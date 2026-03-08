@@ -1,126 +1,194 @@
 import { head, closingTags, nav, footer, marquee, arrowRight } from '../components'
 
 export const aboutPage = () => `
-${head('About AREN', 'AREN ATHLETIC — Built on discipline, presence, and consistency. The standard is the standard.')}
+${head('About AREN', 'AREN ATHLETIC — AREN isn\'t just apparel. AREN is a standard. Built on discipline, presence, and consistency.')}
 
 ${nav('about')}
 
 <!-- PAGE HERO -->
 <section class="page-hero page-hero--dark">
   <div class="container">
-    <div class="text-eyebrow" style="margin-bottom:2rem;">About AREN</div>
-    <h1 class="text-display" style="color:#fff;max-width:16ch;margin-bottom:2rem;">
-      Not a brand.<br>A standard.
+    <div class="text-eyebrow" style="margin-bottom:2rem;">AREN ATHLETIC</div>
+    <h1 class="text-display" style="color:#fff;max-width:18ch;margin-bottom:2rem;">
+      Not just apparel.<br>A standard.
     </h1>
-    <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:46ch;">
-      AREN was built for the athlete who operates with discipline in every domain—training, dress, movement, and mindset.
+    <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:52ch;">
+      AREN isn't just apparel. AREN is a standard.
     </p>
   </div>
 </section>
 
 ${marquee()}
 
-<!-- ABOUT INTRO -->
-<section class="about-intro section">
+<!-- MAIN ABOUT COPY — WORD FOR WORD FROM LIVE SITE -->
+<section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
   <div class="container">
     <div class="about-intro-inner">
+
       <div>
-        <div class="text-eyebrow" style="margin-bottom:2rem;">Origin</div>
-        <h2 class="text-h2" style="margin-bottom:2rem;max-width:18ch;">Built in New York.<br>Designed for everywhere.</h2>
+        <div class="text-eyebrow" style="margin-bottom:2rem;">AREN Athletic</div>
+        <h2 class="text-h2" style="max-width:20ch;margin-bottom:2.5rem;">
+          The moment before<br>the work begins.
+        </h2>
+        <a href="/shop" class="btn btn--outline" style="margin-top:1rem;">Shop Apparel ${arrowRight()}</a>
       </div>
+
       <div>
         <p class="text-body" style="margin-bottom:1.75rem;">
-          AREN ATHLETIC emerged from a simple premise: the gear athletes wear should reflect the same discipline they bring to training. Not loud. Not trend-driven. Functional, restrained, and durable.
+          It's the moment before the work begins. The quiet decision you make when no one is watching. The discipline to prepare, the courage to show up, and the commitment to hold the line when it would be easier not to.
         </p>
         <p class="text-body" style="margin-bottom:1.75rem;">
-          New York City is the proving ground—an environment that demands performance at all hours, across all environments. AREN apparel is designed for that pace and that standard.
+          AREN was built on three principles: discipline, presence, and consistency.
         </p>
-        <p class="text-body">
-          Every piece is engineered to hold up under high-output training and carry the same standard off the floor, onto the street, and through the rest of the day.
+        <p class="text-body" style="margin-bottom:1.75rem;">
+          Discipline is the foundation. It's the shoe being tied before sunrise. It's the extra set, the extra mile, the extra moment of focus when fatigue tells you to stop. Discipline is not loud. It's not flashy. It's the daily choice to do what must be done.
+        </p>
+        <p class="text-body" style="margin-bottom:1.75rem;">
+          Presence is how you carry yourself in the world. It's the way you enter the room, the gym, the track, the street, or the workplace. Presence means standing tall in who you are and what you represent. It means showing up prepared, composed, and ready for whatever the day demands.
+        </p>
+        <p class="text-body" style="margin-bottom:1.75rem;">
+          Consistency is the separator. Anyone can show up once. Anyone can have a good day. But the standard is held by those who show up again and again, day after day, long after the excitement fades and the work becomes routine.
+        </p>
+        <p class="text-body" style="font-weight:500;color:var(--color-black);">
+          That's where AREN lives.
         </p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- VALUES -->
-<section class="about-values section--sm" style="border-top:1px solid var(--color-warm-gray);">
-  <div class="container">
-    <div class="text-eyebrow" style="margin-bottom:3rem;">Core Values</div>
-    <div class="values-grid">
-      
-      <div class="value-item">
-        <div class="value-number">01</div>
-        <h3 class="value-title">Discipline</h3>
-        <p class="value-copy">
-          The standard doesn't change based on mood, season, or environment. AREN is built on this principle—consistent execution, every day.
-        </p>
-      </div>
-      
-      <div class="value-item">
-        <div class="value-number">02</div>
-        <h3 class="value-title">Restraint</h3>
-        <p class="value-copy">
-          No noise. No excess. Every design decision is deliberate—removing what isn't necessary and refining what remains until it holds.
-        </p>
-      </div>
-      
-      <div class="value-item">
-        <div class="value-number">03</div>
-        <h3 class="value-title">Precision</h3>
-        <p class="value-copy">
-          Functional precision over trend. Each piece is built to perform under training and carry that same finish into everything else.
-        </p>
-      </div>
-      
-    </div>
+<!-- THE STANDARD EXTENDED -->
+<section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
+  <div class="container container--narrow">
+    <p class="text-body" style="margin-bottom:1.75rem;">
+      AREN exists at the intersection of training and life: in the gym, on the street, at work, and in the quiet moments when you decide who you are going to be.
+    </p>
+    <p class="text-body" style="margin-bottom:1.75rem;">
+      But the standard doesn't stop there. It carries into how you live, how you treat people, and the kind of character you build when the work of the day is done. It shows up in how you lead your family, how you support the people around you, and how you stand by your principles when life tests them.
+    </p>
+    <p class="text-body" style="margin-bottom:1.75rem;">
+      This isn't clothing made for a moment. It's apparel designed for the standard you hold yourself to every day. When you wear AREN, you're not putting on a brand. You're stepping into a mindset. It means you carry discipline with you. You move with intention.
+    </p>
+    <p class="text-body" style="margin-bottom:1.75rem;font-weight:500;color:var(--color-black);">
+      You show up with presence.
+    </p>
+    <p class="text-body" style="margin-bottom:1.75rem;">
+      It means you respect the work. You respect the process. You respect the standard.
+    </p>
+    <p class="text-body" style="margin-bottom:1.75rem;">
+      Because the standard isn't just performance. It's how you train. It's how you work.
+    </p>
+    <p class="text-body" style="margin-bottom:1.75rem;">
+      It's how you carry yourself in every room you enter.
+    </p>
+    <p class="text-body" style="margin-bottom:1.75rem;">
+      It's also how you show up for the people who depend on you, the values you live by, and the character you build when no one is watching.
+    </p>
   </div>
 </section>
 
-<!-- BRAND STATEMENT -->
+<!-- THE STANDARD IS THE STANDARD -->
 <section class="about-statement">
   <div class="container">
-    <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2.5rem;text-align:center;">The AREN Position</div>
+    <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2.5rem;text-align:center;">The Standard</div>
     <h2 class="about-statement-headline">
-      AREN apparel exists as an extension of the athlete's standard.
+      The standard is the standard.
     </h2>
-    <p style="font-family:var(--font-mono);font-size:0.875rem;line-height:1.75;color:rgba(255,255,255,0.45);max-width:52ch;margin:0 auto 3.5rem;text-align:center;">
-      Not driven by seasonal trends or streetwear cycles, but by discipline, restraint, and functional precision. Every piece is designed to hold up under training and carry that same standard into the rest of life. This is not clothing for spectators. It's equipment for people who operate.
+    <p style="font-size:1rem;line-height:1.8;color:rgba(255,255,255,0.5);max-width:54ch;margin:0 auto 1.75rem;text-align:center;">
+      And the ones who live by it don't need to announce it.
     </p>
-    <div style="text-align:center;">
+    <p style="font-size:1rem;line-height:1.8;color:rgba(255,255,255,0.5);max-width:54ch;margin:0 auto 1.75rem;text-align:center;">
+      You can see it in how they move, how they prepare, and how they show up.
+    </p>
+    <p style="font-size:1rem;line-height:1.8;color:rgba(255,255,255,0.5);max-width:54ch;margin:0 auto 3rem;text-align:center;">
+      AREN exists for those people. The ones who know the work never really ends. The ones who understand that greatness isn't built in moments of spotlight, but in the quiet hours where discipline becomes identity.
+    </p>
+    <div style="text-align:center;margin-bottom:2rem;">
+      <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:0.5rem;">Wear it with intention. Train with purpose. Carry the standard.</p>
+      <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.35);">This is AREN.</p>
+    </div>
+    <div style="text-align:center;margin-bottom:1rem;">
+      <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.2);">EST. 2026. PERFORMANCE PROTOCOL.</span>
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
       <a href="/shop" class="btn btn--outline-white">Shop the Collection ${arrowRight()}</a>
     </div>
   </div>
 </section>
 
-<!-- APPAREL PHILOSOPHY -->
+<!-- WHAT AREN REPRESENTS -->
 <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
   <div class="container">
-    <div class="about-intro-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow" style="margin-bottom:2rem;">Design Philosophy</div>
-        <h2 class="text-h2" style="margin-bottom:2rem;max-width:16ch;">Function. Restraint. Durability.</h2>
-        <a href="/shop" class="btn btn--outline" style="margin-top:1rem;">Shop Apparel ${arrowRight()}</a>
+        <div class="text-eyebrow" style="margin-bottom:2rem;">What AREN Represents</div>
+        <h2 class="text-h2" style="max-width:18ch;margin-bottom:2rem;">A performance identity.</h2>
       </div>
       <div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
-          <div style="padding:2.5rem 2rem;background:var(--color-off-white);">
-            <div class="text-eyebrow" style="margin-bottom:1.25rem;">Training</div>
-            <p class="text-body-sm">Engineered for high-output training environments. Built to perform under repeated stress.</p>
-          </div>
-          <div style="padding:2.5rem 2rem;background:var(--color-off-white);">
-            <div class="text-eyebrow" style="margin-bottom:1.25rem;">Daily Wear</div>
-            <p class="text-body-sm">Structured comfort for transition and recovery days. The same finish, all day.</p>
-          </div>
-          <div style="padding:2.5rem 2rem;background:var(--color-off-white);">
-            <div class="text-eyebrow" style="margin-bottom:1.25rem;">Outer Layers</div>
-            <p class="text-body-sm">Technical protection for environmental defense. Built for the city and everything in it.</p>
-          </div>
-          <div style="padding:2.5rem 2rem;background:var(--color-off-white);">
-            <div class="text-eyebrow" style="margin-bottom:1.25rem;">Community</div>
-            <p class="text-body-sm">Worn by a collective that shows up. Street Miles NYC and beyond.</p>
-          </div>
+        <p class="text-body" style="margin-bottom:1.25rem;">AREN is a performance identity.</p>
+        <p class="text-body" style="margin-bottom:1.25rem;">Defined by discipline, presence, and execution.</p>
+        <p class="text-body" style="margin-bottom:1.25rem;">Not a destination. A standard of conduct.</p>
+        <p class="text-body" style="margin-bottom:1.25rem;">Training is deliberate. How you move through the world matters.</p>
+        <p class="text-body" style="margin-bottom:1.25rem;">The apparel carries the code — a signal of restraint, readiness, and alignment.</p>
+        <p class="text-body">The mark represents a standard — not attention. Wear it as a reflection of how you operate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NO SPECTATORS -->
+<section style="background:var(--color-black);color:var(--color-white);padding:var(--space-xl) 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
+      <div>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(2rem,4vw,3.5rem);font-weight:400;line-height:1.08;letter-spacing:-0.02em;color:#fff;margin-bottom:2rem;">
+          No spectators.<br>Only standards.
+        </h2>
+        <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;max-width:46ch;">
+          AREN rejects passivity and spectatorship in favor of ownership and responsibility.
+        </p>
+        <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;max-width:46ch;">
+          The standard is a non-negotiable threshold of operation — a commitment to presence over distraction and execution over intention. To align with AREN is to accept accountability for how you show up: in training, in work, and in life.
+        </p>
+        <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.5);margin-bottom:1.5rem;max-width:46ch;">
+          We don't observe from the sidelines. We operate.
+        </p>
+        <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);">
+          There are no spectators. There are only standards.
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:2rem;">
+        <div style="padding:3rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:1.25rem;">Performance Apparel</div>
+          <p style="font-size:0.9375rem;line-height:1.7;color:rgba(255,255,255,0.5);">Designed for daily standards. AREN garments are a physical signal of readiness, engineered to endure the rigors of performance while maintaining a restricted, premium aesthetic for life under pressure.</p>
         </div>
+        <div style="padding:3rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:1.25rem;">Street Miles</div>
+          <p style="font-size:0.9375rem;line-height:1.7;color:rgba(255,255,255,0.5);">The community-driven expression of the AREN platform. Street Miles connects individual chapters through a shared commitment to execution, proving that the standard has no geographic center.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NATIONAL PERFORMANCE PLATFORM -->
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
+      <div>
+        <div class="text-eyebrow" style="margin-bottom:2rem;">National Performance Platform</div>
+        <h2 class="text-h2" style="max-width:22ch;margin-bottom:2rem;">
+          Building a scalable culture of community chapters across the nation.
+        </h2>
+        <p class="text-body" style="max-width:44ch;">
+          AREN is evolving into a coordinated performance ecosystem, establishing elite training protocols and community expression while maintaining the absolute integrity of the standard.
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1.25rem;">
+        <a href="/training" class="btn btn--outline" style="justify-content:space-between;">Explore Training ${arrowRight()}</a>
+        <a href="/street-miles" class="btn btn--outline" style="justify-content:space-between;">Join Street Miles NYC ${arrowRight()}</a>
+        <a href="/contact" class="btn btn--primary" style="justify-content:space-between;">Join the Community ${arrowRight()}</a>
       </div>
     </div>
   </div>

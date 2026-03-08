@@ -1,7 +1,7 @@
 import { head, closingTags, nav, footer, marquee, arrowRight } from '../components'
 
 export const servicesPage = () => `
-${head('Services', 'AREN ATHLETIC Services — Performance coaching, programming, and community access for serious athletes.')}
+${head('Services', 'AREN ATHLETIC Services — Structured access. Every level. Performance coaching, programming, and community access.')}
 
 ${nav('services')}
 
@@ -12,8 +12,8 @@ ${nav('services')}
     <h1 class="text-h1" style="max-width:20ch;margin-bottom:2rem;">
       Structured access.<br>Every level.
     </h1>
-    <p class="text-body" style="max-width:48ch;">
-      AREN offers a tiered service ecosystem for athletes and communities. From individual programming to full chapter activation, the standard scales to your context.
+    <p class="text-body" style="max-width:50ch;">
+      AREN offers a tiered service ecosystem for athletes and communities. From individual programming to full chapter activation — the standard scales to your context.
     </p>
   </div>
 </section>
@@ -23,7 +23,7 @@ ${marquee()}
 <!-- SERVICES LIST -->
 <section class="services-list">
   <div class="container">
-  
+
     <div class="service-row">
       <div>
         <div class="text-eyebrow" style="margin-bottom:0.75rem;">01</div>
@@ -36,7 +36,7 @@ ${marquee()}
       </div>
       <a href="/contact" class="service-arrow">Inquire ${arrowRight()}</a>
     </div>
-    
+
     <div class="service-row">
       <div>
         <div class="text-eyebrow" style="margin-bottom:0.75rem;">02</div>
@@ -49,7 +49,7 @@ ${marquee()}
       </div>
       <a href="/contact" class="service-arrow">Inquire ${arrowRight()}</a>
     </div>
-    
+
     <div class="service-row">
       <div>
         <div class="text-eyebrow" style="margin-bottom:0.75rem;">03</div>
@@ -62,7 +62,7 @@ ${marquee()}
       </div>
       <a href="/street-miles" class="service-arrow">Explore ${arrowRight()}</a>
     </div>
-    
+
     <div class="service-row">
       <div>
         <div class="text-eyebrow" style="margin-bottom:0.75rem;">04</div>
@@ -75,7 +75,7 @@ ${marquee()}
       </div>
       <a href="/contact" class="service-arrow">Apply ${arrowRight()}</a>
     </div>
-    
+
     <div class="service-row">
       <div>
         <div class="text-eyebrow" style="margin-bottom:0.75rem;">05</div>
@@ -88,7 +88,7 @@ ${marquee()}
       </div>
       <a href="/contact" class="service-arrow">Inquire ${arrowRight()}</a>
     </div>
-    
+
     <div class="service-row">
       <div>
         <div class="text-eyebrow" style="margin-bottom:0.75rem;">06</div>
@@ -101,25 +101,27 @@ ${marquee()}
       </div>
       <a href="/contact" class="service-arrow">Inquire ${arrowRight()}</a>
     </div>
-    
+
   </div>
 </section>
 
-<!-- SERVICES CTA BANNER -->
-<section style="background:var(--color-off-white);padding:var(--space-xl) 0;border-top:1px solid var(--color-warm-gray);">
+<!-- NATIONAL PERFORMANCE PLATFORM -->
+<section style="background:var(--color-black);padding:var(--space-xl) 0;">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
       <div>
-        <div class="text-eyebrow" style="margin-bottom:1.5rem;">Ready to Execute</div>
-        <h2 class="text-h2" style="max-width:20ch;margin-bottom:1.5rem;">The standard is always available to those who show up.</h2>
-        <p class="text-body" style="max-width:44ch;">
-          All services operate within the AREN ecosystem. Reach out through the contact page to begin the process.
+        <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;">National Performance Platform</div>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;color:#fff;line-height:1.1;letter-spacing:-0.015em;margin-bottom:1.75rem;max-width:22ch;">
+          Building a scalable culture of community chapters across the nation.
+        </h2>
+        <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.5);max-width:44ch;">
+          AREN is evolving into a coordinated performance ecosystem, establishing elite training protocols and community expression while maintaining the absolute integrity of the standard.
         </p>
       </div>
-      <div style="display:flex;flex-direction:column;gap:1rem;max-width:380px;">
+      <div style="display:flex;flex-direction:column;gap:1rem;max-width:400px;">
         <a href="/contact" class="btn btn--primary" style="justify-content:space-between;">Contact / Join the Community ${arrowRight()}</a>
-        <a href="/training" class="btn btn--outline" style="justify-content:space-between;">Explore Training Programs ${arrowRight()}</a>
-        <a href="/street-miles" class="btn btn--outline" style="justify-content:space-between;">Join Street Miles NYC ${arrowRight()}</a>
+        <a href="/training" class="btn btn--outline-white" style="justify-content:space-between;">Explore Training Programs ${arrowRight()}</a>
+        <a href="/street-miles" class="btn btn--outline-white" style="justify-content:space-between;">Join Street Miles NYC ${arrowRight()}</a>
       </div>
     </div>
   </div>
