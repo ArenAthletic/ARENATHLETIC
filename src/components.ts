@@ -9,7 +9,9 @@ export const head = (title: string, description: string = '') => `
   <title>${title} — AREN ATHLETIC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <!-- Wix MadeFor Display (headings) + Wix MadeFor Text (body) + IBM Plex Sans (labels/mono) -->
+  <!-- Exact font stack from arenathletic.com: madefor-display-bold, madefor-text, ibm-plex-sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&family=Wix+Madefor+Text:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/static/styles.css" />
   <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
 </head>

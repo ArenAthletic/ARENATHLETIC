@@ -1,20 +1,37 @@
 /* ================================================================
    AREN ATHLETIC — GLOBAL DESIGN SYSTEM
-   Minimal · Elevated · Performance-Lifestyle
+   Exact colors + fonts extracted from arenathletic.com (Wix source)
    ================================================================ */
 
 :root {
-  --color-black:   #0a0a0a;
-  --color-white:   #ffffff;
-  --color-off-white: #f5f4f0;
-  --color-warm-gray: #e8e5de;
-  --color-mid-gray: #b0aca4;
-  --color-dark-gray: #3a3834;
-  --color-accent:  #0a0a0a;
+  /* ── EXACT PALETTE FROM arenathletic.com ─────────────────────
+     Wix color_11 / primary background  = #232321  (near-black)
+     Wix color_00 / darkest text        = #232321
+     Wix color_03 / deep charcoal       = #2e2e2b
+     Wix color_04 / mid charcoal        = #3a3a36
+     Wix color_10 / page background     = #f9f7f1  (warm off-white)
+     Wix color_08 / warm cream accent   = #ece3cf
+     Wix color_07 / border/divider tone = #2e2e2b
+     ──────────────────────────────────────────────────────────── */
+  --color-black:     #232321;   /* Wix color_11 — primary text / bg */
+  --color-white:     #ffffff;   /* pure white */
+  --color-off-white: #f9f7f1;   /* Wix color_10 — page background */
+  --color-warm-gray: #d6d0c4;   /* Wix color_43 — dividers / borders */
+  --color-mid-gray:  #a8a6a5;   /* Wix a8a6a5 — secondary text */
+  --color-dark-gray: #3a3a36;   /* Wix color_04 — body text on light */
+  --color-charcoal:  #2e2e2b;   /* Wix color_03 — deep charcoal */
+  --color-cream:     #ece3cf;   /* Wix color_08 — warm cream accent */
+  --color-sand:      #e0d2b2;   /* Wix color_23 — warm sand */
+  --color-accent:    #232321;
 
-  --font-serif:    'Playfair Display', 'Georgia', serif;
-  --font-sans:     'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono:     'IBM Plex Mono', 'Courier New', monospace;
+  /* ── EXACT FONTS FROM arenathletic.com ───────────────────────
+     Headings (font_0–6): madefor-display-bold (Wix MadeFor Display)
+     Body (font_7–9):     madefor-text  (Wix MadeFor Text)
+     Labels/mono:         ibm-plex-sans (IBM Plex Sans from Wix)
+     ──────────────────────────────────────────────────────────── */
+  --font-serif:  'Wix Madefor Display', 'Helvetica Neue', Arial, sans-serif;
+  --font-sans:   'Wix Madefor Text', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:   'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 
   --space-xs:  0.5rem;
   --space-sm:  1rem;
@@ -48,7 +65,7 @@ html {
 }
 
 body {
-  background-color: var(--color-white);
+  background-color: var(--color-off-white);
   color: var(--color-black);
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -91,54 +108,55 @@ input {
    TYPOGRAPHY SYSTEM
    ================================================================ */
 
-/* Eyebrow / label */
+/* Eyebrow / label — ibm-plex-sans (matches live site label style) */
 .text-eyebrow {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-mid-gray);
 }
 
-/* Display headings */
+/* Display headings — madefor-display-bold weight 800 */
 .text-display {
   font-family: var(--font-serif);
   font-size: clamp(2.8rem, 6vw, 5.5rem);
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.04;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .text-h1 {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 4.5vw, 4rem);
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -0.015em;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
 }
 
 .text-h2 {
   font-family: var(--font-serif);
   font-size: clamp(1.6rem, 3vw, 2.6rem);
-  font-weight: 400;
-  line-height: 1.18;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
 }
 
 .text-h3 {
   font-family: var(--font-sans);
   font-size: clamp(1.1rem, 2vw, 1.5rem);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.3;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.01em;
 }
 
-/* Body text */
+/* Body text — madefor-text weight 400 */
 .text-body {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--color-dark-gray);
+  font-weight: 400;
 }
 
 .text-body-sm {
@@ -202,9 +220,9 @@ input {
   align-items: center;
   gap: 0.5rem;
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 0.875rem 2rem;
   transition: all var(--transition);
@@ -288,7 +306,7 @@ input {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: var(--color-white);
+  background: var(--color-off-white);
   border-bottom: 1px solid var(--color-warm-gray);
   transition: background var(--transition), border-color var(--transition);
 }
@@ -311,8 +329,8 @@ input {
 .nav-logo {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.22em;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-black);
   transition: opacity var(--transition);
@@ -331,8 +349,8 @@ input {
 .nav-link {
   font-family: var(--font-mono);
   font-size: 0.625rem;
-  font-weight: 400;
-  letter-spacing: 0.16em;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-black);
   transition: opacity var(--transition);
@@ -424,7 +442,7 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--color-white);
+  background: var(--color-off-white);
   z-index: 999;
   padding: 3rem var(--gutter);
   overflow-y: auto;
@@ -447,9 +465,9 @@ input {
 .nav-mobile-link {
   font-family: var(--font-serif);
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--color-black);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   transition: opacity var(--transition);
 }
 
@@ -467,7 +485,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: var(--color-black);
+  background: #232321;
   overflow: hidden;
   padding-top: 68px;
 }
@@ -477,9 +495,9 @@ input {
   inset: 0;
   background: linear-gradient(
     165deg,
-    #0a0a0a 0%,
-    #1a1916 45%,
-    #0f0e0c 100%
+    #1c1c1a 0%,
+    #232321 45%,
+    #1a1a18 100%
   );
 }
 
@@ -512,9 +530,9 @@ input {
 .hero-headline {
   font-family: var(--font-serif);
   font-size: clamp(3rem, 7vw, 6.5rem);
-  font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: -0.025em;
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
   color: var(--color-white);
   max-width: 12ch;
   margin-bottom: 2rem;
@@ -585,7 +603,7 @@ input {
 }
 
 .category-item:hover {
-  background: var(--color-off-white);
+  background: #ece3cf;
 }
 
 .category-number {
@@ -599,10 +617,10 @@ input {
 .category-title {
   font-family: var(--font-serif);
   font-size: clamp(1.4rem, 2.5vw, 2.1rem);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 0.75rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .category-desc {
@@ -741,9 +759,9 @@ input {
 .philosophy-headline {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 4vw, 3.8rem);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
   color: var(--color-white);
   margin-bottom: 2.5rem;
 }
@@ -797,7 +815,7 @@ input {
 
 .street-miles-section {
   padding: var(--space-xl) 0;
-  background: var(--color-off-white);
+  background: #ece3cf;
 }
 
 .street-miles-inner {
@@ -821,7 +839,7 @@ input {
   flex-direction: column;
   justify-content: flex-end;
   padding: 2.5rem;
-  background: linear-gradient(160deg, #111 0%, #1c1b18 100%);
+  background: linear-gradient(160deg, #1c1c1a 0%, #232321 100%);
 }
 
 .street-miles-visual-tag {
@@ -836,10 +854,10 @@ input {
 .street-miles-visual-headline {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 400;
-  line-height: 1.1;
+  font-weight: 700;
+  line-height: 1.08;
   color: var(--color-white);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .street-miles-content .text-eyebrow {
@@ -1232,9 +1250,9 @@ input {
 .training-card-title {
   font-family: var(--font-serif);
   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
   margin-bottom: 1.25rem;
 }
 
@@ -1304,7 +1322,7 @@ input {
    ================================================================ */
 
 .sm-hero {
-  background: var(--color-black);
+  background: #232321;
   color: var(--color-white);
   padding-top: calc(68px + var(--space-xxl));
   padding-bottom: var(--space-xxl);
@@ -1313,16 +1331,16 @@ input {
 .sm-hero-tagline {
   font-family: var(--font-serif);
   font-size: clamp(2.8rem, 6vw, 5.5rem);
-  font-weight: 400;
-  line-height: 1.03;
-  letter-spacing: -0.025em;
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
   max-width: 16ch;
   margin-bottom: 3rem;
 }
 
 .sm-protocol {
   padding: var(--space-xl) 0;
-  background: var(--color-off-white);
+  background: #ece3cf;
 }
 
 .protocol-items {
@@ -1381,11 +1399,12 @@ input {
 }
 
 .testimonial-quote {
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
   letter-spacing: -0.005em;
   color: var(--color-black);
+  font-weight: 400;
   margin-bottom: 2rem;
 }
 
@@ -1406,7 +1425,7 @@ input {
   border-bottom: 1px solid var(--color-warm-gray);
   position: sticky;
   top: 68px;
-  background: var(--color-white);
+  background: var(--color-off-white);
   z-index: 100;
 }
 
@@ -1541,7 +1560,7 @@ input {
    ================================================================ */
 
 .marquee-strip {
-  background: var(--color-black);
+  background: #2e2e2b;
   padding: 0.875rem 0;
   overflow: hidden;
   white-space: nowrap;

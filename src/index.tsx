@@ -66,7 +66,7 @@ app.notFound((c) => {
         <div style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--color-mid-gray);">Error — 404</div>
         <h1 style="font-family:var(--font-serif);font-size:clamp(3rem,8vw,6rem);font-weight:400;letter-spacing:-0.025em;line-height:1;">Page not found.</h1>
         <p style="font-family:var(--font-sans);font-size:1rem;color:var(--color-dark-gray);">This page doesn't exist or has moved.</p>
-        <a href="/" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;border-bottom:1px solid #0a0a0a;padding-bottom:2px;">Return home</a>
+        <a href="/" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;border-bottom:1px solid var(--color-black);padding-bottom:2px;">Return home</a>
       </div>
     </body>
     </html>
