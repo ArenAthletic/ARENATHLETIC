@@ -1,4 +1,4 @@
-import { head, closingTags, nav, footer, marquee, arrowRight, iconTee, iconHoodie, iconCap, iconLayer } from '../components'
+import { head, closingTags, nav, footer, marquee, arrowRight } from '../components'
 
 export const shopPage = () => `
 ${head('Shop', 'AREN ATHLETIC — Composure under pressure. Performance-informed apparel built for daily standards, not trends.')}
@@ -57,68 +57,80 @@ ${nav('shop')}
     </div>
     <div class="shop-product-grid">
 
-      <div class="product-card">
-        <div class="product-image"><div class="product-image-placeholder">${iconTee()}</div><div class="product-tag">Core</div></div>
+      <a href="https://www.arenathletic.com/product-page/aren-athletic-men-s-box-tee-white-tonal" target="_blank" rel="noopener" class="product-card" style="text-decoration:none;color:inherit;">
+        <div class="product-image" style="background:#f2efe9;">
+          <img class="product-img" src="https://static.wixstatic.com/media/8a3301_cac8109f5c5640c799f7949e87585b47~mv2.png/v1/fill/w_480,h_640,al_c,q_85,enc_auto/8a3301_cac8109f5c5640c799f7949e87585b47~mv2.png" alt="AREN Athletic Men's Box Tee — White Tonal" loading="lazy" />
+          <div class="product-tag">Core</div>
+        </div>
         <div class="product-name">AREN Athletic Men's Box Tee — White Tonal</div>
         <div class="product-desc">Everyday fit. Built to last.</div>
         <div class="product-price">Shop Now</div>
-      </div>
+      </a>
 
-      <div class="product-card">
-        <div class="product-image" style="background:#232321;"><div class="product-image-placeholder" style="opacity:0.5;">${iconTee()}</div></div>
+      <a href="https://www.arenathletic.com/product-page/aren-athletic-boxy-tee" target="_blank" rel="noopener" class="product-card" style="text-decoration:none;color:inherit;">
+        <div class="product-image" style="background:#1e1e1c;">
+          <img class="product-img" src="https://static.wixstatic.com/media/8a3301_e81c756c4aaa4045ba6b10d2aeb788d6~mv2.png/v1/fill/w_480,h_640,al_c,q_85,enc_auto/8a3301_e81c756c4aaa4045ba6b10d2aeb788d6~mv2.png" alt="AREN Athletic Boxy Tee — Black" loading="lazy" />
+        </div>
         <div class="product-name">AREN Athletic Boxy Tee — Black</div>
         <div class="product-desc">The foundation. Wear daily.</div>
         <div class="product-price">Shop Now</div>
-      </div>
+      </a>
 
-      <div class="product-card">
-        <div class="product-image" style="background:#e0d2b2;"><div class="product-image-placeholder">${iconTee()}</div><div class="product-tag">New</div></div>
+      <a href="https://www.arenathletic.com/product-page/aren-athletic-boxy-tee" target="_blank" rel="noopener" class="product-card" style="text-decoration:none;color:inherit;">
+        <div class="product-image" style="background:#e8dfc8;">
+          <img class="product-img" src="https://static.wixstatic.com/media/8a3301_03861e90d70046c5801955cab544ec91~mv2.png/v1/fill/w_480,h_640,al_c,q_85,enc_auto/8a3301_03861e90d70046c5801955cab544ec91~mv2.png" alt="AREN Athletic Boxy Tee — Sand" loading="lazy" />
+          <div class="product-tag">New</div>
+        </div>
         <div class="product-name">AREN Athletic Boxy Tee — Sand</div>
         <div class="product-desc">Oversized. Relaxed. Clean.</div>
         <div class="product-price">Shop Now</div>
-      </div>
+      </a>
 
-      <div class="product-card">
-        <div class="product-image" style="background:#ece3cf;"><div class="product-image-placeholder">${iconHoodie()}</div></div>
-        <div class="product-name">Heavyweight Hoodie — Stone</div>
-        <div class="product-desc">Structured warmth for daily wear.</div>
+      <a href="https://www.arenathletic.com/product-page/aren-athletic-boxy-tee" target="_blank" rel="noopener" class="product-card" style="text-decoration:none;color:inherit;">
+        <div class="product-image" style="background:#d8d3c5;">
+          <img class="product-img" src="https://static.wixstatic.com/media/8a3301_5b4957dfe7b148b0b720992a3f94e263~mv2.png/v1/fill/w_480,h_640,al_c,q_85,enc_auto/8a3301_5b4957dfe7b148b0b720992a3f94e263~mv2.png" alt="AREN Athletic Boxy Tee — Stone" loading="lazy" />
+        </div>
+        <div class="product-name">AREN Athletic Boxy Tee — Stone</div>
+        <div class="product-desc">Clean lines. All-day wear.</div>
         <div class="product-price">Shop Now</div>
-      </div>
+      </a>
 
-      <div class="product-card">
-        <div class="product-image" style="background:#2e2e2b;"><div class="product-image-placeholder" style="opacity:0.4;">${iconHoodie()}</div><div class="product-tag">New</div></div>
-        <div class="product-name">Heavyweight Hoodie — Black</div>
+      <a href="https://www.arenathletic.com/product-page/aren-athletic-boxy-tee" target="_blank" rel="noopener" class="product-card" style="text-decoration:none;color:inherit;">
+        <div class="product-image" style="background:#c8c3b6;">
+          <img class="product-img" src="https://static.wixstatic.com/media/8a3301_50ce280989c9408c88ceb63c582e97e9~mv2.png/v1/fill/w_480,h_640,al_c,q_85,enc_auto/8a3301_50ce280989c9408c88ceb63c582e97e9~mv2.png" alt="AREN Athletic Boxy Tee — Warm Gray" loading="lazy" />
+          <div class="product-tag">New</div>
+        </div>
+        <div class="product-name">AREN Athletic Boxy Tee — Warm Gray</div>
         <div class="product-desc">Structured warmth. Clean finish.</div>
         <div class="product-price">Shop Now</div>
-      </div>
+      </a>
 
-      <div class="product-card">
-        <div class="product-image" style="background:#d6d0c4;"><div class="product-image-placeholder">${iconLayer()}</div></div>
-        <div class="product-name">Performance Layer</div>
+      <a href="https://www.arenathletic.com/product-page/aren-athletic-men-s-box-tee-white-tonal" target="_blank" rel="noopener" class="product-card" style="text-decoration:none;color:inherit;">
+        <div class="product-image" style="background:#f5f2ed;">
+          <img class="product-img" src="https://static.wixstatic.com/media/8a3301_15010477e39e4b969f729318ac47f8b0~mv2.jpg/v1/fill/w_480,h_640,al_c,q_85,enc_auto/8a3301_15010477e39e4b969f729318ac47f8b0~mv2.jpg" alt="AREN Athletic Men's Box Tee — White Tonal (Detail)" loading="lazy" />
+        </div>
+        <div class="product-name">AREN Athletic Men's Box Tee — White Tonal</div>
         <div class="product-desc">Training-ready. Street-ready.</div>
         <div class="product-price">Shop Now</div>
-      </div>
+      </a>
 
-      <div class="product-card">
-        <div class="product-image" style="background:#ece3cf;"><div class="product-image-placeholder">${iconTee()}</div></div>
-        <div class="product-name">Training Short — Slate</div>
+      <a href="https://www.arenathletic.com/product-page/aren-athletic-men-s-box-tee-white-tonal" target="_blank" rel="noopener" class="product-card" style="text-decoration:none;color:inherit;">
+        <div class="product-image" style="background:#ede8df;">
+          <img class="product-img" src="https://static.wixstatic.com/media/8a3301_fa6a6950ad304148a7e28983969c42ff~mv2.jpg/v1/fill/w_480,h_640,al_c,q_85,enc_auto/8a3301_fa6a6950ad304148a7e28983969c42ff~mv2.jpg" alt="AREN Athletic Men's Box Tee — Detail View" loading="lazy" />
+        </div>
+        <div class="product-name">AREN Athletic Men's Box Tee — Detail</div>
         <div class="product-desc">Built for movement. Cut clean.</div>
         <div class="product-price">Shop Now</div>
-      </div>
+      </a>
 
-      <div class="product-card">
-        <div class="product-image" style="background:#d6d0c4;"><div class="product-image-placeholder">${iconCap()}</div></div>
-        <div class="product-name">Essential Cap — Stone</div>
-        <div class="product-desc">Clean finish. All week.</div>
-        <div class="product-price">Shop Now</div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-image" style="background:#2e2e2b;"><div class="product-image-placeholder" style="opacity:0.4;">${iconCap()}</div></div>
-        <div class="product-name">Essential Cap — Black</div>
+      <a href="https://www.arenathletic.com/product-page/aren-athletic-men-s-box-tee-white-tonal" target="_blank" rel="noopener" class="product-card" style="text-decoration:none;color:inherit;">
+        <div class="product-image" style="background:#e8e3d8;">
+          <img class="product-img" src="https://static.wixstatic.com/media/8a3301_ba5a6c41c57046e1bb1c0c7b5c5bca6a~mv2.jpg/v1/fill/w_480,h_640,al_c,q_85,enc_auto/8a3301_ba5a6c41c57046e1bb1c0c7b5c5bca6a~mv2.jpg" alt="AREN Athletic Men's Box Tee — Fit View" loading="lazy" />
+        </div>
+        <div class="product-name">AREN Athletic Men's Box Tee — Fit</div>
         <div class="product-desc">The standard. Everyday.</div>
         <div class="product-price">Shop Now</div>
-      </div>
+      </a>
 
     </div>
   </div>
