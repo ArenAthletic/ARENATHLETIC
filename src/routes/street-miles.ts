@@ -10,7 +10,7 @@ ${nav('street-miles')}
   <div class="container">
     <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2.5rem;">Street Miles NYC — SMNYC</div>
     <h1 class="sm-hero-tagline">
-      Do the work.<br>Carry the<br>weight.
+      DO THE WORK.<br>CARRY THE<br>WEIGHT.
     </h1>
     <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:52ch;margin-bottom:3rem;">
       Street Miles is the street-level expression of AREN's standards through community runs and shared accountability.
@@ -24,7 +24,7 @@ ${nav('street-miles')}
 
 ${marquee()}
 
-<!-- THE CULTURE — WORD FOR WORD -->
+<!-- THE CULTURE — WORD FOR WORD FROM LIVE SITE -->
 <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
@@ -49,31 +49,31 @@ ${marquee()}
   </div>
 </section>
 
-<!-- PROTOCOL — WORD FOR WORD -->
+<!-- PROTOCOL — EXACT LIVE SITE LABELS -->
 <section id="protocol" class="sm-protocol">
   <div class="container">
     <div class="text-eyebrow" style="margin-bottom:3rem;">Structure</div>
     <div class="protocol-items">
 
       <div class="protocol-item">
-        <div class="protocol-number">01</div>
-        <div class="protocol-title">Sessions</div>
+        <div class="protocol-number">01 / SESSIONS</div>
+        <div class="protocol-title">Structure</div>
         <p class="protocol-desc">
           Every Sunday at 09:00 sharp. We execute rotating sessions across the five boroughs—focused on bridges, blocks, and industrial sectors.
         </p>
       </div>
 
       <div class="protocol-item">
-        <div class="protocol-number">02</div>
-        <div class="protocol-title">Protocol</div>
+        <div class="protocol-number">02 / PROTOCOL</div>
+        <div class="protocol-title">Run Types</div>
         <p class="protocol-desc">
           From aerobic capacity builds to high-intensity urban splits. Each run is a specific tactical unit within the AREN training protocol.
         </p>
       </div>
 
       <div class="protocol-item">
-        <div class="protocol-number">03</div>
-        <div class="protocol-title">Accountability</div>
+        <div class="protocol-number">03 / ACCOUNTABILITY</div>
+        <div class="protocol-title">Vigilance</div>
         <p class="protocol-desc">
           Presence is the benchmark. Sync via the chapter channel for RSVP and live tracking. Missing sessions is a breach of the standard.
         </p>
@@ -121,7 +121,7 @@ ${marquee()}
   </div>
 </section>
 
-<!-- TESTIMONIALS — EXACT WORD FOR WORD -->
+<!-- TESTIMONIALS — EXACT WORD FOR WORD FROM LIVE SITE -->
 <section class="testimonials-section">
   <div class="container">
     <div class="text-eyebrow" style="margin-bottom:3rem;">From the Chapter</div>
@@ -152,7 +152,7 @@ ${marquee()}
   </div>
 </section>
 
-<!-- ACCESS PROTOCOL — EXACT COPY -->
+<!-- ACCESS PROTOCOL — EXACT COPY FROM LIVE SITE -->
 <section style="background:var(--color-black);padding:var(--space-xl) 0;">
   <div class="container">
     <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:3rem;">Access Protocol</div>
