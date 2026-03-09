@@ -6,8 +6,9 @@ ${head('Contact / Join', 'AREN ATHLETIC — Connect with AREN. General Correspon
 ${nav('contact')}
 
 <!-- PAGE HERO — EXACT LIVE SITE COPY -->
-<section style="padding-top:calc(68px + var(--space-xl));padding-bottom:var(--space-xl);border-bottom:1px solid var(--color-warm-gray);">
-  <div class="container">
+<section style="position:relative;padding-top:calc(68px + var(--space-xl));padding-bottom:var(--space-xl);border-bottom:1px solid var(--color-warm-gray);overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_e8285cd97a0546bd863f906d96d2409f~mv2.png/v1/fill/w_1920,h_600,al_c,q_80,enc_auto/8a3301_e8285cd97a0546bd863f906d96d2409f~mv2.png');background-size:cover;background-position:center;opacity:0.06;"></div>
+  <div class="container" style="position:relative;z-index:1;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:end;">
       <div>
         <div class="text-eyebrow" style="margin-bottom:2rem;">Contact / Join</div>

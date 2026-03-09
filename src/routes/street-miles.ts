@@ -7,7 +7,7 @@ ${nav('street-miles')}
 
 <!-- SM HERO — EXACT LIVE SITE COPY -->
 <section class="sm-hero" style="position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_c61322c3c119438aa2a43d20aa318716~mv2.png/v1/fill/w_1920,h_1080,al_c,q_80,enc_auto/8a3301_c61322c3c119438aa2a43d20aa318716~mv2.png');background-size:cover;background-position:center top;"></div>
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/fill/w_1920,h_1080,al_c,q_80,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png');background-size:cover;background-position:center top;"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(20,20,18,0.88) 0%,rgba(35,35,33,0.70) 55%,rgba(20,20,18,0.92) 100%);"></div>
   <div class="container" style="position:relative;z-index:1;">
     <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2.5rem;">Street Miles NYC — SMNYC</div>
