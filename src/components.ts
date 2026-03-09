@@ -7,11 +7,21 @@ export const head = (title: string, description: string = '') => `
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="${description || 'AREN ATHLETIC — Apparel built for training and everything after. Minimal. Durable. Elevated.'}" />
   <title>${title} — AREN ATHLETIC</title>
+  <!-- Grotesk fonts preloaded from Wix CDN (@font-face in styles.css) -->
+  <!-- Tusker Grotesk Ultra Condensed w700 — H1/hero display (exact match arenathletic.com) -->
+  <link rel="preconnect" href="https://static.parastorage.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://static.parastorage.com/fonts/v2/3b3d672e-0986-43ae-b3bb-be1d200fa6b9/v1/tusker-grotesk-ultra-condensed.latin.woff2" />
+  <!-- Neue Haas Grotesk Display Pro w700 — section headings -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://static.parastorage.com/fonts/v2/29384c45-df1d-4d28-a0c3-3ed95c653ff4/v1/neue-haas-grotesk-display-pro.latin.woff2" />
+  <!-- Neue Haas Grotesk Display Pro w400 — body copy -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="https://static.parastorage.com/fonts/v2/53e2d229-a577-4be1-ab95-07687ab57be1/v1/neue-haas-grotesk-display-pro.latin.woff2" />
+  <!-- IBM Plex Sans — labels / eyebrows / UI (Google Fonts) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Wix MadeFor Display (headings) + Wix MadeFor Text (body) + IBM Plex Sans (labels/mono) -->
-  <!-- Exact font stack from arenathletic.com: madefor-display-bold, madefor-text, ibm-plex-sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&family=Wix+Madefor+Text:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/static/styles.css" />
   <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
 </head>
