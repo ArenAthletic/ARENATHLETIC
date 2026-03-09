@@ -111,7 +111,7 @@ ${marquee()}
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
       <div>
         <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;">National Performance Platform</div>
-        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;color:#fff;line-height:1.1;letter-spacing:-0.015em;margin-bottom:1.75rem;max-width:22ch;">
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:700;color:#fff;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;margin-bottom:1.75rem;max-width:22ch;">
           Building a scalable culture of community chapters across the nation.
         </h2>
         <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.5);max-width:44ch;">

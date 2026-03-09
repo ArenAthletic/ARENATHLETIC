@@ -83,7 +83,7 @@ ${marquee()}
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
       <div>
         <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;">No Spectators. Only Standards.</div>
-        <h2 style="font-family:var(--font-serif);font-size:clamp(2rem,4vw,3.5rem);font-weight:400;line-height:1.08;letter-spacing:-0.02em;color:#fff;margin-bottom:2rem;">NO SPECTATORS.<br>ONLY STANDARDS.</h2>
+        <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.8rem);font-weight:700;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;color:#fff;margin-bottom:2rem;">NO SPECTATORS.<br>ONLY STANDARDS.</h2>
         <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:1.5rem;max-width:46ch;">AREN rejects passivity and spectatorship in favor of ownership and responsibility.</p>
         <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:1.5rem;max-width:46ch;">The standard is a non-negotiable threshold of operation — a commitment to presence over distraction and execution over intention. To align with AREN is to accept accountability for how you show up: in training, in work, and in life.</p>
         <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:1.5rem;max-width:46ch;">We don't observe from the sidelines. We operate.</p>

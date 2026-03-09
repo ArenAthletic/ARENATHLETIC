@@ -148,19 +148,19 @@ ${marquee()}
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(255,255,255,0.08);">
 
       <div style="padding:3.5rem 3rem;border-right:1px solid rgba(255,255,255,0.08);text-align:center;">
-        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:400;color:#fff;margin-bottom:1rem;letter-spacing:-0.01em;">Train</div>
+        <div style="font-family:var(--font-display);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:-0.01em;text-transform:uppercase;">Train</div>
         <p style="font-size:0.875rem;line-height:1.65;color:rgba(255,255,255,0.45);margin-bottom:2rem;">Individual and group training programs for athletes operating at a high standard.</p>
         <a href="/training" class="btn btn--outline-white" style="width:100%;justify-content:center;">Explore Training ${arrowRight()}</a>
       </div>
 
       <div style="padding:3.5rem 3rem;border-right:1px solid rgba(255,255,255,0.08);text-align:center;">
-        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:400;color:#fff;margin-bottom:1rem;letter-spacing:-0.01em;">Run</div>
+        <div style="font-family:var(--font-display);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:-0.01em;text-transform:uppercase;">Run</div>
         <p style="font-size:0.875rem;line-height:1.65;color:rgba(255,255,255,0.45);margin-bottom:2rem;">Street Miles NYC — Every Sunday. Five boroughs. No excuses. Where the standard meets the pavement.</p>
         <a href="/street-miles" class="btn btn--outline-white" style="width:100%;justify-content:center;">Join Street Miles ${arrowRight()}</a>
       </div>
 
       <div style="padding:3.5rem 3rem;text-align:center;">
-        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:400;color:#fff;margin-bottom:1rem;letter-spacing:-0.01em;">Wear</div>
+        <div style="font-family:var(--font-display);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:-0.01em;text-transform:uppercase;">Wear</div>
         <p style="font-size:0.875rem;line-height:1.65;color:rgba(255,255,255,0.45);margin-bottom:2rem;">Apparel built to perform in training and carry the same standard into the rest of life.</p>
         <a href="/shop" class="btn btn--outline-white" style="width:100%;justify-content:center;">Shop AREN ${arrowRight()}</a>
       </div>

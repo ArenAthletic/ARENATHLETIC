@@ -68,19 +68,19 @@ ${marquee()}
         <div class="product-price">Shop</div>
       </a>
       <a href="/shop" style="text-decoration:none;color:inherit;" class="product-card">
-        <div class="product-image" style="background:#f0ede8;"><div class="product-image-placeholder">${iconHoodie()}</div></div>
+        <div class="product-image" style="background:#ece3cf;"><div class="product-image-placeholder">${iconHoodie()}</div></div>
         <div class="product-name">Heavyweight Hoodie</div>
         <div class="product-desc">Structured warmth for daily wear.</div>
         <div class="product-price">Shop</div>
       </a>
       <a href="/shop" style="text-decoration:none;color:inherit;" class="product-card">
-        <div class="product-image" style="background:#e8e8e5;"><div class="product-image-placeholder">${iconLayer()}</div><div class="product-tag">New</div></div>
+        <div class="product-image" style="background:#d6d0c4;"><div class="product-image-placeholder">${iconLayer()}</div><div class="product-tag">New</div></div>
         <div class="product-name">Performance Layer</div>
         <div class="product-desc">Training-ready. Street-ready.</div>
         <div class="product-price">Shop</div>
       </a>
       <a href="/shop" style="text-decoration:none;color:inherit;" class="product-card">
-        <div class="product-image" style="background:#ededeb;"><div class="product-image-placeholder">${iconCap()}</div></div>
+        <div class="product-image" style="background:#e0d2b2;"><div class="product-image-placeholder">${iconCap()}</div></div>
         <div class="product-name">Essential Cap</div>
         <div class="product-desc">Clean finish, all week.</div>
         <div class="product-price">Shop</div>

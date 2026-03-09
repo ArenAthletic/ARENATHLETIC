@@ -111,7 +111,7 @@
      Labels/UI:   IBM Plex Sans                       (Wix ibm-plex-sans)
      ──────────────────────────────────────────────────────────── */
   --font-display: 'tusker-grotesk-ultra-condensed', 'Helvetica Neue', Arial, sans-serif;
-  --font-serif:   'neue-haas-grotesk-display-pro', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif:   'tusker-grotesk-ultra-condensed', 'Helvetica Neue', Arial, sans-serif;  /* aliased to display — Tusker Grotesk Bold */
   --font-sans:    'neue-haas-grotesk-display-pro', 'Helvetica Neue', Arial, sans-serif;
   --font-mono:    'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
 
@@ -220,11 +220,12 @@ input {
 }
 
 .text-h2 {
-  font-family: var(--font-serif);
-  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
   font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
 }
 
 .text-h3 {
@@ -690,7 +691,7 @@ input {
 }
 
 .category-item:hover {
-  background: #ece3cf;
+  background: var(--color-cream);
 }
 
 .category-number {
@@ -973,11 +974,12 @@ input {
 }
 
 .sm-stat-value {
-  font-family: var(--font-serif);
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
   margin-bottom: 0.4rem;
 }
 
@@ -1263,12 +1265,13 @@ input {
 }
 
 .value-title {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1.15;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 0.95;
   margin-bottom: 1rem;
   letter-spacing: -0.01em;
+  text-transform: uppercase;
 }
 
 .value-copy {
@@ -1285,11 +1288,12 @@ input {
 }
 
 .about-statement-headline {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 4.5rem);
-  font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: -0.025em;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
   max-width: 22ch;
   margin: 0 auto 2.5rem;
 }
@@ -1384,10 +1388,12 @@ input {
 }
 
 .service-name {
-  font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-weight: 700;
   letter-spacing: -0.01em;
+  text-transform: uppercase;
+  line-height: 0.95;
 }
 
 .service-desc {

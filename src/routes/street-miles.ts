@@ -89,7 +89,7 @@ ${marquee()}
     <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:3rem;">Chapters: Street Miles NYC</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
       <div>
-        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;line-height:1.1;color:#fff;letter-spacing:-0.015em;margin-bottom:1.75rem;">
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:700;line-height:0.95;color:#fff;letter-spacing:-0.01em;text-transform:uppercase;margin-bottom:1.75rem;">
           The Five Borough Chapter
         </h2>
         <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.5);margin-bottom:1.75rem;max-width:46ch;">
@@ -101,19 +101,19 @@ ${marquee()}
       </div>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;">
         <div style="padding:2.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
-          <div style="font-family:var(--font-serif);font-size:3rem;font-weight:400;color:#fff;margin-bottom:0.5rem;line-height:1;">5</div>
+          <div style="font-family:var(--font-display);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:0.95;text-transform:uppercase;letter-spacing:-0.01em;">5</div>
           <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);">Boroughs covered</div>
         </div>
         <div style="padding:2.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
-          <div style="font-family:var(--font-serif);font-size:3rem;font-weight:400;color:#fff;margin-bottom:0.5rem;line-height:1;">Sun</div>
+          <div style="font-family:var(--font-display);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:0.95;text-transform:uppercase;letter-spacing:-0.01em;">Sun</div>
           <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);">09:00 Sharp</div>
         </div>
         <div style="padding:2.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
-          <div style="font-family:var(--font-serif);font-size:3rem;font-weight:400;color:#fff;margin-bottom:0.5rem;line-height:1;">NYC</div>
+          <div style="font-family:var(--font-display);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:0.95;text-transform:uppercase;letter-spacing:-0.01em;">NYC</div>
           <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);">Home chapter</div>
         </div>
         <div style="padding:2.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
-          <div style="font-family:var(--font-serif);font-size:3rem;font-weight:400;color:#fff;margin-bottom:0.5rem;line-height:1;">All</div>
+          <div style="font-family:var(--font-display);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:0.95;text-transform:uppercase;letter-spacing:-0.01em;">All</div>
           <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);">Conditions — No excuses</div>
         </div>
       </div>
