@@ -5,8 +5,10 @@ ${head('About AREN', 'AREN ATHLETIC — AREN isn\'t just apparel. AREN is a stan
 
 ${nav('about')}
 
-<section class="page-hero page-hero--dark">
-  <div class="container">
+<section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;">
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_9b70672bcc31462095e5cbe8bd39ccbe~mv2.png/v1/fill/w_1920,h_1080,al_c,q_80,enc_auto/8a3301_9b70672bcc31462095e5cbe8bd39ccbe~mv2.png');background-size:cover;background-position:center;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(165deg,rgba(28,28,26,0.88) 0%,rgba(35,35,33,0.68) 55%,rgba(26,26,24,0.92) 100%);"></div>
+  <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
     <div class="text-eyebrow" style="margin-bottom:2rem;">About AREN</div>
     <h1 class="text-display" style="color:#fff;max-width:16ch;margin-bottom:2rem;">AREN isn't just apparel. AREN is a standard.</h1>
   </div>
@@ -21,7 +23,12 @@ ${marquee()}
       <div>
         <div class="text-eyebrow" style="margin-bottom:2rem;">About AREN</div>
         <h2 class="text-h2" style="max-width:18ch;margin-bottom:2.5rem;">AREN Athletic</h2>
-        <a href="/shop" class="btn btn--outline">Shop Apparel ${arrowRight()}</a>
+        <div style="position:relative;overflow:hidden;aspect-ratio:3/4;margin-top:2rem;">
+          <img src="https://static.wixstatic.com/media/8a3301_6f30f1e338ea44e584835c12d47a3452~mv2.png/v1/fill/w_600,h_800,al_c,q_85,enc_auto/8a3301_6f30f1e338ea44e584835c12d47a3452~mv2.png" alt="AREN Athletic" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="/shop" class="btn btn--outline">Shop Apparel ${arrowRight()}</a>
+        </div>
       </div>
       <div>
         <p class="text-body" style="margin-bottom:1.75rem;">AREN isn't just apparel. AREN is a standard.</p>
@@ -60,12 +67,15 @@ ${marquee()}
 <!-- WHAT AREN REPRESENTS -->
 <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
   <div class="container">
-    <div class="about-intro-inner">
-      <div>
-        <div class="text-eyebrow" style="margin-bottom:2rem;">What AREN Represents</div>
-        <h2 class="text-h2" style="max-width:18ch;">A performance identity.</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
+      <!-- Visual panel -->
+      <div style="position:relative;overflow:hidden;aspect-ratio:3/4;">
+        <img src="https://static.wixstatic.com/media/8a3301_b4d27b9f60bc470096a9b72a10aedd0f~mv2.png/v1/fill/w_800,h_1000,al_c,q_85,enc_auto/8a3301_b4d27b9f60bc470096a9b72a10aedd0f~mv2.png" alt="AREN Athletic — What AREN Represents" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(35,35,33,0.35) 0%,transparent 40%);"></div>
       </div>
       <div>
+        <div class="text-eyebrow" style="margin-bottom:2rem;">What AREN Represents</div>
+        <h2 class="text-h2" style="max-width:18ch;margin-bottom:1.75rem;">A performance identity.</h2>
         <p class="text-body" style="margin-bottom:1.25rem;">AREN is a performance identity.</p>
         <p class="text-body" style="margin-bottom:1.25rem;">Defined by discipline, presence, and execution.</p>
         <p class="text-body" style="margin-bottom:1.25rem;">Not a destination. A standard of conduct.</p>

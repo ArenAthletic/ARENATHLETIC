@@ -580,11 +580,21 @@ input {
 .hero-bg {
   position: absolute;
   inset: 0;
+  background-image: url('https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/fill/w_1920,h_1080,al_c,q_80,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
-    165deg,
-    #1c1c1a 0%,
-    #232321 45%,
-    #1a1a18 100%
+    160deg,
+    rgba(28,28,26,0.82) 0%,
+    rgba(35,35,33,0.72) 50%,
+    rgba(26,26,24,0.88) 100%
   );
 }
 

@@ -8,6 +8,8 @@ ${nav('home')}
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grain"></div>
+  <!-- Additional real image overlay for depth -->
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_467001e3abac4ab48b545f552ab81e4d~mv2.png/v1/fill/w_1920,h_1080,al_c,q_80,enc_auto/8a3301_467001e3abac4ab48b545f552ab81e4d~mv2.png');background-size:cover;background-position:center 30%;mix-blend-mode:overlay;opacity:0.18;pointer-events:none;"></div>
   <div class="hero-content container">
     <div class="hero-eyebrow">AREN ATHLETIC</div>
     <h1 class="hero-headline">Apparel built for training—and everything after.</h1>
@@ -131,7 +133,7 @@ ${marquee()}
 <section class="street-miles-section">
   <div class="container">
     <div class="street-miles-inner">
-      <div class="street-miles-visual">
+      <div class="street-miles-visual" style="background-image:url('https://static.wixstatic.com/media/8a3301_c61322c3c119438aa2a43d20aa318716~mv2.png/v1/fill/w_900,h_700,al_c,q_85,enc_auto/8a3301_c61322c3c119438aa2a43d20aa318716~mv2.png');background-size:cover;background-position:center;">
         <div class="street-miles-visual-inner">
           <div class="street-miles-visual-tag">SMNYC / FIVE BOROUGH CHAPTER</div>
           <div class="street-miles-visual-headline">Do the work.<br>Carry the weight.</div>

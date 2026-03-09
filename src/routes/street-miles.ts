@@ -6,8 +6,10 @@ ${head('Street Miles NYC', 'Street Miles NYC — Do the work. Carry the weight. 
 ${nav('street-miles')}
 
 <!-- SM HERO — EXACT LIVE SITE COPY -->
-<section class="sm-hero">
-  <div class="container">
+<section class="sm-hero" style="position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_c61322c3c119438aa2a43d20aa318716~mv2.png/v1/fill/w_1920,h_1080,al_c,q_80,enc_auto/8a3301_c61322c3c119438aa2a43d20aa318716~mv2.png');background-size:cover;background-position:center top;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(20,20,18,0.88) 0%,rgba(35,35,33,0.70) 55%,rgba(20,20,18,0.92) 100%);"></div>
+  <div class="container" style="position:relative;z-index:1;">
     <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2.5rem;">Street Miles NYC — SMNYC</div>
     <h1 class="sm-hero-tagline">
       DO THE WORK.<br>CARRY THE<br>WEIGHT.
@@ -33,8 +35,6 @@ ${marquee()}
         <h2 class="text-h2" style="max-width:20ch;margin-bottom:2rem;">
           Street Miles is the street-level expression of AREN's standards.
         </h2>
-      </div>
-      <div>
         <p class="text-body" style="margin-bottom:1.75rem;">
           Street Miles is the street-level expression of AREN's standards. This is a disciplined run culture built on shared accountability and urban grit.
         </p>
@@ -44,6 +44,10 @@ ${marquee()}
         <p class="text-body">
           This is not a casual run club; it is where standards become visible on the pavement and discipline is forged through repetition.
         </p>
+      </div>
+      <!-- Culture image -->
+      <div style="position:relative;overflow:hidden;aspect-ratio:4/5;">
+        <img src="https://static.wixstatic.com/media/8a3301_36877d37a58d4ecc87a5ea554596a7ea~mv2.jpg/v1/fill/w_800,h_1000,al_c,q_85,enc_auto/8a3301_36877d37a58d4ecc87a5ea554596a7ea~mv2.jpg" alt="Street Miles NYC — Running Culture" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
       </div>
     </div>
   </div>

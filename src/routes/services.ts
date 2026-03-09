@@ -6,8 +6,9 @@ ${head('Services', 'AREN ATHLETIC Services — Structured access. Every level. P
 ${nav('services')}
 
 <!-- PAGE HERO -->
-<section class="page-hero" style="padding-top:calc(68px + var(--space-xl));padding-bottom:var(--space-xl);border-bottom:1px solid var(--color-warm-gray);">
-  <div class="container">
+<section class="page-hero" style="position:relative;overflow:hidden;padding-top:calc(68px + var(--space-xl));padding-bottom:var(--space-xl);border-bottom:1px solid var(--color-warm-gray);">
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_91e8f4a7f0094002a4201f724b170fc8~mv2.png/v1/fill/w_1920,h_600,al_c,q_80,enc_auto/8a3301_91e8f4a7f0094002a4201f724b170fc8~mv2.png');background-size:cover;background-position:center;opacity:0.08;"></div>
+  <div class="container" style="position:relative;z-index:1;">
     <div class="text-eyebrow" style="margin-bottom:2rem;">Services</div>
     <h1 class="text-h1" style="max-width:20ch;margin-bottom:2rem;">
       Structured access.<br>Every level.
@@ -106,8 +107,9 @@ ${marquee()}
 </section>
 
 <!-- NATIONAL PERFORMANCE PLATFORM -->
-<section style="background:var(--color-black);padding:var(--space-xl) 0;">
-  <div class="container">
+<section style="background:var(--color-black);padding:var(--space-xl) 0;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_52aa0963b0c24749b2dc3db05648bcd2~mv2.png/v1/fill/w_1920,h_600,al_c,q_80,enc_auto/8a3301_52aa0963b0c24749b2dc3db05648bcd2~mv2.png');background-size:cover;background-position:center;opacity:0.12;"></div>
+  <div class="container" style="position:relative;z-index:1;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
       <div>
         <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;">National Performance Platform</div>
