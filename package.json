@@ -1,12 +1,16 @@
 {
-  "name": "webapp",
+  "name": "aren-athletic-export",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "wrangler pages dev",
-    "deploy": "npm run build && wrangler pages deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "preview": "wrangler pages dev dist --ip 0.0.0.0 --port 3000",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name webapp",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "dev:sandbox": "wrangler pages dev dist --ip 0.0.0.0 --port 3000",
+    "clean-port": "fuser -k 3000/tcp 2>/dev/null || true",
+    "start:pm2": "pm2 start ecosystem.config.cjs",
+    "test:local": "curl http://localhost:3000"
   },
   "dependencies": {
     "hono": "^4.12.5"
