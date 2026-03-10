@@ -412,13 +412,18 @@ input {
 }
 
 .nav-logo {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--color-black);
   transition: opacity var(--transition);
+}
+
+.nav-logo-image {
+  display: block;
+  width: 160px;
+  max-width: 100%;
+  height: auto;
 }
 
 .nav-logo:hover {
@@ -1124,12 +1129,21 @@ input {
 }
 
 .footer-brand-name {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--color-white);
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 1.5rem;
+}
+
+.footer-brand-link:hover {
+  opacity: 0.8;
+}
+
+.footer-logo-image {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  filter: invert(1);
 }
 
 .footer-brand-taglines {
@@ -1744,6 +1758,10 @@ input {
     --space-xxl: 8rem;
   }
 
+  .nav-logo-image {
+    width: 132px;
+  }
+
   .nav-links {
     display: none;
   }
@@ -1839,6 +1857,14 @@ input {
     --gutter: 1.25rem;
     --space-xl: 4rem;
     --space-xxl: 6rem;
+  }
+
+  .nav-logo-image {
+    width: 112px;
+  }
+
+  .footer-logo-image {
+    width: 150px;
   }
 
   .category-grid {

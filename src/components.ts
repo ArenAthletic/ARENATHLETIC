@@ -37,7 +37,9 @@ export const closingTags = () => `
 export const nav = (activePage: string = '') => `
 <nav class="nav" id="main-nav">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">AREN ATHLETIC</a>
+    <a href="/" class="nav-logo" aria-label="AREN Athletic home">
+      <img src="/static/aren-logo.png" alt="AREN Athletic" class="nav-logo-image" />
+    </a>
     
     <div class="nav-links">
       <a href="/" class="nav-link ${activePage === 'home' ? 'active' : ''}">Home</a>
@@ -80,7 +82,9 @@ export const footer = () => `
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-brand-name">AREN ATHLETIC</div>
+        <a href="/" class="footer-brand-name footer-brand-link" aria-label="AREN Athletic home">
+          <img src="/static/aren-logo.png" alt="AREN Athletic" class="footer-logo-image" />
+        </a>
         <div class="footer-brand-taglines">
           <span class="footer-brand-tagline">SMNYC: FIVE BOROUGH CHAPTER</span>
           <span class="footer-brand-tagline">DISCIPLINE AND PERFORMANCE.</span>
