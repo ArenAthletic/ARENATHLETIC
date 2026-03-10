@@ -131,7 +131,7 @@ ${marquee()}
 <section class="street-miles-section">
   <div class="container">
     <div class="street-miles-inner">
-      <div class="street-miles-visual" style="background-image:url('https://static.wixstatic.com/media/8a3301_c61322c3c119438aa2a43d20aa318716~mv2.png/v1/fill/w_900,h_700,al_c,q_85,enc_auto/8a3301_c61322c3c119438aa2a43d20aa318716~mv2.png');background-size:cover;background-position:center;">
+      <div class="street-miles-visual" style="background-image:url('https://static.wixstatic.com/media/8a3301_467001e3abac4ab48b545f552ab81e4d~mv2.png/v1/fill/w_900,h_700,al_c,q_90,enc_auto/8a3301_467001e3abac4ab48b545f552ab81e4d~mv2.png');background-size:cover;background-position:center;">
         <div class="street-miles-visual-inner">
           <div class="street-miles-visual-tag">SMNYC / FIVE BOROUGH CHAPTER</div>
           <div class="street-miles-visual-headline">Do the work.<br>Carry the weight.</div>
