@@ -7,7 +7,7 @@ ${nav('contact')}
 
 <!-- PAGE HERO — EXACT LIVE SITE COPY -->
 <section style="position:relative;padding-top:calc(68px + var(--space-xl));padding-bottom:var(--space-xl);border-bottom:1px solid var(--color-warm-gray);overflow:hidden;">
-  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_e8285cd97a0546bd863f906d96d2409f~mv2.png/v1/fill/w_1920,h_600,al_c,q_80,enc_auto/8a3301_e8285cd97a0546bd863f906d96d2409f~mv2.png');background-size:cover;background-position:center;opacity:0.06;"></div>
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_a50d3c308c3b4909b7726a0559353904~mv2.jpg/v1/crop/x_0,y_2549,w_3840,h_2057/fill/w_1920,h_600,al_c,q_90,enc_auto/8a3301_a50d3c308c3b4909b7726a0559353904~mv2.jpg');background-size:cover;background-position:center;opacity:0.08;"></div>
   <div class="container" style="position:relative;z-index:1;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:end;">
       <div>

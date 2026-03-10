@@ -6,7 +6,7 @@ ${head('About AREN', 'AREN ATHLETIC — AREN isn\'t just apparel. AREN is a stan
 ${nav('about')}
 
 <section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;">
-  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_9b70672bcc31462095e5cbe8bd39ccbe~mv2.png/v1/fill/w_1920,h_1080,al_c,q_80,enc_auto/8a3301_9b70672bcc31462095e5cbe8bd39ccbe~mv2.png');background-size:cover;background-position:center;"></div>
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/crop/x_0,y_2215,w_4284,h_1845/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png');background-size:cover;background-position:center;"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(165deg,rgba(28,28,26,0.88) 0%,rgba(35,35,33,0.68) 55%,rgba(26,26,24,0.92) 100%);"></div>
   <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
     <div class="text-eyebrow" style="margin-bottom:2rem;">About AREN</div>
@@ -24,7 +24,7 @@ ${marquee()}
         <div class="text-eyebrow" style="margin-bottom:2rem;">About AREN</div>
         <h2 class="text-h2" style="max-width:18ch;margin-bottom:2.5rem;">AREN Athletic</h2>
         <div style="position:relative;overflow:hidden;aspect-ratio:3/4;margin-top:2rem;">
-          <img src="https://static.wixstatic.com/media/8a3301_6f30f1e338ea44e584835c12d47a3452~mv2.png/v1/fill/w_600,h_800,al_c,q_85,enc_auto/8a3301_6f30f1e338ea44e584835c12d47a3452~mv2.png" alt="AREN Athletic" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
+          <img src="https://static.wixstatic.com/media/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png/v1/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png" alt="AREN Athletic" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
         </div>
         <div style="margin-top:2rem;">
           <a href="/shop" class="btn btn--outline">Shop Apparel ${arrowRight()}</a>
@@ -70,7 +70,7 @@ ${marquee()}
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
       <!-- Visual panel -->
       <div style="position:relative;overflow:hidden;aspect-ratio:3/4;">
-        <img src="https://static.wixstatic.com/media/8a3301_b4d27b9f60bc470096a9b72a10aedd0f~mv2.png/v1/fill/w_800,h_1000,al_c,q_85,enc_auto/8a3301_b4d27b9f60bc470096a9b72a10aedd0f~mv2.png" alt="AREN Athletic — What AREN Represents" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
+        <img src="https://static.wixstatic.com/media/8a3301_c4e9e55c79fa424d9097c68e0bbe2892~mv2.png/v1/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_c4e9e55c79fa424d9097c68e0bbe2892~mv2.png" alt="AREN Athletic — What AREN Represents" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(35,35,33,0.35) 0%,transparent 40%);"></div>
       </div>
       <div>

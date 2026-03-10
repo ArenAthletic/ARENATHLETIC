@@ -6,7 +6,7 @@ ${head('Training', 'AREN ATHLETIC — Built by Discipline. Proven by Action. Unc
 ${nav('training')}
 
 <section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:520px;display:flex;align-items:flex-end;">
-  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_b34c7842f2ee4961a0607531ffdcc869~mv2.png/v1/fill/w_1920,h_1080,al_c,q_80,enc_auto/8a3301_b34c7842f2ee4961a0607531ffdcc869~mv2.png');background-size:cover;background-position:center;"></div>
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/crop/x_0,y_558,w_4284,h_4295/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png');background-size:cover;background-position:center;"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(28,28,26,0.85) 0%,rgba(35,35,33,0.65) 60%,rgba(26,26,24,0.9) 100%);"></div>
   <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
     <div class="text-eyebrow" style="margin-bottom:2rem;">Aren Athletic &bull; Discipline</div>
@@ -53,7 +53,7 @@ ${marquee()}
       </div>
       <!-- Training image panel -->
       <div style="position:relative;overflow:hidden;aspect-ratio:3/4;min-height:400px;">
-        <img src="https://static.wixstatic.com/media/8a3301_f23a5b78e40a4d708c6c116fde95856e~mv2.jpg/v1/fill/w_800,h_1000,al_c,q_85,enc_auto/8a3301_f23a5b78e40a4d708c6c116fde95856e~mv2.jpg" alt="AREN Training" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
+        <img src="https://static.wixstatic.com/media/8a3301_b34c7842f2ee4961a0607531ffdcc869~mv2.png/v1/crop/x_0,y_1000,w_3024,h_3032/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_b34c7842f2ee4961a0607531ffdcc869~mv2.png" alt="AREN Training" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(35,35,33,0.4) 0%,transparent 50%);"></div>
       </div>
     </div>

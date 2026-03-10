@@ -7,7 +7,7 @@ ${nav('street-miles')}
 
 <!-- SM HERO — EXACT LIVE SITE COPY -->
 <section class="sm-hero" style="position:relative;overflow:hidden;">
-  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/fill/w_1920,h_1080,al_c,q_80,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png');background-size:cover;background-position:center top;"></div>
+  <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_dfd7f8236654470390a4357692431d22~mv2.png/v1/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_dfd7f8236654470390a4357692431d22~mv2.png');background-size:cover;background-position:center top;"></div>
   <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(20,20,18,0.88) 0%,rgba(35,35,33,0.70) 55%,rgba(20,20,18,0.92) 100%);"></div>
   <div class="container" style="position:relative;z-index:1;">
     <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2.5rem;">Street Miles NYC — SMNYC</div>
@@ -47,7 +47,7 @@ ${marquee()}
       </div>
       <!-- Culture image -->
       <div style="position:relative;overflow:hidden;aspect-ratio:4/5;">
-        <img src="https://static.wixstatic.com/media/8a3301_36877d37a58d4ecc87a5ea554596a7ea~mv2.jpg/v1/fill/w_800,h_1000,al_c,q_85,enc_auto/8a3301_36877d37a58d4ecc87a5ea554596a7ea~mv2.jpg" alt="Street Miles NYC — Running Culture" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
+        <img src="https://static.wixstatic.com/media/8a3301_8a94a47601dd469abbfc6e2cf79dd39a~mv2.png/v1/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_8a94a47601dd469abbfc6e2cf79dd39a~mv2.png" alt="Street Miles NYC — Running Culture" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
       </div>
     </div>
   </div>
