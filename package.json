@@ -10,7 +10,8 @@
     "dev:sandbox": "wrangler pages dev dist --ip 0.0.0.0 --port 3000",
     "clean-port": "fuser -k 3000/tcp 2>/dev/null || true",
     "start:pm2": "pm2 start ecosystem.config.cjs",
-    "test:local": "curl http://localhost:3000"
+    "test:local": "curl http://localhost:3000",
+    "export:html": "mkdir -p export-html/about export-html/training export-html/services export-html/street-miles export-html/shop export-html/contact && curl -s http://localhost:3000/ > export-html/index.html && curl -s http://localhost:3000/about > export-html/about/index.html && curl -s http://localhost:3000/training > export-html/training/index.html && curl -s http://localhost:3000/services > export-html/services/index.html && curl -s http://localhost:3000/street-miles > export-html/street-miles/index.html && curl -s http://localhost:3000/shop > export-html/shop/index.html && curl -s http://localhost:3000/contact > export-html/contact/index.html && cp -R public/static export-html/static"
   },
   "dependencies": {
     "hono": "^4.12.5"
