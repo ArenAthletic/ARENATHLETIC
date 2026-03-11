@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="{{ page_description | escape }}">
+    <title>{{ page_title }}{% if current_tags %} — {{ current_tags | join: ', ' }}{% endif %}{% if current_page != 1 %} — Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} — {{ shop.name }}{% endunless %}</title>
+
+    <link rel="preconnect" href="https://static.parastorage.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://static.parastorage.com/fonts/v2/3b3d672e-0986-43ae-b3bb-be1d200fa6b9/v1/tusker-grotesk-ultra-condensed.latin.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://static.parastorage.com/fonts/v2/29384c45-df1d-4d28-a0c3-3ed95c653ff4/v1/neue-haas-grotesk-display-pro.latin.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://static.parastorage.com/fonts/v2/53e2d229-a577-4be1-ab95-07687ab57be1/v1/neue-haas-grotesk-display-pro.latin.woff2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    {{ 'aren-theme.css' | asset_url | stylesheet_tag }}
+    <link rel="icon" href="{{ 'favicon.svg' | asset_url }}" type="image/svg+xml">
+    {{ content_for_header }}
+  </head>
+  <body>
+    {% render 'site-header' %}
+    <main id="MainContent" role="main">
+      {{ content_for_layout }}
+    </main>
+    {% render 'site-footer' %}
+    <script src="{{ 'aren-theme.js' | asset_url }}" defer></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <a href="{{ routes.root_url }}" class="nav-logo" aria-label="{{ shop.name }} home">
+      {% if settings.logo != blank %}
+        <img
+          src="{{ settings.logo | image_url: width: settings.logo_width }}"
+          alt="{{ shop.name | escape }}"
+          class="nav-logo-image"
+          style="width: {{ settings.logo_width }}px;"
+        >
+      {% else %}
+        <img src="{{ 'aren-logo.png' | asset_url }}" alt="{{ shop.name | escape }}" class="nav-logo-image">
+      {% endif %}
+    </a>
+
+    <div class="nav-links">
+      <a href="{{ routes.root_url }}" class="nav-link{% if request.page_type == 'index' %} active{% endif %}">Home</a>
+      <a href="/pages/about" class="nav-link{% if handle == 'about' %} active{% endif %}">About AREN</a>
+      <a href="/pages/training" class="nav-link{% if handle == 'training' %} active{% endif %}">Training</a>
+      <a href="/pages/services" class="nav-link{% if handle == 'services' %} active{% endif %}">Services</a>
+      <a href="/pages/street-miles" class="nav-link{% if handle == 'street-miles' %} active{% endif %}">Street Miles NYC</a>
+      <a href="{{ routes.all_products_collection_url }}" class="nav-link{% if request.page_type == 'collection' or request.page_type == 'product' %} active{% endif %}">Shop</a>
+      <a href="/pages/contact" class="nav-link{% if handle == 'contact' %} active{% endif %}">Contact / Join</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="{{ routes.account_login_url }}" class="nav-action-link">Log In</a>
+      <a href="{{ routes.all_products_collection_url }}" class="nav-cta">Shop Now</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <div class="nav-mobile-links">
+    <a href="{{ routes.root_url }}" class="nav-mobile-link">Home</a>
+    <a href="/pages/about" class="nav-mobile-link">About AREN</a>
+    <a href="/pages/training" class="nav-mobile-link">Training</a>
+    <a href="/pages/services" class="nav-mobile-link">Services</a>
+    <a href="/pages/street-miles" class="nav-mobile-link">Street Miles NYC</a>
+    <a href="{{ routes.all_products_collection_url }}" class="nav-mobile-link">Shop</a>
+    <a href="/pages/contact" class="nav-mobile-link">Contact / Join</a>
+    <a href="{{ routes.account_login_url }}" class="nav-mobile-link">Log In</a>
+  </div>
+</div>

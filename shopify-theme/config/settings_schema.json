@@ -1,0 +1,30 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "AREN Athletic Shopify Theme",
+    "theme_version": "1.0.0",
+    "theme_author": "OpenAI",
+    "theme_documentation_url": "https://github.com/ArenAthletic/AREN-Athletic-Rebuild",
+    "theme_support_url": "https://github.com/ArenAthletic/AREN-Athletic-Rebuild"
+  },
+  {
+    "name": "Brand",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "min": 80,
+        "max": 240,
+        "step": 4,
+        "unit": "px",
+        "label": "Logo width",
+        "default": 160
+      }
+    ]
+  }
+]
