@@ -1,0 +1,47 @@
+<section class="section" style="padding-top:calc(68px + var(--space-lg));">
+  <div class="container container--narrow">
+    <div class="text-eyebrow mb-sm">Customer Access</div>
+    <h1 class="text-h2" style="margin-bottom:2rem;">Log In</h1>
+
+    {% form 'customer_login' %}
+      <div class="contact-form">
+        <div class="form-group">
+          <label class="form-label" for="CustomerEmail">Email</label>
+          <input class="form-input" type="email" name="customer[email]" id="CustomerEmail" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="CustomerPassword">Password</label>
+          <input class="form-input" type="password" name="customer[password]" id="CustomerPassword" autocomplete="current-password">
+        </div>
+        <button class="btn btn--primary" type="submit">Log in</button>
+      </div>
+      {{ form.errors | default_errors }}
+    {% endform %}
+
+    <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="{{ routes.account_register_url }}" class="btn btn--outline">Create account</a>
+      <a href="{{ routes.account_login_url }}#recover" class="btn btn--outline">Forgot password</a>
+    </div>
+
+    <div id="recover" style="margin-top:3rem;">
+      <div class="text-eyebrow mb-sm">Password Recovery</div>
+      {% form 'recover_customer_password' %}
+        <div class="contact-form">
+          <div class="form-group">
+            <label class="form-label" for="RecoverEmail">Email</label>
+            <input class="form-input" type="email" name="email" id="RecoverEmail" autocomplete="email">
+          </div>
+          <button class="btn btn--primary" type="submit">Send reset link</button>
+        </div>
+        {{ form.errors | default_errors }}
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main customers login",
+  "settings": []
+}
+{% endschema %}

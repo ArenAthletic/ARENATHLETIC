@@ -160,14 +160,18 @@
         <p class="signup-copy">Drops, restocks, and community updates—sent when it matters.</p>
       </div>
       <div class="signup-right">
-        <form class="signup-form" onsubmit="handleSignup(event)">
+        {% form 'customer', class: 'signup-form' %}
+          <input type="hidden" name="contact[tags]" value="newsletter">
           <div class="signup-form-row">
-            <input type="email" class="signup-input" placeholder="Email address" required id="signup-email">
+            <input type="email" class="signup-input" placeholder="Email address" required id="signup-email" name="contact[email]">
             <button type="submit" class="signup-btn">Join</button>
           </div>
           <p class="signup-disclaimer">No spam. Unsubscribe any time.</p>
-          <div id="signup-success" style="display:none;" class="text-eyebrow">You're on the list.</div>
-        </form>
+          {% if form.posted_successfully? %}
+            <div id="signup-success" style="display:block;" class="text-eyebrow">You're on the list.</div>
+          {% endif %}
+          {{ form.errors | default_errors }}
+        {% endform %}
       </div>
     </div>
   </div>

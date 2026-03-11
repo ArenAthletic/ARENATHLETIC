@@ -24,6 +24,27 @@
         "unit": "px",
         "label": "Logo width",
         "default": 160
+      },
+      {
+        "type": "text",
+        "id": "email_address",
+        "label": "Email address",
+        "default": "info@arenathletic.com"
+      },
+      {
+        "type": "text",
+        "id": "instagram_url",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "text",
+        "id": "twitter_url",
+        "label": "Twitter/X URL"
+      },
+      {
+        "type": "text",
+        "id": "youtube_url",
+        "label": "YouTube URL"
       }
     ]
   }

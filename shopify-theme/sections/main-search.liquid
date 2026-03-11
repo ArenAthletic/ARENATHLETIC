@@ -1,0 +1,44 @@
+<section class="section" style="padding-top:calc(68px + var(--space-lg));">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="text-eyebrow mb-sm">Search</div>
+        <h1 class="text-h2">Find the standard</h1>
+      </div>
+    </div>
+
+    <form action="{{ routes.search_url }}" method="get" role="search" style="margin-bottom:2rem;max-width:760px;">
+      <div class="signup-form-row">
+        <input class="signup-input" type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search products, pages, articles">
+        <button class="signup-btn" type="submit">Search</button>
+      </div>
+    </form>
+
+    {% if search.performed %}
+      <div class="text-eyebrow" style="margin-bottom:1.5rem;">{{ search.results_count }} results</div>
+      <div class="shop-product-grid">
+        {% for item in search.results %}
+          {% if item.object_type == 'product' %}
+            {% render 'product-card', card_product: item %}
+          {% else %}
+            <a href="{{ item.url }}" class="product-card" style="text-decoration:none;color:inherit;">
+              <div class="product-image" style="background:#ece3cf;"></div>
+              <div class="product-name">{{ item.title }}</div>
+              <div class="product-desc">{{ item.object_type }}</div>
+              <div class="product-price">Open</div>
+            </a>
+          {% endif %}
+        {% else %}
+          <p class="text-body">No results found.</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main search",
+  "settings": []
+}
+{% endschema %}
