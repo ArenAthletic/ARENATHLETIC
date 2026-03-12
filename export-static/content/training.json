@@ -1,0 +1,30 @@
+{
+  "title": "Training",
+  "intro": "Performance-driven coaching built around discipline, presence, and consistency.",
+  "programs": [
+    {
+      "name": "Private Coaching",
+      "description": "One-on-one coaching focused on strength, conditioning, and performance development.",
+      "cta": "Learn More",
+      "link": "/training/private"
+    },
+    {
+      "name": "Semi-Private Training",
+      "description": "Small group performance training with individualized attention.",
+      "cta": "View Program",
+      "link": "/training/semi-private"
+    },
+    {
+      "name": "Run Performance",
+      "description": "Programming designed for endurance athletes, runners, and marathon preparation.",
+      "cta": "Explore Running",
+      "link": "/training/run"
+    },
+    {
+      "name": "HIIT Sessions",
+      "description": "High-energy sessions focused on conditioning, power, and total body performance.",
+      "cta": "Join Session",
+      "link": "/training/hiit"
+    }
+  ]
+}
