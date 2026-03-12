@@ -1,0 +1,11 @@
+paths:
+  static: ''
+  uploads: uploads
+timezone: America/New_York
+markdown:
+  engine: commonmark
+  options: {}
+collections_config:
+  export_static_content:
+    path: export-static/content
+    icon: expand_content
