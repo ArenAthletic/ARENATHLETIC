@@ -1,0 +1,52 @@
+{
+  "brand": {
+    "name": "AREN Athletic",
+    "tagline": "Discipline. Presence. Consistency.",
+    "description": "Performance-driven training, community, and apparel built for athletes who pursue excellence daily.",
+    "logo": "/static/images/aren-logo.svg"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "link": "/"
+    },
+    {
+      "label": "Training",
+      "link": "/training"
+    },
+    {
+      "label": "Street Miles",
+      "link": "/street-miles"
+    },
+    {
+      "label": "Shop",
+      "link": "/shop"
+    },
+    {
+      "label": "About",
+      "link": "/about"
+    }
+  ],
+  "footer": {
+    "copyright": "© AREN Athletic",
+    "links": [
+      {
+        "label": "Privacy",
+        "link": "/privacy"
+      },
+      {
+        "label": "Terms",
+        "link": "/terms"
+      }
+    ]
+  },
+  "social": {
+    "instagram": "https://instagram.com/arenathletic",
+    "strava": "https://strava.com/clubs/streetmiles",
+    "email": "info@arenathletic.com"
+  },
+  "contact": {
+    "city": "New York",
+    "email": "info@arenathletic.com"
+  }
+}
