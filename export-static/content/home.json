@@ -1,5 +1,32 @@
 {
-  "heroTitle": "AREN Athletic",
-  "heroSubtitle": "Discipline. Presence. Consistency.",
-  "heroButton": "Explore Training"
+  "hero": {
+    "title": "AREN Athletic",
+    "subtitle": "Discipline. Presence. Consistency.",
+    "description": "Performance-driven training, community, and apparel built for those who pursue excellence daily.",
+    "primaryButton": {
+      "text": "Explore Training",
+      "link": "/training"
+    },
+    "secondaryButton": {
+      "text": "Shop Apparel",
+      "link": "/shop"
+    }
+  },
+  "sections": [
+    {
+      "title": "Training",
+      "description": "Structured performance training designed for athletes who want to improve strength, endurance, and discipline.",
+      "link": "/training"
+    },
+    {
+      "title": "Street Miles",
+      "description": "A run community built around consistency, accountability, and the shared pursuit of progress.",
+      "link": "/street-miles"
+    },
+    {
+      "title": "Apparel",
+      "description": "Minimal, performance-driven apparel designed to represent discipline in motion.",
+      "link": "/shop"
+    }
+  ]
 }
