@@ -1,0 +1,9 @@
+content:
+  - label: "My Pages"
+    type: collection
+    path: "**.html" # This finds all HTML files in your project
+    format: html
+    fields:
+      - name: body
+        label: "Page Content"
+        type: rich-text
