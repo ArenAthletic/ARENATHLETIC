@@ -8,6 +8,31 @@
   assign privacy_url = pages['privacy'].url | default: '/pages/privacy'
   assign terms_url = pages['terms'].url | default: '/pages/terms'
   assign shop_url = pages['shop'].url | default: '/pages/shop'
+
+  if section.settings.about_page != blank
+    assign about_url = section.settings.about_page.url
+  endif
+  if section.settings.training_page != blank
+    assign training_url = section.settings.training_page.url
+  endif
+  if section.settings.services_page != blank
+    assign services_url = section.settings.services_page.url
+  endif
+  if section.settings.street_miles_page != blank
+    assign street_miles_url = section.settings.street_miles_page.url
+  endif
+  if section.settings.contact_page != blank
+    assign contact_url = section.settings.contact_page.url
+  endif
+  if section.settings.privacy_page != blank
+    assign privacy_url = section.settings.privacy_page.url
+  endif
+  if section.settings.terms_page != blank
+    assign terms_url = section.settings.terms_page.url
+  endif
+  if section.settings.shop_page != blank
+    assign shop_url = section.settings.shop_page.url
+  endif
 %}
 
 {% if page_handle == 'about' %}
@@ -250,19 +275,21 @@
 {% elsif page_handle == 'shop' %}
   <section style="padding-top:calc(68px + var(--space-lg));padding-bottom:var(--space-lg);border-bottom:1px solid var(--color-warm-gray);">
     <div class="container">
-      <h1 style="font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5.5rem);font-weight:700;letter-spacing:-0.01em;line-height:0.95;text-transform:uppercase;margin-bottom:1.5rem;">COMPOSURE UNDER PRESSURE.</h1>
-      <p class="text-body" style="max-width:52ch;">Performance-informed apparel built for daily standards, not trends.</p>
+      <h1 style="font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5.5rem);font-weight:700;letter-spacing:-0.01em;line-height:0.95;text-transform:uppercase;margin-bottom:1.5rem;">{{ section.settings.shop_hero_heading }}</h1>
+      <p class="text-body" style="max-width:52ch;">{{ section.settings.shop_hero_copy }}</p>
     </div>
   </section>
 
   <section style="padding:3rem 0;border-bottom:1px solid var(--color-warm-gray);">
     <div class="container">
-      <div class="text-eyebrow" style="text-align:center;margin-bottom:2rem;">Design Philosophy</div>
-      <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:700;letter-spacing:-0.01em;text-transform:uppercase;line-height:0.95;text-align:center;margin-bottom:3rem;">FUNCTION. RESTRAINT. DURABILITY.</h2>
+      <div class="text-eyebrow" style="text-align:center;margin-bottom:2rem;">{{ section.settings.shop_design_eyebrow }}</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:700;letter-spacing:-0.01em;text-transform:uppercase;line-height:0.95;text-align:center;margin-bottom:3rem;">{{ section.settings.shop_design_heading }}</h2>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--color-warm-gray);">
-        <div style="padding:2.5rem 2rem;border-right:1px solid var(--color-warm-gray);"><div class="text-eyebrow" style="margin-bottom:0.75rem;">Training</div><p class="text-body-sm">Engineered for high-output training environments.</p></div>
-        <div style="padding:2.5rem 2rem;border-right:1px solid var(--color-warm-gray);"><div class="text-eyebrow" style="margin-bottom:0.75rem;">Daily Wear</div><p class="text-body-sm">Structured comfort for transition and recovery days.</p></div>
-        <div style="padding:2.5rem 2rem;"><div class="text-eyebrow" style="margin-bottom:0.75rem;">Outer Layers</div><p class="text-body-sm">Technical protection for environmental defense.</p></div>
+        {% for block in section.blocks %}
+          {% if block.type == 'shop_pillar' %}
+            <div style="padding:2.5rem 2rem;{% unless forloop.last %}border-right:1px solid var(--color-warm-gray);{% endunless %}" {{ block.shopify_attributes }}><div class="text-eyebrow" style="margin-bottom:0.75rem;">{{ block.settings.title }}</div><p class="text-body-sm">{{ block.settings.description }}</p></div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -270,11 +297,11 @@
   <div class="shop-filter-bar">
     <div class="container">
       <div class="shop-filters">
-        <span class="shop-filter active" data-filter="all">Shop System</span>
-        <span class="shop-filter" data-filter="new">New Arrivals</span>
-        <span class="shop-filter" data-filter="core">Core Essentials</span>
-        <span class="shop-filter" data-filter="outerwear">Outerwear</span>
-        <span class="shop-filter" data-filter="accessories">Accessories</span>
+        {% for block in section.blocks %}
+          {% if block.type == 'shop_filter' %}
+            <span class="shop-filter{% if block.settings.active %} active{% endif %}" data-filter="{{ block.settings.filter_key }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</span>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -282,14 +309,17 @@
   <section class="shop-grid">
     <div class="container">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid var(--color-warm-gray);">
-        <div class="text-eyebrow">All Pieces</div>
-        <div class="text-eyebrow" style="color:var(--color-black);">Current Collection</div>
+        <div class="text-eyebrow">{{ section.settings.shop_grid_eyebrow_left }}</div>
+        <div class="text-eyebrow" style="color:var(--color-black);">{{ section.settings.shop_grid_eyebrow_right }}</div>
       </div>
 
-      {% assign shop_collection = collections['all'] %}
+      {% assign shop_collection = section.settings.shop_collection %}
+      {% if shop_collection == blank %}
+        {% assign shop_collection = collections['all'] %}
+      {% endif %}
       <div class="shop-product-grid">
         {% if shop_collection and shop_collection.products_count > 0 %}
-          {% for product in shop_collection.products %}
+          {% for product in shop_collection.products limit: section.settings.shop_products_limit %}
             <a href="{{ product.url }}" class="product-card" style="text-decoration:none;color:inherit;">
               <div class="product-image" style="background:#f2efe9;">
                 {% if product.featured_image %}
@@ -307,14 +337,20 @@
             </a>
           {% endfor %}
         {% else %}
-          <a href="#" class="product-card" style="text-decoration:none;color:inherit;">
-            <div class="product-image" style="background:#1e1e1c;">
-              <img class="product-img" src="{{ 'e8285cd9.jpg' | asset_url }}" alt="AREN Athletic apparel preview" loading="lazy">
-            </div>
-            <div class="product-name">Add Shopify products</div>
-            <div class="product-desc">This shop page is ready for your real catalog.</div>
-            <div class="product-price">Theme Ready</div>
-          </a>
+          {% for block in section.blocks %}
+            {% if block.type == 'shop_fallback_card' %}
+              <a href="{{ shop_url }}" class="product-card" style="text-decoration:none;color:inherit;" {{ block.shopify_attributes }}>
+                <div class="product-image" style="background:{{ block.settings.background_color }};">
+                  {% if block.settings.image != blank %}
+                    <img class="product-img" src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.image.alt | default: block.settings.title | escape }}" loading="lazy">
+                  {% endif %}
+                </div>
+                <div class="product-name">{{ block.settings.title }}</div>
+                <div class="product-desc">{{ block.settings.description }}</div>
+                <div class="product-price">{{ block.settings.cta_label }}</div>
+              </a>
+            {% endif %}
+          {% endfor %}
         {% endif %}
       </div>
     </div>
@@ -324,18 +360,20 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
         <div>
-          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;">Why AREN Apparel</div>
-          <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:700;color:#fff;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;margin-bottom:1.75rem;">NOT STREETWEAR.<br>A SYSTEM.</h2>
-          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:1.5rem;">AREN apparel exists as an extension of the athlete's standard.</p>
-          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:1.5rem;">Not driven by seasonal trends or streetwear cycles, but by discipline, restraint, and functional precision.</p>
-          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:1.5rem;">Every piece is designed to hold up under training and carry that same standard into the rest of life.</p>
-          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:2rem;">This is not clothing for spectators.</p>
-          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.65);max-width:44ch;font-weight:500;">It's equipment for people who operate.</p>
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;">{{ section.settings.shop_bottom_eyebrow }}</div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:700;color:#fff;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;margin-bottom:1.75rem;">{{ section.settings.shop_bottom_heading }}</h2>
+          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:1.5rem;">{{ section.settings.shop_bottom_paragraph_1 }}</p>
+          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:1.5rem;">{{ section.settings.shop_bottom_paragraph_2 }}</p>
+          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:1.5rem;">{{ section.settings.shop_bottom_paragraph_3 }}</p>
+          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:2rem;">{{ section.settings.shop_bottom_paragraph_4 }}</p>
+          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.65);max-width:44ch;font-weight:500;">{{ section.settings.shop_bottom_paragraph_5 }}</p>
         </div>
         <div style="border-left:1px solid rgba(255,255,255,0.08);padding-left:var(--space-xl);">
-          <div style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.08);"><div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:0.75rem;">Shipping</div><p style="font-size:0.875rem;color:rgba(255,255,255,0.5);">Shipping nationwide on all orders.</p></div>
-          <div style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.08);"><div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:0.75rem;">Quality Standard</div><p style="font-size:0.875rem;color:rgba(255,255,255,0.5);">Built to last. Every piece carries the AREN standard.</p></div>
-          <div><div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:0.75rem;">Returns</div><p style="font-size:0.875rem;color:rgba(255,255,255,0.5);">30-day return policy on unworn items.</p></div>
+          {% for block in section.blocks %}
+            {% if block.type == 'shop_info' %}
+              <div style="margin-bottom:2rem;padding-bottom:2rem;{% unless forloop.last %}border-bottom:1px solid rgba(255,255,255,0.08);{% endunless %}" {{ block.shopify_attributes }}><div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:0.75rem;">{{ block.settings.title }}</div><p style="font-size:0.875rem;color:rgba(255,255,255,0.5);">{{ block.settings.description }}</p></div>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -554,6 +592,92 @@
 {% schema %}
 {
   "name": "Main page",
-  "settings": []
+  "settings": [
+    { "type": "page", "id": "about_page", "label": "About page" },
+    { "type": "page", "id": "training_page", "label": "Training page" },
+    { "type": "page", "id": "services_page", "label": "Services page" },
+    { "type": "page", "id": "street_miles_page", "label": "Street Miles page" },
+    { "type": "page", "id": "contact_page", "label": "Contact page" },
+    { "type": "page", "id": "privacy_page", "label": "Privacy page" },
+    { "type": "page", "id": "terms_page", "label": "Terms page" },
+    { "type": "page", "id": "shop_page", "label": "Shop page" },
+    { "type": "header", "content": "Shop page editor settings" },
+    { "type": "text", "id": "shop_hero_heading", "label": "Shop hero heading", "default": "COMPOSURE UNDER PRESSURE." },
+    { "type": "textarea", "id": "shop_hero_copy", "label": "Shop hero copy", "default": "Performance-informed apparel built for daily standards, not trends." },
+    { "type": "text", "id": "shop_design_eyebrow", "label": "Shop design eyebrow", "default": "Design Philosophy" },
+    { "type": "text", "id": "shop_design_heading", "label": "Shop design heading", "default": "FUNCTION. RESTRAINT. DURABILITY." },
+    { "type": "text", "id": "shop_grid_eyebrow_left", "label": "Shop grid left label", "default": "All Pieces" },
+    { "type": "text", "id": "shop_grid_eyebrow_right", "label": "Shop grid right label", "default": "Current Collection" },
+    { "type": "collection", "id": "shop_collection", "label": "Shop collection" },
+    { "type": "range", "id": "shop_products_limit", "label": "Shop products limit", "min": 4, "max": 24, "step": 1, "default": 12 },
+    { "type": "text", "id": "shop_bottom_eyebrow", "label": "Shop bottom eyebrow", "default": "Why AREN Apparel" },
+    { "type": "text", "id": "shop_bottom_heading", "label": "Shop bottom heading", "default": "NOT STREETWEAR.<br>A SYSTEM." },
+    { "type": "textarea", "id": "shop_bottom_paragraph_1", "label": "Shop bottom paragraph 1", "default": "AREN apparel exists as an extension of the athlete's standard." },
+    { "type": "textarea", "id": "shop_bottom_paragraph_2", "label": "Shop bottom paragraph 2", "default": "Not driven by seasonal trends or streetwear cycles, but by discipline, restraint, and functional precision." },
+    { "type": "textarea", "id": "shop_bottom_paragraph_3", "label": "Shop bottom paragraph 3", "default": "Every piece is designed to hold up under training and carry that same standard into the rest of life." },
+    { "type": "textarea", "id": "shop_bottom_paragraph_4", "label": "Shop bottom paragraph 4", "default": "This is not clothing for spectators." },
+    { "type": "textarea", "id": "shop_bottom_paragraph_5", "label": "Shop bottom paragraph 5", "default": "It's equipment for people who operate." }
+  ],
+  "blocks": [
+    {
+      "type": "shop_pillar",
+      "name": "Shop design pillar",
+      "limit": 6,
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Training" },
+        { "type": "text", "id": "description", "label": "Description", "default": "Engineered for high-output training environments." }
+      ]
+    },
+    {
+      "type": "shop_filter",
+      "name": "Shop filter label",
+      "limit": 8,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Shop System" },
+        { "type": "text", "id": "filter_key", "label": "Filter key", "default": "all" },
+        { "type": "checkbox", "id": "active", "label": "Active by default", "default": false }
+      ]
+    },
+    {
+      "type": "shop_fallback_card",
+      "name": "Shop fallback card",
+      "limit": 8,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Add Shopify products" },
+        { "type": "text", "id": "description", "label": "Description", "default": "This shop page is ready for your real catalog." },
+        { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Theme Ready" },
+        { "type": "text", "id": "background_color", "label": "Background color", "default": "#1e1e1c" }
+      ]
+    },
+    {
+      "type": "shop_info",
+      "name": "Shop info item",
+      "limit": 6,
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Shipping" },
+        { "type": "text", "id": "description", "label": "Description", "default": "Shipping nationwide on all orders." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main page",
+      "blocks": [
+        { "type": "shop_pillar", "settings": { "title": "Training", "description": "Engineered for high-output training environments." } },
+        { "type": "shop_pillar", "settings": { "title": "Daily Wear", "description": "Structured comfort for transition and recovery days." } },
+        { "type": "shop_pillar", "settings": { "title": "Outer Layers", "description": "Technical protection for environmental defense." } },
+        { "type": "shop_filter", "settings": { "label": "Shop System", "filter_key": "all", "active": true } },
+        { "type": "shop_filter", "settings": { "label": "New Arrivals", "filter_key": "new" } },
+        { "type": "shop_filter", "settings": { "label": "Core Essentials", "filter_key": "core" } },
+        { "type": "shop_filter", "settings": { "label": "Outerwear", "filter_key": "outerwear" } },
+        { "type": "shop_filter", "settings": { "label": "Accessories", "filter_key": "accessories" } },
+        { "type": "shop_fallback_card", "settings": { "title": "Add Shopify products", "description": "This shop page is ready for your real catalog.", "cta_label": "Theme Ready", "background_color": "#1e1e1c" } },
+        { "type": "shop_info", "settings": { "title": "Shipping", "description": "Shipping nationwide on all orders." } },
+        { "type": "shop_info", "settings": { "title": "Quality Standard", "description": "Built to last. Every piece carries the AREN standard." } },
+        { "type": "shop_info", "settings": { "title": "Returns", "description": "30-day return policy on unworn items." } }
+      ]
+    }
+  ]
 }
 {% endschema %}
