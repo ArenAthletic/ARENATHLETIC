@@ -84,6 +84,7 @@
   <section class="section" id="protocol" style="border-top:1px solid var(--color-warm-gray);border-bottom:1px solid var(--color-warm-gray);">
     <div class="container">
       <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_protocol_eyebrow">{{ section.settings.street_miles_protocol_eyebrow }}</span></div>
+      <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_protocol_heading">{{ section.settings.street_miles_protocol_heading }}</span></h2>
       <div class="services-list" style="border-top:none;">
         {% for block in section.blocks %}
           {% if block.type == 'street_protocol' %}
@@ -185,6 +186,7 @@
     { "type": "textarea", "id": "street_miles_culture_copy_3", "label": "Street Miles culture copy 3", "default": "This is not a casual run club; it is where standards become visible on the pavement and discipline is forged through repetition." },
     { "type": "image_picker", "id": "street_miles_culture_image", "label": "Street Miles culture image" },
     { "type": "text", "id": "street_miles_protocol_eyebrow", "label": "Street Miles protocol eyebrow", "default": "Structure" },
+    { "type": "text", "id": "street_miles_protocol_heading", "label": "Street Miles protocol heading", "default": "The operating standard for every session." },
     { "type": "text", "id": "street_miles_chapter_eyebrow", "label": "Street Miles chapter eyebrow", "default": "Chapters: Street Miles NYC" },
     { "type": "text", "id": "street_miles_chapter_heading", "label": "Street Miles chapter heading", "default": "The Five Borough Chapter" },
     { "type": "textarea", "id": "street_miles_chapter_copy_1", "label": "Street Miles chapter copy 1", "default": "The Street Miles ecosystem is engineered for modular expansion. NYC provides the street-level proof of concept, establishing the standard of discipline and collective accountability." },
