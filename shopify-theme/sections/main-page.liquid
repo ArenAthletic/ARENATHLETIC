@@ -47,12 +47,13 @@
 %}
 
 {% if page_handle == 'about' %}
+  <div class="page-editor-surface page-editor-surface--about" data-page-handle="about" {{ section.shopify_attributes }}>
   <section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;">
     <div style="position:absolute;inset:0;{% if about_hero_image != blank %}background-image:url('{{ about_hero_image | image_url: width: 2000 }}');{% else %}background-image:url('https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/crop/x_0,y_2215,w_4284,h_1845/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png');{% endif %}background-size:cover;background-position:center;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(165deg,rgba(28,28,26,0.88) 0%,rgba(35,35,33,0.68) 55%,rgba(26,26,24,0.92) 100%);"></div>
     <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
-      <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.about_hero_eyebrow }}</div>
-      <h1 class="text-display" style="color:#fff;max-width:16ch;margin-bottom:2rem;">{{ section.settings.about_hero_heading }}</h1>
+      <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="about_hero_eyebrow">{{ section.settings.about_hero_eyebrow }}</span></div>
+      <h1 class="text-display" style="color:#fff;max-width:16ch;margin-bottom:2rem;"><span data-shopify-editor-setting="about_hero_heading">{{ section.settings.about_hero_heading }}</span></h1>
     </div>
   </section>
 
@@ -62,8 +63,8 @@
     <div class="container">
       <div class="about-intro-inner">
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.about_intro_eyebrow }}</div>
-          <h2 class="text-h2" style="max-width:18ch;margin-bottom:2.5rem;">{{ section.settings.about_intro_heading }}</h2>
+          <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="about_intro_eyebrow">{{ section.settings.about_intro_eyebrow }}</span></div>
+          <h2 class="text-h2" style="max-width:18ch;margin-bottom:2.5rem;"><span data-shopify-editor-setting="about_intro_heading">{{ section.settings.about_intro_heading }}</span></h2>
           <div style="position:relative;overflow:hidden;aspect-ratio:3/4;margin-top:2rem;">
             {% if about_intro_image != blank %}
               <img src="{{ about_intro_image | image_url: width: 1200 }}" alt="{{ about_intro_image.alt | default: 'AREN Athletic' | escape }}" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy">
@@ -71,10 +72,10 @@
               <img src="https://static.wixstatic.com/media/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png/v1/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png" alt="AREN Athletic" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy">
             {% endif %}
           </div>
-          <div style="margin-top:2rem;"><a href="{{ shop_url }}" class="btn btn--outline">{{ section.settings.about_intro_button_label }}</a></div>
+          <div style="margin-top:2rem;"><a href="{{ shop_url }}" class="btn btn--outline"><span data-shopify-editor-setting="about_intro_button_label">{{ section.settings.about_intro_button_label }}</span></a></div>
         </div>
         <div>
-          <div class="text-body rte">{{ section.settings.about_intro_richtext }}</div>
+          <div class="text-body rte"><span data-shopify-editor-setting="about_intro_richtext">{{ section.settings.about_intro_richtext }}</span></div>
         </div>
       </div>
     </div>
@@ -82,8 +83,8 @@
 
   <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
     <div class="container container--narrow">
-      <div class="text-body rte">{{ section.settings.about_body_richtext }}</div>
-      <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-mid-gray);">{{ section.settings.about_body_kicker }}</p>
+      <div class="text-body rte"><span data-shopify-editor-setting="about_body_richtext">{{ section.settings.about_body_richtext }}</span></div>
+      <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-mid-gray);"><span data-shopify-editor-setting="about_body_kicker">{{ section.settings.about_body_kicker }}</span></p>
     </div>
   </section>
 
@@ -99,9 +100,9 @@
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(35,35,33,0.35) 0%,transparent 40%);"></div>
         </div>
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.about_identity_eyebrow }}</div>
-          <h2 class="text-h2" style="max-width:18ch;margin-bottom:1.75rem;">{{ section.settings.about_identity_heading }}</h2>
-          <div class="text-body rte">{{ section.settings.about_identity_richtext }}</div>
+          <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="about_identity_eyebrow">{{ section.settings.about_identity_eyebrow }}</span></div>
+          <h2 class="text-h2" style="max-width:18ch;margin-bottom:1.75rem;"><span data-shopify-editor-setting="about_identity_heading">{{ section.settings.about_identity_heading }}</span></h2>
+          <div class="text-body rte"><span data-shopify-editor-setting="about_identity_richtext">{{ section.settings.about_identity_richtext }}</span></div>
         </div>
       </div>
     </div>
@@ -111,10 +112,10 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
         <div>
-          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;">{{ section.settings.about_values_eyebrow }}</div>
-          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.8rem);font-weight:700;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;color:#fff;margin-bottom:2rem;">{{ section.settings.about_values_heading }}</h2>
-          <div class="rte" style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:46ch;">{{ section.settings.about_values_richtext }}</div>
-          <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);">{{ section.settings.about_values_kicker }}</p>
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;"><span data-shopify-editor-setting="about_values_eyebrow">{{ section.settings.about_values_eyebrow }}</span></div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.8rem);font-weight:700;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;color:#fff;margin-bottom:2rem;"><span data-shopify-editor-setting="about_values_heading">{{ section.settings.about_values_heading }}</span></h2>
+          <div class="rte" style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:46ch;"><span data-shopify-editor-setting="about_values_richtext">{{ section.settings.about_values_richtext }}</span></div>
+          <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);"><span data-shopify-editor-setting="about_values_kicker">{{ section.settings.about_values_kicker }}</span></p>
         </div>
         <div style="display:flex;flex-direction:column;gap:2rem;padding-left:var(--space-lg);border-left:1px solid rgba(255,255,255,0.08);">
           {% for block in section.blocks %}
@@ -132,7 +133,7 @@
 
   <div style="background:var(--color-black);padding:1rem 0;border-top:1px solid rgba(255,255,255,0.06);overflow:hidden;white-space:nowrap;">
     <div style="display:inline-flex;animation:marquee 20s linear infinite;">
-      <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 2rem;">{{ section.settings.about_footer_marquee_text }}</span>
+      <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 2rem;"><span data-shopify-editor-setting="about_footer_marquee_text">{{ section.settings.about_footer_marquee_text }}</span></span>
       <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 2rem;">{{ section.settings.about_footer_marquee_text }}</span>
     </div>
   </div>
@@ -141,14 +142,14 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.about_cta_eyebrow }}</div>
-          <h2 class="text-h2" style="max-width:22ch;margin-bottom:1.75rem;">{{ section.settings.about_cta_heading }}</h2>
-          <p class="text-body" style="max-width:46ch;">{{ section.settings.about_cta_copy }}</p>
+          <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="about_cta_eyebrow">{{ section.settings.about_cta_eyebrow }}</span></div>
+          <h2 class="text-h2" style="max-width:22ch;margin-bottom:1.75rem;"><span data-shopify-editor-setting="about_cta_heading">{{ section.settings.about_cta_heading }}</span></h2>
+          <p class="text-body" style="max-width:46ch;"><span data-shopify-editor-setting="about_cta_copy">{{ section.settings.about_cta_copy }}</span></p>
         </div>
         <div style="display:flex;flex-direction:column;gap:1rem;max-width:400px;">
-          <a href="{{ contact_url }}" class="btn btn--primary">{{ section.settings.about_cta_primary_label }}</a>
-          <a href="{{ training_url }}" class="btn btn--outline">{{ section.settings.about_cta_secondary_label }}</a>
-          <a href="{{ street_miles_url }}" class="btn btn--outline">{{ section.settings.about_cta_tertiary_label }}</a>
+          <a href="{{ contact_url }}" class="btn btn--primary"><span data-shopify-editor-setting="about_cta_primary_label">{{ section.settings.about_cta_primary_label }}</span></a>
+          <a href="{{ training_url }}" class="btn btn--outline"><span data-shopify-editor-setting="about_cta_secondary_label">{{ section.settings.about_cta_secondary_label }}</span></a>
+          <a href="{{ street_miles_url }}" class="btn btn--outline"><span data-shopify-editor-setting="about_cta_tertiary_label">{{ section.settings.about_cta_tertiary_label }}</span></a>
         </div>
       </div>
     </div>
@@ -157,30 +158,32 @@
   {% if page.content != blank %}
     <section class="section"><div class="container rte">{{ page.content }}</div></section>
   {% endif %}
+  </div>
 
 {% elsif page_handle == 'training' %}
+  <div class="page-editor-surface page-editor-surface--training" data-page-handle="training" {{ section.shopify_attributes }}>
   <section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:520px;display:flex;align-items:flex-end;">
     <div style="position:absolute;inset:0;{% if training_hero_image != blank %}background-image:url('{{ training_hero_image | image_url: width: 2000 }}');{% else %}background-image:url('https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/crop/x_0,y_558,w_4284,h_4295/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png');{% endif %}background-size:cover;background-position:center;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(28,28,26,0.85) 0%,rgba(35,35,33,0.65) 60%,rgba(26,26,24,0.9) 100%);"></div>
     <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
-      <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.training_hero_eyebrow }}</div>
-      <h1 class="text-display" style="color:#fff;max-width:20ch;margin-bottom:2rem;">{{ section.settings.training_hero_heading }}</h1>
-      <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:50ch;">{{ section.settings.training_hero_copy }}</p>
+      <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="training_hero_eyebrow">{{ section.settings.training_hero_eyebrow }}</span></div>
+      <h1 class="text-display" style="color:#fff;max-width:20ch;margin-bottom:2rem;"><span data-shopify-editor-setting="training_hero_heading">{{ section.settings.training_hero_heading }}</span></h1>
+      <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:50ch;"><span data-shopify-editor-setting="training_hero_copy">{{ section.settings.training_hero_copy }}</span></p>
     </div>
   </section>
 
-  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text">{{ section.settings.training_marquee_text }}</span><span class="marquee-text">{{ section.settings.training_marquee_text }}</span></div></div>
+  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span data-shopify-editor-setting="training_marquee_text">{{ section.settings.training_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.training_marquee_text }}</span></div></div>
 
   <section class="section">
     <div class="container">
       <div class="section-header">
         <div>
-          <div class="text-eyebrow mb-sm">{{ section.settings.training_philosophy_eyebrow }}</div>
-          <h2 class="text-h2">{{ section.settings.training_philosophy_heading }}</h2>
+          <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="training_philosophy_eyebrow">{{ section.settings.training_philosophy_eyebrow }}</span></div>
+          <h2 class="text-h2"><span data-shopify-editor-setting="training_philosophy_heading">{{ section.settings.training_philosophy_heading }}</span></h2>
         </div>
         <div style="max-width:48ch;">
-          <p class="text-body" style="margin-bottom:1.5rem;">{{ section.settings.training_philosophy_copy_1 }}</p>
-          <p class="text-body">{{ section.settings.training_philosophy_copy_2 }}</p>
+          <p class="text-body" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="training_philosophy_copy_1">{{ section.settings.training_philosophy_copy_1 }}</span></p>
+          <p class="text-body"><span data-shopify-editor-setting="training_philosophy_copy_2">{{ section.settings.training_philosophy_copy_2 }}</span></p>
         </div>
       </div>
 
@@ -209,8 +212,8 @@
     <div class="container">
       <div class="section-header">
         <div>
-          <div class="text-eyebrow mb-sm">{{ section.settings.training_programs_eyebrow }}</div>
-          <h2 class="text-h2">{{ section.settings.training_programs_heading }}</h2>
+          <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="training_programs_eyebrow">{{ section.settings.training_programs_eyebrow }}</span></div>
+          <h2 class="text-h2"><span data-shopify-editor-setting="training_programs_heading">{{ section.settings.training_programs_heading }}</span></h2>
         </div>
       </div>
 
@@ -229,7 +232,14 @@
                 assign training_program_url = block.settings.link
               endif
             %}
-            <div class="service-row" {{ block.shopify_attributes }}><div><div class="text-eyebrow" style="margin-bottom:.75rem;">{{ block.settings.eyebrow }}</div><div class="service-name">{{ block.settings.title }}</div></div><div class="service-desc">{{ block.settings.description }}</div><div class="service-arrow"><a href="{{ training_program_url }}">{{ block.settings.link_label }}</a></div></div>
+            <div class="service-row" {{ block.shopify_attributes }}>
+              <div>
+                <div class="text-eyebrow" style="margin-bottom:.75rem;">{{ block.settings.eyebrow }}</div>
+                <div class="service-name">{{ block.settings.title }}</div>
+              </div>
+              <div class="service-desc">{{ block.settings.description }}</div>
+              <div class="service-arrow"><a href="{{ training_program_url }}">{{ block.settings.link_label }}</a></div>
+            </div>
           {% endif %}
         {% endfor %}
       </div>
@@ -239,8 +249,8 @@
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm">{{ section.settings.training_who_eyebrow }}</div>
-        <h2 class="text-h2" style="margin-bottom:1.5rem;">{{ section.settings.training_who_heading }}</h2>
+        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="training_who_eyebrow">{{ section.settings.training_who_eyebrow }}</span></div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="training_who_heading">{{ section.settings.training_who_heading }}</span></h2>
         <ul class="text-body" style="list-style:none;padding:0;margin:0;display:grid;gap:1rem;">
           {% for block in section.blocks %}
             {% if block.type == 'training_who_item' %}
@@ -262,13 +272,48 @@
   <section class="section" style="background:var(--color-off-white);border-top:1px solid var(--color-warm-gray);">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm">{{ section.settings.training_get_started_eyebrow }}</div>
-        <h2 class="text-h2" style="margin-bottom:1.5rem;">{{ section.settings.training_get_started_heading }}</h2>
-        <p class="text-body" style="margin-bottom:1rem;">{{ section.settings.training_get_started_copy }}</p>
+        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="training_get_started_eyebrow">{{ section.settings.training_get_started_eyebrow }}</span></div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="training_get_started_heading">{{ section.settings.training_get_started_heading }}</span></h2>
+        <p class="text-body" style="margin-bottom:1rem;"><span data-shopify-editor-setting="training_get_started_copy">{{ section.settings.training_get_started_copy }}</span></p>
         <p class="text-body" style="margin-bottom:.5rem;"><a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a></p>
-        <p class="text-body">{{ section.settings.training_get_started_address }}</p>
+        <p class="text-body"><span data-shopify-editor-setting="training_get_started_address">{{ section.settings.training_get_started_address }}</span></p>
       </div>
-      <div>{% form 'contact', id: 'training-contact-form', class: 'contact-form' %}<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;"><div class="form-group"><label class="form-label" for="TrainingFirstName">{{ section.settings.training_form_first_name_label }}</label><input class="form-input" type="text" id="TrainingFirstName" name="contact[first_name]" required></div><div class="form-group"><label class="form-label" for="TrainingLastName">{{ section.settings.training_form_last_name_label }}</label><input class="form-input" type="text" id="TrainingLastName" name="contact[last_name]" required></div></div><div class="form-group"><label class="form-label" for="TrainingEmail">{{ section.settings.training_form_email_label }}</label><input class="form-input" type="email" id="TrainingEmail" name="contact[email]" required></div><div class="form-group"><label class="form-label" for="TrainingPhone">{{ section.settings.training_form_phone_label }}</label><input class="form-input" type="tel" id="TrainingPhone" name="contact[phone]"></div><div class="form-group"><label class="form-label" for="TrainingReferral">{{ section.settings.training_form_referral_label }}</label><input class="form-input" type="text" id="TrainingReferral" name="contact[referral_source]"></div><div class="form-group"><label class="form-label" for="TrainingWhy">{{ section.settings.training_form_body_label }}</label><textarea class="form-textarea" id="TrainingWhy" name="contact[body]" required></textarea></div><button class="btn btn--primary" type="submit">{{ section.settings.training_form_button_label }}</button><div class="text-eyebrow" style="margin-top:1rem;">{{ section.settings.training_form_response_text }}</div>{% if form.posted_successfully? %}<div id="training-contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;">{{ section.settings.training_form_success_text }}</div>{% endif %}{{ form.errors | default_errors }}{% endform %}</div>
+      <div>
+        {% form 'contact', id: 'training-contact-form', class: 'contact-form' %}
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="form-group">
+              <label class="form-label" for="TrainingFirstName"><span data-shopify-editor-setting="training_form_first_name_label">{{ section.settings.training_form_first_name_label }}</span></label>
+              <input class="form-input" type="text" id="TrainingFirstName" name="contact[first_name]" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="TrainingLastName"><span data-shopify-editor-setting="training_form_last_name_label">{{ section.settings.training_form_last_name_label }}</span></label>
+              <input class="form-input" type="text" id="TrainingLastName" name="contact[last_name]" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="TrainingEmail"><span data-shopify-editor-setting="training_form_email_label">{{ section.settings.training_form_email_label }}</span></label>
+            <input class="form-input" type="email" id="TrainingEmail" name="contact[email]" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="TrainingPhone"><span data-shopify-editor-setting="training_form_phone_label">{{ section.settings.training_form_phone_label }}</span></label>
+            <input class="form-input" type="tel" id="TrainingPhone" name="contact[phone]">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="TrainingReferral"><span data-shopify-editor-setting="training_form_referral_label">{{ section.settings.training_form_referral_label }}</span></label>
+            <input class="form-input" type="text" id="TrainingReferral" name="contact[referral_source]">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="TrainingWhy"><span data-shopify-editor-setting="training_form_body_label">{{ section.settings.training_form_body_label }}</span></label>
+            <textarea class="form-textarea" id="TrainingWhy" name="contact[body]" required></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit"><span data-shopify-editor-setting="training_form_button_label">{{ section.settings.training_form_button_label }}</span></button>
+          <div class="text-eyebrow" style="margin-top:1rem;"><span data-shopify-editor-setting="training_form_response_text">{{ section.settings.training_form_response_text }}</span></div>
+          {% if form.posted_successfully? %}
+            <div id="training-contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;"><span data-shopify-editor-setting="training_form_success_text"><span data-shopify-editor-setting="training_form_success_text">{{ section.settings.training_form_success_text }}</span></span></div>
+          {% endif %}
+          {{ form.errors | default_errors }}
+        {% endform %}
+      </div>
     </div>
   </section>
 
@@ -382,18 +427,20 @@
   </section>
 
   {% if page.content != blank %}<section class="section"><div class="container rte">{{ page.content }}</div></section>{% endif %}
+  </div>
 
 {% elsif page_handle == 'services' %}
+  <div class="page-editor-surface page-editor-surface--services" data-page-handle="services" {{ section.shopify_attributes }}>
   <section class="page-hero" style="position:relative;overflow:hidden;padding-top:calc(68px + var(--space-xl));padding-bottom:var(--space-xl);border-bottom:1px solid var(--color-warm-gray);">
     <div style="position:absolute;inset:0;{% if services_hero_image != blank %}background-image:url('{{ services_hero_image | image_url: width: 2000 }}');{% else %}background-image:url('https://static.wixstatic.com/media/8a3301_cf5517a609d94d6992c825205aaae6d6~mv2.png/v1/fill/w_1920,h_600,al_c,q_90,enc_auto/8a3301_cf5517a609d94d6992c825205aaae6d6~mv2.png');{% endif %}background-size:cover;background-position:center;opacity:0.08;"></div>
     <div class="container" style="position:relative;z-index:1;">
-      <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.services_hero_eyebrow }}</div>
-      <h1 class="text-h1" style="max-width:20ch;margin-bottom:2rem;">{{ section.settings.services_hero_heading }}</h1>
-      <p class="text-body" style="max-width:50ch;">{{ section.settings.services_hero_copy }}</p>
+      <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="services_hero_eyebrow">{{ section.settings.services_hero_eyebrow }}</span></div>
+      <h1 class="text-h1" style="max-width:20ch;margin-bottom:2rem;"><span data-shopify-editor-setting="services_hero_heading">{{ section.settings.services_hero_heading }}</span></h1>
+      <p class="text-body" style="max-width:50ch;"><span data-shopify-editor-setting="services_hero_copy">{{ section.settings.services_hero_copy }}</span></p>
     </div>
   </section>
 
-  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text">{{ section.settings.services_marquee_text }}</span><span class="marquee-text">{{ section.settings.services_marquee_text }}</span></div></div>
+  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span data-shopify-editor-setting="services_marquee_text">{{ section.settings.services_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.services_marquee_text }}</span></div></div>
 
   <section class="services-list">
     <div class="container">
@@ -411,7 +458,14 @@
               assign services_item_url = block.settings.link
             endif
           %}
-          <div class="service-row" {{ block.shopify_attributes }}><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">{{ block.settings.number }}</div><div class="service-name">{{ block.settings.title }}</div></div><div class="service-desc">{{ block.settings.description }}</div><div class="service-arrow"><a href="{{ services_item_url }}">{{ block.settings.link_label }}</a></div></div>
+          <div class="service-row" {{ block.shopify_attributes }}>
+            <div>
+              <div class="text-eyebrow" style="margin-bottom:0.75rem;">{{ block.settings.number }}</div>
+              <div class="service-name">{{ block.settings.title }}</div>
+            </div>
+            <div class="service-desc">{{ block.settings.description }}</div>
+            <div class="service-arrow"><a href="{{ services_item_url }}">{{ block.settings.link_label }}</a></div>
+          </div>
         {% endif %}
       {% endfor %}
     </div>
@@ -420,9 +474,9 @@
   <section class="section" style="background:var(--color-off-white);border-top:1px solid var(--color-warm-gray);">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm">{{ section.settings.services_cta_eyebrow }}</div>
-        <h2 class="text-h2" style="margin-bottom:1.5rem;">{{ section.settings.services_cta_heading }}</h2>
-        <p class="text-body" style="margin-bottom:1.5rem;">{{ section.settings.services_cta_copy }}</p>
+        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="services_cta_eyebrow">{{ section.settings.services_cta_eyebrow }}</span></div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="services_cta_heading">{{ section.settings.services_cta_heading }}</span></h2>
+        <p class="text-body" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="services_cta_copy">{{ section.settings.services_cta_copy }}</span></p>
       </div>
       <div style="display:grid;gap:1rem;align-content:start;">
         {% if services_cta_image != blank %}
@@ -430,40 +484,42 @@
             <img src="{{ services_cta_image | image_url: width: 1200 }}" alt="{{ services_cta_image.alt | default: section.settings.services_cta_heading | escape }}" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
           </div>
         {% endif %}
-        <a href="{{ contact_url }}" class="btn btn--primary">{{ section.settings.services_cta_primary_label }}</a>
-        <a href="{{ training_url }}" class="btn btn--outline">{{ section.settings.services_cta_secondary_label }}</a>
-        <a href="{{ street_miles_url }}" class="btn btn--outline">{{ section.settings.services_cta_tertiary_label }}</a>
+        <a href="{{ contact_url }}" class="btn btn--primary"><span data-shopify-editor-setting="services_cta_primary_label">{{ section.settings.services_cta_primary_label }}</span></a>
+        <a href="{{ training_url }}" class="btn btn--outline"><span data-shopify-editor-setting="services_cta_secondary_label">{{ section.settings.services_cta_secondary_label }}</span></a>
+        <a href="{{ street_miles_url }}" class="btn btn--outline"><span data-shopify-editor-setting="services_cta_tertiary_label">{{ section.settings.services_cta_tertiary_label }}</span></a>
       </div>
     </div>
   </section>
 
   {% if page.content != blank %}<section class="section"><div class="container rte">{{ page.content }}</div></section>{% endif %}
+  </div>
 
 {% elsif page_handle == 'street-miles' %}
+  <div class="page-editor-surface page-editor-surface--street-miles" data-page-handle="street-miles" {{ section.shopify_attributes }}>
   <section class="sm-hero" style="position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;{% if street_miles_hero_image != blank %}background-image:url('{{ street_miles_hero_image | image_url: width: 2000 }}');{% else %}background-image:url('https://static.wixstatic.com/media/8a3301_dfd7f8236654470390a4357692431d22~mv2.png/v1/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_dfd7f8236654470390a4357692431d22~mv2.png');{% endif %}background-size:cover;background-position:center top;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(20,20,18,0.88) 0%,rgba(35,35,33,0.70) 55%,rgba(20,20,18,0.92) 100%);"></div>
     <div class="container" style="position:relative;z-index:1;">
-      <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2.5rem;">{{ section.settings.street_miles_hero_eyebrow }}</div>
-      <h1 class="sm-hero-tagline">{{ section.settings.street_miles_hero_heading }}</h1>
-      <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:52ch;margin-bottom:3rem;">{{ section.settings.street_miles_hero_copy }}</p>
+      <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2.5rem;"><span data-shopify-editor-setting="street_miles_hero_eyebrow">{{ section.settings.street_miles_hero_eyebrow }}</span></div>
+      <h1 class="sm-hero-tagline"><span data-shopify-editor-setting="street_miles_hero_heading">{{ section.settings.street_miles_hero_heading }}</span></h1>
+      <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:52ch;margin-bottom:3rem;"><span data-shopify-editor-setting="street_miles_hero_copy">{{ section.settings.street_miles_hero_copy }}</span></p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="{{ contact_url }}" class="btn btn--primary">{{ section.settings.street_miles_primary_label }}</a>
-        <a href="#protocol" class="btn btn--outline-white">{{ section.settings.street_miles_secondary_label }}</a>
+        <a href="{{ contact_url }}" class="btn btn--primary"><span data-shopify-editor-setting="street_miles_primary_label">{{ section.settings.street_miles_primary_label }}</span></a>
+        <a href="#protocol" class="btn btn--outline-white"><span data-shopify-editor-setting="street_miles_secondary_label">{{ section.settings.street_miles_secondary_label }}</span></a>
       </div>
     </div>
   </section>
 
-  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text">{{ section.settings.street_miles_marquee_text }}</span><span class="marquee-text">{{ section.settings.street_miles_marquee_text }}</span></div></div>
+  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span data-shopify-editor-setting="street_miles_marquee_text">{{ section.settings.street_miles_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.street_miles_marquee_text }}</span></div></div>
 
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:var(--space-xl);align-items:center;">
       <div>
-        <div class="text-eyebrow mb-sm">{{ section.settings.street_miles_culture_eyebrow }}</div>
-        <h2 class="text-h2" style="margin-bottom:1.5rem;">{{ section.settings.street_miles_culture_heading }}</h2>
-        <p class="text-body" style="margin-bottom:1.5rem;">{{ section.settings.street_miles_culture_copy_1 }}</p>
-        <p class="text-body" style="margin-bottom:1.5rem;">{{ section.settings.street_miles_culture_copy_2 }}</p>
-        <p class="text-body">{{ section.settings.street_miles_culture_copy_3 }}</p>
+        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_culture_eyebrow">{{ section.settings.street_miles_culture_eyebrow }}</span></div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_culture_heading">{{ section.settings.street_miles_culture_heading }}</span></h2>
+        <p class="text-body" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_culture_copy_1">{{ section.settings.street_miles_culture_copy_1 }}</span></p>
+        <p class="text-body" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_culture_copy_2">{{ section.settings.street_miles_culture_copy_2 }}</span></p>
+        <p class="text-body"><span data-shopify-editor-setting="street_miles_culture_copy_3">{{ section.settings.street_miles_culture_copy_3 }}</span></p>
       </div>
       <div style="position:relative;overflow:hidden;aspect-ratio:4/5;">
         {% if street_miles_culture_image != blank %}
@@ -477,11 +533,17 @@
 
   <section class="section" id="protocol" style="border-top:1px solid var(--color-warm-gray);border-bottom:1px solid var(--color-warm-gray);">
     <div class="container">
-      <div class="text-eyebrow mb-sm">{{ section.settings.street_miles_protocol_eyebrow }}</div>
+      <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_protocol_eyebrow">{{ section.settings.street_miles_protocol_eyebrow }}</span></div>
       <div class="services-list" style="border-top:none;">
         {% for block in section.blocks %}
           {% if block.type == 'street_protocol' %}
-            <div class="service-row" {{ block.shopify_attributes }}><div><div class="text-eyebrow" style="margin-bottom:.75rem;">{{ block.settings.eyebrow }}</div><div class="service-name">{{ block.settings.title }}</div></div><div class="service-desc">{{ block.settings.description }}</div></div>
+            <div class="service-row" {{ block.shopify_attributes }}>
+              <div>
+                <div class="text-eyebrow" style="margin-bottom:.75rem;">{{ block.settings.eyebrow }}</div>
+                <div class="service-name">{{ block.settings.title }}</div>
+              </div>
+              <div class="service-desc">{{ block.settings.description }}</div>
+            </div>
           {% endif %}
         {% endfor %}
       </div>
@@ -491,10 +553,10 @@
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm">{{ section.settings.street_miles_chapter_eyebrow }}</div>
-        <h2 class="text-h2" style="margin-bottom:1.5rem;">{{ section.settings.street_miles_chapter_heading }}</h2>
-        <p class="text-body" style="margin-bottom:1.5rem;">{{ section.settings.street_miles_chapter_copy_1 }}</p>
-        <p class="text-body">{{ section.settings.street_miles_chapter_copy_2 }}</p>
+        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_chapter_eyebrow">{{ section.settings.street_miles_chapter_eyebrow }}</span></div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_chapter_heading">{{ section.settings.street_miles_chapter_heading }}</span></h2>
+        <p class="text-body" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_chapter_copy_1">{{ section.settings.street_miles_chapter_copy_1 }}</span></p>
+        <p class="text-body"><span data-shopify-editor-setting="street_miles_chapter_copy_2">{{ section.settings.street_miles_chapter_copy_2 }}</span></p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;">
         {% for block in section.blocks %}
@@ -514,7 +576,7 @@
       <div style="position:absolute;inset:0;background-image:url('{{ street_miles_quotes_image | image_url: width: 2000 }}');background-size:cover;background-position:center;opacity:0.08;"></div>
     {% endif %}
     <div class="container" style="position:relative;z-index:1;">
-      <div class="text-eyebrow mb-sm">{{ section.settings.street_miles_quotes_eyebrow }}</div>
+      <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_quotes_eyebrow">{{ section.settings.street_miles_quotes_eyebrow }}</span></div>
       <div class="training-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;">
         {% for block in section.blocks %}
           {% if block.type == 'street_quote' %}
@@ -528,7 +590,7 @@
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm">{{ section.settings.street_miles_access_eyebrow }}</div>
+        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_access_eyebrow">{{ section.settings.street_miles_access_eyebrow }}</span></div>
         <div class="training-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;">
           {% for block in section.blocks %}
             {% if block.type == 'street_access_step' %}
@@ -538,32 +600,34 @@
         </div>
       </div>
       <div style="display:grid;align-content:start;">
-        <a href="{{ contact_url }}" class="btn btn--primary">{{ section.settings.street_miles_access_button_label }}</a>
+        <a href="{{ contact_url }}" class="btn btn--primary"><span data-shopify-editor-setting="street_miles_access_button_label">{{ section.settings.street_miles_access_button_label }}</span></a>
       </div>
     </div>
   </section>
 
   {% if page.content != blank %}<section class="section"><div class="container rte">{{ page.content }}</div></section>{% endif %}
+  </div>
 
 {% elsif page_handle == 'contact' %}
+  <div class="page-editor-surface page-editor-surface--contact" data-page-handle="contact" {{ section.shopify_attributes }}>
   <section style="position:relative;padding-top:calc(68px + var(--space-xl));padding-bottom:var(--space-xl);border-bottom:1px solid var(--color-warm-gray);overflow:hidden;">
     <div style="position:absolute;inset:0;{% if contact_hero_image != blank %}background-image:url('{{ contact_hero_image | image_url: width: 2000 }}');{% else %}background-image:url('https://static.wixstatic.com/media/8a3301_a50d3c308c3b4909b7726a0559353904~mv2.jpg/v1/crop/x_0,y_2549,w_3840,h_2057/fill/w_1920,h_600,al_c,q_90,enc_auto/8a3301_a50d3c308c3b4909b7726a0559353904~mv2.jpg');{% endif %}background-size:cover;background-position:center;opacity:0.08;"></div>
     <div class="container" style="position:relative;z-index:1;">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:end;">
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.contact_hero_eyebrow }}</div>
-          <h1 class="text-h1" style="max-width:18ch;">{{ section.settings.contact_hero_heading }}</h1>
+          <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="contact_hero_eyebrow">{{ section.settings.contact_hero_eyebrow }}</span></div>
+          <h1 class="text-h1" style="max-width:18ch;"><span data-shopify-editor-setting="contact_hero_heading">{{ section.settings.contact_hero_heading }}</span></h1>
         </div>
-        <p class="text-body" style="max-width:44ch;">{{ section.settings.contact_hero_copy }}</p>
+        <p class="text-body" style="max-width:44ch;"><span data-shopify-editor-setting="contact_hero_copy">{{ section.settings.contact_hero_copy }}</span></p>
       </div>
     </div>
   </section>
 
-  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text">{{ section.settings.contact_marquee_text }}</span><span class="marquee-text">{{ section.settings.contact_marquee_text }}</span></div></div>
+  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span data-shopify-editor-setting="contact_marquee_text">{{ section.settings.contact_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.contact_marquee_text }}</span></div></div>
 
   <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
     <div class="container">
-      <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.contact_channels_heading }}</div>
+      <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="contact_channels_heading">{{ section.settings.contact_channels_heading }}</span></div>
       <div class="training-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;">
         {% for block in section.blocks %}
           {% if block.type == 'contact_channel' %}
@@ -577,20 +641,55 @@
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm">{{ section.settings.contact_social_heading }}</div>
+        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="contact_social_heading">{{ section.settings.contact_social_heading }}</span></div>
         <div class="footer-links" style="gap:1rem;display:grid;">
           <a href="{{ settings.instagram_url | default: 'https://www.instagram.com/arenathletic/' }}" class="footer-link">Instagram</a>
           <a href="{{ settings.twitter_url | default: 'https://x.com/' }}" class="footer-link">Twitter</a>
           <a href="{{ settings.youtube_url | default: 'https://www.youtube.com/' }}" class="footer-link">YouTube</a>
         </div>
       </div>
-      <div>{% form 'contact', id: 'contact-form', class: 'contact-form' %}<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;"><div class="form-group"><label class="form-label" for="ContactFormFirstName">{{ section.settings.contact_form_first_name_label }}</label><input class="form-input" type="text" id="ContactFormFirstName" name="contact[first_name]"></div><div class="form-group"><label class="form-label" for="ContactFormLastName">{{ section.settings.contact_form_last_name_label }}</label><input class="form-input" type="text" id="ContactFormLastName" name="contact[last_name]"></div></div><div class="form-group"><label class="form-label" for="ContactFormEmail">{{ section.settings.contact_form_email_label }}</label><input class="form-input" type="email" id="ContactFormEmail" name="contact[email]" required></div><div class="form-group"><label class="form-label" for="ContactFormPhone">{{ section.settings.contact_form_phone_label }}</label><input class="form-input" type="tel" id="ContactFormPhone" name="contact[phone]"></div><div class="form-group"><label class="form-label" for="ContactFormReferral">{{ section.settings.contact_form_referral_label }}</label><input class="form-input" type="text" id="ContactFormReferral" name="contact[referral_source]"></div><div class="form-group"><label class="form-label" for="ContactFormBody">{{ section.settings.contact_form_body_label }}</label><textarea class="form-textarea" id="ContactFormBody" name="contact[body]"></textarea></div><button class="btn btn--primary" type="submit">{{ section.settings.contact_form_button_label }}</button>{% if form.posted_successfully? %}<div id="contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;">{{ section.settings.contact_form_success_text }}</div>{% endif %}<div class="text-body" style="margin-top:1rem;opacity:.75;">{{ section.settings.contact_form_disclaimer }}</div>{{ form.errors | default_errors }}{% endform %}</div>
+      <div>
+        {% form 'contact', id: 'contact-form', class: 'contact-form' %}
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="form-group">
+              <label class="form-label" for="ContactFormFirstName"><span data-shopify-editor-setting="contact_form_first_name_label">{{ section.settings.contact_form_first_name_label }}</span></label>
+              <input class="form-input" type="text" id="ContactFormFirstName" name="contact[first_name]">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="ContactFormLastName"><span data-shopify-editor-setting="contact_form_last_name_label">{{ section.settings.contact_form_last_name_label }}</span></label>
+              <input class="form-input" type="text" id="ContactFormLastName" name="contact[last_name]">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ContactFormEmail"><span data-shopify-editor-setting="contact_form_email_label">{{ section.settings.contact_form_email_label }}</span></label>
+            <input class="form-input" type="email" id="ContactFormEmail" name="contact[email]" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ContactFormPhone"><span data-shopify-editor-setting="contact_form_phone_label">{{ section.settings.contact_form_phone_label }}</span></label>
+            <input class="form-input" type="tel" id="ContactFormPhone" name="contact[phone]">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ContactFormReferral"><span data-shopify-editor-setting="contact_form_referral_label">{{ section.settings.contact_form_referral_label }}</span></label>
+            <input class="form-input" type="text" id="ContactFormReferral" name="contact[referral_source]">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ContactFormBody"><span data-shopify-editor-setting="contact_form_body_label">{{ section.settings.contact_form_body_label }}</span></label>
+            <textarea class="form-textarea" id="ContactFormBody" name="contact[body]"></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit"><span data-shopify-editor-setting="contact_form_button_label"><span data-shopify-editor-setting="contact_form_button_label">{{ section.settings.contact_form_button_label }}</span></span></button>
+          {% if form.posted_successfully? %}
+            <div id="contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;"><span data-shopify-editor-setting="contact_form_success_text"><span data-shopify-editor-setting="contact_form_success_text">{{ section.settings.contact_form_success_text }}</span></span></div>
+          {% endif %}
+          <div class="text-body" style="margin-top:1rem;opacity:.75;"><span data-shopify-editor-setting="contact_form_disclaimer">{{ section.settings.contact_form_disclaimer }}</span></div>
+          {{ form.errors | default_errors }}
+        {% endform %}
+      </div>
     </div>
   </section>
 
   <section class="section" style="background:var(--color-off-white);border-top:1px solid var(--color-warm-gray);">
     <div class="container">
-      <div class="section-header"><div><div class="text-eyebrow mb-sm">{{ section.settings.contact_ecosystem_eyebrow }}</div><h2 class="text-h2">{{ section.settings.contact_ecosystem_heading }}</h2></div></div>
+      <div class="section-header"><div><div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="contact_ecosystem_eyebrow"><span data-shopify-editor-setting="contact_ecosystem_eyebrow">{{ section.settings.contact_ecosystem_eyebrow }}</span></span></div><h2 class="text-h2"><span data-shopify-editor-setting="contact_ecosystem_heading">{{ section.settings.contact_ecosystem_heading }}</span></h2></div></div>
       <div class="training-grid" style="margin-top:var(--space-lg);">
         {% for block in section.blocks %}
           {% if block.type == 'contact_ecosystem_card' %}
@@ -614,48 +713,53 @@
   </section>
 
   {% if page.content != blank %}<section class="section"><div class="container rte">{{ page.content }}</div></section>{% endif %}
+  </div>
 
 {% elsif page_handle == 'privacy' %}
+  <div class="page-editor-surface page-editor-surface--privacy" data-page-handle="privacy" {{ section.shopify_attributes }}>
   <section class="section" style="padding-top:calc(68px + var(--space-xl));">
     <div class="container container--narrow">
-      <div class="text-eyebrow mb-sm">{{ section.settings.privacy_eyebrow }}</div>
-      <h1 class="text-display" style="margin-bottom:2rem;">{{ section.settings.privacy_heading }}</h1>
+      <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="privacy_eyebrow">{{ section.settings.privacy_eyebrow }}</span></div>
+      <h1 class="text-display" style="margin-bottom:2rem;"><span data-shopify-editor-setting="privacy_heading">{{ section.settings.privacy_heading }}</span></h1>
       <div class="text-body">
-        <p style="margin-bottom:1.75rem;">{{ section.settings.privacy_intro }}</p>
-        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.privacy_section_1_heading }}</h2>
-        <p style="margin-bottom:1.75rem;">{{ section.settings.privacy_section_1_body }}</p>
-        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.privacy_section_2_heading }}</h2>
-        <p style="margin-bottom:1.75rem;">{{ section.settings.privacy_section_2_body }}</p>
-        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.privacy_contact_heading }}</h2>
-        <p style="margin-bottom:1.75rem;">{{ section.settings.privacy_contact_copy }} <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p>
-        <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;">{{ section.settings.privacy_footer_note }}</p>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="privacy_intro">{{ section.settings.privacy_intro }}</span></p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;"><span data-shopify-editor-setting="privacy_section_1_heading">{{ section.settings.privacy_section_1_heading }}</span></h2>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="privacy_section_1_body">{{ section.settings.privacy_section_1_body }}</span></p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;"><span data-shopify-editor-setting="privacy_section_2_heading">{{ section.settings.privacy_section_2_heading }}</span></h2>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="privacy_section_2_body">{{ section.settings.privacy_section_2_body }}</span></p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;"><span data-shopify-editor-setting="privacy_contact_heading">{{ section.settings.privacy_contact_heading }}</span></h2>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="privacy_contact_copy">{{ section.settings.privacy_contact_copy }}</span> <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p>
+        <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;"><span data-shopify-editor-setting="privacy_footer_note">{{ section.settings.privacy_footer_note }}</span></p>
         <div style="margin-top:3rem;">
-          <a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--color-black);">{{ section.settings.legal_back_label }}</a>
+          <a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--color-black);"><span data-shopify-editor-setting="legal_back_label"><span data-shopify-editor-setting="legal_back_label">{{ section.settings.legal_back_label }}</span></span></a>
         </div>
       </div>
     </div>
   </section>
+  </div>
 
 {% elsif page_handle == 'terms' %}
+  <div class="page-editor-surface page-editor-surface--terms" data-page-handle="terms" {{ section.shopify_attributes }}>
   <section class="section" style="padding-top:calc(68px + var(--space-xl));">
     <div class="container container--narrow">
-      <div class="text-eyebrow mb-sm">{{ section.settings.terms_eyebrow }}</div>
-      <h1 class="text-display" style="margin-bottom:2rem;">{{ section.settings.terms_heading }}</h1>
+      <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="terms_eyebrow">{{ section.settings.terms_eyebrow }}</span></div>
+      <h1 class="text-display" style="margin-bottom:2rem;"><span data-shopify-editor-setting="terms_heading">{{ section.settings.terms_heading }}</span></h1>
       <div class="text-body">
-        <p style="margin-bottom:1.75rem;">{{ section.settings.terms_intro }}</p>
-        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.terms_section_1_heading }}</h2>
-        <p style="margin-bottom:1.75rem;">{{ section.settings.terms_section_1_body }}</p>
-        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.terms_section_2_heading }}</h2>
-        <p style="margin-bottom:1.75rem;">{{ section.settings.terms_section_2_body }}</p>
-        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.terms_contact_heading }}</h2>
-        <p style="margin-bottom:1.75rem;">{{ section.settings.terms_contact_copy }} <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p>
-        <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;">{{ section.settings.terms_footer_note }}</p>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="terms_intro">{{ section.settings.terms_intro }}</span></p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;"><span data-shopify-editor-setting="terms_section_1_heading">{{ section.settings.terms_section_1_heading }}</span></h2>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="terms_section_1_body">{{ section.settings.terms_section_1_body }}</span></p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;"><span data-shopify-editor-setting="terms_section_2_heading">{{ section.settings.terms_section_2_heading }}</span></h2>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="terms_section_2_body">{{ section.settings.terms_section_2_body }}</span></p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;"><span data-shopify-editor-setting="terms_contact_heading">{{ section.settings.terms_contact_heading }}</span></h2>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="terms_contact_copy">{{ section.settings.terms_contact_copy }}</span> <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p>
+        <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;"><span data-shopify-editor-setting="terms_footer_note">{{ section.settings.terms_footer_note }}</span></p>
         <div style="margin-top:3rem;">
-          <a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--color-black);">{{ section.settings.legal_back_label }}</a>
+          <a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--color-black);"><span data-shopify-editor-setting="legal_back_label">{{ section.settings.legal_back_label }}</span></a>
         </div>
       </div>
     </div>
   </section>
+  </div>
 
 {% else %}
   <section class="section" style="padding-top:calc(68px + var(--space-xl));"><div class="container rte"><h1 class="text-display" style="margin-bottom:2rem;">{{ page.title }}</h1>{% if page.content != blank %}{{ page.content }}{% else %}<p class="text-body">Create a Shopify page with the handle <strong>{{ page_handle }}</strong> to add custom content here.</p>{% endif %}</div></section>

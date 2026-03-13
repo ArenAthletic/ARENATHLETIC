@@ -21,11 +21,11 @@
   endif
 %}
 
-<footer class="footer">
+<footer class="footer" data-shopify-editor-section="footer" {{ section.shopify_attributes }}>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <a href="{{ routes.root_url }}" class="footer-brand-name footer-brand-link" aria-label="{{ shop.name }} home">
+        <a href="{{ routes.root_url }}" class="footer-brand-name footer-brand-link" aria-label="{{ shop.name }} home" data-shopify-editor-setting="logo">
           {% if section.settings.logo != blank %}
             <img src="{{ section.settings.logo | image_url: width: 180 }}" alt="{{ shop.name | escape }}" class="footer-logo-image">
           {% elsif settings.logo != blank %}
@@ -35,9 +35,9 @@
           {% endif %}
         </a>
         <div class="footer-brand-taglines">
-          <span class="footer-brand-tagline">{{ section.settings.tagline_1 | default: settings.footer_tagline_1 | default: 'SMNYC: FIVE BOROUGH CHAPTER' }}</span>
-          <span class="footer-brand-tagline">{{ section.settings.tagline_2 | default: settings.footer_tagline_2 | default: 'DISCIPLINE AND PERFORMANCE.' }}</span>
-          <span class="footer-brand-tagline">{{ section.settings.tagline_3 | default: settings.footer_tagline_3 | default: 'AREN ATHLETIC UNIFORM.' }}</span>
+          <span class="footer-brand-tagline" data-shopify-editor-setting="tagline_1">{{ section.settings.tagline_1 | default: settings.footer_tagline_1 | default: 'SMNYC: FIVE BOROUGH CHAPTER' }}</span>
+          <span class="footer-brand-tagline" data-shopify-editor-setting="tagline_2">{{ section.settings.tagline_2 | default: settings.footer_tagline_2 | default: 'DISCIPLINE AND PERFORMANCE.' }}</span>
+          <span class="footer-brand-tagline" data-shopify-editor-setting="tagline_3">{{ section.settings.tagline_3 | default: settings.footer_tagline_3 | default: 'AREN ATHLETIC UNIFORM.' }}</span>
         </div>
         <div class="footer-social">
           {% for block in section.blocks %}
@@ -55,7 +55,7 @@
                 endif
               %}
               {% if social_url != blank %}
-                <a href="{{ social_url }}" class="footer-social-link" {{ block.shopify_attributes }}>
+                <a href="{{ social_url }}" class="footer-social-link" {{ block.shopify_attributes }} title="{{ block.settings.label | escape }}">
                   {% if block.settings.icon != blank %}
                     <span aria-hidden="true">{{ block.settings.icon }}</span>
                   {% endif %}
@@ -68,7 +68,7 @@
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">{{ section.settings.ecosystem_heading | default: settings.footer_ecosystem_heading | default: 'ECOSYSTEM' }}</div>
+        <div class="footer-col-title" data-shopify-editor-setting="ecosystem_heading">{{ section.settings.ecosystem_heading | default: settings.footer_ecosystem_heading | default: 'ECOSYSTEM' }}</div>
         <div class="footer-links">
           {% if ecosystem_menu_links != blank %}
             {% for link in ecosystem_menu_links %}
@@ -85,7 +85,7 @@
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">{{ section.settings.access_heading | default: settings.footer_access_heading | default: 'ACCESS' }}</div>
+        <div class="footer-col-title" data-shopify-editor-setting="access_heading">{{ section.settings.access_heading | default: settings.footer_access_heading | default: 'ACCESS' }}</div>
         <div class="footer-links">
           {% if access_menu_links != blank %}
             {% for link in access_menu_links %}
@@ -102,7 +102,7 @@
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">{{ section.settings.network_heading | default: settings.footer_network_heading | default: 'NATIONAL HUB NETWORK.' }}</div>
+        <div class="footer-col-title" data-shopify-editor-setting="network_heading">{{ section.settings.network_heading | default: settings.footer_network_heading | default: 'NATIONAL HUB NETWORK.' }}</div>
         <div class="footer-links">
           <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}" class="footer-link">{{ settings.email_address | default: 'INFO@ARENATHLETIC.COM' | upcase }}</a>
           {% for block in section.blocks %}
@@ -116,12 +116,12 @@
 
     <div class="footer-bottom">
       <div class="footer-bottom-left">
-        <span class="footer-identity-line">{{ section.settings.identity_line | default: settings.footer_identity_line | default: 'AREN ATHLETIC — NEW YORK CITY' }}</span>
-        <span class="footer-copyright">{{ section.settings.copyright_text | default: settings.footer_copyright | default: '© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.' }}</span>
+        <span class="footer-identity-line" data-shopify-editor-setting="identity_line">{{ section.settings.identity_line | default: settings.footer_identity_line | default: 'AREN ATHLETIC — NEW YORK CITY' }}</span>
+        <span class="footer-copyright" data-shopify-editor-setting="copyright_text">{{ section.settings.copyright_text | default: settings.footer_copyright | default: '© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.' }}</span>
       </div>
       <div style="display:flex;gap:2rem;">
-        <a href="{{ privacy_url }}" class="footer-copyright" style="text-decoration:none;">{{ section.settings.privacy_label | default: settings.footer_privacy_label | default: 'PRIVACY' }}</a>
-        <a href="{{ terms_url }}" class="footer-copyright" style="text-decoration:none;">{{ section.settings.terms_label | default: settings.footer_terms_label | default: 'TERMS' }}</a>
+        <a href="{{ privacy_url }}" class="footer-copyright" style="text-decoration:none;" data-shopify-editor-setting="privacy_label">{{ section.settings.privacy_label | default: settings.footer_privacy_label | default: 'PRIVACY' }}</a>
+        <a href="{{ terms_url }}" class="footer-copyright" style="text-decoration:none;" data-shopify-editor-setting="terms_label">{{ section.settings.terms_label | default: settings.footer_terms_label | default: 'TERMS' }}</a>
       </div>
     </div>
   </div>
