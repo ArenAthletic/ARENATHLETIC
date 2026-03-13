@@ -1,3 +1,10 @@
+{% liquid
+  assign about_url = pages['about'].url | default: '/pages/about'
+  assign street_miles_url = pages['street-miles'].url | default: '/pages/street-miles'
+  assign contact_url = pages['contact'].url | default: '/pages/contact'
+  assign shop_url = routes.all_products_collection_url | default: '/collections/all'
+%}
+
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grain"></div>
@@ -6,8 +13,8 @@
     <h1 class="hero-headline">Apparel built for training—and everything after.</h1>
     <p class="hero-subline">Minimal. Durable. Elevated. Designed for the gym, the street, and the pace of New York.</p>
     <div class="hero-ctas">
-      <a href="{{ routes.all_products_collection_url }}" class="btn btn--primary">Shop Apparel</a>
-      <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="btn btn--outline-white">Join the Community</a>
+      <a href="{{ shop_url }}" class="btn btn--primary">Shop Apparel</a>
+      <a href="{{ contact_url }}" class="btn btn--outline-white">Join the Community</a>
     </div>
     <div class="hero-microcopy">
       <span>New drops + core staples • Shipping nationwide</span>
@@ -27,19 +34,19 @@
 <section class="category-strip">
   <div class="container">
     <div class="category-grid">
-      <a href="{{ routes.all_products_collection_url }}" class="category-item" style="text-decoration:none;display:block;">
+      <a href="{{ shop_url }}" class="category-item" style="text-decoration:none;display:block;">
         <div class="category-number">01</div>
         <h2 class="category-title">New Arrivals</h2>
         <p class="category-desc">Latest drops, limited runs.</p>
         <span class="category-arrow">→</span>
       </a>
-      <a href="{{ routes.all_products_collection_url }}" class="category-item" style="text-decoration:none;display:block;">
+      <a href="{{ shop_url }}" class="category-item" style="text-decoration:none;display:block;">
         <div class="category-number">02</div>
         <h2 class="category-title">Core Essentials</h2>
         <p class="category-desc">The foundation—clean, repeatable, durable.</p>
         <span class="category-arrow">→</span>
       </a>
-      <a href="{{ routes.all_products_collection_url }}" class="category-item" style="text-decoration:none;display:block;">
+      <a href="{{ shop_url }}" class="category-item" style="text-decoration:none;display:block;">
         <div class="category-number">03</div>
         <h2 class="category-title">Outerwear</h2>
         <p class="category-desc">Layers built for movement and weather.</p>
@@ -56,10 +63,10 @@
         <div class="text-eyebrow mb-sm">Featured Apparel</div>
         <h2 class="text-h2">The standard pieces.</h2>
       </div>
-      <a href="{{ routes.all_products_collection_url }}" class="btn btn--ghost">View All</a>
+      <a href="{{ shop_url }}" class="btn btn--ghost">View All</a>
     </div>
     <div class="product-grid">
-      <a href="{{ routes.all_products_collection_url }}" style="text-decoration:none;color:inherit;" class="product-card">
+      <a href="{{ shop_url }}" style="text-decoration:none;color:inherit;" class="product-card">
         <div class="product-image" style="background:#1e1e1c;">
           <img class="product-img" src="https://static.wixstatic.com/media/8a3301_e8285cd97a0546bd863f906d96d2409f~mv2.png/v1/fill/w_1024,h_1536,al_c,q_90,enc_auto/8a3301_e8285cd97a0546bd863f906d96d2409f~mv2.png" alt="AREN Athletic tonal men's box tee black" loading="lazy">
           <div class="product-tag">Featured</div>
@@ -68,7 +75,7 @@
         <div class="product-desc">Sharp structure. Everyday system.</div>
         <div class="product-price">Shop</div>
       </a>
-      <a href="{{ routes.all_products_collection_url }}" style="text-decoration:none;color:inherit;" class="product-card">
+      <a href="{{ shop_url }}" style="text-decoration:none;color:inherit;" class="product-card">
         <div class="product-image" style="background:#d8d3c5;">
           <img class="product-img" src="https://static.wixstatic.com/media/8a3301_b4d27b9f60bc470096a9b72a10aedd0f~mv2.png/v1/fill/w_1024,h_1536,al_c,q_90,enc_auto/8a3301_b4d27b9f60bc470096a9b72a10aedd0f~mv2.png" alt="AREN Athletic structured warmth layer" loading="lazy">
           <div class="product-tag">Core</div>
@@ -77,7 +84,7 @@
         <div class="product-desc">Built for daily wear.</div>
         <div class="product-price">Shop</div>
       </a>
-      <a href="{{ routes.all_products_collection_url }}" style="text-decoration:none;color:inherit;" class="product-card">
+      <a href="{{ shop_url }}" style="text-decoration:none;color:inherit;" class="product-card">
         <div class="product-image" style="background:#e8dfc8;">
           <img class="product-img" src="https://static.wixstatic.com/media/8a3301_50ce280989c9408c88ceb63c582e97e9~mv2.png/v1/fill/w_1024,h_683,al_c,q_90,enc_auto/8a3301_50ce280989c9408c88ceb63c582e97e9~mv2.png" alt="AREN Athletic essential cap" loading="lazy">
           <div class="product-tag">Accessory</div>
@@ -86,7 +93,7 @@
         <div class="product-desc">Clean finish. All week.</div>
         <div class="product-price">Shop</div>
       </a>
-      <a href="{{ routes.all_products_collection_url }}" style="text-decoration:none;color:inherit;" class="product-card">
+      <a href="{{ shop_url }}" style="text-decoration:none;color:inherit;" class="product-card">
         <div class="product-image" style="background:#232321;">
           <img class="product-img" src="https://static.wixstatic.com/media/8a3301_6f30f1e338ea44e584835c12d47a3452~mv2.png/v1/fill/w_1024,h_683,al_c,q_90,enc_auto/8a3301_6f30f1e338ea44e584835c12d47a3452~mv2.png" alt="AREN Athletic performance layer" loading="lazy">
         </div>
@@ -106,7 +113,7 @@
         <h2 class="philosophy-headline">The standard is the standard.</h2>
         <p class="philosophy-copy">AREN is built on discipline, presence, and consistency — apparel designed to perform in training and carry the standard everywhere else in life.</p>
         <div style="margin-top:3rem;">
-          <a href="{{ pages['about'].url | default: '/pages/about' }}" class="btn btn--outline-white">About AREN</a>
+          <a href="{{ about_url }}" class="btn btn--outline-white">About AREN</a>
         </div>
       </div>
       <div class="philosophy-right">
@@ -145,7 +152,7 @@
           <div><div class="sm-stat-value">Sun</div><div class="sm-stat-label">09:00 Sharp</div></div>
           <div><div class="sm-stat-value">NYC</div><div class="sm-stat-label">Home Chapter</div></div>
         </div>
-        <a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}" class="btn btn--outline">Explore Street Miles</a>
+        <a href="{{ street_miles_url }}" class="btn btn--outline">Explore Street Miles</a>
       </div>
     </div>
   </div>

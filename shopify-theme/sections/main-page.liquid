@@ -1,4 +1,14 @@
-{% assign page_handle = page.handle | default: handle %}
+{% liquid
+  assign page_handle = page.handle | default: handle
+  assign about_url = pages['about'].url | default: '/pages/about'
+  assign training_url = pages['training'].url | default: '/pages/training'
+  assign services_url = pages['services'].url | default: '/pages/services'
+  assign street_miles_url = pages['street-miles'].url | default: '/pages/street-miles'
+  assign contact_url = pages['contact'].url | default: '/pages/contact'
+  assign privacy_url = pages['privacy'].url | default: '/pages/privacy'
+  assign terms_url = pages['terms'].url | default: '/pages/terms'
+  assign shop_url = routes.all_products_collection_url | default: '/collections/all'
+%}
 
 {% if page_handle == 'about' %}
   <section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;">
@@ -21,7 +31,7 @@
           <div style="position:relative;overflow:hidden;aspect-ratio:3/4;margin-top:2rem;">
             <img src="https://static.wixstatic.com/media/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png/v1/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png" alt="AREN Athletic" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy">
           </div>
-          <div style="margin-top:2rem;"><a href="{{ routes.all_products_collection_url }}" class="btn btn--outline">Shop Apparel</a></div>
+          <div style="margin-top:2rem;"><a href="{{ shop_url }}" class="btn btn--outline">Shop Apparel</a></div>
         </div>
         <div>
           <p class="text-body" style="margin-bottom:1.75rem;">AREN isn't just apparel. AREN is a standard.</p>
@@ -122,9 +132,9 @@
           <p class="text-body" style="max-width:46ch;">AREN is evolving into a coordinated performance ecosystem, establishing elite training protocols and community expression while maintaining the absolute integrity of the standard.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:1rem;max-width:400px;">
-          <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="btn btn--primary">Join the Collective</a>
-          <a href="{{ pages['training'].url | default: '/pages/training' }}" class="btn btn--outline">Explore Training</a>
-          <a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}" class="btn btn--outline">Join Street Miles NYC</a>
+          <a href="{{ contact_url }}" class="btn btn--primary">Join the Collective</a>
+          <a href="{{ training_url }}" class="btn btn--outline">Explore Training</a>
+          <a href="{{ street_miles_url }}" class="btn btn--outline">Join Street Miles NYC</a>
         </div>
       </div>
     </div>
@@ -196,9 +206,9 @@
       </div>
 
       <div class="services-list" style="border-top:none;">
-        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">01 / PROTOCOL</div><div class="service-name">Protocol — Threshold</div></div><div class="service-desc">Advanced performance development emphasizing neural efficiency, force production, and high-intensity execution. Built for athletes operating above baseline standards and seeking elevated output within a controlled training environment.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Apply for Threshold</a></div></div>
-        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">02 / PROTOCOL</div><div class="service-name">Protocol — Capacity</div></div><div class="service-desc">Structured performance training built on volume architecture, strength progression, and metabolic control. Designed for athletes and professionals seeking consistent output, measurable progression, and disciplined execution inside the AREN system.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Enter Capacity</a></div></div>
-        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">03 / COLLECTIVE</div><div class="service-name">National Collective</div></div><div class="service-desc">Open-format performance movement unified under shared standards. Community-driven sessions built around exploration, discipline, and collective execution across boroughs.</div><div class="service-arrow"><a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}">Join Street Miles</a></div></div>
+        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">01 / PROTOCOL</div><div class="service-name">Protocol — Threshold</div></div><div class="service-desc">Advanced performance development emphasizing neural efficiency, force production, and high-intensity execution. Built for athletes operating above baseline standards and seeking elevated output within a controlled training environment.</div><div class="service-arrow"><a href="{{ contact_url }}">Apply for Threshold</a></div></div>
+        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">02 / PROTOCOL</div><div class="service-name">Protocol — Capacity</div></div><div class="service-desc">Structured performance training built on volume architecture, strength progression, and metabolic control. Designed for athletes and professionals seeking consistent output, measurable progression, and disciplined execution inside the AREN system.</div><div class="service-arrow"><a href="{{ contact_url }}">Enter Capacity</a></div></div>
+        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">03 / COLLECTIVE</div><div class="service-name">National Collective</div></div><div class="service-desc">Open-format performance movement unified under shared standards. Community-driven sessions built around exploration, discipline, and collective execution across boroughs.</div><div class="service-arrow"><a href="{{ street_miles_url }}">Join Street Miles</a></div></div>
       </div>
     </div>
   </section>
@@ -251,12 +261,12 @@
 
   <section class="services-list">
     <div class="container">
-      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">01</div><div class="service-name">Individual Programming</div></div><div class="service-desc">Custom training programs built around the individual athlete's goals, schedule, and environment. Periodized, progressive, and designed for long-term development. Remote coaching available nationally.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Inquire</a></div></div>
-      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">02</div><div class="service-name">Group Training</div></div><div class="service-desc">Structured sessions for small groups in the NYC metro area. Accountability-driven, community-oriented, and executed to the AREN standard. Every session is a unit within a larger protocol.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Inquire</a></div></div>
-      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">03</div><div class="service-name">Street Miles Access</div></div><div class="service-desc">Full integration into the Street Miles NYC chapter ecosystem. Weekly runs, digital hub access, chapter coordination, and accountability structures. Every Sunday, five boroughs.</div><div class="service-arrow"><a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}">Explore</a></div></div>
-      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">04</div><div class="service-name">Hub Chapter Activation</div></div><div class="service-desc">Launch a Street Miles chapter in your city. AREN provides the operational framework, brand standards, and programming infrastructure. National hub network expansion is ongoing.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Apply</a></div></div>
-      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">05</div><div class="service-name">Corporate + Team Performance</div></div><div class="service-desc">Performance culture programming for teams and organizations. Training, accountability frameworks, and the physical standards that drive high-output performance at scale.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Inquire</a></div></div>
-      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">06</div><div class="service-name">Apparel — Uniform Program</div></div><div class="service-desc">Custom AREN ATHLETIC uniform programs for teams, chapters, and organizations. Branded performance apparel built to the same functional standard as the core collection.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Inquire</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">01</div><div class="service-name">Individual Programming</div></div><div class="service-desc">Custom training programs built around the individual athlete's goals, schedule, and environment. Periodized, progressive, and designed for long-term development. Remote coaching available nationally.</div><div class="service-arrow"><a href="{{ contact_url }}">Inquire</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">02</div><div class="service-name">Group Training</div></div><div class="service-desc">Structured sessions for small groups in the NYC metro area. Accountability-driven, community-oriented, and executed to the AREN standard. Every session is a unit within a larger protocol.</div><div class="service-arrow"><a href="{{ contact_url }}">Inquire</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">03</div><div class="service-name">Street Miles Access</div></div><div class="service-desc">Full integration into the Street Miles NYC chapter ecosystem. Weekly runs, digital hub access, chapter coordination, and accountability structures. Every Sunday, five boroughs.</div><div class="service-arrow"><a href="{{ street_miles_url }}">Explore</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">04</div><div class="service-name">Hub Chapter Activation</div></div><div class="service-desc">Launch a Street Miles chapter in your city. AREN provides the operational framework, brand standards, and programming infrastructure. National hub network expansion is ongoing.</div><div class="service-arrow"><a href="{{ contact_url }}">Apply</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">05</div><div class="service-name">Corporate + Team Performance</div></div><div class="service-desc">Performance culture programming for teams and organizations. Training, accountability frameworks, and the physical standards that drive high-output performance at scale.</div><div class="service-arrow"><a href="{{ contact_url }}">Inquire</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">06</div><div class="service-name">Apparel — Uniform Program</div></div><div class="service-desc">Custom AREN ATHLETIC uniform programs for teams, chapters, and organizations. Branded performance apparel built to the same functional standard as the core collection.</div><div class="service-arrow"><a href="{{ contact_url }}">Inquire</a></div></div>
     </div>
   </section>
 
@@ -268,9 +278,9 @@
         <p class="text-body" style="margin-bottom:1.5rem;">AREN is evolving into a coordinated performance ecosystem, establishing elite training protocols and community expression while maintaining the absolute integrity of the standard.</p>
       </div>
       <div style="display:grid;gap:1rem;align-content:start;">
-        <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="btn btn--primary">Contact / Join the Community</a>
-        <a href="{{ pages['training'].url | default: '/pages/training' }}" class="btn btn--outline">Explore Training Programs</a>
-        <a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}" class="btn btn--outline">Join Street Miles NYC</a>
+        <a href="{{ contact_url }}" class="btn btn--primary">Contact / Join the Community</a>
+        <a href="{{ training_url }}" class="btn btn--outline">Explore Training Programs</a>
+        <a href="{{ street_miles_url }}" class="btn btn--outline">Join Street Miles NYC</a>
       </div>
     </div>
   </section>
@@ -286,7 +296,7 @@
       <h1 class="sm-hero-tagline">DO THE WORK.<br>CARRY THE<br>WEIGHT.</h1>
       <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:52ch;margin-bottom:3rem;">Street Miles is the street-level expression of AREN's standards through community runs and shared accountability.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="btn btn--primary">Join SMNYC</a>
+        <a href="{{ contact_url }}" class="btn btn--primary">Join SMNYC</a>
         <a href="#protocol" class="btn btn--outline-white">View Protocol</a>
       </div>
     </div>
@@ -371,7 +381,7 @@
         </div>
       </div>
       <div style="display:grid;align-content:start;">
-        <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="btn btn--primary">Join Street Miles NYC</a>
+        <a href="{{ contact_url }}" class="btn btn--primary">Join Street Miles NYC</a>
       </div>
     </div>
   </section>
@@ -426,9 +436,9 @@
     <div class="container">
       <div class="section-header"><div><div class="text-eyebrow mb-sm">Grid &amp; Grit</div><h2 class="text-h2">The AREN ecosystem in motion</h2></div></div>
       <div class="training-grid" style="margin-top:var(--space-lg);">
-        <div class="training-card"><div class="training-card-title">Train</div><div class="training-card-desc">Individual and group training programs for athletes operating at a high standard.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ pages['training'].url | default: '/pages/training' }}">Explore Training</a></div></div>
-        <div class="training-card"><div class="training-card-title">Run</div><div class="training-card-desc">Street Miles NYC — Every Sunday. Five boroughs. No excuses. Where the standard meets the pavement.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}">Join Street Miles</a></div></div>
-        <div class="training-card"><div class="training-card-title">Wear</div><div class="training-card-desc">Apparel built to perform in training and carry the same standard into the rest of life.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ routes.all_products_collection_url }}">Shop AREN</a></div></div>
+        <div class="training-card"><div class="training-card-title">Train</div><div class="training-card-desc">Individual and group training programs for athletes operating at a high standard.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ training_url }}">Explore Training</a></div></div>
+        <div class="training-card"><div class="training-card-title">Run</div><div class="training-card-desc">Street Miles NYC — Every Sunday. Five boroughs. No excuses. Where the standard meets the pavement.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ street_miles_url }}">Join Street Miles</a></div></div>
+        <div class="training-card"><div class="training-card-title">Wear</div><div class="training-card-desc">Apparel built to perform in training and carry the same standard into the rest of life.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ shop_url }}">Shop AREN</a></div></div>
       </div>
     </div>
   </section>

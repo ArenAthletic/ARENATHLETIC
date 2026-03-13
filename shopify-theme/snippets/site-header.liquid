@@ -1,3 +1,12 @@
+{% liquid
+  assign about_url = pages['about'].url | default: '/pages/about'
+  assign training_url = pages['training'].url | default: '/pages/training'
+  assign services_url = pages['services'].url | default: '/pages/services'
+  assign street_miles_url = pages['street-miles'].url | default: '/pages/street-miles'
+  assign contact_url = pages['contact'].url | default: '/pages/contact'
+  assign shop_url = routes.all_products_collection_url | default: '/collections/all'
+%}
+
 <nav class="nav" id="main-nav">
   <div class="nav-inner">
     <a href="{{ routes.root_url }}" class="nav-logo" aria-label="{{ shop.name }} home">
@@ -15,17 +24,17 @@
 
     <div class="nav-links">
       <a href="{{ routes.root_url }}" class="nav-link{% if request.page_type == 'index' %} active{% endif %}">Home</a>
-      <a href="{{ pages['about'].url | default: '/pages/about' }}" class="nav-link{% if handle == 'about' %} active{% endif %}">About AREN</a>
-      <a href="{{ pages['training'].url | default: '/pages/training' }}" class="nav-link{% if handle == 'training' %} active{% endif %}">Training</a>
-      <a href="{{ pages['services'].url | default: '/pages/services' }}" class="nav-link{% if handle == 'services' %} active{% endif %}">Services</a>
-      <a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}" class="nav-link{% if handle == 'street-miles' %} active{% endif %}">Street Miles NYC</a>
-      <a href="{{ routes.all_products_collection_url }}" class="nav-link{% if request.page_type == 'collection' or request.page_type == 'product' %} active{% endif %}">Shop</a>
-      <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="nav-link{% if handle == 'contact' %} active{% endif %}">Contact / Join</a>
+      <a href="{{ about_url }}" class="nav-link{% if handle == 'about' %} active{% endif %}">About AREN</a>
+      <a href="{{ training_url }}" class="nav-link{% if handle == 'training' %} active{% endif %}">Training</a>
+      <a href="{{ services_url }}" class="nav-link{% if handle == 'services' %} active{% endif %}">Services</a>
+      <a href="{{ street_miles_url }}" class="nav-link{% if handle == 'street-miles' %} active{% endif %}">Street Miles NYC</a>
+      <a href="{{ shop_url }}" class="nav-link{% if request.page_type == 'collection' or request.page_type == 'product' %} active{% endif %}">Shop</a>
+      <a href="{{ contact_url }}" class="nav-link{% if handle == 'contact' %} active{% endif %}">Contact / Join</a>
     </div>
 
     <div class="nav-actions">
       <a href="{{ routes.account_login_url }}" class="nav-action-link">Log In</a>
-      <a href="{{ routes.all_products_collection_url }}" class="nav-cta">Shop Now</a>
+      <a href="{{ shop_url }}" class="nav-cta">Shop Now</a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" type="button">
         <span></span>
         <span></span>
@@ -38,12 +47,12 @@
 <div class="nav-mobile" id="nav-mobile">
   <div class="nav-mobile-links">
     <a href="{{ routes.root_url }}" class="nav-mobile-link">Home</a>
-    <a href="{{ pages['about'].url | default: '/pages/about' }}" class="nav-mobile-link">About AREN</a>
-    <a href="{{ pages['training'].url | default: '/pages/training' }}" class="nav-mobile-link">Training</a>
-    <a href="{{ pages['services'].url | default: '/pages/services' }}" class="nav-mobile-link">Services</a>
-    <a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}" class="nav-mobile-link">Street Miles NYC</a>
-    <a href="{{ routes.all_products_collection_url }}" class="nav-mobile-link">Shop</a>
-    <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="nav-mobile-link">Contact / Join</a>
+    <a href="{{ about_url }}" class="nav-mobile-link">About AREN</a>
+    <a href="{{ training_url }}" class="nav-mobile-link">Training</a>
+    <a href="{{ services_url }}" class="nav-mobile-link">Services</a>
+    <a href="{{ street_miles_url }}" class="nav-mobile-link">Street Miles NYC</a>
+    <a href="{{ shop_url }}" class="nav-mobile-link">Shop</a>
+    <a href="{{ contact_url }}" class="nav-mobile-link">Contact / Join</a>
     <a href="{{ routes.account_login_url }}" class="nav-mobile-link">Log In</a>
   </div>
 </div>
