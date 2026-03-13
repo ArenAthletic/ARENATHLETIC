@@ -1,5 +1,33 @@
 {
   "sections": {
+    "hero_draggable": {
+      "type": "hero-draggable",
+      "settings": {
+        "bg_color": "#ffffff"
+      },
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Elevate Your Training"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Experience the next level of athletic performance.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Now",
+            "link": "/collections/all"
+          }
+        }
+      },
+      "block_order": ["heading", "text", "button"]
+    },
     "hero": {
       "type": "hero",
       "settings": {
@@ -68,5 +96,5 @@
       }
     }
   },
-  "order": ["hero", "featured_collection", "image_with_text", "newsletter"]
+  "order": ["hero_draggable", "hero", "featured_collection", "image_with_text", "newsletter"]
 }
