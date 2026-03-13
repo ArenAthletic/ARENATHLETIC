@@ -108,6 +108,11 @@
         "default": "Shop Now"
       },
       {
+        "type": "link_list",
+        "id": "header_menu",
+        "label": "Header menu"
+      },
+      {
         "type": "header",
         "content": "Footer"
       },
@@ -218,6 +223,16 @@
         "id": "footer_terms_label",
         "label": "Footer terms label",
         "default": "TERMS"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_ecosystem_menu",
+        "label": "Footer ecosystem menu"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_access_menu",
+        "label": "Footer access menu"
       }
     ]
   }

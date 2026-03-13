@@ -7,6 +7,18 @@
   assign privacy_url = pages['privacy'].url | default: '/pages/privacy'
   assign terms_url = pages['terms'].url | default: '/pages/terms'
   assign shop_url = pages['shop'].url | default: '/pages/shop'
+  assign ecosystem_menu_handle = settings.footer_ecosystem_menu
+  assign access_menu_handle = settings.footer_access_menu
+  assign ecosystem_menu_links = blank
+  assign access_menu_links = blank
+
+  if ecosystem_menu_handle != blank and linklists[ecosystem_menu_handle] != blank
+    assign ecosystem_menu_links = linklists[ecosystem_menu_handle].links
+  endif
+
+  if access_menu_handle != blank and linklists[access_menu_handle] != blank
+    assign access_menu_links = linklists[access_menu_handle].links
+  endif
 %}
 
 <footer class="footer">
@@ -39,22 +51,34 @@
       <div class="footer-col">
         <div class="footer-col-title">{{ settings.footer_ecosystem_heading | default: 'ECOSYSTEM' }}</div>
         <div class="footer-links">
-          <a href="{{ about_url }}" class="footer-link">{{ settings.header_about_label | default: 'About AREN' }}</a>
-          <a href="{{ training_url }}" class="footer-link">{{ settings.header_training_label | default: 'Training' }}</a>
-          <a href="{{ services_url }}" class="footer-link">{{ settings.header_services_label | default: 'Services' }}</a>
-          <a href="{{ street_miles_url }}" class="footer-link">{{ settings.header_street_label | default: 'Street Miles NYC' }}</a>
-          <a href="{{ contact_url }}" class="footer-link">{{ settings.footer_join_label | default: 'Join the Community' }}</a>
+          {% if ecosystem_menu_links != blank %}
+            {% for link in ecosystem_menu_links %}
+              <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
+            {% endfor %}
+          {% else %}
+            <a href="{{ about_url }}" class="footer-link">{{ settings.header_about_label | default: 'About AREN' }}</a>
+            <a href="{{ training_url }}" class="footer-link">{{ settings.header_training_label | default: 'Training' }}</a>
+            <a href="{{ services_url }}" class="footer-link">{{ settings.header_services_label | default: 'Services' }}</a>
+            <a href="{{ street_miles_url }}" class="footer-link">{{ settings.header_street_label | default: 'Street Miles NYC' }}</a>
+            <a href="{{ contact_url }}" class="footer-link">{{ settings.footer_join_label | default: 'Join the Community' }}</a>
+          {% endif %}
         </div>
       </div>
 
       <div class="footer-col">
         <div class="footer-col-title">{{ settings.footer_access_heading | default: 'ACCESS' }}</div>
         <div class="footer-links">
-          <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_shop_label | default: 'Shop Apparel' }}</a>
-          <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_new_arrivals_label | default: 'New Arrivals' }}</a>
-          <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_core_essentials_label | default: 'Core Essentials' }}</a>
-          <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_outerwear_label | default: 'Outerwear' }}</a>
-          <a href="{{ routes.account_login_url }}" class="footer-link">{{ settings.footer_login_label | default: 'Log In' }}</a>
+          {% if access_menu_links != blank %}
+            {% for link in access_menu_links %}
+              <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
+            {% endfor %}
+          {% else %}
+            <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_shop_label | default: 'Shop Apparel' }}</a>
+            <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_new_arrivals_label | default: 'New Arrivals' }}</a>
+            <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_core_essentials_label | default: 'Core Essentials' }}</a>
+            <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_outerwear_label | default: 'Outerwear' }}</a>
+            <a href="{{ routes.account_login_url }}" class="footer-link">{{ settings.footer_login_label | default: 'Log In' }}</a>
+          {% endif %}
         </div>
       </div>
 

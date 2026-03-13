@@ -5,6 +5,12 @@
   assign street_miles_url = pages['street-miles'].url | default: '/pages/street-miles'
   assign contact_url = pages['contact'].url | default: '/pages/contact'
   assign shop_url = pages['shop'].url | default: '/pages/shop'
+  assign header_menu_handle = settings.header_menu
+  assign header_menu_links = blank
+
+  if header_menu_handle != blank and linklists[header_menu_handle] != blank
+    assign header_menu_links = linklists[header_menu_handle].links
+  endif
 %}
 
 <nav class="nav" id="main-nav">
@@ -23,13 +29,19 @@
     </a>
 
     <div class="nav-links">
-      <a href="{{ routes.root_url }}" class="nav-link{% if request.page_type == 'index' %} active{% endif %}">{{ settings.header_home_label | default: 'Home' }}</a>
-      <a href="{{ about_url }}" class="nav-link{% if handle == 'about' %} active{% endif %}">{{ settings.header_about_label | default: 'About AREN' }}</a>
-      <a href="{{ training_url }}" class="nav-link{% if handle == 'training' %} active{% endif %}">{{ settings.header_training_label | default: 'Training' }}</a>
-      <a href="{{ services_url }}" class="nav-link{% if handle == 'services' %} active{% endif %}">{{ settings.header_services_label | default: 'Services' }}</a>
-      <a href="{{ street_miles_url }}" class="nav-link{% if handle == 'street-miles' %} active{% endif %}">{{ settings.header_street_label | default: 'Street Miles NYC' }}</a>
-      <a href="{{ shop_url }}" class="nav-link{% if handle == 'shop' or request.page_type == 'collection' or request.page_type == 'product' %} active{% endif %}">{{ settings.header_shop_label | default: 'Shop' }}</a>
-      <a href="{{ contact_url }}" class="nav-link{% if handle == 'contact' %} active{% endif %}">{{ settings.header_contact_label | default: 'Contact / Join' }}</a>
+      {% if header_menu_links != blank %}
+        {% for link in header_menu_links %}
+          <a href="{{ link.url }}" class="nav-link{% if link.current or link.active %} active{% endif %}">{{ link.title }}</a>
+        {% endfor %}
+      {% else %}
+        <a href="{{ routes.root_url }}" class="nav-link{% if request.page_type == 'index' %} active{% endif %}">{{ settings.header_home_label | default: 'Home' }}</a>
+        <a href="{{ about_url }}" class="nav-link{% if handle == 'about' %} active{% endif %}">{{ settings.header_about_label | default: 'About AREN' }}</a>
+        <a href="{{ training_url }}" class="nav-link{% if handle == 'training' %} active{% endif %}">{{ settings.header_training_label | default: 'Training' }}</a>
+        <a href="{{ services_url }}" class="nav-link{% if handle == 'services' %} active{% endif %}">{{ settings.header_services_label | default: 'Services' }}</a>
+        <a href="{{ street_miles_url }}" class="nav-link{% if handle == 'street-miles' %} active{% endif %}">{{ settings.header_street_label | default: 'Street Miles NYC' }}</a>
+        <a href="{{ shop_url }}" class="nav-link{% if handle == 'shop' or request.page_type == 'collection' or request.page_type == 'product' %} active{% endif %}">{{ settings.header_shop_label | default: 'Shop' }}</a>
+        <a href="{{ contact_url }}" class="nav-link{% if handle == 'contact' %} active{% endif %}">{{ settings.header_contact_label | default: 'Contact / Join' }}</a>
+      {% endif %}
     </div>
 
     <div class="nav-actions">
@@ -46,13 +58,19 @@
 
 <div class="nav-mobile" id="nav-mobile">
   <div class="nav-mobile-links">
-    <a href="{{ routes.root_url }}" class="nav-mobile-link">{{ settings.header_home_label | default: 'Home' }}</a>
-    <a href="{{ about_url }}" class="nav-mobile-link">{{ settings.header_about_label | default: 'About AREN' }}</a>
-    <a href="{{ training_url }}" class="nav-mobile-link">{{ settings.header_training_label | default: 'Training' }}</a>
-    <a href="{{ services_url }}" class="nav-mobile-link">{{ settings.header_services_label | default: 'Services' }}</a>
-    <a href="{{ street_miles_url }}" class="nav-mobile-link">{{ settings.header_street_label | default: 'Street Miles NYC' }}</a>
-    <a href="{{ shop_url }}" class="nav-mobile-link">{{ settings.header_shop_label | default: 'Shop' }}</a>
-    <a href="{{ contact_url }}" class="nav-mobile-link">{{ settings.header_contact_label | default: 'Contact / Join' }}</a>
+    {% if header_menu_links != blank %}
+      {% for link in header_menu_links %}
+        <a href="{{ link.url }}" class="nav-mobile-link">{{ link.title }}</a>
+      {% endfor %}
+    {% else %}
+      <a href="{{ routes.root_url }}" class="nav-mobile-link">{{ settings.header_home_label | default: 'Home' }}</a>
+      <a href="{{ about_url }}" class="nav-mobile-link">{{ settings.header_about_label | default: 'About AREN' }}</a>
+      <a href="{{ training_url }}" class="nav-mobile-link">{{ settings.header_training_label | default: 'Training' }}</a>
+      <a href="{{ services_url }}" class="nav-mobile-link">{{ settings.header_services_label | default: 'Services' }}</a>
+      <a href="{{ street_miles_url }}" class="nav-mobile-link">{{ settings.header_street_label | default: 'Street Miles NYC' }}</a>
+      <a href="{{ shop_url }}" class="nav-mobile-link">{{ settings.header_shop_label | default: 'Shop' }}</a>
+      <a href="{{ contact_url }}" class="nav-mobile-link">{{ settings.header_contact_label | default: 'Contact / Join' }}</a>
+    {% endif %}
     <a href="{{ routes.account_login_url }}" class="nav-mobile-link">{{ settings.header_login_label | default: 'Log In' }}</a>
   </div>
 </div>
