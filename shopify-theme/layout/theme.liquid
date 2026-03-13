@@ -20,11 +20,11 @@
     {{ content_for_header }}
   </head>
   <body class="template-{{ template.name | handle }}">
-    {% render 'site-header' %}
+    {% section 'site-header' %}
     <main id="MainContent" role="main">
       {{ content_for_layout }}
     </main>
-    {% render 'site-footer' %}
+    {% section 'site-footer' %}
     <script src="{{ 'aren-theme.js' | asset_url }}" defer></script>
   </body>
 </html>
