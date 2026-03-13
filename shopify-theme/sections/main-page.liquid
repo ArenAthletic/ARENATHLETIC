@@ -7,7 +7,7 @@
   assign contact_url = pages['contact'].url | default: '/pages/contact'
   assign privacy_url = pages['privacy'].url | default: '/pages/privacy'
   assign terms_url = pages['terms'].url | default: '/pages/terms'
-  assign shop_url = routes.all_products_collection_url | default: '/collections/all'
+  assign shop_url = pages['shop'].url | default: '/pages/shop'
 %}
 
 {% if page_handle == 'about' %}

@@ -2,7 +2,7 @@
   assign about_url = pages['about'].url | default: '/pages/about'
   assign street_miles_url = pages['street-miles'].url | default: '/pages/street-miles'
   assign contact_url = pages['contact'].url | default: '/pages/contact'
-  assign shop_url = routes.all_products_collection_url | default: '/collections/all'
+  assign shop_url = pages['shop'].url | default: '/pages/shop'
 %}
 
 <section class="hero">
