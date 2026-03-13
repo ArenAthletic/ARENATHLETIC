@@ -1,18 +1,16 @@
-backend:
-  name: github
-  repo: ArenAthletic/ARENATHLETIC
-  branch: main
+# 1. Where your site files are
+source: Export-static
 
-media_folder: "export-static/images"
-public_folder: "/images"
+# 2. Tell CloudCannon where to put the "built" version for the preview
+output_dir: _site
 
-collections:
-  - name: home
-    label: Home
-    files:
-      - file: content/home.json
-        label: Home Page
-        name: home
-        fields:
-          - { label: Hero Title, name: hero_title, widget: string }
-          - { label: Hero Subtitle, name: hero_subtitle, widget: string }
+# 3. Define your pages as a collection
+collections_config:
+  pages:
+    path: ""
+    output: true
+    url: "/[path]"
+
+# 4. Enable the Visual Editor by default
+editor:
+  default_view: visual
