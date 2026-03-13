@@ -9,7 +9,7 @@ collections_config:
   pages:
     path: ""
     output: true
-    url: "/[path]"
+    url: "/"
 
 # 4. Enable the Visual Editor by default
 editor:
