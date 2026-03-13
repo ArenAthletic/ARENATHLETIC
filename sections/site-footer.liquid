@@ -1,0 +1,197 @@
+{% liquid
+  assign about_url = pages['about'].url | default: '/pages/about'
+  assign training_url = pages['training'].url | default: '/pages/training'
+  assign services_url = pages['services'].url | default: '/pages/services'
+  assign street_miles_url = pages['street-miles'].url | default: '/pages/street-miles'
+  assign contact_url = pages['contact'].url | default: '/pages/contact'
+  assign privacy_url = pages['privacy'].url | default: '/pages/privacy'
+  assign terms_url = pages['terms'].url | default: '/pages/terms'
+  assign shop_url = pages['shop'].url | default: '/pages/shop'
+  assign ecosystem_menu_handle = section.settings.footer_ecosystem_menu | default: settings.footer_ecosystem_menu
+  assign access_menu_handle = section.settings.footer_access_menu | default: settings.footer_access_menu
+  assign ecosystem_menu_links = blank
+  assign access_menu_links = blank
+
+  if ecosystem_menu_handle != blank and linklists[ecosystem_menu_handle] != blank
+    assign ecosystem_menu_links = linklists[ecosystem_menu_handle].links
+  endif
+
+  if access_menu_handle != blank and linklists[access_menu_handle] != blank
+    assign access_menu_links = linklists[access_menu_handle].links
+  endif
+%}
+
+<footer class="footer" {{ section.shopify_attributes }}>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="{{ routes.root_url }}" class="footer-brand-name footer-brand-link" aria-label="{{ shop.name }} home">
+          {% if section.settings.logo != blank %}
+            <img src="{{ section.settings.logo | image_url: width: 180 }}" alt="{{ shop.name | escape }}" class="footer-logo-image">
+          {% elsif settings.logo != blank %}
+            <img src="{{ settings.logo | image_url: width: 180 }}" alt="{{ shop.name | escape }}" class="footer-logo-image">
+          {% else %}
+            <img src="{{ 'aren-logo.png' | asset_url }}" alt="{{ shop.name | escape }}" class="footer-logo-image">
+          {% endif %}
+        </a>
+        <div class="footer-brand-taglines">
+          <span class="footer-brand-tagline">{{ section.settings.tagline_1 | default: settings.footer_tagline_1 | default: 'SMNYC: FIVE BOROUGH CHAPTER' }}</span>
+          <span class="footer-brand-tagline">{{ section.settings.tagline_2 | default: settings.footer_tagline_2 | default: 'DISCIPLINE AND PERFORMANCE.' }}</span>
+          <span class="footer-brand-tagline">{{ section.settings.tagline_3 | default: settings.footer_tagline_3 | default: 'AREN ATHLETIC UNIFORM.' }}</span>
+        </div>
+        <div class="footer-social">
+          {% for block in section.blocks %}
+            {% if block.type == 'social_link' %}
+              {% liquid
+                assign social_url = block.settings.url
+                if social_url == blank
+                  if block.settings.platform == 'instagram'
+                    assign social_url = settings.instagram_url
+                  elsif block.settings.platform == 'twitter'
+                    assign social_url = settings.twitter_url
+                  elsif block.settings.platform == 'youtube'
+                    assign social_url = settings.youtube_url
+                  endif
+                endif
+              %}
+              {% if social_url != blank %}
+                <a href="{{ social_url }}" class="footer-social-link" {{ block.shopify_attributes }} title="{{ block.settings.label | escape }}">
+                  {% if block.settings.icon != blank %}
+                    <span aria-hidden="true">{{ block.settings.icon }}</span>
+                  {% endif %}
+                  <span>{{ block.settings.label }}</span>
+                </a>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">{{ section.settings.ecosystem_heading | default: settings.footer_ecosystem_heading | default: 'ECOSYSTEM' }}</div>
+        <div class="footer-links">
+          {% if ecosystem_menu_links != blank %}
+            {% for link in ecosystem_menu_links %}
+              <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
+            {% endfor %}
+          {% else %}
+            <a href="{{ about_url }}" class="footer-link">{{ section.settings.about_label | default: settings.header_about_label | default: 'About AREN' }}</a>
+            <a href="{{ training_url }}" class="footer-link">{{ section.settings.training_label | default: settings.header_training_label | default: 'Training' }}</a>
+            <a href="{{ services_url }}" class="footer-link">{{ section.settings.services_label | default: settings.header_services_label | default: 'Services' }}</a>
+            <a href="{{ street_miles_url }}" class="footer-link">{{ section.settings.street_label | default: settings.header_street_label | default: 'Street Miles NYC' }}</a>
+            <a href="{{ contact_url }}" class="footer-link">{{ section.settings.join_label | default: settings.footer_join_label | default: 'Join the Community' }}</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">{{ section.settings.access_heading | default: settings.footer_access_heading | default: 'ACCESS' }}</div>
+        <div class="footer-links">
+          {% if access_menu_links != blank %}
+            {% for link in access_menu_links %}
+              <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
+            {% endfor %}
+          {% else %}
+            <a href="{{ shop_url }}" class="footer-link">{{ section.settings.shop_label | default: settings.footer_shop_label | default: 'Shop Apparel' }}</a>
+            <a href="{{ shop_url }}" class="footer-link">{{ section.settings.new_arrivals_label | default: settings.footer_new_arrivals_label | default: 'New Arrivals' }}</a>
+            <a href="{{ shop_url }}" class="footer-link">{{ section.settings.core_essentials_label | default: settings.footer_core_essentials_label | default: 'Core Essentials' }}</a>
+            <a href="{{ shop_url }}" class="footer-link">{{ section.settings.outerwear_label | default: settings.footer_outerwear_label | default: 'Outerwear' }}</a>
+            <a href="{{ routes.account_login_url }}" class="footer-link">{{ section.settings.login_label | default: settings.footer_login_label | default: 'Log In' }}</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-col-title">{{ section.settings.network_heading | default: settings.footer_network_heading | default: 'NATIONAL HUB NETWORK.' }}</div>
+        <div class="footer-links">
+          <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}" class="footer-link">{{ settings.email_address | default: 'INFO@ARENATHLETIC.COM' | upcase }}</a>
+          {% for block in section.blocks %}
+            {% if block.type == 'footer_note' %}
+              <span class="footer-link" style="cursor:default;" {{ block.shopify_attributes }}>{{ block.settings.text }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <span class="footer-identity-line">{{ section.settings.identity_line | default: settings.footer_identity_line | default: 'AREN ATHLETIC — NEW YORK CITY' }}</span>
+        <span class="footer-copyright">{{ section.settings.copyright_text | default: settings.footer_copyright | default: '© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.' }}</span>
+      </div>
+      <div style="display:flex;gap:2rem;">
+        <a href="{{ privacy_url }}" class="footer-copyright" style="text-decoration:none;">{{ section.settings.privacy_label | default: settings.footer_privacy_label | default: 'PRIVACY' }}</a>
+        <a href="{{ terms_url }}" class="footer-copyright" style="text-decoration:none;">{{ section.settings.terms_label | default: settings.footer_terms_label | default: 'TERMS' }}</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Site footer",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo override" },
+    { "type": "text", "id": "tagline_1", "label": "Tagline 1", "default": "SMNYC: FIVE BOROUGH CHAPTER" },
+    { "type": "text", "id": "tagline_2", "label": "Tagline 2", "default": "DISCIPLINE AND PERFORMANCE." },
+    { "type": "text", "id": "tagline_3", "label": "Tagline 3", "default": "AREN ATHLETIC UNIFORM." },
+    { "type": "text", "id": "ecosystem_heading", "label": "Ecosystem heading", "default": "ECOSYSTEM" },
+    { "type": "link_list", "id": "footer_ecosystem_menu", "label": "Footer ecosystem menu" },
+    { "type": "text", "id": "about_label", "label": "About fallback label", "default": "About AREN" },
+    { "type": "text", "id": "training_label", "label": "Training fallback label", "default": "Training" },
+    { "type": "text", "id": "services_label", "label": "Services fallback label", "default": "Services" },
+    { "type": "text", "id": "street_label", "label": "Street Miles fallback label", "default": "Street Miles NYC" },
+    { "type": "text", "id": "join_label", "label": "Join fallback label", "default": "Join the Community" },
+    { "type": "text", "id": "access_heading", "label": "Access heading", "default": "ACCESS" },
+    { "type": "link_list", "id": "footer_access_menu", "label": "Footer access menu" },
+    { "type": "text", "id": "shop_label", "label": "Shop fallback label", "default": "Shop Apparel" },
+    { "type": "text", "id": "new_arrivals_label", "label": "New arrivals fallback label", "default": "New Arrivals" },
+    { "type": "text", "id": "core_essentials_label", "label": "Core essentials fallback label", "default": "Core Essentials" },
+    { "type": "text", "id": "outerwear_label", "label": "Outerwear fallback label", "default": "Outerwear" },
+    { "type": "text", "id": "login_label", "label": "Login fallback label", "default": "Log In" },
+    { "type": "text", "id": "network_heading", "label": "Network heading", "default": "NATIONAL HUB NETWORK." },
+    { "type": "text", "id": "identity_line", "label": "Identity line", "default": "AREN ATHLETIC — NEW YORK CITY" },
+    { "type": "text", "id": "copyright_text", "label": "Copyright text", "default": "© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED." },
+    { "type": "text", "id": "privacy_label", "label": "Privacy label", "default": "PRIVACY" },
+    { "type": "text", "id": "terms_label", "label": "Terms label", "default": "TERMS" }
+  ],
+  "blocks": [
+    {
+      "type": "social_link",
+      "name": "Social link",
+      "limit": 6,
+      "settings": [
+        { "type": "select", "id": "platform", "label": "Platform", "default": "instagram", "options": [
+          { "value": "instagram", "label": "Instagram" },
+          { "value": "twitter", "label": "Twitter / X" },
+          { "value": "youtube", "label": "YouTube" },
+          { "value": "custom", "label": "Custom" }
+        ] },
+        { "type": "text", "id": "label", "label": "Label", "default": "Instagram" },
+        { "type": "text", "id": "icon", "label": "Icon text", "default": "IG" },
+        { "type": "url", "id": "url", "label": "Custom URL" }
+      ]
+    },
+    {
+      "type": "footer_note",
+      "name": "Footer note",
+      "limit": 6,
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "AREN ATHLETIC COLLECTIVE." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Site footer",
+      "blocks": [
+        { "type": "social_link", "settings": { "platform": "instagram", "label": "Instagram", "icon": "IG" } },
+        { "type": "social_link", "settings": { "platform": "twitter", "label": "Twitter", "icon": "TW" } },
+        { "type": "social_link", "settings": { "platform": "youtube", "label": "YouTube", "icon": "YT" } },
+        { "type": "footer_note", "settings": { "text": "AREN ATHLETIC COLLECTIVE." } },
+        { "type": "footer_note", "settings": { "text": "STRUCTURED PERFORMANCE." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

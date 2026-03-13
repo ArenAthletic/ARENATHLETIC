@@ -1,0 +1,176 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero-banner",
+      "settings": {
+        "page": "training",
+        "dark_theme": true,
+        "min_height": 520,
+        "eyebrow": "Aren Athletic &bull; Discipline",
+        "heading": "Built by Discipline.<br>Proven by Action.",
+        "copy": "<p>Uncompromising execution and elite standards. Our systems are built for the high-level athlete where performance must be validated by measurable output and structured accountability.</p>",
+        "fallback_image_url": "https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/crop/x_0,y_558,w_4284,h_4295/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png",
+        "background_position": "center",
+        "overlay_gradient": "linear-gradient(160deg,rgba(28,28,26,0.85) 0%,rgba(35,35,33,0.65) 60%,rgba(26,26,24,0.9) 100%)",
+        "heading_width": 20,
+        "copy_width": 50
+      }
+    },
+    "marquee": {
+      "type": "page-marquee",
+      "settings": {
+        "page": "training",
+        "text": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —"
+      }
+    },
+    "philosophy": {
+      "type": "page-card-list",
+      "blocks": {
+        "principle_1": {
+          "type": "card",
+          "settings": {
+            "title": "01 / Presence.",
+            "description": "Operate with awareness, control, and intent in every rep and every environment."
+          }
+        },
+        "principle_2": {
+          "type": "card",
+          "settings": {
+            "title": "02 / Discipline.",
+            "description": "Execution starts with standards held long before intensity arrives."
+          }
+        },
+        "principle_3": {
+          "type": "card",
+          "settings": {
+            "title": "03 / Execution.",
+            "description": "Intent means nothing unless it becomes measurable output."
+          }
+        },
+        "principle_4": {
+          "type": "card",
+          "settings": {
+            "title": "04 / Performance Systems.",
+            "description": "Every protocol is built to support repeatable progress under real pressure."
+          }
+        }
+      },
+      "block_order": ["principle_1", "principle_2", "principle_3", "principle_4"],
+      "settings": {
+        "page": "training",
+        "eyebrow": "Philosophy",
+        "heading": "Built by Discipline.<br>Proven by Action.",
+        "copy": "<p>The AREN performance system is built on structured discipline and uncompromising accountability. Every protocol is designed for the serious athlete who values output over opinion.</p><p>We operate on a hierarchy of performance where intent must be validated by action. We define the standard; you execute the work.</p>",
+        "kicker": "TRAIN / ADAPT / EXECUTE"
+      }
+    },
+    "feature": {
+      "type": "page-split-content",
+      "settings": {
+        "page": "training",
+        "border_bottom": true,
+        "columns": "0.9fr 1.1fr",
+        "vertical_align": "center",
+        "eyebrow": "Feature",
+        "heading": "The training environment reflects the standard.",
+        "copy": "<p>Every detail of the system is designed to remove distraction and reinforce focus, rhythm, and composure.</p>",
+        "fallback_image_url": "https://static.wixstatic.com/media/8a3301_b34c7842f2ee4961a0607531ffdcc869~mv2.png/v1/crop/x_0,y_1000,w_3024,h_3032/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_b34c7842f2ee4961a0607531ffdcc869~mv2.png",
+        "image_aspect": "3/4",
+        "image_overlay": true,
+        "heading_width": 16
+      }
+    },
+    "programs": {
+      "type": "page-cta-links",
+      "blocks": {
+        "program_1": {
+          "type": "link",
+          "settings": {
+            "label": "Apply for Threshold",
+            "url": "/pages/contact",
+            "style": "primary"
+          }
+        },
+        "program_2": {
+          "type": "link",
+          "settings": {
+            "label": "Apply for Capacity",
+            "url": "/pages/contact",
+            "style": "outline"
+          }
+        },
+        "program_3": {
+          "type": "link",
+          "settings": {
+            "label": "Join the Collective",
+            "url": "/pages/street-miles",
+            "style": "outline"
+          }
+        }
+      },
+      "block_order": ["program_1", "program_2", "program_3"],
+      "settings": {
+        "page": "training",
+        "eyebrow": "Performance Systems",
+        "heading": "Programs built for athletes who train with intent.",
+        "copy": "<p>Threshold is built for elevated output. Capacity is built for durable repeatability. The collective connects athletes through shared standards and accountability.</p>"
+      }
+    },
+    "who": {
+      "type": "page-card-list",
+      "blocks": {
+        "who_1": {
+          "type": "card",
+          "settings": {
+            "title": "Performance-first mindset",
+            "description": "Individuals who prioritize performance output over public opinion."
+          }
+        },
+        "who_2": {
+          "type": "card",
+          "settings": {
+            "title": "Structured progression",
+            "description": "Athletes seeking structure, discipline, and measurable progression."
+          }
+        },
+        "who_3": {
+          "type": "card",
+          "settings": {
+            "title": "Composure under pressure",
+            "description": "Operators who value accountability and composure under pressure."
+          }
+        }
+      },
+      "block_order": ["who_1", "who_2", "who_3"],
+      "settings": {
+        "page": "training",
+        "dark_theme": true,
+        "eyebrow": "Who Trains With Intent?",
+        "heading": "The standard is not for everyone.",
+        "copy": "<p>AREN training is built for people ready to be measured by how they operate, not how they talk.</p>",
+        "kicker": "100% EXECUTION / HIGH COMPOSURE / STRICT ADHERENCE"
+      }
+    },
+    "get_started": {
+      "type": "page-split-content",
+      "settings": {
+        "page": "training",
+        "border_top": true,
+        "section_background": "light",
+        "columns": "0.9fr 1.1fr",
+        "vertical_align": "start",
+        "eyebrow": "Get Started",
+        "heading": "Execute the first step.",
+        "copy": "<p>Response Protocol: 24h. We respond to all serious inquiries within 24 hours.</p><p><a href='mailto:info@arenathletic.com'>info@arenathletic.com</a></p><p>37 Union Sq West, 2nd Floor, New York, NY 10003</p>",
+        "button_url": "/pages/contact",
+        "button_label": "Go to Contact",
+        "button_style": "primary",
+        "heading_width": 16
+      }
+    },
+    "main_content": {
+      "type": "main-page-training"
+    }
+  },
+  "order": ["hero", "marquee", "philosophy", "feature", "programs", "who", "get_started", "main_content"]
+}

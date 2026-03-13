@@ -1,0 +1,31 @@
+{% liquid
+  assign target_page = section.settings.page
+  assign current_page_handle = page.handle | default: handle
+  assign target_page_handle = blank
+  if target_page != blank
+    assign target_page_handle = target_page.handle
+  endif
+  if target_page_handle != blank and target_page_handle != current_page_handle
+    break
+  endif
+%}
+
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="marquee-text">{{ section.settings.text }}</span>
+    <span class="marquee-text">{{ section.settings.text }}</span>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Page marquee",
+  "settings": [
+    { "type": "page", "id": "page", "label": "Display on page" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —" }
+  ],
+  "presets": [
+    { "name": "Page marquee" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,17 @@
+<div class="page-training" {{ section.shopify_attributes }}>
+  {% if page.content != blank %}
+    <section class="section"><div class="container rte">{{ page.content }}</div></section>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Training page",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Training page"
+    }
+  ]
+}
+{% endschema %}

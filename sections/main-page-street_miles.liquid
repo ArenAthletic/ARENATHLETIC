@@ -1,0 +1,17 @@
+<div class="page-street-miles" {{ section.shopify_attributes }}>
+  {% if page.content != blank %}
+    <section class="section"><div class="container rte">{{ page.content }}</div></section>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Street Miles page",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Street Miles page"
+    }
+  ]
+}
+{% endschema %}

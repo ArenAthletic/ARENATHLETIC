@@ -1,0 +1,95 @@
+{% liquid
+  assign target_page = section.settings.page
+  assign current_page_handle = page.handle | default: handle
+  assign target_page_handle = blank
+  assign button_url = section.settings.button_url
+  if target_page != blank
+    assign target_page_handle = target_page.handle
+  endif
+  if target_page_handle != blank and target_page_handle != current_page_handle
+    break
+  endif
+%}
+
+<section class="section" style="{% if section.settings.border_top %}border-top:1px solid var(--color-warm-gray);{% endif %}{% if section.settings.border_bottom %}border-bottom:1px solid var(--color-warm-gray);{% endif %}{% if section.settings.section_background == 'dark' %}background:var(--color-black);color:var(--color-white);{% endif %}">
+  <div class="container{% if section.settings.narrow %} container--narrow{% endif %}">
+    <div style="display:grid;grid-template-columns:{{ section.settings.columns }};gap:var(--space-xl);align-items:{{ section.settings.vertical_align }};">
+      <div>
+        {% if section.settings.eyebrow != blank %}
+          <div class="text-eyebrow" style="margin-bottom:2rem;{% if section.settings.section_background == 'dark' %}color:rgba(255,255,255,0.3);{% endif %}">{{ section.settings.eyebrow }}</div>
+        {% endif %}
+        {% if section.settings.heading != blank %}
+          <h2 class="text-h2" style="max-width:{{ section.settings.heading_width }}ch;margin-bottom:1.75rem;{% if section.settings.section_background == 'dark' %}color:#fff;{% endif %}">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.copy != blank %}
+          <div class="text-body rte" style="{% if section.settings.section_background == 'dark' %}color:rgba(255,255,255,0.6);{% endif %}">{{ section.settings.copy }}</div>
+        {% endif %}
+        {% if section.settings.kicker != blank %}
+          <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;{% if section.settings.section_background == 'dark' %}color:rgba(255,255,255,0.35);{% else %}color:var(--color-mid-gray);{% endif %};margin-top:1rem;">{{ section.settings.kicker }}</p>
+        {% endif %}
+        {% if section.settings.button_label != blank and button_url != blank %}
+          <div style="margin-top:2rem;"><a href="{{ button_url }}" class="btn {% if section.settings.button_style == 'primary' %}btn--primary{% elsif section.settings.button_style == 'outline-white' %}btn--outline-white{% else %}btn--outline{% endif %}">{{ section.settings.button_label }}</a></div>
+        {% endif %}
+      </div>
+      <div>
+        {% if section.settings.image != blank or section.settings.fallback_image_url != blank %}
+          <div style="position:relative;overflow:hidden;aspect-ratio:{{ section.settings.image_aspect }};">
+            {% if section.settings.image != blank %}
+              <img src="{{ section.settings.image | image_url: width: 1400 }}" alt="{{ section.settings.image.alt | default: section.settings.heading | escape }}" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy">
+            {% elsif section.settings.fallback_image_url != blank %}
+              <img src="{{ section.settings.fallback_image_url }}" alt="{{ section.settings.heading | escape }}" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy">
+            {% endif %}
+            {% if section.settings.image_overlay %}
+              <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(35,35,33,0.35) 0%,transparent 40%);"></div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Page split content",
+  "settings": [
+    { "type": "page", "id": "page", "label": "Display on page" },
+    { "type": "checkbox", "id": "border_top", "label": "Show top border", "default": false },
+    { "type": "checkbox", "id": "border_bottom", "label": "Show bottom border", "default": true },
+    { "type": "checkbox", "id": "narrow", "label": "Use narrow container", "default": false },
+    { "type": "select", "id": "section_background", "label": "Background", "default": "light", "options": [
+      { "value": "light", "label": "Light" },
+      { "value": "dark", "label": "Dark" }
+    ]},
+    { "type": "select", "id": "columns", "label": "Columns", "default": "1fr 1fr", "options": [
+      { "value": "1fr 1fr", "label": "50 / 50" },
+      { "value": "1.1fr 0.9fr", "label": "55 / 45" },
+      { "value": "0.9fr 1.1fr", "label": "45 / 55" }
+    ]},
+    { "type": "select", "id": "vertical_align", "label": "Vertical align", "default": "start", "options": [
+      { "value": "start", "label": "Top" },
+      { "value": "center", "label": "Center" },
+      { "value": "end", "label": "Bottom" }
+    ]},
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "html", "id": "heading", "label": "Heading" },
+    { "type": "richtext", "id": "copy", "label": "Copy", "default": "<p></p>" },
+    { "type": "text", "id": "kicker", "label": "Kicker" },
+    { "type": "range", "id": "heading_width", "label": "Heading width", "min": 8, "max": 30, "step": 1, "default": 18 },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "fallback_image_url", "label": "Fallback image URL" },
+    { "type": "text", "id": "image_aspect", "label": "Image aspect ratio", "default": "3/4" },
+    { "type": "checkbox", "id": "image_overlay", "label": "Add image overlay", "default": false },
+    { "type": "url", "id": "button_url", "label": "Button link" },
+    { "type": "text", "id": "button_label", "label": "Button label" },
+    { "type": "select", "id": "button_style", "label": "Button style", "default": "outline", "options": [
+      { "value": "primary", "label": "Primary" },
+      { "value": "outline", "label": "Outline" },
+      { "value": "outline-white", "label": "Outline white" }
+    ]}
+  ],
+  "presets": [
+    { "name": "Page split content" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,45 @@
+<div class="page-editor-surface page-editor-surface--terms" data-page-handle="terms" {{ section.shopify_attributes }}>
+  <section class="section" style="padding-top:calc(68px + var(--space-xl));">
+    <div class="container container--narrow">
+      <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="terms_eyebrow">{{ section.settings.terms_eyebrow }}</span></div>
+      <h1 class="text-display" style="margin-bottom:2rem;"><span data-shopify-editor-setting="terms_heading">{{ section.settings.terms_heading }}</span></h1>
+      <div class="text-body">
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="terms_intro">{{ section.settings.terms_intro }}</span></p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;"><span data-shopify-editor-setting="terms_section_1_heading">{{ section.settings.terms_section_1_heading }}</span></h2>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="terms_section_1_body">{{ section.settings.terms_section_1_body }}</span></p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;"><span data-shopify-editor-setting="terms_section_2_heading">{{ section.settings.terms_section_2_heading }}</span></h2>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="terms_section_2_body">{{ section.settings.terms_section_2_body }}</span></p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;"><span data-shopify-editor-setting="terms_contact_heading">{{ section.settings.terms_contact_heading }}</span></h2>
+        <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="terms_contact_copy">{{ section.settings.terms_contact_copy }}</span> <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p>
+        <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;"><span data-shopify-editor-setting="terms_footer_note">{{ section.settings.terms_footer_note }}</span></p>
+        <div style="margin-top:3rem;">
+          <a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--color-black);"><span data-shopify-editor-setting="legal_back_label">{{ section.settings.legal_back_label }}</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "Terms page",
+  "settings": [
+    { "type": "text", "id": "terms_eyebrow", "label": "Terms eyebrow", "default": "Legal" },
+    { "type": "text", "id": "terms_heading", "label": "Terms heading", "default": "Terms of Service" },
+    { "type": "textarea", "id": "terms_intro", "label": "Terms intro", "default": "By accessing or using arenathletic.com and engaging with AREN ATHLETIC services, you agree to the following terms. Please read them carefully." },
+    { "type": "text", "id": "terms_section_1_heading", "label": "Terms section 1 heading", "default": "Use of the Site" },
+    { "type": "textarea", "id": "terms_section_1_body", "label": "Terms section 1 body", "default": "This site is provided for informational and commercial purposes. You may not use the site for unlawful purposes or in any way that could damage AREN ATHLETIC or its community members." },
+    { "type": "text", "id": "terms_section_2_heading", "label": "Terms section 2 heading", "default": "Community Standards" },
+    { "type": "textarea", "id": "terms_section_2_body", "label": "Terms section 2 body", "default": "All AREN Athletic community participants are held to the AREN standard: discipline, presence, and consistency. Participation in training programs, Street Miles NYC, and community activities requires commitment to these values." },
+    { "type": "text", "id": "terms_contact_heading", "label": "Terms contact heading", "default": "Contact" },
+    { "type": "text", "id": "terms_contact_copy", "label": "Terms contact copy", "default": "For terms inquiries, contact us at" },
+    { "type": "text", "id": "terms_footer_note", "label": "Terms footer note", "default": "Last updated: 2026. AREN ATHLETIC. NEW YORK CITY." },
+    { "type": "text", "id": "legal_back_label", "label": "Legal back link label", "default": "Back to home" }
+  ],
+  "presets": [
+    {
+      "name": "Terms page"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,36 @@
+<section class="section" style="padding-top:calc(68px + var(--space-lg));">
+  <div class="container container--narrow">
+    <div class="text-eyebrow mb-sm">Customer Access</div>
+    <h1 class="text-h2" style="margin-bottom:2rem;">Create account</h1>
+
+    {% form 'create_customer' %}
+      <div class="contact-form">
+        <div class="form-group">
+          <label class="form-label" for="RegisterFirstName">First name</label>
+          <input class="form-input" type="text" name="customer[first_name]" id="RegisterFirstName" autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="RegisterLastName">Last name</label>
+          <input class="form-input" type="text" name="customer[last_name]" id="RegisterLastName" autocomplete="family-name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="RegisterEmail">Email</label>
+          <input class="form-input" type="email" name="customer[email]" id="RegisterEmail" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="RegisterPassword">Password</label>
+          <input class="form-input" type="password" name="customer[password]" id="RegisterPassword" autocomplete="new-password">
+        </div>
+        <button class="btn btn--primary" type="submit">Create account</button>
+      </div>
+      {{ form.errors | default_errors }}
+    {% endform %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main customers register",
+  "settings": []
+}
+{% endschema %}

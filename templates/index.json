@@ -1,0 +1,10 @@
+{
+  "name": "Main Index",
+  "sections": {
+    "main": {
+      "type": "home-featured-products",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

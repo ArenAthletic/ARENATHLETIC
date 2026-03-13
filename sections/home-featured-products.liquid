@@ -1,0 +1,82 @@
+{% liquid
+  assign shop_url = pages['shop'].url | default: '/pages/shop'
+  if section.settings.shop_page != blank
+    assign shop_url = section.settings.shop_page.url
+  endif
+%}
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        {% if section.settings.eyebrow != blank %}<div class="text-eyebrow mb-sm">{{ section.settings.eyebrow }}</div>{% endif %}
+        {% if section.settings.heading != blank %}<h2 class="text-h2">{{ section.settings.heading }}</h2>{% endif %}
+      </div>
+      {% if section.settings.button_label != blank %}<a href="{{ shop_url }}" class="btn btn--ghost">{{ section.settings.button_label }}</a>{% endif %}
+    </div>
+    <div class="product-grid">
+      {% assign featured_collection = section.settings.featured_collection %}
+      {% if featured_collection != blank and featured_collection.products_count > 0 %}
+        {% for product in featured_collection.products limit: section.settings.featured_products_limit %}
+          <a href="{{ product.url }}" style="text-decoration:none;color:inherit;" class="product-card">
+            <div class="product-image" style="background:#f2efe9;">
+              {% if product.featured_image %}<img class="product-img" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.featured_image.alt | default: product.title | escape }}" loading="lazy">{% endif %}
+              {% if product.tags.size > 0 %}<div class="product-tag">{{ product.tags.first }}</div>{% endif %}
+            </div>
+            <div class="product-name">{{ product.title }}</div>
+            {% if product.description != blank %}<div class="product-desc">{{ product.description | strip_html | truncate: 60 }}</div>{% endif %}
+            <div class="product-price">{{ product.price | money }}</div>
+          </a>
+        {% endfor %}
+      {% else %}
+        {% for block in section.blocks %}
+          {% liquid
+            assign card_url = shop_url
+            if block.settings.link != blank
+              assign card_url = block.settings.link
+            endif
+          %}
+          <a href="{{ card_url }}" style="text-decoration:none;color:inherit;" class="product-card" {{ block.shopify_attributes }}>
+            <div class="product-image" style="background:{{ block.settings.background_color }};">
+              {% if block.settings.image != blank %}<img class="product-img" src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.image.alt | default: block.settings.title | escape }}" loading="lazy">{% endif %}
+              {% if block.settings.tag != blank %}<div class="product-tag">{{ block.settings.tag }}</div>{% endif %}
+            </div>
+            <div class="product-name">{{ block.settings.title }}</div>
+            <div class="product-desc">{{ block.settings.description }}</div>
+            <div class="product-price">{{ block.settings.cta_label }}</div>
+          </a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home featured products",
+  "settings": [
+    { "type": "page", "id": "shop_page", "label": "Shop page" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Featured Apparel" },
+    { "type": "html", "id": "heading", "label": "Heading", "default": "The standard pieces." },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "View All" },
+    { "type": "collection", "id": "featured_collection", "label": "Featured collection" },
+    { "type": "range", "id": "featured_products_limit", "label": "Products limit", "min": 2, "max": 8, "step": 1, "default": 4 }
+  ],
+  "blocks": [
+    {
+      "type": "featured_card",
+      "name": "Featured fallback card",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "tag", "label": "Tag", "default": "Featured" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Tonal Men's Box Tee — Black" },
+        { "type": "text", "id": "description", "label": "Description", "default": "Sharp structure. Everyday system." },
+        { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Shop" },
+        { "type": "text", "id": "background_color", "label": "Background color", "default": "#1e1e1c" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Home featured products" }]
+}
+{% endschema %}

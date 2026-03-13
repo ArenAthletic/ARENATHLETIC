@@ -1,0 +1,22 @@
+<section class="section" style="padding-top:calc(68px + var(--space-xl));">
+  <div class="container rte" {{ section.shopify_attributes }}>
+    <h1 class="text-display" style="margin-bottom:2rem;">{{ page.title }}</h1>
+    {% if page.content != blank %}
+      {{ page.content }}
+    {% else %}
+      <p class="text-body">Create a Shopify page with the handle <strong>{{ page.handle | default: handle }}</strong> to add custom content here.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main page",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Main page"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,158 @@
+{
+  "sections": {
+    "hero": {
+      "type": "page-hero-banner",
+      "settings": {
+        "page": "about",
+        "dark_theme": true,
+        "min_height": 480,
+        "eyebrow": "About AREN",
+        "heading": "AREN isn't just apparel. AREN is a standard.",
+        "fallback_image_url": "https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/crop/x_0,y_2215,w_4284,h_1845/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png",
+        "background_position": "center",
+        "overlay_gradient": "linear-gradient(165deg,rgba(28,28,26,0.88) 0%,rgba(35,35,33,0.68) 55%,rgba(26,26,24,0.92) 100%)",
+        "heading_width": 16,
+        "copy_width": 46
+      }
+    },
+    "marquee": {
+      "type": "page-marquee",
+      "settings": {
+        "page": "about",
+        "text": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —"
+      }
+    },
+    "intro": {
+      "type": "page-split-content",
+      "settings": {
+        "page": "about",
+        "border_bottom": true,
+        "section_background": "light",
+        "columns": "1fr 1fr",
+        "vertical_align": "start",
+        "eyebrow": "About AREN",
+        "heading": "AREN Athletic",
+        "copy": "<p>AREN isn't just apparel. AREN is a standard.</p><p>It's the moment before the work begins. The quiet decision you make when no one is watching. The discipline to prepare, the courage to show up, and the commitment to hold the line when it would be easier not to.</p><p>AREN was built on three principles: discipline, presence, and consistency.</p><p>Discipline is the foundation. It's the shoe being tied before sunrise. It's the extra set, the extra mile, the extra moment of focus when fatigue tells you to stop. Discipline is not loud. It's not flashy. It's the daily choice to do what must be done.</p><p>Presence is how you carry yourself in the world. It's the way you enter the room, the gym, the track, the street, or the workplace. Presence means showing up prepared, composed, and ready for whatever the day demands.</p><p>Consistency is the separator. Anyone can show up once. Anyone can have a good day. But the standard is held by those who show up again and again, day after day, long after the excitement fades and the work becomes routine.</p><p><strong>That's where AREN lives.</strong></p>",
+        "image_aspect": "3/4",
+        "fallback_image_url": "https://static.wixstatic.com/media/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png/v1/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png",
+        "button_url": "/pages/shop",
+        "button_label": "Shop Apparel",
+        "button_style": "outline",
+        "heading_width": 18,
+        "image_overlay": false
+      }
+    },
+    "body": {
+      "type": "page-split-content",
+      "settings": {
+        "page": "about",
+        "border_bottom": true,
+        "narrow": true,
+        "columns": "1fr 1fr",
+        "vertical_align": "start",
+        "copy": "<p>AREN exists at the intersection of discipline, culture, and performance. We design pieces that hold up inside training environments and outside of them — garments that move with intent and carry a standard.</p><p>Every product, system, and community expression is built to reinforce the same principle: do the work, carry the weight, and show up consistently.</p>",
+        "kicker": "WHAT AREN REPRESENTS",
+        "image_aspect": "3/4"
+      }
+    },
+    "identity": {
+      "type": "page-split-content",
+      "settings": {
+        "page": "about",
+        "border_bottom": true,
+        "section_background": "light",
+        "columns": "1fr 1fr",
+        "vertical_align": "start",
+        "eyebrow": "Identity",
+        "heading": "What AREN represents.",
+        "copy": "<p>AREN is a system for people who understand that identity is built through repetition. It's less about saying the right thing and more about doing the right thing — over and over again.</p><p>The uniform is a reflection of the standard: clean, structured, and built to last.</p>",
+        "fallback_image_url": "https://static.wixstatic.com/media/8a3301_c4e9e55c79fa424d9097c68e0bbe2892~mv2.png/v1/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_c4e9e55c79fa424d9097c68e0bbe2892~mv2.png",
+        "image_aspect": "3/4",
+        "image_overlay": true,
+        "heading_width": 18
+      }
+    },
+    "values": {
+      "type": "page-card-list",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "title": "Training Systems",
+            "description": "Disciplined systems for athletes, operators, and people committed to steady progress."
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "title": "Street Miles NYC",
+            "description": "Community in motion — the street-level expression of the AREN standard."
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "title": "Uniform",
+            "description": "Minimal apparel built for repetition, durability, and presence."
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2", "card_3"],
+      "settings": {
+        "page": "about",
+        "dark_theme": true,
+        "eyebrow": "Core pillars",
+        "heading": "What holds the standard.",
+        "copy": "<p>AREN is carried through systems, community, and uniform. Each part reinforces the others so the brand is felt through action, not just language.</p>",
+        "kicker": "DISCIPLINE / PRESENCE / CONSISTENCY"
+      }
+    },
+    "footer_marquee": {
+      "type": "page-marquee",
+      "settings": {
+        "page": "about",
+        "text": "AREN ATHLETIC — DISCIPLINE — PRESENCE — CONSISTENCY — AREN ATHLETIC — DISCIPLINE — PRESENCE — CONSISTENCY —"
+      }
+    },
+    "cta": {
+      "type": "page-cta-links",
+      "blocks": {
+        "link_1": {
+          "type": "link",
+          "settings": {
+            "label": "Contact / Join the Community",
+            "url": "/pages/contact",
+            "style": "primary"
+          }
+        },
+        "link_2": {
+          "type": "link",
+          "settings": {
+            "label": "Explore Training Programs",
+            "url": "/pages/training",
+            "style": "outline"
+          }
+        },
+        "link_3": {
+          "type": "link",
+          "settings": {
+            "label": "Join Street Miles NYC",
+            "url": "/pages/street-miles",
+            "style": "outline"
+          }
+        }
+      },
+      "block_order": ["link_1", "link_2", "link_3"],
+      "settings": {
+        "page": "about",
+        "eyebrow": "Next move",
+        "heading": "Enter the AREN ecosystem.",
+        "copy": "<p>Train with intent, move with community, and wear the standard daily.</p>"
+      }
+    },
+    "main_content": {
+      "type": "main-page-about"
+    }
+  },
+  "order": ["hero", "marquee", "intro", "body", "identity", "values", "footer_marquee", "cta", "main_content"]
+}

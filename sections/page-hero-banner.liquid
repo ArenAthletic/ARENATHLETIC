@@ -1,0 +1,58 @@
+{% liquid
+  assign target_page = section.settings.page
+  assign current_page_handle = page.handle | default: handle
+  assign target_page_handle = blank
+
+  if target_page != blank
+    assign target_page_handle = target_page.handle
+  endif
+
+  if target_page_handle != blank and target_page_handle != current_page_handle
+    break
+  endif
+%}
+
+<section class="page-hero{% if section.settings.dark_theme %} page-hero--dark{% endif %}" style="position:relative;overflow:hidden;min-height:{{ section.settings.min_height }}px;display:flex;align-items:flex-end;">
+  <div style="position:absolute;inset:0;{% if section.settings.background_image != blank %}background-image:url('{{ section.settings.background_image | image_url: width: 2200 }}');{% elsif section.settings.fallback_image_url != blank %}background-image:url('{{ section.settings.fallback_image_url }}');{% endif %}background-size:cover;background-position:{{ section.settings.background_position }};"></div>
+  <div style="position:absolute;inset:0;background:{{ section.settings.overlay_gradient }};"></div>
+  <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
+    {% if section.settings.eyebrow != blank %}
+      <div class="text-eyebrow" style="margin-bottom:2rem;{% if section.settings.dark_theme %}color:rgba(255,255,255,0.35);{% endif %}">{{ section.settings.eyebrow }}</div>
+    {% endif %}
+    {% if section.settings.heading != blank %}
+      <h1 class="text-display" style="{% if section.settings.dark_theme %}color:#fff;{% endif %}max-width:{{ section.settings.heading_width }}ch;margin-bottom:{% if section.settings.copy != blank %}2rem{% else %}0{% endif %};">{{ section.settings.heading }}</h1>
+    {% endif %}
+    {% if section.settings.copy != blank %}
+      <div class="text-body rte" style="max-width:{{ section.settings.copy_width }}ch;{% if section.settings.dark_theme %}color:rgba(255,255,255,0.6);{% endif %}">{{ section.settings.copy }}</div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Page hero banner",
+  "settings": [
+    { "type": "page", "id": "page", "label": "Display on page" },
+    { "type": "checkbox", "id": "dark_theme", "label": "Use dark theme", "default": true },
+    { "type": "range", "id": "min_height", "label": "Minimum height", "min": 320, "max": 900, "step": 20, "unit": "px", "default": 480 },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "About AREN" },
+    { "type": "html", "id": "heading", "label": "Heading", "default": "AREN isn't just apparel. AREN is a standard." },
+    { "type": "richtext", "id": "copy", "label": "Copy", "default": "<p></p>" },
+    { "type": "range", "id": "heading_width", "label": "Heading width", "min": 8, "max": 30, "step": 1, "default": 16 },
+    { "type": "range", "id": "copy_width", "label": "Copy width", "min": 20, "max": 70, "step": 1, "default": 46 },
+    { "type": "image_picker", "id": "background_image", "label": "Background image" },
+    { "type": "text", "id": "fallback_image_url", "label": "Fallback image URL" },
+    { "type": "select", "id": "background_position", "label": "Background position", "default": "center", "options": [
+      { "value": "center", "label": "Center" },
+      { "value": "center top", "label": "Top" },
+      { "value": "center bottom", "label": "Bottom" },
+      { "value": "left center", "label": "Left" },
+      { "value": "right center", "label": "Right" }
+    ]},
+    { "type": "textarea", "id": "overlay_gradient", "label": "Overlay gradient", "default": "linear-gradient(165deg,rgba(28,28,26,0.88) 0%,rgba(35,35,33,0.68) 55%,rgba(26,26,24,0.92) 100%)" }
+  ],
+  "presets": [
+    { "name": "Page hero banner" }
+  ]
+}
+{% endschema %}
