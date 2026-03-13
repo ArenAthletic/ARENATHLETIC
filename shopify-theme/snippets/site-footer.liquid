@@ -19,9 +19,9 @@
           <span class="footer-brand-tagline">AREN ATHLETIC UNIFORM.</span>
         </div>
         <div class="footer-social">
-          <a href="#" class="footer-social-link">IG</a>
-          <a href="#" class="footer-social-link">TW</a>
-          <a href="#" class="footer-social-link">YT</a>
+          <a href="{{ settings.instagram_url | default: 'https://www.instagram.com/arenathletic/' }}" class="footer-social-link">IG</a>
+          <a href="{{ settings.twitter_url | default: 'https://x.com/' }}" class="footer-social-link">TW</a>
+          <a href="{{ settings.youtube_url | default: 'https://www.youtube.com/' }}" class="footer-social-link">YT</a>
         </div>
       </div>
 
@@ -50,7 +50,7 @@
       <div class="footer-col">
         <div class="footer-col-title">NATIONAL HUB NETWORK.</div>
         <div class="footer-links">
-          <a href="mailto:info@arenathletic.com" class="footer-link">INFO@ARENATHLETIC.COM</a>
+          <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}" class="footer-link">{{ settings.email_address | default: 'INFO@ARENATHLETIC.COM' | upcase }}</a>
           <span class="footer-link" style="cursor:default;">AREN ATHLETIC COLLECTIVE.</span>
           <span class="footer-link" style="cursor:default;">STRUCTURED PERFORMANCE.</span>
         </div>

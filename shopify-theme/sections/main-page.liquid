@@ -319,9 +319,9 @@
       <div>
         <div class="text-eyebrow mb-sm">Follow AREN</div>
         <div class="footer-links" style="gap:1rem;display:grid;">
-          <a href="#" class="footer-link">Instagram</a>
-          <a href="#" class="footer-link">Twitter</a>
-          <a href="#" class="footer-link">YouTube</a>
+          <a href="{{ settings.instagram_url | default: 'https://www.instagram.com/arenathletic/' }}" class="footer-link">Instagram</a>
+          <a href="{{ settings.twitter_url | default: 'https://x.com/' }}" class="footer-link">Twitter</a>
+          <a href="{{ settings.youtube_url | default: 'https://www.youtube.com/' }}" class="footer-link">YouTube</a>
         </div>
       </div>
       <div>{% form 'contact', id: 'contact-form', class: 'contact-form' %}<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;"><div class="form-group"><label class="form-label" for="ContactFormFirstName">First Name</label><input class="form-input" type="text" id="ContactFormFirstName" name="contact[first_name]"></div><div class="form-group"><label class="form-label" for="ContactFormLastName">Last Name</label><input class="form-input" type="text" id="ContactFormLastName" name="contact[last_name]"></div></div><div class="form-group"><label class="form-label" for="ContactFormEmail">Email</label><input class="form-input" type="email" id="ContactFormEmail" name="contact[email]" required></div><div class="form-group"><label class="form-label" for="ContactFormPhone">Phone</label><input class="form-input" type="tel" id="ContactFormPhone" name="contact[phone]"></div><div class="form-group"><label class="form-label" for="ContactFormReferral">Referral Source</label><input class="form-input" type="text" id="ContactFormReferral" name="contact[referral_source]"></div><div class="form-group"><label class="form-label" for="ContactFormBody">Why are you looking to train?</label><textarea class="form-textarea" id="ContactFormBody" name="contact[body]"></textarea></div><button class="btn btn--primary" type="submit">Submit</button>{% if form.posted_successfully? %}<div id="contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;">Received.<br>We'll be in touch within 48 hours. The standard applies here too.</div>{% endif %}<div class="text-body" style="margin-top:1rem;opacity:.75;">Your information is never shared. Used only for AREN communication.</div>{{ form.errors | default_errors }}{% endform %}</div>
