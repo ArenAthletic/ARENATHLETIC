@@ -1,10 +1,140 @@
 {
   "sections": {
-    "main": {
+    "hero": {
+      "type": "page-hero-banner",
+      "settings": {
+        "page": "services",
+        "dark_theme": false,
+        "min_height": 420,
+        "eyebrow": "Services",
+        "heading": "Structured access.<br>Every level.",
+        "copy": "<p>AREN offers a tiered service ecosystem for athletes and communities. From individual programming to full chapter activation — the standard scales to your context.</p>",
+        "fallback_image_url": "https://static.wixstatic.com/media/8a3301_cf5517a609d94d6992c825205aaae6d6~mv2.png/v1/fill/w_1920,h_600,al_c,q_90,enc_auto/8a3301_cf5517a609d94d6992c825205aaae6d6~mv2.png",
+        "background_position": "center",
+        "overlay_gradient": "linear-gradient(180deg,rgba(249,247,241,0.96) 0%,rgba(249,247,241,0.9) 100%)",
+        "heading_width": 20,
+        "copy_width": 50
+      }
+    },
+    "marquee": {
+      "type": "page-marquee",
+      "settings": {
+        "page": "services",
+        "text": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —"
+      }
+    },
+    "services_list": {
+      "type": "page-card-list",
+      "blocks": {
+        "service_1": {
+          "type": "card",
+          "settings": {
+            "title": "01 / Individual Programming",
+            "description": "Custom training programs built around the individual athlete's goals, schedule, and environment. Periodized, progressive, and designed for long-term development. Remote coaching available nationally."
+          }
+        },
+        "service_2": {
+          "type": "card",
+          "settings": {
+            "title": "02 / Group Training",
+            "description": "Structured group performance sessions built around discipline, accountability, and collective output. Ideal for teams, communities, and high-standard training environments."
+          }
+        },
+        "service_3": {
+          "type": "card",
+          "settings": {
+            "title": "03 / Street Miles Access",
+            "description": "Access to the community run system and chapter-based execution model. Designed for athletes who want to carry the standard into the streets."
+          }
+        },
+        "service_4": {
+          "type": "card",
+          "settings": {
+            "title": "04 / Hub Chapter Activation",
+            "description": "Frameworks for activating local AREN chapters with structure, protocols, and performance culture embedded from day one."
+          }
+        },
+        "service_5": {
+          "type": "card",
+          "settings": {
+            "title": "05 / Corporate + Team Performance",
+            "description": "High-accountability training and development systems for organizations and teams that require composure, execution, and consistent output."
+          }
+        },
+        "service_6": {
+          "type": "card",
+          "settings": {
+            "title": "06 / Apparel — Uniform Program",
+            "description": "Functional apparel systems for teams, communities, and operators who require durable design, restraint, and alignment with the AREN standard."
+          }
+        }
+      },
+      "block_order": ["service_1", "service_2", "service_3", "service_4", "service_5", "service_6"],
+      "settings": {
+        "page": "services",
+        "eyebrow": "Service Ecosystem",
+        "heading": "Structured access points built around the same standard.",
+        "copy": "<p>Each service is designed as a pathway into the AREN system — whether you need coaching, community, activation, or uniform support.</p>",
+        "kicker": "COACH / ORGANIZE / ACTIVATE / EQUIP"
+      }
+    },
+    "cta": {
+      "type": "page-split-content",
+      "settings": {
+        "page": "services",
+        "border_top": true,
+        "section_background": "light",
+        "columns": "1fr 0.9fr",
+        "vertical_align": "start",
+        "eyebrow": "National Performance Platform",
+        "heading": "Building a scalable culture of community chapters across the nation.",
+        "copy": "<p>AREN is evolving into a coordinated performance ecosystem, establishing elite training protocols and community expression while maintaining the absolute integrity of the standard.</p>",
+        "image_aspect": "4/5",
+        "button_url": "/pages/contact",
+        "button_label": "Contact / Join the Community",
+        "button_style": "primary",
+        "heading_width": 18
+      }
+    },
+    "cta_links": {
+      "type": "page-cta-links",
+      "blocks": {
+        "cta_1": {
+          "type": "link",
+          "settings": {
+            "label": "Contact / Join the Community",
+            "url": "/pages/contact",
+            "style": "primary"
+          }
+        },
+        "cta_2": {
+          "type": "link",
+          "settings": {
+            "label": "Explore Training Programs",
+            "url": "/pages/training",
+            "style": "outline"
+          }
+        },
+        "cta_3": {
+          "type": "link",
+          "settings": {
+            "label": "Join Street Miles NYC",
+            "url": "/pages/street-miles",
+            "style": "outline"
+          }
+        }
+      },
+      "block_order": ["cta_1", "cta_2", "cta_3"],
+      "settings": {
+        "page": "services",
+        "eyebrow": "Next steps",
+        "heading": "Choose your access point.",
+        "copy": "<p>Start with inquiry, explore training, or connect through Street Miles.</p>"
+      }
+    },
+    "main_content": {
       "type": "main-page-services"
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["hero", "marquee", "services_list", "cta", "cta_links", "main_content"]
 }
