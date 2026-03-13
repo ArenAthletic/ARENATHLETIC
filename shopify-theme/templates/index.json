@@ -1,10 +1,192 @@
 {
   "sections": {
-    "main": {
-      "type": "aren-home"
+    "hero": {
+      "type": "home-hero",
+      "settings": {
+        "eyebrow": "AREN ATHLETIC",
+        "heading": "Apparel built for training—and everything after.",
+        "copy": "<p>Minimal. Durable. Elevated. Designed for the gym, the street, and the pace of New York.</p>",
+        "primary_label": "Shop Apparel",
+        "secondary_label": "Join the Community",
+        "microcopy_one": "New drops + core staples • Shipping nationwide",
+        "microcopy_two": "Quiet confidence. Built to wear daily.",
+        "min_height": 640,
+        "heading_width": 16,
+        "copy_width": 44,
+        "fallback_image_url": ""
+      }
+    },
+    "marquee": {
+      "type": "page-marquee",
+      "settings": {
+        "text": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —"
+      }
+    },
+    "categories": {
+      "type": "home-category-list",
+      "blocks": {
+        "cat_1": {
+          "type": "category",
+          "settings": {
+            "number": "01",
+            "title": "New Arrivals",
+            "description": "Latest drops, limited runs."
+          }
+        },
+        "cat_2": {
+          "type": "category",
+          "settings": {
+            "number": "02",
+            "title": "Core Essentials",
+            "description": "The foundation—clean, repeatable, durable."
+          }
+        },
+        "cat_3": {
+          "type": "category",
+          "settings": {
+            "number": "03",
+            "title": "Outerwear",
+            "description": "Layers built for movement and weather."
+          }
+        }
+      },
+      "block_order": ["cat_1", "cat_2", "cat_3"],
+      "settings": {
+        "eyebrow": "Category focus",
+        "heading": "Shop by system."
+      }
+    },
+    "featured": {
+      "type": "home-featured-products",
+      "blocks": {
+        "product_1": {
+          "type": "featured_card",
+          "settings": {
+            "tag": "Featured",
+            "title": "Tonal Men's Box Tee — Black",
+            "description": "Sharp structure. Everyday system.",
+            "cta_label": "Shop",
+            "background_color": "#1e1e1c"
+          }
+        },
+        "product_2": {
+          "type": "featured_card",
+          "settings": {
+            "tag": "Core",
+            "title": "Structured Warmth Layer",
+            "description": "Built for daily wear.",
+            "cta_label": "Shop",
+            "background_color": "#d8d3c5"
+          }
+        },
+        "product_3": {
+          "type": "featured_card",
+          "settings": {
+            "tag": "Accessory",
+            "title": "Essential Cap",
+            "description": "Clean finish. All week.",
+            "cta_label": "Shop",
+            "background_color": "#e8dfc8"
+          }
+        },
+        "product_4": {
+          "type": "featured_card",
+          "settings": {
+            "title": "Performance Layer",
+            "description": "Training-ready. Street-ready.",
+            "cta_label": "Shop",
+            "background_color": "#232321"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "eyebrow": "Featured Apparel",
+        "heading": "The standard pieces.",
+        "button_label": "View All",
+        "featured_products_limit": 4
+      }
+    },
+    "philosophy": {
+      "type": "home-philosophy",
+      "blocks": {
+        "stat_1": {
+          "type": "stat",
+          "settings": {
+            "value": "NYC",
+            "label": "Home Chapter — Five Boroughs"
+          }
+        },
+        "stat_2": {
+          "type": "stat",
+          "settings": {
+            "value": "Daily",
+            "label": "Standard — Not Seasonal"
+          }
+        },
+        "stat_3": {
+          "type": "stat",
+          "settings": {
+            "value": "One",
+            "label": "System — Built to Perform"
+          }
+        }
+      },
+      "block_order": ["stat_1", "stat_2", "stat_3"],
+      "settings": {
+        "eyebrow": "Brand Philosophy",
+        "heading": "The standard is the standard.",
+        "copy": "<p>AREN is built on discipline, presence, and consistency — apparel designed to perform in training and carry the standard everywhere else in life.</p>",
+        "button_label": "About AREN"
+      }
+    },
+    "street_miles": {
+      "type": "home-street-miles",
+      "blocks": {
+        "street_1": {
+          "type": "street_stat",
+          "settings": {
+            "value": "5",
+            "label": "Boroughs"
+          }
+        },
+        "street_2": {
+          "type": "street_stat",
+          "settings": {
+            "value": "Sun",
+            "label": "09:00 Sharp"
+          }
+        },
+        "street_3": {
+          "type": "street_stat",
+          "settings": {
+            "value": "NYC",
+            "label": "Home Chapter"
+          }
+        }
+      },
+      "block_order": ["street_1", "street_2", "street_3"],
+      "settings": {
+        "eyebrow": "Street Miles",
+        "heading": "Street Miles NYC",
+        "copy": "<p>A weekly run club built on exploration, effort, and community — moving through the city together.</p>",
+        "button_label": "Explore Street Miles",
+        "image_eyebrow": "SMNYC / FIVE BOROUGH CHAPTER",
+        "image_heading": "Do the work.<br>Carry the weight.",
+        "fallback_image_url": ""
+      }
+    },
+    "signup": {
+      "type": "home-signup",
+      "settings": {
+        "eyebrow": "Community Signup",
+        "heading": "Join the AREN list.",
+        "copy": "<p>Drops, restocks, and community updates — sent when it matters.</p>",
+        "button_label": "Join",
+        "disclaimer": "No spam. Unsubscribe any time.",
+        "success_text": "You're on the list."
+      }
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["hero", "marquee", "categories", "featured", "philosophy", "street_miles", "signup"]
 }

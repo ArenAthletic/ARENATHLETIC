@@ -1,0 +1,56 @@
+{% liquid
+  assign shop_url = pages['shop'].url | default: '/pages/shop'
+  if section.settings.shop_page != blank
+    assign shop_url = section.settings.shop_page.url
+  endif
+%}
+
+<section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        {% if section.settings.eyebrow != blank %}<div class="text-eyebrow mb-sm">{{ section.settings.eyebrow }}</div>{% endif %}
+        {% if section.settings.heading != blank %}<h2 class="text-h2">{{ section.settings.heading }}</h2>{% endif %}
+      </div>
+    </div>
+    <div class="training-grid" style="margin-top:var(--space-lg);">
+      {% for block in section.blocks %}
+        {% liquid
+          assign category_url = shop_url
+          if block.settings.link != blank
+            assign category_url = block.settings.link
+          endif
+        %}
+        <a href="{{ category_url }}" class="training-card" style="text-decoration:none;color:inherit;display:block;" {{ block.shopify_attributes }}>
+          <div class="training-card-number">{{ block.settings.number }}</div>
+          <div class="training-card-title">{{ block.settings.title }}</div>
+          <div class="training-card-desc">{{ block.settings.description }}</div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home category list",
+  "settings": [
+    { "type": "page", "id": "shop_page", "label": "Shop page" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Category focus" },
+    { "type": "html", "id": "heading", "label": "Heading", "default": "Shop by system." }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category card",
+      "settings": [
+        { "type": "text", "id": "number", "label": "Number", "default": "01" },
+        { "type": "text", "id": "title", "label": "Title", "default": "New Arrivals" },
+        { "type": "text", "id": "description", "label": "Description", "default": "Latest drops, limited runs." },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Home category list", "blocks": [{ "type": "category" }, { "type": "category" }, { "type": "category" }] }]
+}
+{% endschema %}

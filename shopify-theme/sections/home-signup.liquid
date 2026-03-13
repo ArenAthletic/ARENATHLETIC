@@ -1,0 +1,38 @@
+<section class="section" style="background:var(--color-off-white);border-top:1px solid var(--color-warm-gray);">
+  <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:var(--space-xl);align-items:start;">
+    <div>
+      {% if section.settings.eyebrow != blank %}<div class="text-eyebrow">{{ section.settings.eyebrow }}</div>{% endif %}
+      {% if section.settings.heading != blank %}<h2 class="text-h2" style="margin-top:1.25rem;margin-bottom:1rem;">{{ section.settings.heading }}</h2>{% endif %}
+      {% if section.settings.copy != blank %}<div class="text-body rte">{{ section.settings.copy }}</div>{% endif %}
+    </div>
+    <div>
+      {% form 'customer', class: 'signup-form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="signup-form-row">
+          <input type="email" class="signup-input" placeholder="Email address" required id="signup-email" name="contact[email]">
+          <button type="submit" class="signup-btn">{{ section.settings.button_label }}</button>
+        </div>
+        <p class="signup-disclaimer">{{ section.settings.disclaimer }}</p>
+        {% if form.posted_successfully? %}
+          <div id="signup-success" style="display:block;" class="text-eyebrow">{{ section.settings.success_text }}</div>
+        {% endif %}
+        {{ form.errors | default_errors }}
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home signup",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Community Signup" },
+    { "type": "html", "id": "heading", "label": "Heading", "default": "Join the AREN list." },
+    { "type": "richtext", "id": "copy", "label": "Copy", "default": "<p>Drops, restocks, and community updates — sent when it matters.</p>" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Join" },
+    { "type": "text", "id": "disclaimer", "label": "Disclaimer", "default": "No spam. Unsubscribe any time." },
+    { "type": "text", "id": "success_text", "label": "Success text", "default": "You're on the list." }
+  ],
+  "presets": [{ "name": "Home signup" }]
+}
+{% endschema %}
