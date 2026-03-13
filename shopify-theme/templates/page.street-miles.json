@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-street_miles"
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
