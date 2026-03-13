@@ -1,9 +1,0 @@
-content:
-  - name: everything
-    label: "All Files"
-    type: collection
-    path: "**/*" 
-    fields:
-      - name: body
-        label: "File Content"
-        type: code
