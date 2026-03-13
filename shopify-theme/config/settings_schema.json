@@ -204,13 +204,13 @@
         "type": "text",
         "id": "footer_identity_line",
         "label": "Footer identity line",
-        "default": "AREN ATHLETIC — NEW YORK CITY"
+        "default": "AREN ATHLETIC \u2014 NEW YORK CITY"
       },
       {
         "type": "text",
         "id": "footer_copyright",
         "label": "Footer copyright",
-        "default": "© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED."
+        "default": "\u00a9 2026 AREN ATHLETIC. ALL RIGHTS RESERVED."
       },
       {
         "type": "text",
@@ -233,6 +233,84 @@
         "type": "link_list",
         "id": "footer_access_menu",
         "label": "Footer access menu"
+      },
+      {
+        "type": "header",
+        "content": "Design controls"
+      },
+      {
+        "type": "select",
+        "id": "font_style_preset",
+        "label": "Font style preset",
+        "default": "arena_default",
+        "options": [
+          {
+            "value": "arena_default",
+            "label": "AREN Default"
+          },
+          {
+            "value": "editorial",
+            "label": "Editorial"
+          },
+          {
+            "value": "modern_sans",
+            "label": "Modern Sans"
+          },
+          {
+            "value": "condensed",
+            "label": "Condensed"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "display_scale",
+        "min": 80,
+        "max": 130,
+        "step": 5,
+        "unit": "%",
+        "label": "Display heading scale",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "body_scale",
+        "min": 90,
+        "max": 120,
+        "step": 5,
+        "unit": "%",
+        "label": "Body text scale",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "label_scale",
+        "min": 90,
+        "max": 130,
+        "step": 5,
+        "unit": "%",
+        "label": "Label text scale",
+        "default": 100
+      },
+      {
+        "type": "image_picker",
+        "id": "default_hero_image",
+        "label": "Default home hero image"
+      },
+      {
+        "type": "image_picker",
+        "id": "default_street_miles_image",
+        "label": "Default home Street Miles image"
+      },
+      {
+        "type": "image_picker",
+        "id": "header_background_image",
+        "label": "Header background image"
+      },
+      {
+        "type": "image_picker",
+        "id": "footer_background_image",
+        "label": "Footer background image"
       }
     ]
   }
