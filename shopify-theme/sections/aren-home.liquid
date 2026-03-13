@@ -1,8 +1,8 @@
 {% liquid
+  assign shop_url = pages['shop'].url | default: '/pages/shop'
+  assign contact_url = pages['contact'].url | default: '/pages/contact'
   assign about_url = pages['about'].url | default: '/pages/about'
   assign street_miles_url = pages['street-miles'].url | default: '/pages/street-miles'
-  assign contact_url = pages['contact'].url | default: '/pages/contact'
-  assign shop_url = pages['shop'].url | default: '/pages/shop'
 
   if section.settings.shop_page != blank
     assign shop_url = section.settings.shop_page.url
@@ -21,173 +21,175 @@
   endif
 %}
 
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grain"></div>
-  <div class="hero-content container">
-    <div class="hero-eyebrow">{{ section.settings.hero_eyebrow }}</div>
-    <h1 class="hero-headline">{{ section.settings.hero_headline }}</h1>
-    <p class="hero-subline">{{ section.settings.hero_subline }}</p>
-    <div class="hero-ctas">
-      <a href="{{ shop_url }}" class="btn btn--primary">{{ section.settings.hero_primary_label }}</a>
-      <a href="{{ contact_url }}" class="btn btn--outline-white">{{ section.settings.hero_secondary_label }}</a>
-    </div>
-    <div class="hero-microcopy">
-      <span>{{ section.settings.hero_microcopy_one }}</span>
-      <span>{{ section.settings.hero_microcopy_two }}</span>
-    </div>
-  </div>
-  <div class="hero-scroll-line"></div>
-</section>
-
-<div class="marquee-strip">
-  <div class="marquee-track">
-    <span class="marquee-text">{{ section.settings.marquee_text }}</span>
-    <span class="marquee-text">{{ section.settings.marquee_text }}</span>
-  </div>
-</div>
-
-<section class="category-strip">
-  <div class="container">
-    <div class="category-grid">
-      {% for block in section.blocks %}
-        {% if block.type == 'category' %}
-          {% liquid
-            assign category_url = shop_url
-            if block.settings.link != blank
-              assign category_url = block.settings.link
-            endif
-          %}
-          <a href="{{ category_url }}" class="category-item" style="text-decoration:none;display:block;" {{ block.shopify_attributes }}>
-            <div class="category-number">{{ block.settings.number }}</div>
-            <h2 class="category-title">{{ block.settings.title }}</h2>
-            <p class="category-desc">{{ block.settings.description }}</p>
-            <span class="category-arrow">→</span>
-          </a>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="product-section section">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="text-eyebrow mb-sm">{{ section.settings.featured_eyebrow }}</div>
-        <h2 class="text-h2">{{ section.settings.featured_heading }}</h2>
+<div class="page-home" {{ section.shopify_attributes }}>
+  <section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:640px;display:flex;align-items:flex-end;">
+    <div style="position:absolute;inset:0;{% if settings.default_hero_image != blank %}background-image:url('{{ settings.default_hero_image | image_url: width: 2200 }}');{% else %}background-image:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=2000&q=80');{% endif %}background-size:cover;background-position:center;"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(165deg,rgba(28,28,26,0.88) 0%,rgba(35,35,33,0.68) 55%,rgba(26,26,24,0.92) 100%);"></div>
+    <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
+      <div class="text-eyebrow" style="margin-bottom:2rem;color:rgba(255,255,255,0.35);">{{ section.settings.hero_eyebrow }}</div>
+      <h1 class="text-display" style="color:#fff;max-width:16ch;margin-bottom:1.5rem;">{{ section.settings.hero_headline }}</h1>
+      <p class="text-body" style="max-width:44ch;color:rgba(255,255,255,0.65);margin-bottom:2rem;">{{ section.settings.hero_subline }}</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+        <a href="{{ shop_url }}" class="btn btn--primary">{{ section.settings.hero_primary_label }}</a>
+        <a href="{{ contact_url }}" class="btn btn--outline-white">{{ section.settings.hero_secondary_label }}</a>
       </div>
-      <a href="{{ shop_url }}" class="btn btn--ghost">{{ section.settings.featured_button_label }}</a>
+      <div style="display:grid;gap:0.35rem;color:rgba(255,255,255,0.42);font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.18em;text-transform:uppercase;">
+        <span>{{ section.settings.hero_microcopy_one }}</span>
+        <span>{{ section.settings.hero_microcopy_two }}</span>
+      </div>
     </div>
-    <div class="product-grid">
-      {% assign featured_collection = section.settings.featured_collection %}
-      {% if featured_collection != blank and featured_collection.products_count > 0 %}
-        {% for product in featured_collection.products limit: section.settings.featured_products_limit %}
-          <a href="{{ product.url }}" style="text-decoration:none;color:inherit;" class="product-card">
-            <div class="product-image" style="background:#f2efe9;">
-              {% if product.featured_image %}
-                <img class="product-img" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.featured_image.alt | default: product.title | escape }}" loading="lazy">
-              {% endif %}
-              {% if product.tags.size > 0 %}
-                <div class="product-tag">{{ product.tags.first }}</div>
-              {% endif %}
-            </div>
-            <div class="product-name">{{ product.title }}</div>
-            {% if product.description != blank %}
-              <div class="product-desc">{{ product.description | strip_html | truncate: 60 }}</div>
-            {% endif %}
-            <div class="product-price">{{ product.price | money }}</div>
-          </a>
-        {% endfor %}
-      {% else %}
+  </section>
+
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span class="marquee-text">{{ section.settings.marquee_text }}</span>
+      <span class="marquee-text">{{ section.settings.marquee_text }}</span>
+    </div>
+  </div>
+
+  <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="text-eyebrow mb-sm">Category focus</div>
+          <h2 class="text-h2">Shop by system.</h2>
+        </div>
+      </div>
+      <div class="training-grid" style="margin-top:var(--space-lg);">
         {% for block in section.blocks %}
-          {% if block.type == 'featured_card' %}
+          {% if block.type == 'category' %}
             {% liquid
-              assign card_url = shop_url
+              assign category_url = shop_url
               if block.settings.link != blank
-                assign card_url = block.settings.link
+                assign category_url = block.settings.link
               endif
             %}
-            <a href="{{ card_url }}" style="text-decoration:none;color:inherit;" class="product-card" {{ block.shopify_attributes }}>
-              <div class="product-image" style="background:{{ block.settings.background_color }};">
-                {% if block.settings.image != blank %}
-                  <img class="product-img" src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.image.alt | default: block.settings.title | escape }}" loading="lazy">
-                {% endif %}
-                {% if block.settings.tag != blank %}
-                  <div class="product-tag">{{ block.settings.tag }}</div>
-                {% endif %}
-              </div>
-              <div class="product-name">{{ block.settings.title }}</div>
-              <div class="product-desc">{{ block.settings.description }}</div>
-              <div class="product-price">{{ block.settings.cta_label }}</div>
+            <a href="{{ category_url }}" class="training-card" style="text-decoration:none;color:inherit;display:block;" {{ block.shopify_attributes }}>
+              <div class="training-card-number">{{ block.settings.number }}</div>
+              <div class="training-card-title">{{ block.settings.title }}</div>
+              <div class="training-card-desc">{{ block.settings.description }}</div>
             </a>
           {% endif %}
         {% endfor %}
-      {% endif %}
-    </div>
-  </div>
-</section>
-
-<section class="philosophy-section">
-  <div class="container">
-    <div class="philosophy-inner">
-      <div class="philosophy-left">
-        <div class="text-eyebrow">{{ section.settings.philosophy_eyebrow }}</div>
-        <h2 class="philosophy-headline">{{ section.settings.philosophy_headline }}</h2>
-        <p class="philosophy-copy">{{ section.settings.philosophy_copy }}</p>
-        <div style="margin-top:3rem;">
-          <a href="{{ about_url }}" class="btn btn--outline-white">{{ section.settings.philosophy_button_label }}</a>
-        </div>
       </div>
-      <div class="philosophy-right">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="text-eyebrow mb-sm">{{ section.settings.featured_eyebrow }}</div>
+          <h2 class="text-h2">{{ section.settings.featured_heading }}</h2>
+        </div>
+        <a href="{{ shop_url }}" class="btn btn--ghost">{{ section.settings.featured_button_label }}</a>
+      </div>
+      <div class="product-grid">
+        {% assign featured_collection = section.settings.featured_collection %}
+        {% if featured_collection != blank and featured_collection.products_count > 0 %}
+          {% for product in featured_collection.products limit: section.settings.featured_products_limit %}
+            <a href="{{ product.url }}" style="text-decoration:none;color:inherit;" class="product-card">
+              <div class="product-image" style="background:#f2efe9;">
+                {% if product.featured_image %}
+                  <img class="product-img" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.featured_image.alt | default: product.title | escape }}" loading="lazy">
+                {% endif %}
+                {% if product.tags.size > 0 %}
+                  <div class="product-tag">{{ product.tags.first }}</div>
+                {% endif %}
+              </div>
+              <div class="product-name">{{ product.title }}</div>
+              {% if product.description != blank %}
+                <div class="product-desc">{{ product.description | strip_html | truncate: 60 }}</div>
+              {% endif %}
+              <div class="product-price">{{ product.price | money }}</div>
+            </a>
+          {% endfor %}
+        {% else %}
+          {% for block in section.blocks %}
+            {% if block.type == 'featured_card' %}
+              {% liquid
+                assign card_url = shop_url
+                if block.settings.link != blank
+                  assign card_url = block.settings.link
+                endif
+              %}
+              <a href="{{ card_url }}" style="text-decoration:none;color:inherit;" class="product-card" {{ block.shopify_attributes }}>
+                <div class="product-image" style="background:{{ block.settings.background_color }};">
+                  {% if block.settings.image != blank %}
+                    <img class="product-img" src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.image.alt | default: block.settings.title | escape }}" loading="lazy">
+                  {% endif %}
+                  {% if block.settings.tag != blank %}
+                    <div class="product-tag">{{ block.settings.tag }}</div>
+                  {% endif %}
+                </div>
+                <div class="product-name">{{ block.settings.title }}</div>
+                <div class="product-desc">{{ block.settings.description }}</div>
+                <div class="product-price">{{ block.settings.cta_label }}</div>
+              </a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--color-black);color:var(--color-white);">
+    <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:var(--space-xl);align-items:start;">
+      <div>
+        <div class="text-eyebrow mb-sm" style="color:rgba(255,255,255,0.3);">{{ section.settings.philosophy_eyebrow }}</div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;color:#fff;">{{ section.settings.philosophy_headline }}</h2>
+        <p class="text-body" style="max-width:42ch;margin-bottom:2rem;color:rgba(255,255,255,0.6);">{{ section.settings.philosophy_copy }}</p>
+        <a href="{{ about_url }}" class="btn btn--outline-white">{{ section.settings.philosophy_button_label }}</a>
+      </div>
+      <div class="training-grid" style="grid-template-columns:1fr;gap:1rem;">
         {% for block in section.blocks %}
           {% if block.type == 'stat' %}
-            <div class="philosophy-stat" {{ block.shopify_attributes }}>
-              <div class="philosophy-stat-number">{{ block.settings.value }}</div>
-              <div class="philosophy-stat-label">{{ block.settings.label }}</div>
+            <div class="training-card" style="background:rgba(255,255,255,0.03);border-color:rgba(255,255,255,0.08);" {{ block.shopify_attributes }}>
+              <div class="training-card-number" style="color:#fff;">{{ block.settings.value }}</div>
+              <div class="training-card-title" style="color:#fff;">{{ block.settings.label }}</div>
             </div>
           {% endif %}
         {% endfor %}
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="street-miles-section">
-  <div class="container">
-    <div class="street-miles-inner">
-      <div class="street-miles-visual" style="background-image:url('https://static.wixstatic.com/media/8a3301_467001e3abac4ab48b545f552ab81e4d~mv2.png/v1/fill/w_900,h_700,al_c,q_90,enc_auto/8a3301_467001e3abac4ab48b545f552ab81e4d~mv2.png');background-size:cover;background-position:center;">
-        <div class="street-miles-visual-inner">
-          <div class="street-miles-visual-tag">SMNYC / FIVE BOROUGH CHAPTER</div>
-          <div class="street-miles-visual-headline">Do the work.<br>Carry the weight.</div>
+  <section class="section">
+    <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:var(--space-xl);align-items:center;">
+      <div style="position:relative;overflow:hidden;aspect-ratio:4/5;background-size:cover;background-position:center;{% if settings.default_street_miles_image != blank %}background-image:url('{{ settings.default_street_miles_image | image_url: width: 1600 }}');{% else %}background-image:url('https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&w=1600&q=80');{% endif %}">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(35,35,33,0.45) 0%,transparent 50%);"></div>
+        <div style="position:absolute;left:1.5rem;bottom:1.5rem;right:1.5rem;color:#fff;z-index:1;">
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.35);margin-bottom:1rem;">SMNYC / FIVE BOROUGH CHAPTER</div>
+          <div class="text-h2" style="color:#fff;">Do the work.<br>Carry the weight.</div>
         </div>
       </div>
-      <div class="street-miles-content">
+      <div>
         <div class="text-eyebrow mb-sm">{{ section.settings.street_eyebrow }}</div>
         <h2 class="text-h2" style="margin-bottom:1.25rem;">{{ section.settings.street_heading }}</h2>
-        <p class="text-body" style="margin-bottom:2.5rem;max-width:42ch;">{{ section.settings.street_copy }}</p>
-        <div class="street-miles-stats">
+        <p class="text-body" style="margin-bottom:2rem;max-width:42ch;">{{ section.settings.street_copy }}</p>
+        <div class="training-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem;">
           {% for block in section.blocks %}
             {% if block.type == 'street_stat' %}
-              <div {{ block.shopify_attributes }}><div class="sm-stat-value">{{ block.settings.value }}</div><div class="sm-stat-label">{{ block.settings.label }}</div></div>
+              <div class="training-card" {{ block.shopify_attributes }}>
+                <div class="training-card-number">{{ block.settings.value }}</div>
+                <div class="training-card-title">{{ block.settings.label }}</div>
+              </div>
             {% endif %}
           {% endfor %}
         </div>
         <a href="{{ street_miles_url }}" class="btn btn--outline">{{ section.settings.street_button_label }}</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="signup-section">
-  <div class="container">
-    <div class="signup-inner">
-      <div class="signup-left">
+  <section class="section" style="background:var(--color-off-white);border-top:1px solid var(--color-warm-gray);">
+    <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:var(--space-xl);align-items:start;">
+      <div>
         <div class="text-eyebrow">{{ section.settings.signup_eyebrow }}</div>
         <h2 class="text-h2" style="margin-top:1.25rem;margin-bottom:1rem;">{{ section.settings.signup_heading }}</h2>
-        <p class="signup-copy">{{ section.settings.signup_copy }}</p>
+        <p class="text-body">{{ section.settings.signup_copy }}</p>
       </div>
-      <div class="signup-right">
+      <div>
         {% form 'customer', class: 'signup-form' %}
           <input type="hidden" name="contact[tags]" value="newsletter">
           <div class="signup-form-row">
@@ -202,9 +204,8 @@
         {% endform %}
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
+</div>
 {% schema %}
 {
   "name": "AREN Home",
