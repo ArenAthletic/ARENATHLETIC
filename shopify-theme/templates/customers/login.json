@@ -2,11 +2,6 @@
   "sections": {
     "main": {
       "type": "main-customers-login"
-    },
-    "final_pass_note": {
-      "type": "main-404",
-      "disabled": true,
-      "settings": {}
     }
   },
   "order": [
