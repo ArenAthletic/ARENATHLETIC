@@ -45,17 +45,17 @@
   endif
 %}
 
-  <div class="page-editor-surface page-editor-surface--services" data-page-handle="services" {{ section.shopify_attributes }}>
+  <div class="page-services" {{ section.shopify_attributes }}>
   <section class="page-hero" style="position:relative;overflow:hidden;padding-top:calc(68px + var(--space-xl));padding-bottom:var(--space-xl);border-bottom:1px solid var(--color-warm-gray);">
     <div style="position:absolute;inset:0;{% if services_hero_image != blank %}background-image:url('{{ services_hero_image | image_url: width: 2000 }}');{% else %}background-image:url('https://static.wixstatic.com/media/8a3301_cf5517a609d94d6992c825205aaae6d6~mv2.png/v1/fill/w_1920,h_600,al_c,q_90,enc_auto/8a3301_cf5517a609d94d6992c825205aaae6d6~mv2.png');{% endif %}background-size:cover;background-position:center;opacity:0.08;"></div>
     <div class="container" style="position:relative;z-index:1;">
-      <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="services_hero_eyebrow">{{ section.settings.services_hero_eyebrow }}</span></div>
-      <h1 class="text-h1" style="max-width:20ch;margin-bottom:2rem;"><span data-shopify-editor-setting="services_hero_heading">{{ section.settings.services_hero_heading }}</span></h1>
-      <p class="text-body" style="max-width:50ch;"><span data-shopify-editor-setting="services_hero_copy">{{ section.settings.services_hero_copy }}</span></p>
+      <div class="text-eyebrow" style="margin-bottom:2rem;"><span>{{ section.settings.services_hero_eyebrow }}</span></div>
+      <h1 class="text-h1" style="max-width:20ch;margin-bottom:2rem;"><span>{{ section.settings.services_hero_heading }}</span></h1>
+      <p class="text-body" style="max-width:50ch;"><span>{{ section.settings.services_hero_copy }}</span></p>
     </div>
   </section>
 
-  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span data-shopify-editor-setting="services_marquee_text">{{ section.settings.services_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.services_marquee_text }}</span></div></div>
+  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span>{{ section.settings.services_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.services_marquee_text }}</span></div></div>
 
   <section class="services-list">
     <div class="container">
@@ -89,9 +89,9 @@
   <section class="section" style="background:var(--color-off-white);border-top:1px solid var(--color-warm-gray);">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="services_cta_eyebrow">{{ section.settings.services_cta_eyebrow }}</span></div>
-        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="services_cta_heading">{{ section.settings.services_cta_heading }}</span></h2>
-        <p class="text-body" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="services_cta_copy">{{ section.settings.services_cta_copy }}</span></p>
+        <div class="text-eyebrow mb-sm"><span>{{ section.settings.services_cta_eyebrow }}</span></div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span>{{ section.settings.services_cta_heading }}</span></h2>
+        <p class="text-body" style="margin-bottom:1.5rem;"><span>{{ section.settings.services_cta_copy }}</span></p>
       </div>
       <div style="display:grid;gap:1rem;align-content:start;">
         {% if services_cta_image != blank %}
@@ -99,9 +99,9 @@
             <img src="{{ services_cta_image | image_url: width: 1200 }}" alt="{{ services_cta_image.alt | default: section.settings.services_cta_heading | escape }}" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
           </div>
         {% endif %}
-        <a href="{{ contact_url }}" class="btn btn--primary"><span data-shopify-editor-setting="services_cta_primary_label">{{ section.settings.services_cta_primary_label }}</span></a>
-        <a href="{{ training_url }}" class="btn btn--outline"><span data-shopify-editor-setting="services_cta_secondary_label">{{ section.settings.services_cta_secondary_label }}</span></a>
-        <a href="{{ street_miles_url }}" class="btn btn--outline"><span data-shopify-editor-setting="services_cta_tertiary_label">{{ section.settings.services_cta_tertiary_label }}</span></a>
+        <a href="{{ contact_url }}" class="btn btn--primary"><span>{{ section.settings.services_cta_primary_label }}</span></a>
+        <a href="{{ training_url }}" class="btn btn--outline"><span>{{ section.settings.services_cta_secondary_label }}</span></a>
+        <a href="{{ street_miles_url }}" class="btn btn--outline"><span>{{ section.settings.services_cta_tertiary_label }}</span></a>
       </div>
     </div>
   </section>

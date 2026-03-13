@@ -45,13 +45,13 @@
   endif
 %}
 
-  <div class="page-editor-surface page-editor-surface--about" data-page-handle="about" {{ section.shopify_attributes }}>
+  <div class="page-about" {{ section.shopify_attributes }}>
   <section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;">
     <div style="position:absolute;inset:0;{% if about_hero_image != blank %}background-image:url('{{ about_hero_image | image_url: width: 2000 }}');{% else %}background-image:url('https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/crop/x_0,y_2215,w_4284,h_1845/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png');{% endif %}background-size:cover;background-position:center;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(165deg,rgba(28,28,26,0.88) 0%,rgba(35,35,33,0.68) 55%,rgba(26,26,24,0.92) 100%);"></div>
     <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
-      <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="about_hero_eyebrow">{{ section.settings.about_hero_eyebrow }}</span></div>
-      <h1 class="text-display" style="color:#fff;max-width:16ch;margin-bottom:2rem;"><span data-shopify-editor-setting="about_hero_heading">{{ section.settings.about_hero_heading }}</span></h1>
+      <div class="text-eyebrow" style="margin-bottom:2rem;"><span>{{ section.settings.about_hero_eyebrow }}</span></div>
+      <h1 class="text-display" style="color:#fff;max-width:16ch;margin-bottom:2rem;"><span>{{ section.settings.about_hero_heading }}</span></h1>
     </div>
   </section>
 
@@ -61,8 +61,8 @@
     <div class="container">
       <div class="about-intro-inner">
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="about_intro_eyebrow">{{ section.settings.about_intro_eyebrow }}</span></div>
-          <h2 class="text-h2" style="max-width:18ch;margin-bottom:2.5rem;"><span data-shopify-editor-setting="about_intro_heading">{{ section.settings.about_intro_heading }}</span></h2>
+          <div class="text-eyebrow" style="margin-bottom:2rem;"><span>{{ section.settings.about_intro_eyebrow }}</span></div>
+          <h2 class="text-h2" style="max-width:18ch;margin-bottom:2.5rem;"><span>{{ section.settings.about_intro_heading }}</span></h2>
           <div style="position:relative;overflow:hidden;aspect-ratio:3/4;margin-top:2rem;">
             {% if about_intro_image != blank %}
               <img src="{{ about_intro_image | image_url: width: 1200 }}" alt="{{ about_intro_image.alt | default: 'AREN Athletic' | escape }}" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy">
@@ -70,10 +70,10 @@
               <img src="https://static.wixstatic.com/media/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png/v1/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png" alt="AREN Athletic" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy">
             {% endif %}
           </div>
-          <div style="margin-top:2rem;"><a href="{{ shop_url }}" class="btn btn--outline"><span data-shopify-editor-setting="about_intro_button_label">{{ section.settings.about_intro_button_label }}</span></a></div>
+          <div style="margin-top:2rem;"><a href="{{ shop_url }}" class="btn btn--outline"><span>{{ section.settings.about_intro_button_label }}</span></a></div>
         </div>
         <div>
-          <div class="text-body rte"><span data-shopify-editor-setting="about_intro_richtext">{{ section.settings.about_intro_richtext }}</span></div>
+          <div class="text-body rte"><span>{{ section.settings.about_intro_richtext }}</span></div>
         </div>
       </div>
     </div>
@@ -81,8 +81,8 @@
 
   <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
     <div class="container container--narrow">
-      <div class="text-body rte"><span data-shopify-editor-setting="about_body_richtext">{{ section.settings.about_body_richtext }}</span></div>
-      <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-mid-gray);"><span data-shopify-editor-setting="about_body_kicker">{{ section.settings.about_body_kicker }}</span></p>
+      <div class="text-body rte"><span>{{ section.settings.about_body_richtext }}</span></div>
+      <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-mid-gray);"><span>{{ section.settings.about_body_kicker }}</span></p>
     </div>
   </section>
 
@@ -98,9 +98,9 @@
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(35,35,33,0.35) 0%,transparent 40%);"></div>
         </div>
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="about_identity_eyebrow">{{ section.settings.about_identity_eyebrow }}</span></div>
-          <h2 class="text-h2" style="max-width:18ch;margin-bottom:1.75rem;"><span data-shopify-editor-setting="about_identity_heading">{{ section.settings.about_identity_heading }}</span></h2>
-          <div class="text-body rte"><span data-shopify-editor-setting="about_identity_richtext">{{ section.settings.about_identity_richtext }}</span></div>
+          <div class="text-eyebrow" style="margin-bottom:2rem;"><span>{{ section.settings.about_identity_eyebrow }}</span></div>
+          <h2 class="text-h2" style="max-width:18ch;margin-bottom:1.75rem;"><span>{{ section.settings.about_identity_heading }}</span></h2>
+          <div class="text-body rte"><span>{{ section.settings.about_identity_richtext }}</span></div>
         </div>
       </div>
     </div>
@@ -110,10 +110,10 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
         <div>
-          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;"><span data-shopify-editor-setting="about_values_eyebrow">{{ section.settings.about_values_eyebrow }}</span></div>
-          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.8rem);font-weight:700;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;color:#fff;margin-bottom:2rem;"><span data-shopify-editor-setting="about_values_heading">{{ section.settings.about_values_heading }}</span></h2>
-          <div class="rte" style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:46ch;"><span data-shopify-editor-setting="about_values_richtext">{{ section.settings.about_values_richtext }}</span></div>
-          <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);"><span data-shopify-editor-setting="about_values_kicker">{{ section.settings.about_values_kicker }}</span></p>
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;"><span>{{ section.settings.about_values_eyebrow }}</span></div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.8rem);font-weight:700;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;color:#fff;margin-bottom:2rem;"><span>{{ section.settings.about_values_heading }}</span></h2>
+          <div class="rte" style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:46ch;"><span>{{ section.settings.about_values_richtext }}</span></div>
+          <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);"><span>{{ section.settings.about_values_kicker }}</span></p>
         </div>
         <div style="display:flex;flex-direction:column;gap:2rem;padding-left:var(--space-lg);border-left:1px solid rgba(255,255,255,0.08);">
           {% for block in section.blocks %}
@@ -131,7 +131,7 @@
 
   <div style="background:var(--color-black);padding:1rem 0;border-top:1px solid rgba(255,255,255,0.06);overflow:hidden;white-space:nowrap;">
     <div style="display:inline-flex;animation:marquee 20s linear infinite;">
-      <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 2rem;"><span data-shopify-editor-setting="about_footer_marquee_text">{{ section.settings.about_footer_marquee_text }}</span></span>
+      <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 2rem;"><span>{{ section.settings.about_footer_marquee_text }}</span></span>
       <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 2rem;">{{ section.settings.about_footer_marquee_text }}</span>
     </div>
   </div>
@@ -140,14 +140,14 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="about_cta_eyebrow">{{ section.settings.about_cta_eyebrow }}</span></div>
-          <h2 class="text-h2" style="max-width:22ch;margin-bottom:1.75rem;"><span data-shopify-editor-setting="about_cta_heading">{{ section.settings.about_cta_heading }}</span></h2>
-          <p class="text-body" style="max-width:46ch;"><span data-shopify-editor-setting="about_cta_copy">{{ section.settings.about_cta_copy }}</span></p>
+          <div class="text-eyebrow" style="margin-bottom:2rem;"><span>{{ section.settings.about_cta_eyebrow }}</span></div>
+          <h2 class="text-h2" style="max-width:22ch;margin-bottom:1.75rem;"><span>{{ section.settings.about_cta_heading }}</span></h2>
+          <p class="text-body" style="max-width:46ch;"><span>{{ section.settings.about_cta_copy }}</span></p>
         </div>
         <div style="display:flex;flex-direction:column;gap:1rem;max-width:400px;">
-          <a href="{{ contact_url }}" class="btn btn--primary"><span data-shopify-editor-setting="about_cta_primary_label">{{ section.settings.about_cta_primary_label }}</span></a>
-          <a href="{{ training_url }}" class="btn btn--outline"><span data-shopify-editor-setting="about_cta_secondary_label">{{ section.settings.about_cta_secondary_label }}</span></a>
-          <a href="{{ street_miles_url }}" class="btn btn--outline"><span data-shopify-editor-setting="about_cta_tertiary_label">{{ section.settings.about_cta_tertiary_label }}</span></a>
+          <a href="{{ contact_url }}" class="btn btn--primary"><span>{{ section.settings.about_cta_primary_label }}</span></a>
+          <a href="{{ training_url }}" class="btn btn--outline"><span>{{ section.settings.about_cta_secondary_label }}</span></a>
+          <a href="{{ street_miles_url }}" class="btn btn--outline"><span>{{ section.settings.about_cta_tertiary_label }}</span></a>
         </div>
       </div>
     </div>

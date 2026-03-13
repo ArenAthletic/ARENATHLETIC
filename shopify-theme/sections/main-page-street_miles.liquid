@@ -45,31 +45,31 @@
   endif
 %}
 
-  <div class="page-editor-surface page-editor-surface--street-miles" data-page-handle="street-miles" {{ section.shopify_attributes }}>
+  <div class="page-street-miles" {{ section.shopify_attributes }}>
   <section class="sm-hero" style="position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;{% if street_miles_hero_image != blank %}background-image:url('{{ street_miles_hero_image | image_url: width: 2000 }}');{% else %}background-image:url('https://static.wixstatic.com/media/8a3301_dfd7f8236654470390a4357692431d22~mv2.png/v1/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_dfd7f8236654470390a4357692431d22~mv2.png');{% endif %}background-size:cover;background-position:center top;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(20,20,18,0.88) 0%,rgba(35,35,33,0.70) 55%,rgba(20,20,18,0.92) 100%);"></div>
     <div class="container" style="position:relative;z-index:1;">
-      <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2.5rem;"><span data-shopify-editor-setting="street_miles_hero_eyebrow">{{ section.settings.street_miles_hero_eyebrow }}</span></div>
-      <h1 class="sm-hero-tagline"><span data-shopify-editor-setting="street_miles_hero_heading">{{ section.settings.street_miles_hero_heading }}</span></h1>
-      <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:52ch;margin-bottom:3rem;"><span data-shopify-editor-setting="street_miles_hero_copy">{{ section.settings.street_miles_hero_copy }}</span></p>
+      <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2.5rem;"><span>{{ section.settings.street_miles_hero_eyebrow }}</span></div>
+      <h1 class="sm-hero-tagline"><span>{{ section.settings.street_miles_hero_heading }}</span></h1>
+      <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:52ch;margin-bottom:3rem;"><span>{{ section.settings.street_miles_hero_copy }}</span></p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="{{ contact_url }}" class="btn btn--primary"><span data-shopify-editor-setting="street_miles_primary_label">{{ section.settings.street_miles_primary_label }}</span></a>
-        <a href="#protocol" class="btn btn--outline-white"><span data-shopify-editor-setting="street_miles_secondary_label">{{ section.settings.street_miles_secondary_label }}</span></a>
+        <a href="{{ contact_url }}" class="btn btn--primary"><span>{{ section.settings.street_miles_primary_label }}</span></a>
+        <a href="#protocol" class="btn btn--outline-white"><span>{{ section.settings.street_miles_secondary_label }}</span></a>
       </div>
     </div>
   </section>
 
-  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span data-shopify-editor-setting="street_miles_marquee_text">{{ section.settings.street_miles_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.street_miles_marquee_text }}</span></div></div>
+  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span>{{ section.settings.street_miles_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.street_miles_marquee_text }}</span></div></div>
 
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:var(--space-xl);align-items:center;">
       <div>
-        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_culture_eyebrow">{{ section.settings.street_miles_culture_eyebrow }}</span></div>
-        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_culture_heading">{{ section.settings.street_miles_culture_heading }}</span></h2>
-        <p class="text-body" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_culture_copy_1">{{ section.settings.street_miles_culture_copy_1 }}</span></p>
-        <p class="text-body" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_culture_copy_2">{{ section.settings.street_miles_culture_copy_2 }}</span></p>
-        <p class="text-body"><span data-shopify-editor-setting="street_miles_culture_copy_3">{{ section.settings.street_miles_culture_copy_3 }}</span></p>
+        <div class="text-eyebrow mb-sm"><span>{{ section.settings.street_miles_culture_eyebrow }}</span></div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span>{{ section.settings.street_miles_culture_heading }}</span></h2>
+        <p class="text-body" style="margin-bottom:1.5rem;"><span>{{ section.settings.street_miles_culture_copy_1 }}</span></p>
+        <p class="text-body" style="margin-bottom:1.5rem;"><span>{{ section.settings.street_miles_culture_copy_2 }}</span></p>
+        <p class="text-body"><span>{{ section.settings.street_miles_culture_copy_3 }}</span></p>
       </div>
       <div style="position:relative;overflow:hidden;aspect-ratio:4/5;">
         {% if street_miles_culture_image != blank %}
@@ -83,8 +83,8 @@
 
   <section class="section" id="protocol" style="border-top:1px solid var(--color-warm-gray);border-bottom:1px solid var(--color-warm-gray);">
     <div class="container">
-      <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_protocol_eyebrow">{{ section.settings.street_miles_protocol_eyebrow }}</span></div>
-      <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_protocol_heading">{{ section.settings.street_miles_protocol_heading }}</span></h2>
+      <div class="text-eyebrow mb-sm"><span>{{ section.settings.street_miles_protocol_eyebrow }}</span></div>
+      <h2 class="text-h2" style="margin-bottom:1.5rem;"><span>{{ section.settings.street_miles_protocol_heading }}</span></h2>
       <div class="services-list" style="border-top:none;">
         {% for block in section.blocks %}
           {% if block.type == 'street_protocol' %}
@@ -104,10 +104,10 @@
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_chapter_eyebrow">{{ section.settings.street_miles_chapter_eyebrow }}</span></div>
-        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_chapter_heading">{{ section.settings.street_miles_chapter_heading }}</span></h2>
-        <p class="text-body" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="street_miles_chapter_copy_1">{{ section.settings.street_miles_chapter_copy_1 }}</span></p>
-        <p class="text-body"><span data-shopify-editor-setting="street_miles_chapter_copy_2">{{ section.settings.street_miles_chapter_copy_2 }}</span></p>
+        <div class="text-eyebrow mb-sm"><span>{{ section.settings.street_miles_chapter_eyebrow }}</span></div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span>{{ section.settings.street_miles_chapter_heading }}</span></h2>
+        <p class="text-body" style="margin-bottom:1.5rem;"><span>{{ section.settings.street_miles_chapter_copy_1 }}</span></p>
+        <p class="text-body"><span>{{ section.settings.street_miles_chapter_copy_2 }}</span></p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;">
         {% for block in section.blocks %}
@@ -127,7 +127,7 @@
       <div style="position:absolute;inset:0;background-image:url('{{ street_miles_quotes_image | image_url: width: 2000 }}');background-size:cover;background-position:center;opacity:0.08;"></div>
     {% endif %}
     <div class="container" style="position:relative;z-index:1;">
-      <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_quotes_eyebrow">{{ section.settings.street_miles_quotes_eyebrow }}</span></div>
+      <div class="text-eyebrow mb-sm"><span>{{ section.settings.street_miles_quotes_eyebrow }}</span></div>
       <div class="training-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;">
         {% for block in section.blocks %}
           {% if block.type == 'street_quote' %}
@@ -141,7 +141,7 @@
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="street_miles_access_eyebrow">{{ section.settings.street_miles_access_eyebrow }}</span></div>
+        <div class="text-eyebrow mb-sm"><span>{{ section.settings.street_miles_access_eyebrow }}</span></div>
         <div class="training-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;">
           {% for block in section.blocks %}
             {% if block.type == 'street_access_step' %}
@@ -151,7 +151,7 @@
         </div>
       </div>
       <div style="display:grid;align-content:start;">
-        <a href="{{ contact_url }}" class="btn btn--primary"><span data-shopify-editor-setting="street_miles_access_button_label">{{ section.settings.street_miles_access_button_label }}</span></a>
+        <a href="{{ contact_url }}" class="btn btn--primary"><span>{{ section.settings.street_miles_access_button_label }}</span></a>
       </div>
     </div>
   </section>

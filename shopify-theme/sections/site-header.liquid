@@ -15,7 +15,7 @@
 
 <nav class="nav" id="main-nav" {{ section.shopify_attributes }}>
   <div class="nav-inner">
-    <a href="{{ routes.root_url }}" class="nav-logo" aria-label="{{ shop.name }} home" data-shopify-editor-setting="logo">
+    <a href="{{ routes.root_url }}" class="nav-logo" aria-label="{{ shop.name }} home">
       {% if section.settings.logo != blank %}
         <img
           src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
@@ -41,19 +41,19 @@
           <a href="{{ link.url }}" class="nav-link{% if link.current or link.active %} active{% endif %}" title="{{ link.title | escape }}">{{ link.title }}</a>
         {% endfor %}
       {% else %}
-        <a href="{{ routes.root_url }}" class="nav-link{% if request.page_type == 'index' %} active{% endif %}" data-shopify-editor-setting="home_label">{{ section.settings.home_label | default: settings.header_home_label | default: 'Home' }}</a>
-        <a href="{{ about_url }}" class="nav-link{% if handle == 'about' %} active{% endif %}" data-shopify-editor-setting="about_label">{{ section.settings.about_label | default: settings.header_about_label | default: 'About AREN' }}</a>
-        <a href="{{ training_url }}" class="nav-link{% if handle == 'training' %} active{% endif %}" data-shopify-editor-setting="training_label">{{ section.settings.training_label | default: settings.header_training_label | default: 'Training' }}</a>
-        <a href="{{ services_url }}" class="nav-link{% if handle == 'services' %} active{% endif %}" data-shopify-editor-setting="services_label">{{ section.settings.services_label | default: settings.header_services_label | default: 'Services' }}</a>
-        <a href="{{ street_miles_url }}" class="nav-link{% if handle == 'street-miles' %} active{% endif %}" data-shopify-editor-setting="street_label">{{ section.settings.street_label | default: settings.header_street_label | default: 'Street Miles NYC' }}</a>
-        <a href="{{ shop_url }}" class="nav-link{% if handle == 'shop' or request.page_type == 'collection' or request.page_type == 'product' %} active{% endif %}" data-shopify-editor-setting="shop_label">{{ section.settings.shop_label | default: settings.header_shop_label | default: 'Shop' }}</a>
-        <a href="{{ contact_url }}" class="nav-link{% if handle == 'contact' %} active{% endif %}" data-shopify-editor-setting="contact_label">{{ section.settings.contact_label | default: settings.header_contact_label | default: 'Contact / Join' }}</a>
+        <a href="{{ routes.root_url }}" class="nav-link{% if request.page_type == 'index' %} active{% endif %}">{{ section.settings.home_label | default: settings.header_home_label | default: 'Home' }}</a>
+        <a href="{{ about_url }}" class="nav-link{% if handle == 'about' %} active{% endif %}">{{ section.settings.about_label | default: settings.header_about_label | default: 'About AREN' }}</a>
+        <a href="{{ training_url }}" class="nav-link{% if handle == 'training' %} active{% endif %}">{{ section.settings.training_label | default: settings.header_training_label | default: 'Training' }}</a>
+        <a href="{{ services_url }}" class="nav-link{% if handle == 'services' %} active{% endif %}">{{ section.settings.services_label | default: settings.header_services_label | default: 'Services' }}</a>
+        <a href="{{ street_miles_url }}" class="nav-link{% if handle == 'street-miles' %} active{% endif %}">{{ section.settings.street_label | default: settings.header_street_label | default: 'Street Miles NYC' }}</a>
+        <a href="{{ shop_url }}" class="nav-link{% if handle == 'shop' or request.page_type == 'collection' or request.page_type == 'product' %} active{% endif %}">{{ section.settings.shop_label | default: settings.header_shop_label | default: 'Shop' }}</a>
+        <a href="{{ contact_url }}" class="nav-link{% if handle == 'contact' %} active{% endif %}">{{ section.settings.contact_label | default: settings.header_contact_label | default: 'Contact / Join' }}</a>
       {% endif %}
     </div>
 
     <div class="nav-actions">
-      <a href="{{ routes.account_login_url }}" class="nav-action-link" data-shopify-editor-setting="login_label">{{ section.settings.login_label | default: settings.header_login_label | default: 'Log In' }}</a>
-      <a href="{{ shop_url }}" class="nav-cta" data-shopify-editor-setting="cta_label">{{ section.settings.cta_label | default: settings.header_cta_label | default: 'Shop Now' }}</a>
+      <a href="{{ routes.account_login_url }}" class="nav-action-link">{{ section.settings.login_label | default: settings.header_login_label | default: 'Log In' }}</a>
+      <a href="{{ shop_url }}" class="nav-cta">{{ section.settings.cta_label | default: settings.header_cta_label | default: 'Shop Now' }}</a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" type="button">
         <span></span>
         <span></span>
@@ -70,15 +70,15 @@
         <a href="{{ link.url }}" class="nav-mobile-link" title="{{ link.title | escape }}">{{ link.title }}</a>
       {% endfor %}
     {% else %}
-      <a href="{{ routes.root_url }}" class="nav-mobile-link" data-shopify-editor-setting="home_label">{{ section.settings.home_label | default: settings.header_home_label | default: 'Home' }}</a>
-      <a href="{{ about_url }}" class="nav-mobile-link" data-shopify-editor-setting="about_label">{{ section.settings.about_label | default: settings.header_about_label | default: 'About AREN' }}</a>
-      <a href="{{ training_url }}" class="nav-mobile-link" data-shopify-editor-setting="training_label">{{ section.settings.training_label | default: settings.header_training_label | default: 'Training' }}</a>
-      <a href="{{ services_url }}" class="nav-mobile-link" data-shopify-editor-setting="services_label">{{ section.settings.services_label | default: settings.header_services_label | default: 'Services' }}</a>
-      <a href="{{ street_miles_url }}" class="nav-mobile-link" data-shopify-editor-setting="street_label">{{ section.settings.street_label | default: settings.header_street_label | default: 'Street Miles NYC' }}</a>
-      <a href="{{ shop_url }}" class="nav-mobile-link" data-shopify-editor-setting="shop_label">{{ section.settings.shop_label | default: settings.header_shop_label | default: 'Shop' }}</a>
-      <a href="{{ contact_url }}" class="nav-mobile-link" data-shopify-editor-setting="contact_label">{{ section.settings.contact_label | default: settings.header_contact_label | default: 'Contact / Join' }}</a>
+      <a href="{{ routes.root_url }}" class="nav-mobile-link">{{ section.settings.home_label | default: settings.header_home_label | default: 'Home' }}</a>
+      <a href="{{ about_url }}" class="nav-mobile-link">{{ section.settings.about_label | default: settings.header_about_label | default: 'About AREN' }}</a>
+      <a href="{{ training_url }}" class="nav-mobile-link">{{ section.settings.training_label | default: settings.header_training_label | default: 'Training' }}</a>
+      <a href="{{ services_url }}" class="nav-mobile-link">{{ section.settings.services_label | default: settings.header_services_label | default: 'Services' }}</a>
+      <a href="{{ street_miles_url }}" class="nav-mobile-link">{{ section.settings.street_label | default: settings.header_street_label | default: 'Street Miles NYC' }}</a>
+      <a href="{{ shop_url }}" class="nav-mobile-link">{{ section.settings.shop_label | default: settings.header_shop_label | default: 'Shop' }}</a>
+      <a href="{{ contact_url }}" class="nav-mobile-link">{{ section.settings.contact_label | default: settings.header_contact_label | default: 'Contact / Join' }}</a>
     {% endif %}
-    <a href="{{ routes.account_login_url }}" class="nav-mobile-link" data-shopify-editor-setting="login_label">{{ section.settings.login_label | default: settings.header_login_label | default: 'Log In' }}</a>
+    <a href="{{ routes.account_login_url }}" class="nav-mobile-link">{{ section.settings.login_label | default: settings.header_login_label | default: 'Log In' }}</a>
   </div>
 </div>
 

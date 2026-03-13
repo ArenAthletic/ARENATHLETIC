@@ -45,25 +45,25 @@
   endif
 %}
 
-  <div class="page-editor-surface page-editor-surface--contact" data-page-handle="contact" {{ section.shopify_attributes }}>
+  <div class="page-contact" {{ section.shopify_attributes }}>
   <section style="position:relative;padding-top:calc(68px + var(--space-xl));padding-bottom:var(--space-xl);border-bottom:1px solid var(--color-warm-gray);overflow:hidden;">
     <div style="position:absolute;inset:0;{% if contact_hero_image != blank %}background-image:url('{{ contact_hero_image | image_url: width: 2000 }}');{% else %}background-image:url('https://static.wixstatic.com/media/8a3301_a50d3c308c3b4909b7726a0559353904~mv2.jpg/v1/crop/x_0,y_2549,w_3840,h_2057/fill/w_1920,h_600,al_c,q_90,enc_auto/8a3301_a50d3c308c3b4909b7726a0559353904~mv2.jpg');{% endif %}background-size:cover;background-position:center;opacity:0.08;"></div>
     <div class="container" style="position:relative;z-index:1;">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:end;">
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="contact_hero_eyebrow">{{ section.settings.contact_hero_eyebrow }}</span></div>
-          <h1 class="text-h1" style="max-width:18ch;"><span data-shopify-editor-setting="contact_hero_heading">{{ section.settings.contact_hero_heading }}</span></h1>
+          <div class="text-eyebrow" style="margin-bottom:2rem;"><span>{{ section.settings.contact_hero_eyebrow }}</span></div>
+          <h1 class="text-h1" style="max-width:18ch;"><span>{{ section.settings.contact_hero_heading }}</span></h1>
         </div>
-        <p class="text-body" style="max-width:44ch;"><span data-shopify-editor-setting="contact_hero_copy">{{ section.settings.contact_hero_copy }}</span></p>
+        <p class="text-body" style="max-width:44ch;"><span>{{ section.settings.contact_hero_copy }}</span></p>
       </div>
     </div>
   </section>
 
-  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span data-shopify-editor-setting="contact_marquee_text">{{ section.settings.contact_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.contact_marquee_text }}</span></div></div>
+  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span>{{ section.settings.contact_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.contact_marquee_text }}</span></div></div>
 
   <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
     <div class="container">
-      <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="contact_channels_heading">{{ section.settings.contact_channels_heading }}</span></div>
+      <div class="text-eyebrow" style="margin-bottom:2rem;"><span>{{ section.settings.contact_channels_heading }}</span></div>
       <div class="training-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;">
         {% for block in section.blocks %}
           {% if block.type == 'contact_channel' %}
@@ -77,7 +77,7 @@
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="contact_social_heading">{{ section.settings.contact_social_heading }}</span></div>
+        <div class="text-eyebrow mb-sm"><span>{{ section.settings.contact_social_heading }}</span></div>
         <div class="footer-links" style="gap:1rem;display:grid;">
           <a href="{{ settings.instagram_url | default: 'https://www.instagram.com/arenathletic/' }}" class="footer-link">Instagram</a>
           <a href="{{ settings.twitter_url | default: 'https://x.com/' }}" class="footer-link">Twitter</a>
@@ -88,35 +88,35 @@
         {% form 'contact', id: 'contact-form', class: 'contact-form' %}
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
             <div class="form-group">
-              <label class="form-label" for="ContactFormFirstName"><span data-shopify-editor-setting="contact_form_first_name_label">{{ section.settings.contact_form_first_name_label }}</span></label>
+              <label class="form-label" for="ContactFormFirstName"><span>{{ section.settings.contact_form_first_name_label }}</span></label>
               <input class="form-input" type="text" id="ContactFormFirstName" name="contact[first_name]">
             </div>
             <div class="form-group">
-              <label class="form-label" for="ContactFormLastName"><span data-shopify-editor-setting="contact_form_last_name_label">{{ section.settings.contact_form_last_name_label }}</span></label>
+              <label class="form-label" for="ContactFormLastName"><span>{{ section.settings.contact_form_last_name_label }}</span></label>
               <input class="form-input" type="text" id="ContactFormLastName" name="contact[last_name]">
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label" for="ContactFormEmail"><span data-shopify-editor-setting="contact_form_email_label">{{ section.settings.contact_form_email_label }}</span></label>
+            <label class="form-label" for="ContactFormEmail"><span>{{ section.settings.contact_form_email_label }}</span></label>
             <input class="form-input" type="email" id="ContactFormEmail" name="contact[email]" required>
           </div>
           <div class="form-group">
-            <label class="form-label" for="ContactFormPhone"><span data-shopify-editor-setting="contact_form_phone_label">{{ section.settings.contact_form_phone_label }}</span></label>
+            <label class="form-label" for="ContactFormPhone"><span>{{ section.settings.contact_form_phone_label }}</span></label>
             <input class="form-input" type="tel" id="ContactFormPhone" name="contact[phone]">
           </div>
           <div class="form-group">
-            <label class="form-label" for="ContactFormReferral"><span data-shopify-editor-setting="contact_form_referral_label">{{ section.settings.contact_form_referral_label }}</span></label>
+            <label class="form-label" for="ContactFormReferral"><span>{{ section.settings.contact_form_referral_label }}</span></label>
             <input class="form-input" type="text" id="ContactFormReferral" name="contact[referral_source]">
           </div>
           <div class="form-group">
-            <label class="form-label" for="ContactFormBody"><span data-shopify-editor-setting="contact_form_body_label">{{ section.settings.contact_form_body_label }}</span></label>
+            <label class="form-label" for="ContactFormBody"><span>{{ section.settings.contact_form_body_label }}</span></label>
             <textarea class="form-textarea" id="ContactFormBody" name="contact[body]"></textarea>
           </div>
-          <button class="btn btn--primary" type="submit"><span data-shopify-editor-setting="contact_form_button_label">{{ section.settings.contact_form_button_label }}</span></button>
+          <button class="btn btn--primary" type="submit"><span>{{ section.settings.contact_form_button_label }}</span></button>
           {% if form.posted_successfully? %}
-            <div id="contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;"><span data-shopify-editor-setting="contact_form_success_text">{{ section.settings.contact_form_success_text }}</span></div>
+            <div id="contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;"><span>{{ section.settings.contact_form_success_text }}</span></div>
           {% endif %}
-          <div class="text-body" style="margin-top:1rem;opacity:.75;"><span data-shopify-editor-setting="contact_form_disclaimer">{{ section.settings.contact_form_disclaimer }}</span></div>
+          <div class="text-body" style="margin-top:1rem;opacity:.75;"><span>{{ section.settings.contact_form_disclaimer }}</span></div>
           {{ form.errors | default_errors }}
         {% endform %}
       </div>
@@ -125,7 +125,7 @@
 
   <section class="section" style="background:var(--color-off-white);border-top:1px solid var(--color-warm-gray);">
     <div class="container">
-      <div class="section-header"><div><div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="contact_ecosystem_eyebrow">{{ section.settings.contact_ecosystem_eyebrow }}</span></div><h2 class="text-h2"><span data-shopify-editor-setting="contact_ecosystem_heading">{{ section.settings.contact_ecosystem_heading }}</span></h2></div></div>
+      <div class="section-header"><div><div class="text-eyebrow mb-sm"><span>{{ section.settings.contact_ecosystem_eyebrow }}</span></div><h2 class="text-h2"><span>{{ section.settings.contact_ecosystem_heading }}</span></h2></div></div>
       <div class="training-grid" style="margin-top:var(--space-lg);">
         {% for block in section.blocks %}
           {% if block.type == 'contact_ecosystem_card' %}

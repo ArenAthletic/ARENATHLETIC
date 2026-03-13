@@ -45,29 +45,29 @@
   endif
 %}
 
-  <div class="page-editor-surface page-editor-surface--training" data-page-handle="training" {{ section.shopify_attributes }}>
+  <div class="page-training" {{ section.shopify_attributes }}>
   <section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:520px;display:flex;align-items:flex-end;">
     <div style="position:absolute;inset:0;{% if training_hero_image != blank %}background-image:url('{{ training_hero_image | image_url: width: 2000 }}');{% else %}background-image:url('https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/crop/x_0,y_558,w_4284,h_4295/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png');{% endif %}background-size:cover;background-position:center;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(28,28,26,0.85) 0%,rgba(35,35,33,0.65) 60%,rgba(26,26,24,0.9) 100%);"></div>
     <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
-      <div class="text-eyebrow" style="margin-bottom:2rem;"><span data-shopify-editor-setting="training_hero_eyebrow">{{ section.settings.training_hero_eyebrow }}</span></div>
-      <h1 class="text-display" style="color:#fff;max-width:20ch;margin-bottom:2rem;"><span data-shopify-editor-setting="training_hero_heading">{{ section.settings.training_hero_heading }}</span></h1>
-      <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:50ch;"><span data-shopify-editor-setting="training_hero_copy">{{ section.settings.training_hero_copy }}</span></p>
+      <div class="text-eyebrow" style="margin-bottom:2rem;"><span>{{ section.settings.training_hero_eyebrow }}</span></div>
+      <h1 class="text-display" style="color:#fff;max-width:20ch;margin-bottom:2rem;"><span>{{ section.settings.training_hero_heading }}</span></h1>
+      <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:50ch;"><span>{{ section.settings.training_hero_copy }}</span></p>
     </div>
   </section>
 
-  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span data-shopify-editor-setting="training_marquee_text">{{ section.settings.training_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.training_marquee_text }}</span></div></div>
+  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text"><span>{{ section.settings.training_marquee_text }}</span></span><span class="marquee-text">{{ section.settings.training_marquee_text }}</span></div></div>
 
   <section class="section">
     <div class="container">
       <div class="section-header">
         <div>
-          <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="training_philosophy_eyebrow">{{ section.settings.training_philosophy_eyebrow }}</span></div>
-          <h2 class="text-h2"><span data-shopify-editor-setting="training_philosophy_heading">{{ section.settings.training_philosophy_heading }}</span></h2>
+          <div class="text-eyebrow mb-sm"><span>{{ section.settings.training_philosophy_eyebrow }}</span></div>
+          <h2 class="text-h2"><span>{{ section.settings.training_philosophy_heading }}</span></h2>
         </div>
         <div style="max-width:48ch;">
-          <p class="text-body" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="training_philosophy_copy_1">{{ section.settings.training_philosophy_copy_1 }}</span></p>
-          <p class="text-body"><span data-shopify-editor-setting="training_philosophy_copy_2">{{ section.settings.training_philosophy_copy_2 }}</span></p>
+          <p class="text-body" style="margin-bottom:1.5rem;"><span>{{ section.settings.training_philosophy_copy_1 }}</span></p>
+          <p class="text-body"><span>{{ section.settings.training_philosophy_copy_2 }}</span></p>
         </div>
       </div>
 
@@ -96,8 +96,8 @@
     <div class="container">
       <div class="section-header">
         <div>
-          <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="training_programs_eyebrow">{{ section.settings.training_programs_eyebrow }}</span></div>
-          <h2 class="text-h2"><span data-shopify-editor-setting="training_programs_heading">{{ section.settings.training_programs_heading }}</span></h2>
+          <div class="text-eyebrow mb-sm"><span>{{ section.settings.training_programs_eyebrow }}</span></div>
+          <h2 class="text-h2"><span>{{ section.settings.training_programs_heading }}</span></h2>
         </div>
       </div>
 
@@ -133,8 +133,8 @@
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="training_who_eyebrow">{{ section.settings.training_who_eyebrow }}</span></div>
-        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="training_who_heading">{{ section.settings.training_who_heading }}</span></h2>
+        <div class="text-eyebrow mb-sm"><span>{{ section.settings.training_who_eyebrow }}</span></div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span>{{ section.settings.training_who_heading }}</span></h2>
         <ul class="text-body" style="list-style:none;padding:0;margin:0;display:grid;gap:1rem;">
           {% for block in section.blocks %}
             {% if block.type == 'training_who_item' %}
@@ -156,44 +156,44 @@
   <section class="section" style="background:var(--color-off-white);border-top:1px solid var(--color-warm-gray);">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="training_get_started_eyebrow">{{ section.settings.training_get_started_eyebrow }}</span></div>
-        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span data-shopify-editor-setting="training_get_started_heading">{{ section.settings.training_get_started_heading }}</span></h2>
-        <p class="text-body" style="margin-bottom:1rem;"><span data-shopify-editor-setting="training_get_started_copy">{{ section.settings.training_get_started_copy }}</span></p>
+        <div class="text-eyebrow mb-sm"><span>{{ section.settings.training_get_started_eyebrow }}</span></div>
+        <h2 class="text-h2" style="margin-bottom:1.5rem;"><span>{{ section.settings.training_get_started_heading }}</span></h2>
+        <p class="text-body" style="margin-bottom:1rem;"><span>{{ section.settings.training_get_started_copy }}</span></p>
         <p class="text-body" style="margin-bottom:.5rem;"><a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a></p>
-        <p class="text-body"><span data-shopify-editor-setting="training_get_started_address">{{ section.settings.training_get_started_address }}</span></p>
+        <p class="text-body"><span>{{ section.settings.training_get_started_address }}</span></p>
       </div>
       <div>
         {% form 'contact', id: 'training-contact-form', class: 'contact-form' %}
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
             <div class="form-group">
-              <label class="form-label" for="TrainingFirstName"><span data-shopify-editor-setting="training_form_first_name_label">{{ section.settings.training_form_first_name_label }}</span></label>
+              <label class="form-label" for="TrainingFirstName"><span>{{ section.settings.training_form_first_name_label }}</span></label>
               <input class="form-input" type="text" id="TrainingFirstName" name="contact[first_name]" required>
             </div>
             <div class="form-group">
-              <label class="form-label" for="TrainingLastName"><span data-shopify-editor-setting="training_form_last_name_label">{{ section.settings.training_form_last_name_label }}</span></label>
+              <label class="form-label" for="TrainingLastName"><span>{{ section.settings.training_form_last_name_label }}</span></label>
               <input class="form-input" type="text" id="TrainingLastName" name="contact[last_name]" required>
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label" for="TrainingEmail"><span data-shopify-editor-setting="training_form_email_label">{{ section.settings.training_form_email_label }}</span></label>
+            <label class="form-label" for="TrainingEmail"><span>{{ section.settings.training_form_email_label }}</span></label>
             <input class="form-input" type="email" id="TrainingEmail" name="contact[email]" required>
           </div>
           <div class="form-group">
-            <label class="form-label" for="TrainingPhone"><span data-shopify-editor-setting="training_form_phone_label">{{ section.settings.training_form_phone_label }}</span></label>
+            <label class="form-label" for="TrainingPhone"><span>{{ section.settings.training_form_phone_label }}</span></label>
             <input class="form-input" type="tel" id="TrainingPhone" name="contact[phone]">
           </div>
           <div class="form-group">
-            <label class="form-label" for="TrainingReferral"><span data-shopify-editor-setting="training_form_referral_label">{{ section.settings.training_form_referral_label }}</span></label>
+            <label class="form-label" for="TrainingReferral"><span>{{ section.settings.training_form_referral_label }}</span></label>
             <input class="form-input" type="text" id="TrainingReferral" name="contact[referral_source]">
           </div>
           <div class="form-group">
-            <label class="form-label" for="TrainingWhy"><span data-shopify-editor-setting="training_form_body_label">{{ section.settings.training_form_body_label }}</span></label>
+            <label class="form-label" for="TrainingWhy"><span>{{ section.settings.training_form_body_label }}</span></label>
             <textarea class="form-textarea" id="TrainingWhy" name="contact[body]" required></textarea>
           </div>
-          <button class="btn btn--primary" type="submit"><span data-shopify-editor-setting="training_form_button_label">{{ section.settings.training_form_button_label }}</span></button>
-          <div class="text-eyebrow" style="margin-top:1rem;"><span data-shopify-editor-setting="training_form_response_text">{{ section.settings.training_form_response_text }}</span></div>
+          <button class="btn btn--primary" type="submit"><span>{{ section.settings.training_form_button_label }}</span></button>
+          <div class="text-eyebrow" style="margin-top:1rem;"><span>{{ section.settings.training_form_response_text }}</span></div>
           {% if form.posted_successfully? %}
-            <div id="training-contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;"><span data-shopify-editor-setting="training_form_success_text">{{ section.settings.training_form_success_text }}</span></div>
+            <div id="training-contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;"><span>{{ section.settings.training_form_success_text }}</span></div>
           {% endif %}
           {{ form.errors | default_errors }}
         {% endform %}
