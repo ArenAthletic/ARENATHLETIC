@@ -113,27 +113,120 @@
 {
   "name": "Services page",
   "settings": [
-    { "type": "header", "content": "Services page editor settings" },
-    { "type": "page", "id": "about_page", "label": "About page" },
-    { "type": "page", "id": "training_page", "label": "Training page" },
-    { "type": "page", "id": "services_page", "label": "Services page" },
-    { "type": "page", "id": "street_miles_page", "label": "Street Miles page" },
-    { "type": "page", "id": "contact_page", "label": "Contact page" },
-    { "type": "page", "id": "privacy_page", "label": "Privacy page" },
-    { "type": "page", "id": "terms_page", "label": "Terms page" },
-    { "type": "page", "id": "shop_page", "label": "Shop page" },
-    { "type": "text", "id": "services_hero_eyebrow", "label": "Services hero eyebrow", "default": "Services" },
-    { "type": "image_picker", "id": "services_hero_image", "label": "Services hero image" },
-    { "type": "html", "id": "services_hero_heading", "label": "Services hero heading", "default": "Structured access.<br>Every level." },
-    { "type": "textarea", "id": "services_hero_copy", "label": "Services hero copy", "default": "AREN offers a tiered service ecosystem for athletes and communities. From individual programming to full chapter activation — the standard scales to your context." },
-    { "type": "textarea", "id": "services_marquee_text", "label": "Services marquee text", "default": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —" },
-    { "type": "text", "id": "services_cta_eyebrow", "label": "Services CTA eyebrow", "default": "National Performance Platform" },
-    { "type": "text", "id": "services_cta_heading", "label": "Services CTA heading", "default": "Building a scalable culture of community chapters across the nation." },
-    { "type": "textarea", "id": "services_cta_copy", "label": "Services CTA copy", "default": "AREN is evolving into a coordinated performance ecosystem, establishing elite training protocols and community expression while maintaining the absolute integrity of the standard." },
-    { "type": "image_picker", "id": "services_cta_image", "label": "Services CTA image" },
-    { "type": "text", "id": "services_cta_primary_label", "label": "Services CTA primary label", "default": "Contact / Join the Community" },
-    { "type": "text", "id": "services_cta_secondary_label", "label": "Services CTA secondary label", "default": "Explore Training Programs" },
-    { "type": "text", "id": "services_cta_tertiary_label", "label": "Services CTA tertiary label", "default": "Join Street Miles NYC" }
+    {
+      "type": "header",
+      "content": "Services page editor settings"
+    },
+    {
+      "type": "page",
+      "id": "about_page",
+      "label": "About page"
+    },
+    {
+      "type": "page",
+      "id": "training_page",
+      "label": "Training page"
+    },
+    {
+      "type": "page",
+      "id": "services_page",
+      "label": "Services page"
+    },
+    {
+      "type": "page",
+      "id": "street_miles_page",
+      "label": "Street Miles page"
+    },
+    {
+      "type": "page",
+      "id": "contact_page",
+      "label": "Contact page"
+    },
+    {
+      "type": "page",
+      "id": "privacy_page",
+      "label": "Privacy page"
+    },
+    {
+      "type": "page",
+      "id": "terms_page",
+      "label": "Terms page"
+    },
+    {
+      "type": "page",
+      "id": "shop_page",
+      "label": "Shop page"
+    },
+    {
+      "type": "text",
+      "id": "services_hero_eyebrow",
+      "label": "Services hero eyebrow",
+      "default": "Services"
+    },
+    {
+      "type": "image_picker",
+      "id": "services_hero_image",
+      "label": "Services hero image"
+    },
+    {
+      "type": "html",
+      "id": "services_hero_heading",
+      "label": "Services hero heading",
+      "default": "Structured access.<br>Every level."
+    },
+    {
+      "type": "textarea",
+      "id": "services_hero_copy",
+      "label": "Services hero copy",
+      "default": "AREN offers a tiered service ecosystem for athletes and communities. From individual programming to full chapter activation — the standard scales to your context."
+    },
+    {
+      "type": "textarea",
+      "id": "services_marquee_text",
+      "label": "Services marquee text",
+      "default": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —"
+    },
+    {
+      "type": "text",
+      "id": "services_cta_eyebrow",
+      "label": "Services CTA eyebrow",
+      "default": "National Performance Platform"
+    },
+    {
+      "type": "text",
+      "id": "services_cta_heading",
+      "label": "Services CTA heading",
+      "default": "Building a scalable culture of community chapters across the nation."
+    },
+    {
+      "type": "textarea",
+      "id": "services_cta_copy",
+      "label": "Services CTA copy",
+      "default": "AREN is evolving into a coordinated performance ecosystem, establishing elite training protocols and community expression while maintaining the absolute integrity of the standard."
+    },
+    {
+      "type": "image_picker",
+      "id": "services_cta_image",
+      "label": "Services CTA image"
+    },
+    {
+      "type": "text",
+      "id": "services_cta_primary_label",
+      "label": "Services CTA primary label",
+      "default": "Contact / Join the Community"
+    },
+    {
+      "type": "text",
+      "id": "services_cta_secondary_label",
+      "label": "Services CTA secondary label",
+      "default": "Explore Training Programs"
+    },
+    {
+      "type": "text",
+      "id": "services_cta_tertiary_label",
+      "label": "Services CTA tertiary label",
+      "default": "Join Street Miles NYC"
+    }
   ],
   "blocks": [
     {
@@ -141,24 +234,131 @@
       "name": "Services item",
       "limit": 10,
       "settings": [
-        { "type": "text", "id": "number", "label": "Number", "default": "01" },
-        { "type": "text", "id": "title", "label": "Title", "default": "Individual Programming" },
-        { "type": "textarea", "id": "description", "label": "Description", "default": "Custom training programs built around the individual athlete's goals, schedule, and environment. Periodized, progressive, and designed for long-term development. Remote coaching available nationally." },
-        { "type": "select", "id": "link_type", "label": "Link type", "default": "contact", "options": [
-          { "value": "contact", "label": "Contact page" },
-          { "value": "training", "label": "Training page" },
-          { "value": "street_miles", "label": "Street Miles page" },
-          { "value": "shop", "label": "Shop page" },
-          { "value": "custom", "label": "Custom URL" }
-        ] },
-        { "type": "url", "id": "link", "label": "Custom link" },
-        { "type": "text", "id": "link_label", "label": "Link label", "default": "Inquire" }
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Individual Programming"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Custom training programs built around the individual athlete's goals, schedule, and environment. Periodized, progressive, and designed for long-term development. Remote coaching available nationally."
+        },
+        {
+          "type": "select",
+          "id": "link_type",
+          "label": "Link type",
+          "default": "contact",
+          "options": [
+            {
+              "value": "contact",
+              "label": "Contact page"
+            },
+            {
+              "value": "training",
+              "label": "Training page"
+            },
+            {
+              "value": "street_miles",
+              "label": "Street Miles page"
+            },
+            {
+              "value": "shop",
+              "label": "Shop page"
+            },
+            {
+              "value": "custom",
+              "label": "Custom URL"
+            }
+          ]
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Custom link"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label",
+          "default": "Inquire"
+        }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Services page"
+      "name": "Services page",
+      "blocks": [
+        {
+          "type": "services_item",
+          "settings": {
+            "number": "01",
+            "title": "Individual Programming",
+            "description": "Custom training programs built around the individual athlete's goals, schedule, and environment. Periodized, progressive, and designed for long-term development. Remote coaching available nationally.",
+            "link_type": "contact",
+            "link_label": "Inquire"
+          }
+        },
+        {
+          "type": "services_item",
+          "settings": {
+            "number": "02",
+            "title": "Group Training",
+            "description": "Structured group performance sessions built around discipline, accountability, and collective output. Ideal for teams, communities, and high-standard training environments.",
+            "link_type": "training",
+            "link_label": "Explore Training"
+          }
+        },
+        {
+          "type": "services_item",
+          "settings": {
+            "number": "03",
+            "title": "Street Miles Access",
+            "description": "Access to the community run system and chapter-based execution model. Designed for athletes who want to carry the standard into the streets.",
+            "link_type": "street_miles",
+            "link_label": "Join Street Miles"
+          }
+        },
+        {
+          "type": "services_item",
+          "settings": {
+            "number": "04",
+            "title": "Hub Chapter Activation",
+            "description": "Frameworks for activating local AREN chapters with structure, protocols, and performance culture embedded from day one.",
+            "link_type": "contact",
+            "link_label": "Start a Chapter"
+          }
+        },
+        {
+          "type": "services_item",
+          "settings": {
+            "number": "05",
+            "title": "Corporate + Team Performance",
+            "description": "High-accountability training and development systems for organizations and teams that require composure, execution, and consistent output.",
+            "link_type": "contact",
+            "link_label": "Discuss Partnership"
+          }
+        },
+        {
+          "type": "services_item",
+          "settings": {
+            "number": "06",
+            "title": "Apparel — Uniform Program",
+            "description": "Functional apparel systems for teams, communities, and operators who require durable design, restraint, and alignment with the AREN standard.",
+            "link_type": "shop",
+            "link_label": "View Apparel"
+          }
+        }
+      ]
     }
   ]
 }

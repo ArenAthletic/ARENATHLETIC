@@ -163,38 +163,185 @@
 {
   "name": "Street Miles page",
   "settings": [
-    { "type": "header", "content": "Street Miles page editor settings" },
-    { "type": "page", "id": "about_page", "label": "About page" },
-    { "type": "page", "id": "training_page", "label": "Training page" },
-    { "type": "page", "id": "services_page", "label": "Services page" },
-    { "type": "page", "id": "street_miles_page", "label": "Street Miles page" },
-    { "type": "page", "id": "contact_page", "label": "Contact page" },
-    { "type": "page", "id": "privacy_page", "label": "Privacy page" },
-    { "type": "page", "id": "terms_page", "label": "Terms page" },
-    { "type": "page", "id": "shop_page", "label": "Shop page" },
-    { "type": "text", "id": "street_miles_hero_eyebrow", "label": "Street Miles hero eyebrow", "default": "Street Miles NYC — SMNYC" },
-    { "type": "image_picker", "id": "street_miles_hero_image", "label": "Street Miles hero image" },
-    { "type": "html", "id": "street_miles_hero_heading", "label": "Street Miles hero heading", "default": "DO THE WORK.<br>CARRY THE<br>WEIGHT." },
-    { "type": "textarea", "id": "street_miles_hero_copy", "label": "Street Miles hero copy", "default": "Street Miles is the street-level expression of AREN's standards through community runs and shared accountability." },
-    { "type": "text", "id": "street_miles_primary_label", "label": "Street Miles primary button label", "default": "Join SMNYC" },
-    { "type": "text", "id": "street_miles_secondary_label", "label": "Street Miles secondary button label", "default": "View Protocol" },
-    { "type": "textarea", "id": "street_miles_marquee_text", "label": "Street Miles marquee text", "default": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —" },
-    { "type": "text", "id": "street_miles_culture_eyebrow", "label": "Street Miles culture eyebrow", "default": "The Culture" },
-    { "type": "text", "id": "street_miles_culture_heading", "label": "Street Miles culture heading", "default": "Street Miles is the street-level expression of AREN's standards." },
-    { "type": "textarea", "id": "street_miles_culture_copy_1", "label": "Street Miles culture copy 1", "default": "Street Miles is the street-level expression of AREN's standards. This is a disciplined run culture built on shared accountability and urban grit." },
-    { "type": "textarea", "id": "street_miles_culture_copy_2", "label": "Street Miles culture copy 2", "default": "It provides a structured ecosystem for athletes committed to showing up for the work, regardless of environment or condition." },
-    { "type": "textarea", "id": "street_miles_culture_copy_3", "label": "Street Miles culture copy 3", "default": "This is not a casual run club; it is where standards become visible on the pavement and discipline is forged through repetition." },
-    { "type": "image_picker", "id": "street_miles_culture_image", "label": "Street Miles culture image" },
-    { "type": "text", "id": "street_miles_protocol_eyebrow", "label": "Street Miles protocol eyebrow", "default": "Structure" },
-    { "type": "text", "id": "street_miles_protocol_heading", "label": "Street Miles protocol heading", "default": "The operating standard for every session." },
-    { "type": "text", "id": "street_miles_chapter_eyebrow", "label": "Street Miles chapter eyebrow", "default": "Chapters: Street Miles NYC" },
-    { "type": "text", "id": "street_miles_chapter_heading", "label": "Street Miles chapter heading", "default": "The Five Borough Chapter" },
-    { "type": "textarea", "id": "street_miles_chapter_copy_1", "label": "Street Miles chapter copy 1", "default": "The Street Miles ecosystem is engineered for modular expansion. NYC provides the street-level proof of concept, establishing the standard of discipline and collective accountability." },
-    { "type": "textarea", "id": "street_miles_chapter_copy_2", "label": "Street Miles chapter copy 2", "default": "As AREN grows, new chapters will launch in urban hubs where standard execution and high performance are mandatory, ensuring consistent run culture nationwide." },
-    { "type": "text", "id": "street_miles_quotes_eyebrow", "label": "Street Miles quotes eyebrow", "default": "From the Chapter" },
-    { "type": "image_picker", "id": "street_miles_quotes_image", "label": "Street Miles quotes background image" },
-    { "type": "text", "id": "street_miles_access_eyebrow", "label": "Street Miles access eyebrow", "default": "Access Protocol" },
-    { "type": "text", "id": "street_miles_access_button_label", "label": "Street Miles access button label", "default": "Join Street Miles NYC" }
+    {
+      "type": "header",
+      "content": "Street Miles page editor settings"
+    },
+    {
+      "type": "page",
+      "id": "about_page",
+      "label": "About page"
+    },
+    {
+      "type": "page",
+      "id": "training_page",
+      "label": "Training page"
+    },
+    {
+      "type": "page",
+      "id": "services_page",
+      "label": "Services page"
+    },
+    {
+      "type": "page",
+      "id": "street_miles_page",
+      "label": "Street Miles page"
+    },
+    {
+      "type": "page",
+      "id": "contact_page",
+      "label": "Contact page"
+    },
+    {
+      "type": "page",
+      "id": "privacy_page",
+      "label": "Privacy page"
+    },
+    {
+      "type": "page",
+      "id": "terms_page",
+      "label": "Terms page"
+    },
+    {
+      "type": "page",
+      "id": "shop_page",
+      "label": "Shop page"
+    },
+    {
+      "type": "text",
+      "id": "street_miles_hero_eyebrow",
+      "label": "Street Miles hero eyebrow",
+      "default": "Street Miles NYC — SMNYC"
+    },
+    {
+      "type": "image_picker",
+      "id": "street_miles_hero_image",
+      "label": "Street Miles hero image"
+    },
+    {
+      "type": "html",
+      "id": "street_miles_hero_heading",
+      "label": "Street Miles hero heading",
+      "default": "DO THE WORK.<br>CARRY THE<br>WEIGHT."
+    },
+    {
+      "type": "textarea",
+      "id": "street_miles_hero_copy",
+      "label": "Street Miles hero copy",
+      "default": "Street Miles is the street-level expression of AREN's standards through community runs and shared accountability."
+    },
+    {
+      "type": "text",
+      "id": "street_miles_primary_label",
+      "label": "Street Miles primary button label",
+      "default": "Join SMNYC"
+    },
+    {
+      "type": "text",
+      "id": "street_miles_secondary_label",
+      "label": "Street Miles secondary button label",
+      "default": "View Protocol"
+    },
+    {
+      "type": "textarea",
+      "id": "street_miles_marquee_text",
+      "label": "Street Miles marquee text",
+      "default": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —"
+    },
+    {
+      "type": "text",
+      "id": "street_miles_culture_eyebrow",
+      "label": "Street Miles culture eyebrow",
+      "default": "The Culture"
+    },
+    {
+      "type": "text",
+      "id": "street_miles_culture_heading",
+      "label": "Street Miles culture heading",
+      "default": "Street Miles is the street-level expression of AREN's standards."
+    },
+    {
+      "type": "textarea",
+      "id": "street_miles_culture_copy_1",
+      "label": "Street Miles culture copy 1",
+      "default": "Street Miles is the street-level expression of AREN's standards. This is a disciplined run culture built on shared accountability and urban grit."
+    },
+    {
+      "type": "textarea",
+      "id": "street_miles_culture_copy_2",
+      "label": "Street Miles culture copy 2",
+      "default": "It provides a structured ecosystem for athletes committed to showing up for the work, regardless of environment or condition."
+    },
+    {
+      "type": "textarea",
+      "id": "street_miles_culture_copy_3",
+      "label": "Street Miles culture copy 3",
+      "default": "This is not a casual run club; it is where standards become visible on the pavement and discipline is forged through repetition."
+    },
+    {
+      "type": "image_picker",
+      "id": "street_miles_culture_image",
+      "label": "Street Miles culture image"
+    },
+    {
+      "type": "text",
+      "id": "street_miles_protocol_eyebrow",
+      "label": "Street Miles protocol eyebrow",
+      "default": "Structure"
+    },
+    {
+      "type": "text",
+      "id": "street_miles_protocol_heading",
+      "label": "Street Miles protocol heading",
+      "default": "The operating standard for every session."
+    },
+    {
+      "type": "text",
+      "id": "street_miles_chapter_eyebrow",
+      "label": "Street Miles chapter eyebrow",
+      "default": "Chapters: Street Miles NYC"
+    },
+    {
+      "type": "text",
+      "id": "street_miles_chapter_heading",
+      "label": "Street Miles chapter heading",
+      "default": "The Five Borough Chapter"
+    },
+    {
+      "type": "textarea",
+      "id": "street_miles_chapter_copy_1",
+      "label": "Street Miles chapter copy 1",
+      "default": "The Street Miles ecosystem is engineered for modular expansion. NYC provides the street-level proof of concept, establishing the standard of discipline and collective accountability."
+    },
+    {
+      "type": "textarea",
+      "id": "street_miles_chapter_copy_2",
+      "label": "Street Miles chapter copy 2",
+      "default": "As AREN grows, new chapters will launch in urban hubs where standard execution and high performance are mandatory, ensuring consistent run culture nationwide."
+    },
+    {
+      "type": "text",
+      "id": "street_miles_quotes_eyebrow",
+      "label": "Street Miles quotes eyebrow",
+      "default": "From the Chapter"
+    },
+    {
+      "type": "image_picker",
+      "id": "street_miles_quotes_image",
+      "label": "Street Miles quotes background image"
+    },
+    {
+      "type": "text",
+      "id": "street_miles_access_eyebrow",
+      "label": "Street Miles access eyebrow",
+      "default": "Access Protocol"
+    },
+    {
+      "type": "text",
+      "id": "street_miles_access_button_label",
+      "label": "Street Miles access button label",
+      "default": "Join Street Miles NYC"
+    }
   ],
   "blocks": [
     {
@@ -202,9 +349,24 @@
       "name": "Street protocol item",
       "limit": 6,
       "settings": [
-        { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "01 / SESSIONS" },
-        { "type": "text", "id": "title", "label": "Title", "default": "Structure" },
-        { "type": "textarea", "id": "description", "label": "Description", "default": "Every Sunday at 09:00 sharp. We execute rotating sessions across the five boroughs—focused on bridges, blocks, and industrial sectors." }
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow",
+          "default": "01 / SESSIONS"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Structure"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Every Sunday at 09:00 sharp. We execute rotating sessions across the five boroughs—focused on bridges, blocks, and industrial sectors."
+        }
       ]
     },
     {
@@ -212,8 +374,18 @@
       "name": "Street stat card",
       "limit": 8,
       "settings": [
-        { "type": "text", "id": "value", "label": "Value", "default": "5" },
-        { "type": "text", "id": "label", "label": "Label", "default": "Boroughs covered" }
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "5"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Boroughs covered"
+        }
       ]
     },
     {
@@ -221,8 +393,18 @@
       "name": "Street quote",
       "limit": 6,
       "settings": [
-        { "type": "textarea", "id": "quote", "label": "Quote", "default": "Street Miles is the street-level expression of AREN's standards. We forge mental and physical resilience through shared miles and collective accountability. We do the work; we carry the weight." },
-        { "type": "text", "id": "attribution", "label": "Attribution", "default": "ATHLETE 089 / SMNYC CHAPTER" }
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "Street Miles is the street-level expression of AREN's standards. We forge mental and physical resilience through shared miles and collective accountability. We do the work; we carry the weight."
+        },
+        {
+          "type": "text",
+          "id": "attribution",
+          "label": "Attribution",
+          "default": "ATHLETE 089 / SMNYC CHAPTER"
+        }
       ]
     },
     {
@@ -230,15 +412,129 @@
       "name": "Street access step",
       "limit": 6,
       "settings": [
-        { "type": "text", "id": "number", "label": "Number", "default": "1." },
-        { "type": "text", "id": "title", "label": "Title", "default": "SYNC" },
-        { "type": "textarea", "id": "description", "label": "Description", "default": "Join the digital hub for real-time coordinates." }
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "1."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "SYNC"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Join the digital hub for real-time coordinates."
+        }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Street Miles page"
+      "name": "Street Miles page",
+      "blocks": [
+        {
+          "type": "street_protocol",
+          "settings": {
+            "eyebrow": "01 / SESSIONS",
+            "title": "Structure",
+            "description": "Every Sunday at 09:00 sharp. We execute rotating sessions across the five boroughs—focused on bridges, blocks, and industrial sectors."
+          }
+        },
+        {
+          "type": "street_protocol",
+          "settings": {
+            "eyebrow": "02 / RUN TYPES",
+            "title": "Run Types",
+            "description": "Threshold runs, capacity work, bridge repeats, and pace-based efforts. Each session has intent, not randomness."
+          }
+        },
+        {
+          "type": "street_protocol",
+          "settings": {
+            "eyebrow": "03 / VIGILANCE",
+            "title": "Vigilance",
+            "description": "Composure, awareness, and shared accountability define how the chapter moves. The city is part of the test."
+          }
+        },
+        {
+          "type": "street_stat_card",
+          "settings": {
+            "value": "5",
+            "label": "Boroughs covered"
+          }
+        },
+        {
+          "type": "street_stat_card",
+          "settings": {
+            "value": "09:00",
+            "label": "Sharp"
+          }
+        },
+        {
+          "type": "street_stat_card",
+          "settings": {
+            "value": "NYC",
+            "label": "Chapter"
+          }
+        },
+        {
+          "type": "street_stat_card",
+          "settings": {
+            "value": "ALL",
+            "label": "Conditions"
+          }
+        },
+        {
+          "type": "street_quote",
+          "settings": {
+            "quote": "Street Miles is where discipline becomes visible. You feel the standard in who shows up, how they move, and how they carry the work.",
+            "attribution": "ATHLETE 089 / SMNYC CHAPTER"
+          }
+        },
+        {
+          "type": "street_quote",
+          "settings": {
+            "quote": "This is not a casual run club. It is structured, demanding, and honest. That is exactly why it matters.",
+            "attribution": "CHAPTER LEAD / NYC"
+          }
+        },
+        {
+          "type": "street_quote",
+          "settings": {
+            "quote": "The city becomes part of the training environment. Every session sharpens presence, vigilance, and collective accountability.",
+            "attribution": "OPERATOR / FIVE BOROUGHS"
+          }
+        },
+        {
+          "type": "street_access_step",
+          "settings": {
+            "number": "1.",
+            "title": "SYNC",
+            "description": "Join the digital hub for real-time coordinates."
+          }
+        },
+        {
+          "type": "street_access_step",
+          "settings": {
+            "number": "2.",
+            "title": "SHOW UP",
+            "description": "Arrive prepared, on time, and ready to carry the standard."
+          }
+        },
+        {
+          "type": "street_access_step",
+          "settings": {
+            "number": "3.",
+            "title": "EXECUTE",
+            "description": "Run with discipline, composure, and respect for the group protocol."
+          }
+        }
+      ]
     }
   ]
 }
