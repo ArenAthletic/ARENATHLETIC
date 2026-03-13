@@ -2,7 +2,7 @@
   {
     "name": "theme_info",
     "theme_name": "AREN Athletic Shopify Theme",
-    "theme_version": "1.0.0",
+    "theme_version": "1.0.1",
     "theme_author": "OpenAI",
     "theme_documentation_url": "https://github.com/ArenAthletic/ARENATHLETIC",
     "theme_support_url": "https://github.com/ArenAthletic/ARENATHLETIC"
@@ -34,17 +34,20 @@
       {
         "type": "text",
         "id": "instagram_url",
-        "label": "Instagram URL"
+        "label": "Instagram URL",
+        "default": "https://www.instagram.com/arenathletic/"
       },
       {
         "type": "text",
         "id": "twitter_url",
-        "label": "Twitter/X URL"
+        "label": "Twitter/X URL",
+        "default": "https://x.com/"
       },
       {
         "type": "text",
         "id": "youtube_url",
-        "label": "YouTube URL"
+        "label": "YouTube URL",
+        "default": "https://www.youtube.com/"
       }
     ]
   }
