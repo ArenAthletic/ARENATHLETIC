@@ -147,3 +147,5 @@
   }
 
 })();
+
+// Final pass marker: assets refreshed for latest theme parity commit.

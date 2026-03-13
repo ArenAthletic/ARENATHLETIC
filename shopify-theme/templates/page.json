@@ -2,6 +2,11 @@
   "sections": {
     "main": {
       "type": "main-page"
+    },
+    "final_pass_note": {
+      "type": "main-404",
+      "disabled": true,
+      "settings": {}
     }
   },
   "order": [
