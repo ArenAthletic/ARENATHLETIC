@@ -1,0 +1,74 @@
+{% liquid
+  assign target_page = section.settings.page
+  assign current_page_handle = page.handle | default: handle
+  assign target_page_handle = blank
+  if target_page != blank
+    assign target_page_handle = target_page.handle
+  endif
+  if target_page_handle != blank and target_page_handle != current_page_handle
+    break
+  endif
+%}
+
+<section class="section" style="{% if section.settings.dark_theme %}background:var(--color-black);color:var(--color-white);{% endif %}">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
+      <div>
+        {% if section.settings.eyebrow != blank %}
+          <div class="text-eyebrow" style="margin-bottom:2rem;{% if section.settings.dark_theme %}color:rgba(255,255,255,0.3);{% endif %}">{{ section.settings.eyebrow }}</div>
+        {% endif %}
+        {% if section.settings.heading != blank %}
+          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.8rem);font-weight:700;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;{% if section.settings.dark_theme %}color:#fff;{% endif %};margin-bottom:2rem;">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.copy != blank %}
+          <div class="rte" style="font-size:1rem;line-height:1.75;{% if section.settings.dark_theme %}color:rgba(255,255,255,0.55);{% else %}color:var(--color-dark-gray);{% endif %};max-width:46ch;">{{ section.settings.copy }}</div>
+        {% endif %}
+        {% if section.settings.kicker != blank %}
+          <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;{% if section.settings.dark_theme %}color:rgba(255,255,255,0.35);{% else %}color:var(--color-mid-gray);{% endif %};margin-top:1rem;">{{ section.settings.kicker }}</p>
+        {% endif %}
+      </div>
+      <div style="display:flex;flex-direction:column;gap:2rem;padding-left:var(--space-lg);{% if section.settings.dark_theme %}border-left:1px solid rgba(255,255,255,0.08);{% else %}border-left:1px solid var(--color-warm-gray);{% endif %}">
+        {% for block in section.blocks %}
+          <div style="padding:2.5rem;{% if section.settings.dark_theme %}background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);{% else %}background:rgba(0,0,0,0.02);border:1px solid var(--color-warm-gray);{% endif %}" {{ block.shopify_attributes }}>
+            <div class="text-eyebrow" style="margin-bottom:1rem;{% if section.settings.dark_theme %}color:rgba(255,255,255,0.3);{% endif %}">{{ block.settings.title }}</div>
+            <p style="font-size:0.9375rem;line-height:1.7;{% if section.settings.dark_theme %}color:rgba(255,255,255,0.5);{% else %}color:var(--color-dark-gray);{% endif %};">{{ block.settings.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Page card list",
+  "settings": [
+    { "type": "page", "id": "page", "label": "Display on page" },
+    { "type": "checkbox", "id": "dark_theme", "label": "Use dark theme", "default": true },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow" },
+    { "type": "html", "id": "heading", "label": "Heading" },
+    { "type": "richtext", "id": "copy", "label": "Copy", "default": "<p></p>" },
+    { "type": "text", "id": "kicker", "label": "Kicker" }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Training Systems" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Structured systems built for discipline, presence, and consistency." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page card list",
+      "blocks": [
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
