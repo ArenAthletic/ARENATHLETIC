@@ -60,7 +60,7 @@
         <p style="margin-bottom:1.75rem;"><span data-shopify-editor-setting="privacy_contact_copy">{{ section.settings.privacy_contact_copy }}</span> <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p>
         <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;"><span data-shopify-editor-setting="privacy_footer_note">{{ section.settings.privacy_footer_note }}</span></p>
         <div style="margin-top:3rem;">
-          <a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--color-black);"><span data-shopify-editor-setting="legal_back_label"><span data-shopify-editor-setting="legal_back_label">{{ section.settings.legal_back_label }}</span></span></a>
+          <a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--color-black);"><span data-shopify-editor-setting="legal_back_label">{{ section.settings.legal_back_label }}</span></a>
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@
 
 {% schema %}
 {
-  "name": "Main page",
+  "name": "Privacy page",
   "settings": [
     { "type": "page", "id": "about_page", "label": "About page" },
     { "type": "page", "id": "training_page", "label": "Training page" },

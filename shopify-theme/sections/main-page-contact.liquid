@@ -112,9 +112,9 @@
             <label class="form-label" for="ContactFormBody"><span data-shopify-editor-setting="contact_form_body_label">{{ section.settings.contact_form_body_label }}</span></label>
             <textarea class="form-textarea" id="ContactFormBody" name="contact[body]"></textarea>
           </div>
-          <button class="btn btn--primary" type="submit"><span data-shopify-editor-setting="contact_form_button_label"><span data-shopify-editor-setting="contact_form_button_label">{{ section.settings.contact_form_button_label }}</span></span></button>
+          <button class="btn btn--primary" type="submit"><span data-shopify-editor-setting="contact_form_button_label">{{ section.settings.contact_form_button_label }}</span></button>
           {% if form.posted_successfully? %}
-            <div id="contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;"><span data-shopify-editor-setting="contact_form_success_text"><span data-shopify-editor-setting="contact_form_success_text">{{ section.settings.contact_form_success_text }}</span></span></div>
+            <div id="contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;"><span data-shopify-editor-setting="contact_form_success_text">{{ section.settings.contact_form_success_text }}</span></div>
           {% endif %}
           <div class="text-body" style="margin-top:1rem;opacity:.75;"><span data-shopify-editor-setting="contact_form_disclaimer">{{ section.settings.contact_form_disclaimer }}</span></div>
           {{ form.errors | default_errors }}
@@ -125,7 +125,7 @@
 
   <section class="section" style="background:var(--color-off-white);border-top:1px solid var(--color-warm-gray);">
     <div class="container">
-      <div class="section-header"><div><div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="contact_ecosystem_eyebrow"><span data-shopify-editor-setting="contact_ecosystem_eyebrow">{{ section.settings.contact_ecosystem_eyebrow }}</span></span></div><h2 class="text-h2"><span data-shopify-editor-setting="contact_ecosystem_heading">{{ section.settings.contact_ecosystem_heading }}</span></h2></div></div>
+      <div class="section-header"><div><div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="contact_ecosystem_eyebrow">{{ section.settings.contact_ecosystem_eyebrow }}</span></div><h2 class="text-h2"><span data-shopify-editor-setting="contact_ecosystem_heading">{{ section.settings.contact_ecosystem_heading }}</span></h2></div></div>
       <div class="training-grid" style="margin-top:var(--space-lg);">
         {% for block in section.blocks %}
           {% if block.type == 'contact_ecosystem_card' %}
@@ -153,7 +153,7 @@
 
 {% schema %}
 {
-  "name": "Main page",
+  "name": "Contact page",
   "settings": [
     { "type": "page", "id": "about_page", "label": "About page" },
     { "type": "page", "id": "training_page", "label": "Training page" },

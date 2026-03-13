@@ -193,7 +193,7 @@
           <button class="btn btn--primary" type="submit"><span data-shopify-editor-setting="training_form_button_label">{{ section.settings.training_form_button_label }}</span></button>
           <div class="text-eyebrow" style="margin-top:1rem;"><span data-shopify-editor-setting="training_form_response_text">{{ section.settings.training_form_response_text }}</span></div>
           {% if form.posted_successfully? %}
-            <div id="training-contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;"><span data-shopify-editor-setting="training_form_success_text"><span data-shopify-editor-setting="training_form_success_text">{{ section.settings.training_form_success_text }}</span></span></div>
+            <div id="training-contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;"><span data-shopify-editor-setting="training_form_success_text">{{ section.settings.training_form_success_text }}</span></div>
           {% endif %}
           {{ form.errors | default_errors }}
         {% endform %}
@@ -205,7 +205,7 @@
 
 {% schema %}
 {
-  "name": "Main page",
+  "name": "Training page",
   "settings": [
     { "type": "page", "id": "about_page", "label": "About page" },
     { "type": "page", "id": "training_page", "label": "Training page" },
