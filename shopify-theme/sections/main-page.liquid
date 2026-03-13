@@ -40,32 +40,26 @@
     <div style="position:absolute;inset:0;background-image:url('https://static.wixstatic.com/media/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png/v1/crop/x_0,y_2215,w_4284,h_1845/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_7e4d26bfdcf043e9a3212206d4f53db5~mv2.png');background-size:cover;background-position:center;"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(165deg,rgba(28,28,26,0.88) 0%,rgba(35,35,33,0.68) 55%,rgba(26,26,24,0.92) 100%);"></div>
     <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
-      <div class="text-eyebrow" style="margin-bottom:2rem;">About AREN</div>
-      <h1 class="text-display" style="color:#fff;max-width:16ch;margin-bottom:2rem;">AREN isn't just apparel. AREN is a standard.</h1>
+      <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.about_hero_eyebrow }}</div>
+      <h1 class="text-display" style="color:#fff;max-width:16ch;margin-bottom:2rem;">{{ section.settings.about_hero_heading }}</h1>
     </div>
   </section>
 
-  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text">AREN ATHLETIC <span class="marquee-sep">—</span> NEW YORK CITY <span class="marquee-sep">—</span> DISCIPLINE AND PERFORMANCE <span class="marquee-sep">—</span> STREET MILES NYC <span class="marquee-sep">—</span> FIVE BOROUGH CHAPTER <span class="marquee-sep">—</span> STRUCTURED PERFORMANCE <span class="marquee-sep">—</span> AREN ATHLETIC COLLECTIVE <span class="marquee-sep">—</span> APPAREL BUILT FOR TRAINING <span class="marquee-sep">—</span></span><span class="marquee-text">AREN ATHLETIC <span class="marquee-sep">—</span> NEW YORK CITY <span class="marquee-sep">—</span> DISCIPLINE AND PERFORMANCE <span class="marquee-sep">—</span> STREET MILES NYC <span class="marquee-sep">—</span> FIVE BOROUGH CHAPTER <span class="marquee-sep">—</span> STRUCTURED PERFORMANCE <span class="marquee-sep">—</span> AREN ATHLETIC COLLECTIVE <span class="marquee-sep">—</span> APPAREL BUILT FOR TRAINING <span class="marquee-sep">—</span></span></div></div>
+  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text">{{ section.settings.about_marquee_text }}</span><span class="marquee-text">{{ section.settings.about_marquee_text }}</span></div></div>
 
   <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
     <div class="container">
       <div class="about-intro-inner">
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;">About AREN</div>
-          <h2 class="text-h2" style="max-width:18ch;margin-bottom:2.5rem;">AREN Athletic</h2>
+          <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.about_intro_eyebrow }}</div>
+          <h2 class="text-h2" style="max-width:18ch;margin-bottom:2.5rem;">{{ section.settings.about_intro_heading }}</h2>
           <div style="position:relative;overflow:hidden;aspect-ratio:3/4;margin-top:2rem;">
             <img src="https://static.wixstatic.com/media/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png/v1/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_84feeb8e93ac42eb8e302b7b56f9b6c3~mv2.png" alt="AREN Athletic" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy">
           </div>
-          <div style="margin-top:2rem;"><a href="{{ shop_url }}" class="btn btn--outline">Shop Apparel</a></div>
+          <div style="margin-top:2rem;"><a href="{{ shop_url }}" class="btn btn--outline">{{ section.settings.about_intro_button_label }}</a></div>
         </div>
         <div>
-          <p class="text-body" style="margin-bottom:1.75rem;">AREN isn't just apparel. AREN is a standard.</p>
-          <p class="text-body" style="margin-bottom:1.75rem;">It's the moment before the work begins. The quiet decision you make when no one is watching. The discipline to prepare, the courage to show up, and the commitment to hold the line when it would be easier not to.</p>
-          <p class="text-body" style="margin-bottom:1.75rem;">AREN was built on three principles: discipline, presence, and consistency.</p>
-          <p class="text-body" style="margin-bottom:1.75rem;">Discipline is the foundation. It's the shoe being tied before sunrise. It's the extra set, the extra mile, the extra moment of focus when fatigue tells you to stop. Discipline is not loud. It's not flashy. It's the daily choice to do what must be done.</p>
-          <p class="text-body" style="margin-bottom:1.75rem;">Presence is how you carry yourself in the world. It's the way you enter the room, the gym, the track, the street, or the workplace. Presence means standing tall in who you are and what you represent. It means showing up prepared, composed, and ready for whatever the day demands.</p>
-          <p class="text-body" style="margin-bottom:1.75rem;">Consistency is the separator. Anyone can show up once. Anyone can have a good day. But the standard is held by those who show up again and again, day after day, long after the excitement fades and the work becomes routine.</p>
-          <p class="text-body" style="margin-bottom:1.75rem;font-weight:500;color:var(--color-black);">That's where AREN lives.</p>
+          <div class="text-body rte">{{ section.settings.about_intro_richtext }}</div>
         </div>
       </div>
     </div>
@@ -73,21 +67,8 @@
 
   <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
     <div class="container container--narrow">
-      <p class="text-body" style="margin-bottom:1.75rem;">AREN exists at the intersection of training and life: in the gym, on the street, at work, and in the quiet moments when you decide who you are going to be.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;">But the standard doesn't stop there. It carries into how you live, how you treat people, and the kind of character you build when the work of the day is done. It shows up in how you lead your family, how you support the people around you, and how you stand by your principles when life tests them.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;">This isn't clothing made for a moment. It's apparel designed for the standard you hold yourself to every day. When you wear AREN, you're not putting on a brand. You're stepping into a mindset. It means you carry discipline with you. You move with intention.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;font-weight:500;color:var(--color-black);">You show up with presence.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;">It means you respect the work. You respect the process. You respect the standard.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;">Because the standard isn't just performance. It's how you train. It's how you work.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;">It's how you carry yourself in every room you enter.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;">It's also how you show up for the people who depend on you, the values you live by, and the character you build when no one is watching.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;">The standard is the standard.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;">And the ones who live by it don't need to announce it.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;">You can see it in how they move, how they prepare, and how they show up.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;">AREN exists for those people. The ones who know the work never really ends. The ones who understand that greatness isn't built in moments of spotlight, but in the quiet hours where discipline becomes identity.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;font-weight:500;color:var(--color-black);">Wear it with intention. Train with purpose. Carry the standard.</p>
-      <p class="text-body" style="margin-bottom:1.75rem;font-weight:500;color:var(--color-black);">This is AREN.</p>
-      <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-mid-gray);">EST. 2026. PERFORMANCE PROTOCOL.</p>
+      <div class="text-body rte">{{ section.settings.about_body_richtext }}</div>
+      <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-mid-gray);">{{ section.settings.about_body_kicker }}</p>
     </div>
   </section>
 
@@ -99,14 +80,9 @@
           <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(35,35,33,0.35) 0%,transparent 40%);"></div>
         </div>
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;">What AREN Represents</div>
-          <h2 class="text-h2" style="max-width:18ch;margin-bottom:1.75rem;">A performance identity.</h2>
-          <p class="text-body" style="margin-bottom:1.25rem;">AREN is a performance identity.</p>
-          <p class="text-body" style="margin-bottom:1.25rem;">Defined by discipline, presence, and execution.</p>
-          <p class="text-body" style="margin-bottom:1.25rem;">Not a destination. A standard of conduct.</p>
-          <p class="text-body" style="margin-bottom:1.25rem;">Training is deliberate. How you move through the world matters.</p>
-          <p class="text-body" style="margin-bottom:1.25rem;">The apparel carries the code — a signal of restraint, readiness, and alignment.</p>
-          <p class="text-body">The mark represents a standard — not attention. Wear it as a reflection of how you operate.</p>
+          <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.about_identity_eyebrow }}</div>
+          <h2 class="text-h2" style="max-width:18ch;margin-bottom:1.75rem;">{{ section.settings.about_identity_heading }}</h2>
+          <div class="text-body rte">{{ section.settings.about_identity_richtext }}</div>
         </div>
       </div>
     </div>
@@ -116,26 +92,20 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
         <div>
-          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;">No Spectators. Only Standards.</div>
-          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.8rem);font-weight:700;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;color:#fff;margin-bottom:2rem;">NO SPECTATORS.<br>ONLY STANDARDS.</h2>
-          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:1.5rem;max-width:46ch;">AREN rejects passivity and spectatorship in favor of ownership and responsibility.</p>
-          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:1.5rem;max-width:46ch;">The standard is a non-negotiable threshold of operation — a commitment to presence over distraction and execution over intention. To align with AREN is to accept accountability for how you show up: in training, in work, and in life.</p>
-          <p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:1.5rem;max-width:46ch;">We don't observe from the sidelines. We operate.</p>
-          <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);">There are no spectators. There are only standards.</p>
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;">{{ section.settings.about_values_eyebrow }}</div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.8rem);font-weight:700;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;color:#fff;margin-bottom:2rem;">{{ section.settings.about_values_heading }}</h2>
+          <div class="rte" style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:46ch;">{{ section.settings.about_values_richtext }}</div>
+          <p style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);">{{ section.settings.about_values_kicker }}</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:2rem;padding-left:var(--space-lg);border-left:1px solid rgba(255,255,255,0.08);">
-          <div style="padding:2.5rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);">
-            <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:1rem;">Training Systems</div>
-            <p style="font-size:0.9375rem;line-height:1.7;color:rgba(255,255,255,0.5);">Engineered for high-pressure execution. Every protocol is designed to eliminate distraction and focus on the clarity of movement, ensuring consistency is maintained under the weight of the collective standard.</p>
-          </div>
-          <div style="padding:2.5rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);">
-            <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:1rem;">Performance Apparel</div>
-            <p style="font-size:0.9375rem;line-height:1.7;color:rgba(255,255,255,0.5);">Designed for daily standards. AREN garments are a physical signal of readiness, engineered to endure the rigors of performance while maintaining a restricted, premium aesthetic for life under pressure.</p>
-          </div>
-          <div style="padding:2.5rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);">
-            <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:1rem;">Street Miles</div>
-            <p style="font-size:0.9375rem;line-height:1.7;color:rgba(255,255,255,0.5);">The community-driven expression of the AREN platform. Street Miles connects individual chapters through a shared commitment to execution, proving that the standard has no geographic center.</p>
-          </div>
+          {% for block in section.blocks %}
+            {% if block.type == 'about_value_card' %}
+              <div style="padding:2.5rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);" {{ block.shopify_attributes }}>
+                <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:1rem;">{{ block.settings.title }}</div>
+                <p style="font-size:0.9375rem;line-height:1.7;color:rgba(255,255,255,0.5);">{{ block.settings.description }}</p>
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -143,8 +113,8 @@
 
   <div style="background:var(--color-black);padding:1rem 0;border-top:1px solid rgba(255,255,255,0.06);overflow:hidden;white-space:nowrap;">
     <div style="display:inline-flex;animation:marquee 20s linear infinite;">
-      <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 2rem;">DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS •</span>
-      <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 2rem;">DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS •</span>
+      <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 2rem;">{{ section.settings.about_footer_marquee_text }}</span>
+      <span style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 2rem;">{{ section.settings.about_footer_marquee_text }}</span>
     </div>
   </div>
 
@@ -152,14 +122,14 @@
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;">National Performance Platform</div>
-          <h2 class="text-h2" style="max-width:22ch;margin-bottom:1.75rem;">Building a scalable culture of community chapters across the nation.</h2>
-          <p class="text-body" style="max-width:46ch;">AREN is evolving into a coordinated performance ecosystem, establishing elite training protocols and community expression while maintaining the absolute integrity of the standard.</p>
+          <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.about_cta_eyebrow }}</div>
+          <h2 class="text-h2" style="max-width:22ch;margin-bottom:1.75rem;">{{ section.settings.about_cta_heading }}</h2>
+          <p class="text-body" style="max-width:46ch;">{{ section.settings.about_cta_copy }}</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:1rem;max-width:400px;">
-          <a href="{{ contact_url }}" class="btn btn--primary">Join the Collective</a>
-          <a href="{{ training_url }}" class="btn btn--outline">Explore Training</a>
-          <a href="{{ street_miles_url }}" class="btn btn--outline">Join Street Miles NYC</a>
+          <a href="{{ contact_url }}" class="btn btn--primary">{{ section.settings.about_cta_primary_label }}</a>
+          <a href="{{ training_url }}" class="btn btn--outline">{{ section.settings.about_cta_secondary_label }}</a>
+          <a href="{{ street_miles_url }}" class="btn btn--outline">{{ section.settings.about_cta_tertiary_label }}</a>
         </div>
       </div>
     </div>
@@ -528,26 +498,25 @@
     <div class="container" style="position:relative;z-index:1;">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:end;">
         <div>
-          <div class="text-eyebrow" style="margin-bottom:2rem;">Contact / Join</div>
-          <h1 class="text-h1" style="max-width:18ch;">CONNECT WITH AREN.</h1>
+          <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.contact_hero_eyebrow }}</div>
+          <h1 class="text-h1" style="max-width:18ch;">{{ section.settings.contact_hero_heading }}</h1>
         </div>
-        <p class="text-body" style="max-width:44ch;">GENERAL CORRESPONDENCE / PERFORMANCE TRAINING / COMMUNITY MEMBERSHIP / BRAND PARTNERSHIPS.</p>
+        <p class="text-body" style="max-width:44ch;">{{ section.settings.contact_hero_copy }}</p>
       </div>
     </div>
   </section>
 
-  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text">AREN ATHLETIC <span class="marquee-sep">—</span> NEW YORK CITY <span class="marquee-sep">—</span> DISCIPLINE AND PERFORMANCE <span class="marquee-sep">—</span> STREET MILES NYC <span class="marquee-sep">—</span> FIVE BOROUGH CHAPTER <span class="marquee-sep">—</span> STRUCTURED PERFORMANCE <span class="marquee-sep">—</span> AREN ATHLETIC COLLECTIVE <span class="marquee-sep">—</span> APPAREL BUILT FOR TRAINING <span class="marquee-sep">—</span></span><span class="marquee-text">AREN ATHLETIC <span class="marquee-sep">—</span> NEW YORK CITY <span class="marquee-sep">—</span> DISCIPLINE AND PERFORMANCE <span class="marquee-sep">—</span> STREET MILES NYC <span class="marquee-sep">—</span> FIVE BOROUGH CHAPTER <span class="marquee-sep">—</span> STRUCTURED PERFORMANCE <span class="marquee-sep">—</span> AREN ATHLETIC COLLECTIVE <span class="marquee-sep">—</span> APPAREL BUILT FOR TRAINING <span class="marquee-sep">—</span></span></div></div>
+  <div class="marquee-strip"><div class="marquee-track"><span class="marquee-text">{{ section.settings.contact_marquee_text }}</span><span class="marquee-text">{{ section.settings.contact_marquee_text }}</span></div></div>
 
   <section class="section" style="border-bottom:1px solid var(--color-warm-gray);">
     <div class="container">
-      <div class="text-eyebrow" style="margin-bottom:2rem;">Direct All Inquiries to the Appropriate Channel</div>
+      <div class="text-eyebrow" style="margin-bottom:2rem;">{{ section.settings.contact_channels_heading }}</div>
       <div class="training-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;">
-        <div class="training-card"><div class="training-card-title">General Inquiries</div><div class="training-card-desc"><a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a></div></div>
-        <div class="training-card"><div class="training-card-title">Training Inquiries</div><div class="training-card-desc"><a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a></div></div>
-        <div class="training-card"><div class="training-card-title">Community / Street Miles</div><div class="training-card-desc"><a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a></div></div>
-        <div class="training-card"><div class="training-card-title">Brand / Partnerships</div><div class="training-card-desc"><a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a></div></div>
-        <div class="training-card"><div class="training-card-title">HQ</div><div class="training-card-desc">37 Union Sq West, 2nd Floor<br>NEW YORK, NY 10003</div></div>
-        <div class="training-card"><div class="training-card-title">Operating Hours</div><div class="training-card-desc">MON–FRI 06:00–21:00<br>SAT–SUN 08:00–18:00</div></div>
+        {% for block in section.blocks %}
+          {% if block.type == 'contact_channel' %}
+            <div class="training-card" {{ block.shopify_attributes }}><div class="training-card-title">{{ block.settings.title }}</div><div class="training-card-desc">{{ block.settings.description }}</div></div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -555,24 +524,38 @@
   <section class="section">
     <div class="container" style="display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:var(--space-xl);align-items:start;">
       <div>
-        <div class="text-eyebrow mb-sm">Follow AREN</div>
+        <div class="text-eyebrow mb-sm">{{ section.settings.contact_social_heading }}</div>
         <div class="footer-links" style="gap:1rem;display:grid;">
           <a href="{{ settings.instagram_url | default: 'https://www.instagram.com/arenathletic/' }}" class="footer-link">Instagram</a>
           <a href="{{ settings.twitter_url | default: 'https://x.com/' }}" class="footer-link">Twitter</a>
           <a href="{{ settings.youtube_url | default: 'https://www.youtube.com/' }}" class="footer-link">YouTube</a>
         </div>
       </div>
-      <div>{% form 'contact', id: 'contact-form', class: 'contact-form' %}<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;"><div class="form-group"><label class="form-label" for="ContactFormFirstName">First Name</label><input class="form-input" type="text" id="ContactFormFirstName" name="contact[first_name]"></div><div class="form-group"><label class="form-label" for="ContactFormLastName">Last Name</label><input class="form-input" type="text" id="ContactFormLastName" name="contact[last_name]"></div></div><div class="form-group"><label class="form-label" for="ContactFormEmail">Email</label><input class="form-input" type="email" id="ContactFormEmail" name="contact[email]" required></div><div class="form-group"><label class="form-label" for="ContactFormPhone">Phone</label><input class="form-input" type="tel" id="ContactFormPhone" name="contact[phone]"></div><div class="form-group"><label class="form-label" for="ContactFormReferral">Referral Source</label><input class="form-input" type="text" id="ContactFormReferral" name="contact[referral_source]"></div><div class="form-group"><label class="form-label" for="ContactFormBody">Why are you looking to train?</label><textarea class="form-textarea" id="ContactFormBody" name="contact[body]"></textarea></div><button class="btn btn--primary" type="submit">Submit</button>{% if form.posted_successfully? %}<div id="contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;">Received.<br>We'll be in touch within 48 hours. The standard applies here too.</div>{% endif %}<div class="text-body" style="margin-top:1rem;opacity:.75;">Your information is never shared. Used only for AREN communication.</div>{{ form.errors | default_errors }}{% endform %}</div>
+      <div>{% form 'contact', id: 'contact-form', class: 'contact-form' %}<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;"><div class="form-group"><label class="form-label" for="ContactFormFirstName">{{ section.settings.contact_form_first_name_label }}</label><input class="form-input" type="text" id="ContactFormFirstName" name="contact[first_name]"></div><div class="form-group"><label class="form-label" for="ContactFormLastName">{{ section.settings.contact_form_last_name_label }}</label><input class="form-input" type="text" id="ContactFormLastName" name="contact[last_name]"></div></div><div class="form-group"><label class="form-label" for="ContactFormEmail">{{ section.settings.contact_form_email_label }}</label><input class="form-input" type="email" id="ContactFormEmail" name="contact[email]" required></div><div class="form-group"><label class="form-label" for="ContactFormPhone">{{ section.settings.contact_form_phone_label }}</label><input class="form-input" type="tel" id="ContactFormPhone" name="contact[phone]"></div><div class="form-group"><label class="form-label" for="ContactFormReferral">{{ section.settings.contact_form_referral_label }}</label><input class="form-input" type="text" id="ContactFormReferral" name="contact[referral_source]"></div><div class="form-group"><label class="form-label" for="ContactFormBody">{{ section.settings.contact_form_body_label }}</label><textarea class="form-textarea" id="ContactFormBody" name="contact[body]"></textarea></div><button class="btn btn--primary" type="submit">{{ section.settings.contact_form_button_label }}</button>{% if form.posted_successfully? %}<div id="contact-success" class="text-eyebrow" style="display:block;margin-top:1rem;">{{ section.settings.contact_form_success_text }}</div>{% endif %}<div class="text-body" style="margin-top:1rem;opacity:.75;">{{ section.settings.contact_form_disclaimer }}</div>{{ form.errors | default_errors }}{% endform %}</div>
     </div>
   </section>
 
   <section class="section" style="background:var(--color-off-white);border-top:1px solid var(--color-warm-gray);">
     <div class="container">
-      <div class="section-header"><div><div class="text-eyebrow mb-sm">Grid &amp; Grit</div><h2 class="text-h2">The AREN ecosystem in motion</h2></div></div>
+      <div class="section-header"><div><div class="text-eyebrow mb-sm">{{ section.settings.contact_ecosystem_eyebrow }}</div><h2 class="text-h2">{{ section.settings.contact_ecosystem_heading }}</h2></div></div>
       <div class="training-grid" style="margin-top:var(--space-lg);">
-        <div class="training-card"><div class="training-card-title">Train</div><div class="training-card-desc">Individual and group training programs for athletes operating at a high standard.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ training_url }}">Explore Training</a></div></div>
-        <div class="training-card"><div class="training-card-title">Run</div><div class="training-card-desc">Street Miles NYC — Every Sunday. Five boroughs. No excuses. Where the standard meets the pavement.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ street_miles_url }}">Join Street Miles</a></div></div>
-        <div class="training-card"><div class="training-card-title">Wear</div><div class="training-card-desc">Apparel built to perform in training and carry the same standard into the rest of life.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ shop_url }}">Shop AREN</a></div></div>
+        {% for block in section.blocks %}
+          {% if block.type == 'contact_ecosystem_card' %}
+            {% liquid
+              assign ecosystem_url = shop_url
+              if block.settings.link_type == 'training'
+                assign ecosystem_url = training_url
+              elsif block.settings.link_type == 'street_miles'
+                assign ecosystem_url = street_miles_url
+              elsif block.settings.link_type == 'shop'
+                assign ecosystem_url = shop_url
+              elsif block.settings.link != blank
+                assign ecosystem_url = block.settings.link
+              endif
+            %}
+            <div class="training-card" {{ block.shopify_attributes }}><div class="training-card-title">{{ block.settings.title }}</div><div class="training-card-desc">{{ block.settings.description }}</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ ecosystem_url }}">{{ block.settings.link_label }}</a></div></div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -616,7 +599,49 @@
     { "type": "textarea", "id": "shop_bottom_paragraph_2", "label": "Shop bottom paragraph 2", "default": "Not driven by seasonal trends or streetwear cycles, but by discipline, restraint, and functional precision." },
     { "type": "textarea", "id": "shop_bottom_paragraph_3", "label": "Shop bottom paragraph 3", "default": "Every piece is designed to hold up under training and carry that same standard into the rest of life." },
     { "type": "textarea", "id": "shop_bottom_paragraph_4", "label": "Shop bottom paragraph 4", "default": "This is not clothing for spectators." },
-    { "type": "textarea", "id": "shop_bottom_paragraph_5", "label": "Shop bottom paragraph 5", "default": "It's equipment for people who operate." }
+    { "type": "textarea", "id": "shop_bottom_paragraph_5", "label": "Shop bottom paragraph 5", "default": "It's equipment for people who operate." },
+    { "type": "header", "content": "About page editor settings" },
+    { "type": "text", "id": "about_hero_eyebrow", "label": "About hero eyebrow", "default": "About AREN" },
+    { "type": "text", "id": "about_hero_heading", "label": "About hero heading", "default": "AREN isn't just apparel. AREN is a standard." },
+    { "type": "textarea", "id": "about_marquee_text", "label": "About marquee text", "default": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —" },
+    { "type": "text", "id": "about_intro_eyebrow", "label": "About intro eyebrow", "default": "About AREN" },
+    { "type": "text", "id": "about_intro_heading", "label": "About intro heading", "default": "AREN Athletic" },
+    { "type": "text", "id": "about_intro_button_label", "label": "About intro button label", "default": "Shop Apparel" },
+    { "type": "richtext", "id": "about_intro_richtext", "label": "About intro rich text", "default": "<p>AREN isn't just apparel. AREN is a standard.</p><p>It's the moment before the work begins. The quiet decision you make when no one is watching. The discipline to prepare, the courage to show up, and the commitment to hold the line when it would be easier not to.</p><p>AREN was built on three principles: discipline, presence, and consistency.</p><p>Discipline is the foundation. It's the shoe being tied before sunrise. It's the extra set, the extra mile, the extra moment of focus when fatigue tells you to stop. Discipline is not loud. It's not flashy. It's the daily choice to do what must be done.</p><p>Presence is how you carry yourself in the world. It's the way you enter the room, the gym, the track, the street, or the workplace. Presence means showing up prepared, composed, and ready for whatever the day demands.</p><p>Consistency is the separator. Anyone can show up once. Anyone can have a good day. But the standard is held by those who show up again and again, day after day, long after the excitement fades and the work becomes routine.</p><p><strong>That's where AREN lives.</strong></p>" },
+    { "type": "richtext", "id": "about_body_richtext", "label": "About body rich text", "default": "<p>AREN exists at the intersection of training and life: in the gym, on the street, at work, and in the quiet moments when you decide who you are going to be.</p><p>But the standard doesn't stop there. It carries into how you live, how you treat people, and the kind of character you build when the work of the day is done. It shows up in how you lead your family, how you support the people around you, and how you stand by your principles when life tests them.</p><p>This isn't clothing made for a moment. It's apparel designed for the standard you hold yourself to every day. When you wear AREN, you're not putting on a brand. You're stepping into a mindset. It means you carry discipline with you. You move with intention.</p><p><strong>You show up with presence.</strong></p><p>It means you respect the work. You respect the process. You respect the standard.</p><p>Because the standard isn't just performance. It's how you train. It's how you work.</p><p>It's how you carry yourself in every room you enter.</p><p>It's also how you show up for the people who depend on you, the values you live by, and the character you build when no one is watching.</p><p>The standard is the standard.</p><p>And the ones who live by it don't need to announce it.</p><p>You can see it in how they move, how they prepare, and how they show up.</p><p>AREN exists for those people. The ones who know the work never really ends. The ones who understand that greatness isn't built in moments of spotlight, but in the quiet hours where discipline becomes identity.</p><p><strong>Wear it with intention. Train with purpose. Carry the standard.</strong></p><p><strong>This is AREN.</strong></p>" },
+    { "type": "text", "id": "about_body_kicker", "label": "About body kicker", "default": "EST. 2026. PERFORMANCE PROTOCOL." },
+    { "type": "text", "id": "about_identity_eyebrow", "label": "About identity eyebrow", "default": "What AREN Represents" },
+    { "type": "text", "id": "about_identity_heading", "label": "About identity heading", "default": "A performance identity." },
+    { "type": "richtext", "id": "about_identity_richtext", "label": "About identity rich text", "default": "<p>AREN is a performance identity.</p><p>Defined by discipline, presence, and execution.</p><p>Not a destination. A standard of conduct.</p><p>Training is deliberate. How you move through the world matters.</p><p>The apparel carries the code — a signal of restraint, readiness, and alignment.</p><p>The mark represents a standard — not attention. Wear it as a reflection of how you operate.</p>" },
+    { "type": "text", "id": "about_values_eyebrow", "label": "About values eyebrow", "default": "No Spectators. Only Standards." },
+    { "type": "html", "id": "about_values_heading", "label": "About values heading", "default": "NO SPECTATORS.<br>ONLY STANDARDS." },
+    { "type": "richtext", "id": "about_values_richtext", "label": "About values rich text", "default": "<p>AREN rejects passivity and spectatorship in favor of ownership and responsibility.</p><p>The standard is a non-negotiable threshold of operation — a commitment to presence over distraction and execution over intention. To align with AREN is to accept accountability for how you show up: in training, in work, and in life.</p><p>We don't observe from the sidelines. We operate.</p>" },
+    { "type": "text", "id": "about_values_kicker", "label": "About values kicker", "default": "There are no spectators. There are only standards." },
+    { "type": "textarea", "id": "about_footer_marquee_text", "label": "About footer marquee text", "default": "DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS • DISCIPLINE • EXECUTION • STANDARDS •" },
+    { "type": "text", "id": "about_cta_eyebrow", "label": "About CTA eyebrow", "default": "National Performance Platform" },
+    { "type": "text", "id": "about_cta_heading", "label": "About CTA heading", "default": "Building a scalable culture of community chapters across the nation." },
+    { "type": "textarea", "id": "about_cta_copy", "label": "About CTA copy", "default": "AREN is evolving into a coordinated performance ecosystem, establishing elite training protocols and community expression while maintaining the absolute integrity of the standard." },
+    { "type": "text", "id": "about_cta_primary_label", "label": "About CTA primary label", "default": "Join the Collective" },
+    { "type": "text", "id": "about_cta_secondary_label", "label": "About CTA secondary label", "default": "Explore Training" },
+    { "type": "text", "id": "about_cta_tertiary_label", "label": "About CTA tertiary label", "default": "Join Street Miles NYC" },
+    { "type": "header", "content": "Contact page editor settings" },
+    { "type": "text", "id": "contact_hero_eyebrow", "label": "Contact hero eyebrow", "default": "Contact / Join" },
+    { "type": "text", "id": "contact_hero_heading", "label": "Contact hero heading", "default": "CONNECT WITH AREN." },
+    { "type": "textarea", "id": "contact_hero_copy", "label": "Contact hero copy", "default": "GENERAL CORRESPONDENCE / PERFORMANCE TRAINING / COMMUNITY MEMBERSHIP / BRAND PARTNERSHIPS." },
+    { "type": "textarea", "id": "contact_marquee_text", "label": "Contact marquee text", "default": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —" },
+    { "type": "text", "id": "contact_channels_heading", "label": "Contact channels heading", "default": "Direct All Inquiries to the Appropriate Channel" },
+    { "type": "text", "id": "contact_social_heading", "label": "Contact social heading", "default": "Follow AREN" },
+    { "type": "text", "id": "contact_form_first_name_label", "label": "Contact form first name label", "default": "First Name" },
+    { "type": "text", "id": "contact_form_last_name_label", "label": "Contact form last name label", "default": "Last Name" },
+    { "type": "text", "id": "contact_form_email_label", "label": "Contact form email label", "default": "Email" },
+    { "type": "text", "id": "contact_form_phone_label", "label": "Contact form phone label", "default": "Phone" },
+    { "type": "text", "id": "contact_form_referral_label", "label": "Contact form referral label", "default": "Referral Source" },
+    { "type": "text", "id": "contact_form_body_label", "label": "Contact form message label", "default": "Why are you looking to train?" },
+    { "type": "text", "id": "contact_form_button_label", "label": "Contact form button label", "default": "Submit" },
+    { "type": "textarea", "id": "contact_form_success_text", "label": "Contact form success text", "default": "Received.<br>We'll be in touch within 48 hours. The standard applies here too." },
+    { "type": "textarea", "id": "contact_form_disclaimer", "label": "Contact form disclaimer", "default": "Your information is never shared. Used only for AREN communication." },
+    { "type": "text", "id": "contact_ecosystem_eyebrow", "label": "Contact ecosystem eyebrow", "default": "Grid & Grit" },
+    { "type": "text", "id": "contact_ecosystem_heading", "label": "Contact ecosystem heading", "default": "The AREN ecosystem in motion" }
   ],
   "blocks": [
     {
@@ -658,6 +683,41 @@
         { "type": "text", "id": "title", "label": "Title", "default": "Shipping" },
         { "type": "text", "id": "description", "label": "Description", "default": "Shipping nationwide on all orders." }
       ]
+    },
+    {
+      "type": "about_value_card",
+      "name": "About value card",
+      "limit": 6,
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Training Systems" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Engineered for high-pressure execution. Every protocol is designed to eliminate distraction and focus on the clarity of movement, ensuring consistency is maintained under the weight of the collective standard." }
+      ]
+    },
+    {
+      "type": "contact_channel",
+      "name": "Contact channel",
+      "limit": 12,
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "General Inquiries" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "info@arenathletic.com" }
+      ]
+    },
+    {
+      "type": "contact_ecosystem_card",
+      "name": "Contact ecosystem card",
+      "limit": 6,
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Train" },
+        { "type": "textarea", "id": "description", "label": "Description", "default": "Individual and group training programs for athletes operating at a high standard." },
+        { "type": "select", "id": "link_type", "label": "Link type", "default": "training", "options": [
+          { "value": "training", "label": "Training page" },
+          { "value": "street_miles", "label": "Street Miles page" },
+          { "value": "shop", "label": "Shop page" },
+          { "value": "custom", "label": "Custom URL" }
+        ] },
+        { "type": "url", "id": "link", "label": "Custom link" },
+        { "type": "text", "id": "link_label", "label": "Link label", "default": "Explore Training" }
+      ]
     }
   ],
   "presets": [
@@ -675,7 +735,19 @@
         { "type": "shop_fallback_card", "settings": { "title": "Add Shopify products", "description": "This shop page is ready for your real catalog.", "cta_label": "Theme Ready", "background_color": "#1e1e1c" } },
         { "type": "shop_info", "settings": { "title": "Shipping", "description": "Shipping nationwide on all orders." } },
         { "type": "shop_info", "settings": { "title": "Quality Standard", "description": "Built to last. Every piece carries the AREN standard." } },
-        { "type": "shop_info", "settings": { "title": "Returns", "description": "30-day return policy on unworn items." } }
+        { "type": "shop_info", "settings": { "title": "Returns", "description": "30-day return policy on unworn items." } },
+        { "type": "about_value_card", "settings": { "title": "Training Systems", "description": "Engineered for high-pressure execution. Every protocol is designed to eliminate distraction and focus on the clarity of movement, ensuring consistency is maintained under the weight of the collective standard." } },
+        { "type": "about_value_card", "settings": { "title": "Performance Apparel", "description": "Designed for daily standards. AREN garments are a physical signal of readiness, engineered to endure the rigors of performance while maintaining a restricted, premium aesthetic for life under pressure." } },
+        { "type": "about_value_card", "settings": { "title": "Street Miles", "description": "The community-driven expression of the AREN platform. Street Miles connects individual chapters through a shared commitment to execution, proving that the standard has no geographic center." } },
+        { "type": "contact_channel", "settings": { "title": "General Inquiries", "description": "info@arenathletic.com" } },
+        { "type": "contact_channel", "settings": { "title": "Training Inquiries", "description": "info@arenathletic.com" } },
+        { "type": "contact_channel", "settings": { "title": "Community / Street Miles", "description": "info@arenathletic.com" } },
+        { "type": "contact_channel", "settings": { "title": "Brand / Partnerships", "description": "info@arenathletic.com" } },
+        { "type": "contact_channel", "settings": { "title": "HQ", "description": "37 Union Sq West, 2nd Floor<br>NEW YORK, NY 10003" } },
+        { "type": "contact_channel", "settings": { "title": "Operating Hours", "description": "MON–FRI 06:00–21:00<br>SAT–SUN 08:00–18:00" } },
+        { "type": "contact_ecosystem_card", "settings": { "title": "Train", "description": "Individual and group training programs for athletes operating at a high standard.", "link_type": "training", "link_label": "Explore Training" } },
+        { "type": "contact_ecosystem_card", "settings": { "title": "Run", "description": "Street Miles NYC — Every Sunday. Five boroughs. No excuses. Where the standard meets the pavement.", "link_type": "street_miles", "link_label": "Join Street Miles" } },
+        { "type": "contact_ecosystem_card", "settings": { "title": "Wear", "description": "Apparel built to perform in training and carry the same standard into the rest of life.", "link_type": "shop", "link_label": "Shop AREN" } }
       ]
     }
   ]
