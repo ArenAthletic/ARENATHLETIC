@@ -13,7 +13,7 @@
   endif
 %}
 
-<nav class="nav" id="main-nav" data-shopify-editor-section="header" {{ section.shopify_attributes }}>
+<nav class="nav" id="main-nav" {{ section.shopify_attributes }}>
   <div class="nav-inner">
     <a href="{{ routes.root_url }}" class="nav-logo" aria-label="{{ shop.name }} home" data-shopify-editor-setting="logo">
       {% if section.settings.logo != blank %}
