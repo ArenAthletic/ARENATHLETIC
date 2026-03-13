@@ -28,11 +28,11 @@
       <div class="footer-col">
         <div class="footer-col-title">ECOSYSTEM</div>
         <div class="footer-links">
-          <a href="/pages/about" class="footer-link">About AREN</a>
-          <a href="/pages/training" class="footer-link">Training</a>
-          <a href="/pages/services" class="footer-link">Services</a>
-          <a href="/pages/street-miles" class="footer-link">Street Miles NYC</a>
-          <a href="/pages/contact" class="footer-link">Join the Community</a>
+          <a href="{{ pages['about'].url | default: '/pages/about' }}" class="footer-link">About AREN</a>
+          <a href="{{ pages['training'].url | default: '/pages/training' }}" class="footer-link">Training</a>
+          <a href="{{ pages['services'].url | default: '/pages/services' }}" class="footer-link">Services</a>
+          <a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}" class="footer-link">Street Miles NYC</a>
+          <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="footer-link">Join the Community</a>
         </div>
       </div>
 
@@ -63,8 +63,8 @@
         <span class="footer-copyright">© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.</span>
       </div>
       <div style="display:flex;gap:2rem;">
-        <a href="/pages/privacy" class="footer-copyright" style="text-decoration:none;">PRIVACY</a>
-        <a href="/pages/terms" class="footer-copyright" style="text-decoration:none;">TERMS</a>
+        <a href="{{ pages['privacy'].url | default: '/pages/privacy' }}" class="footer-copyright" style="text-decoration:none;">PRIVACY</a>
+        <a href="{{ pages['terms'].url | default: '/pages/terms' }}" class="footer-copyright" style="text-decoration:none;">TERMS</a>
       </div>
     </div>
   </div>

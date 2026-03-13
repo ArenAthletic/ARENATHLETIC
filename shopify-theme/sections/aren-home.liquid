@@ -7,7 +7,7 @@
     <p class="hero-subline">Minimal. Durable. Elevated. Designed for the gym, the street, and the pace of New York.</p>
     <div class="hero-ctas">
       <a href="{{ routes.all_products_collection_url }}" class="btn btn--primary">Shop Apparel</a>
-      <a href="/pages/contact" class="btn btn--outline-white">Join the Community</a>
+      <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="btn btn--outline-white">Join the Community</a>
     </div>
     <div class="hero-microcopy">
       <span>New drops + core staples • Shipping nationwide</span>
@@ -106,7 +106,7 @@
         <h2 class="philosophy-headline">The standard is the standard.</h2>
         <p class="philosophy-copy">AREN is built on discipline, presence, and consistency —apparel designed to perform in training and carry the standard everywhere else in life.</p>
         <div style="margin-top:3rem;">
-          <a href="/pages/about" class="btn btn--outline-white">About AREN</a>
+          <a href="{{ pages['about'].url | default: '/pages/about' }}" class="btn btn--outline-white">About AREN</a>
         </div>
       </div>
       <div class="philosophy-right">
@@ -145,7 +145,7 @@
           <div><div class="sm-stat-value">Sun</div><div class="sm-stat-label">09:00 Sharp</div></div>
           <div><div class="sm-stat-value">NYC</div><div class="sm-stat-label">Home Chapter</div></div>
         </div>
-        <a href="/pages/street-miles" class="btn btn--outline">Explore Street Miles</a>
+        <a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}" class="btn btn--outline">Explore Street Miles</a>
       </div>
     </div>
   </div>

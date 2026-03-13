@@ -66,14 +66,31 @@
         </div>
       </div>
 
-      <div class="training-grid" style="margin-top:var(--space-lg);">
-        <div class="training-card"><div class="training-card-number">01</div><div class="training-card-title">Presence.</div><div class="training-card-desc">Awareness, composure, and discipline before the first movement is made.</div></div>
-        <div class="training-card"><div class="training-card-number">02</div><div class="training-card-title">Discipline.</div><div class="training-card-desc">Repeated adherence to the standard when motivation is no longer enough.</div></div>
-        <div class="training-card"><div class="training-card-number">03</div><div class="training-card-title">Execution.</div><div class="training-card-desc">Intent must translate into measurable action, precision, and completed work.</div></div>
-        <div class="training-card"><div class="training-card-number">04</div><div class="training-card-title">Performance Systems.</div><div class="training-card-desc">Structured protocols designed to create durable, accountable progress.</div></div>
+      <div style="display:flex;gap:3rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--color-warm-gray);flex-wrap:wrap;">
+        <div>
+          <div style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-mid-gray);margin-bottom:0.5rem;">01</div>
+          <div style="font-family:var(--font-sans);font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">Presence.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-mid-gray);margin-bottom:0.5rem;">02</div>
+          <div style="font-family:var(--font-sans);font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">Discipline.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-mid-gray);margin-bottom:0.5rem;">03</div>
+          <div style="font-family:var(--font-sans);font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">Execution.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-mid-gray);margin-bottom:0.5rem;">04</div>
+          <div style="font-family:var(--font-sans);font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;">Performance Systems.</div>
+        </div>
       </div>
     </div>
-  </section>
+    <div style="position:relative;overflow:hidden;aspect-ratio:3/4;min-height:400px;">
+      <img src="https://static.wixstatic.com/media/8a3301_b34c7842f2ee4961a0607531ffdcc869~mv2.png/v1/crop/x_0,y_1000,w_3024,h_3032/fill/w_800,h_1000,al_c,q_90,enc_auto/8a3301_b34c7842f2ee4961a0607531ffdcc869~mv2.png" alt="AREN Training" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy" />
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(35,35,33,0.4) 0%,transparent 50%);"></div>
+    </div>
+  </div>
+</section>
 
   <section class="section" style="border-top:1px solid var(--color-warm-gray);border-bottom:1px solid var(--color-warm-gray);">
     <div class="container">
@@ -85,9 +102,9 @@
       </div>
 
       <div class="services-list" style="border-top:none;">
-        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">01 / PROTOCOL</div><div class="service-name">Protocol — Threshold</div></div><div class="service-desc">Advanced performance development emphasizing neural efficiency, force production, and high-intensity execution. Built for athletes operating above baseline standards and seeking elevated output within a controlled training environment.</div><div class="service-arrow"><a href="/pages/contact">Apply for Threshold</a></div></div>
-        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">02 / PROTOCOL</div><div class="service-name">Protocol — Capacity</div></div><div class="service-desc">Structured performance training built on volume architecture, strength progression, and metabolic control. Designed for athletes and professionals seeking consistent output, measurable progression, and disciplined execution inside the AREN system.</div><div class="service-arrow"><a href="/pages/contact">Enter Capacity</a></div></div>
-        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">03 / COLLECTIVE</div><div class="service-name">National Collective</div></div><div class="service-desc">Open-format performance movement unified under shared standards. Community-driven sessions built around exploration, discipline, and collective execution across boroughs.</div><div class="service-arrow"><a href="/pages/street-miles">Join Street Miles</a></div></div>
+        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">01 / PROTOCOL</div><div class="service-name">Protocol — Threshold</div></div><div class="service-desc">Advanced performance development emphasizing neural efficiency, force production, and high-intensity execution. Built for athletes operating above baseline standards and seeking elevated output within a controlled training environment.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Apply for Threshold</a></div></div>
+        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">02 / PROTOCOL</div><div class="service-name">Protocol — Capacity</div></div><div class="service-desc">Structured performance training built on volume architecture, strength progression, and metabolic control. Designed for athletes and professionals seeking consistent output, measurable progression, and disciplined execution inside the AREN system.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Enter Capacity</a></div></div>
+        <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:.75rem;">03 / COLLECTIVE</div><div class="service-name">National Collective</div></div><div class="service-desc">Open-format performance movement unified under shared standards. Community-driven sessions built around exploration, discipline, and collective execution across boroughs.</div><div class="service-arrow"><a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}">Join Street Miles</a></div></div>
       </div>
     </div>
   </section>
@@ -140,12 +157,12 @@
 
   <section class="services-list">
     <div class="container">
-      <div class="service-row"><div><div class="training-card-number">01</div><div class="service-name">Individual Programming</div></div><div class="service-desc">Custom training programs built around the individual athlete's goals, schedule, and environment. Periodized, progressive, and designed for long-term development. Remote coaching available nationally.</div><div class="service-arrow"><a href="/pages/contact">Inquire</a></div></div>
-      <div class="service-row"><div><div class="training-card-number">02</div><div class="service-name">Group Training</div></div><div class="service-desc">Structured sessions for small groups in the NYC metro area. Accountability-driven, community-oriented, and executed to the AREN standard. Every session is a unit within a larger protocol.</div><div class="service-arrow"><a href="/pages/contact">Inquire</a></div></div>
-      <div class="service-row"><div><div class="training-card-number">03</div><div class="service-name">Street Miles Access</div></div><div class="service-desc">Full integration into the Street Miles NYC chapter ecosystem. Weekly runs, digital hub access, chapter coordination, and accountability structures. Every Sunday, five boroughs.</div><div class="service-arrow"><a href="/pages/street-miles">Explore</a></div></div>
-      <div class="service-row"><div><div class="training-card-number">04</div><div class="service-name">Hub Chapter Activation</div></div><div class="service-desc">Launch a Street Miles chapter in your city. AREN provides the operational framework, brand standards, and programming infrastructure. National hub network expansion is ongoing.</div><div class="service-arrow"><a href="/pages/contact">Apply</a></div></div>
-      <div class="service-row"><div><div class="training-card-number">05</div><div class="service-name">Corporate + Team Performance</div></div><div class="service-desc">Performance culture programming for teams and organizations. Training, accountability frameworks, and the physical standards that drive high-output performance at scale.</div><div class="service-arrow"><a href="/pages/contact">Inquire</a></div></div>
-      <div class="service-row"><div><div class="training-card-number">06</div><div class="service-name">Apparel — Uniform Program</div></div><div class="service-desc">Custom AREN ATHLETIC uniform programs for teams, chapters, and organizations. Branded performance apparel built to the same functional standard as the core collection.</div><div class="service-arrow"><a href="{{ routes.all_products_collection_url }}">Inquire</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">01</div><div class="service-name">Individual Programming</div></div><div class="service-desc">Custom training programs built around the individual athlete's goals, schedule, and environment. Periodized, progressive, and designed for long-term development. Remote coaching available nationally.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Inquire</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">02</div><div class="service-name">Group Training</div></div><div class="service-desc">Structured sessions for small groups in the NYC metro area. Accountability-driven, community-oriented, and executed to the AREN standard. Every session is a unit within a larger protocol.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Inquire</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">03</div><div class="service-name">Street Miles Access</div></div><div class="service-desc">Full integration into the Street Miles NYC chapter ecosystem. Weekly runs, digital hub access, chapter coordination, and accountability structures. Every Sunday, five boroughs.</div><div class="service-arrow"><a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}">Explore</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">04</div><div class="service-name">Hub Chapter Activation</div></div><div class="service-desc">Launch a Street Miles chapter in your city. AREN provides the operational framework, brand standards, and programming infrastructure. National hub network expansion is ongoing.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Apply</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">05</div><div class="service-name">Corporate + Team Performance</div></div><div class="service-desc">Performance culture programming for teams and organizations. Training, accountability frameworks, and the physical standards that drive high-output performance at scale.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Inquire</a></div></div>
+      <div class="service-row"><div><div class="text-eyebrow" style="margin-bottom:0.75rem;">06</div><div class="service-name">Apparel — Uniform Program</div></div><div class="service-desc">Custom AREN ATHLETIC uniform programs for teams, chapters, and organizations. Branded performance apparel built to the same functional standard as the core collection.</div><div class="service-arrow"><a href="{{ pages['contact'].url | default: '/pages/contact' }}">Inquire</a></div></div>
     </div>
   </section>
 
@@ -157,9 +174,9 @@
         <p class="text-body" style="margin-bottom:1.5rem;">AREN is evolving into a coordinated performance ecosystem, establishing elite training protocols and community expression while maintaining the absolute integrity of the standard.</p>
       </div>
       <div style="display:grid;gap:1rem;align-content:start;">
-        <a href="/pages/contact" class="btn btn--primary">Contact / Join the Community</a>
-        <a href="/pages/training" class="btn btn--outline">Explore Training Programs</a>
-        <a href="/pages/street-miles" class="btn btn--outline">Join Street Miles NYC</a>
+        <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="btn btn--primary">Contact / Join the Community</a>
+        <a href="{{ pages['training'].url | default: '/pages/training' }}" class="btn btn--outline">Explore Training Programs</a>
+        <a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}" class="btn btn--outline">Join Street Miles NYC</a>
       </div>
     </div>
   </section>
@@ -175,7 +192,7 @@
       <h1 class="sm-hero-tagline">DO THE WORK.<br>CARRY THE<br>WEIGHT.</h1>
       <p style="font-size:1.0625rem;line-height:1.7;color:rgba(255,255,255,0.5);max-width:52ch;margin-bottom:3rem;">Street Miles is the street-level expression of AREN's standards through community runs and shared accountability.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="/pages/contact" class="btn btn--primary">Join SMNYC</a>
+        <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="btn btn--primary">Join SMNYC</a>
         <a href="#protocol" class="btn btn--outline-white">View Protocol</a>
       </div>
     </div>
@@ -217,11 +234,23 @@
         <p class="text-body" style="margin-bottom:1.5rem;">The Street Miles ecosystem is engineered for modular expansion. NYC provides the street-level proof of concept, establishing the standard of discipline and collective accountability.</p>
         <p class="text-body">As AREN grows, new chapters will launch in urban hubs where standard execution and high performance are mandatory, ensuring consistent run culture nationwide.</p>
       </div>
-      <div class="training-grid" style="grid-template-columns:1fr 1fr;gap:1rem;">
-        <div class="training-card"><div class="training-card-number">5</div><div class="training-card-title">Boroughs covered</div></div>
-        <div class="training-card"><div class="training-card-number">Sun</div><div class="training-card-title">09:00 Sharp</div></div>
-        <div class="training-card"><div class="training-card-number">NYC</div><div class="training-card-title">Home chapter</div></div>
-        <div class="training-card"><div class="training-card-number">All</div><div class="training-card-title">Conditions — No excuses</div></div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;">
+        <div style="padding:2.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-family:var(--font-display);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:0.95;text-transform:uppercase;letter-spacing:-0.01em;">5</div>
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);">Boroughs covered</div>
+        </div>
+        <div style="padding:2.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-family:var(--font-display);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:0.95;text-transform:uppercase;letter-spacing:-0.01em;">Sun</div>
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);">09:00 Sharp</div>
+        </div>
+        <div style="padding:2.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-family:var(--font-display);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:0.95;text-transform:uppercase;letter-spacing:-0.01em;">NYC</div>
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);">Home chapter</div>
+        </div>
+        <div style="padding:2.5rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);">
+          <div style="font-family:var(--font-display);font-size:clamp(2.5rem,4vw,3.5rem);font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:0.95;text-transform:uppercase;letter-spacing:-0.01em;">All</div>
+          <div class="text-eyebrow" style="color:rgba(255,255,255,0.3);">Conditions — No excuses</div>
+        </div>
       </div>
     </div>
   </section>
@@ -248,7 +277,7 @@
         </div>
       </div>
       <div style="display:grid;align-content:start;">
-        <a href="/pages/contact" class="btn btn--primary">Join Street Miles NYC</a>
+        <a href="{{ pages['contact'].url | default: '/pages/contact' }}" class="btn btn--primary">Join Street Miles NYC</a>
       </div>
     </div>
   </section>
@@ -303,8 +332,8 @@
     <div class="container">
       <div class="section-header"><div><div class="text-eyebrow mb-sm">Grid &amp; Grit</div><h2 class="text-h2">The AREN ecosystem in motion</h2></div></div>
       <div class="training-grid" style="margin-top:var(--space-lg);">
-        <div class="training-card"><div class="training-card-title">Train</div><div class="training-card-desc">Individual and group training programs for athletes operating at a high standard.</div><div class="service-arrow" style="margin-top:1rem;"><a href="/pages/training">Explore Training</a></div></div>
-        <div class="training-card"><div class="training-card-title">Run</div><div class="training-card-desc">Street Miles NYC — Every Sunday. Five boroughs. No excuses. Where the standard meets the pavement.</div><div class="service-arrow" style="margin-top:1rem;"><a href="/pages/street-miles">Join Street Miles</a></div></div>
+        <div class="training-card"><div class="training-card-title">Train</div><div class="training-card-desc">Individual and group training programs for athletes operating at a high standard.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ pages['training'].url | default: '/pages/training' }}">Explore Training</a></div></div>
+        <div class="training-card"><div class="training-card-title">Run</div><div class="training-card-desc">Street Miles NYC — Every Sunday. Five boroughs. No excuses. Where the standard meets the pavement.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ pages['street-miles'].url | default: '/pages/street-miles' }}">Join Street Miles</a></div></div>
         <div class="training-card"><div class="training-card-title">Wear</div><div class="training-card-desc">Apparel built to perform in training and carry the same standard into the rest of life.</div><div class="service-arrow" style="margin-top:1rem;"><a href="{{ routes.all_products_collection_url }}">Shop AREN</a></div></div>
       </div>
     </div>
@@ -313,10 +342,10 @@
   {% if page.content != blank %}<section class="section"><div class="container rte">{{ page.content }}</div></section>{% endif %}
 
 {% elsif page_handle == 'privacy' %}
-  <section class="section" style="padding-top:calc(68px + var(--space-xl));"><div class="container container--narrow"><div class="text-eyebrow mb-sm">Legal</div><h1 class="text-display" style="margin-bottom:2rem;">Privacy Policy</h1><div class="text-body"><p style="margin-bottom:1.75rem;">AREN ATHLETIC ("AREN," "we," "us," or "our") respects your privacy. This Privacy Policy describes how we collect, use, and protect information you provide when you visit arenathletic.com or engage with our services.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Information We Collect</h2><p style="margin-bottom:1.75rem;">We collect information you voluntarily provide (name, email, phone) when you submit inquiry forms or sign up for community updates. We do not sell your personal information to third parties.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">How We Use Your Information</h2><p style="margin-bottom:1.75rem;">Information collected is used solely for AREN Athletic communications: responding to inquiries, sending community updates you have opted into, and coordinating training or community access.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Contact</h2><p style="margin-bottom:1.75rem;">For privacy inquiries, contact us at <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p></div>{% if page.content != blank %}<div class="rte" style="margin-top:2rem;">{{ page.content }}</div>{% endif %}</div></section>
+  <section class="section" style="padding-top:calc(68px + var(--space-xl));"><div class="container container--narrow"><div class="text-eyebrow mb-sm">Legal</div><h1 class="text-display" style="margin-bottom:2rem;">Privacy Policy</h1><div class="text-body"><p style="margin-bottom:1.75rem;">AREN ATHLETIC ("AREN," "we," "us," or "our") respects your privacy. This Privacy Policy describes how we collect, use, and protect information you provide when you visit arenathletic.com or engage with our services.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Information We Collect</h2><p style="margin-bottom:1.75rem;">We collect information you voluntarily provide (name, email, phone) when you submit inquiry forms or sign up for community updates. We do not sell your personal information to third parties.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">How We Use Your Information</h2><p style="margin-bottom:1.75rem;">Information collected is used solely for AREN Athletic communications: responding to inquiries, sending community updates you have opted into, and coordinating training or community access.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Contact</h2><p style="margin-bottom:1.75rem;">For privacy inquiries, contact us at <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p><p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;">Last updated: 2026. AREN ATHLETIC. NEW YORK CITY.</p><div style="margin-top:3rem;"><a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;border-bottom:1px solid var(--color-black);padding-bottom:2px;">Return home</a></div></div>{% if page.content != blank %}<div class="rte" style="margin-top:2rem;">{{ page.content }}</div>{% endif %}</div></section>
 
 {% elsif page_handle == 'terms' %}
-  <section class="section" style="padding-top:calc(68px + var(--space-xl));"><div class="container container--narrow"><div class="text-eyebrow mb-sm">Legal</div><h1 class="text-display" style="margin-bottom:2rem;">Terms of Service</h1><div class="text-body"><p style="margin-bottom:1.75rem;">By accessing or using arenathletic.com and engaging with AREN ATHLETIC services, you agree to the following terms. Please read them carefully.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Use of the Site</h2><p style="margin-bottom:1.75rem;">This site is provided for informational and commercial purposes. You may not use the site for unlawful purposes or in any way that could damage AREN ATHLETIC or its community members.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Community Standards</h2><p style="margin-bottom:1.75rem;">All AREN Athletic community participants are held to the AREN standard: discipline, presence, and consistency. Participation in training programs, Street Miles NYC, and community activities requires commitment to these values.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Contact</h2><p style="margin-bottom:1.75rem;">For terms inquiries, contact us at <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p></div>{% if page.content != blank %}<div class="rte" style="margin-top:2rem;">{{ page.content }}</div>{% endif %}</div></section>
+  <section class="section" style="padding-top:calc(68px + var(--space-xl));"><div class="container container--narrow"><div class="text-eyebrow mb-sm">Legal</div><h1 class="text-display" style="margin-bottom:2rem;">Terms of Service</h1><div class="text-body"><p style="margin-bottom:1.75rem;">By accessing or using arenathletic.com and engaging with AREN ATHLETIC services, you agree to the following terms. Please read them carefully.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Use of the Site</h2><p style="margin-bottom:1.75rem;">This site is provided for informational and commercial purposes. You may not use the site for unlawful purposes or in any way that could damage AREN ATHLETIC or its community members.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Community Standards</h2><p style="margin-bottom:1.75rem;">All AREN Athletic community participants are held to the AREN standard: discipline, presence, and consistency. Participation in training programs, Street Miles NYC, and community activities requires commitment to these values.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Contact</h2><p style="margin-bottom:1.75rem;">For terms inquiries, contact us at <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p><p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;">Last updated: 2026. AREN ATHLETIC. NEW YORK CITY.</p><div style="margin-top:3rem;"><a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;border-bottom:1px solid var(--color-black);padding-bottom:2px;">Return home</a></div></div>{% if page.content != blank %}<div class="rte" style="margin-top:2rem;">{{ page.content }}</div>{% endif %}</div></section>
 
 {% else %}
   <section class="section" style="padding-top:calc(68px + var(--space-xl));"><div class="container rte"><h1 class="text-display" style="margin-bottom:2rem;">{{ page.title }}</h1>{% if page.content != blank %}{{ page.content }}{% else %}<p class="text-body">Create a Shopify page with the handle <strong>{{ page_handle }}</strong> to add custom content here.</p>{% endif %}</div></section>
