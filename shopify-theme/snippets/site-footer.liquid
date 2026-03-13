@@ -25,9 +25,9 @@
           {% endif %}
         </a>
         <div class="footer-brand-taglines">
-          <span class="footer-brand-tagline">SMNYC: FIVE BOROUGH CHAPTER</span>
-          <span class="footer-brand-tagline">DISCIPLINE AND PERFORMANCE.</span>
-          <span class="footer-brand-tagline">AREN ATHLETIC UNIFORM.</span>
+          <span class="footer-brand-tagline">{{ settings.footer_tagline_1 | default: 'SMNYC: FIVE BOROUGH CHAPTER' }}</span>
+          <span class="footer-brand-tagline">{{ settings.footer_tagline_2 | default: 'DISCIPLINE AND PERFORMANCE.' }}</span>
+          <span class="footer-brand-tagline">{{ settings.footer_tagline_3 | default: 'AREN ATHLETIC UNIFORM.' }}</span>
         </div>
         <div class="footer-social">
           <a href="{{ settings.instagram_url | default: 'https://www.instagram.com/arenathletic/' }}" class="footer-social-link">IG</a>
@@ -37,45 +37,45 @@
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">ECOSYSTEM</div>
+        <div class="footer-col-title">{{ settings.footer_ecosystem_heading | default: 'ECOSYSTEM' }}</div>
         <div class="footer-links">
-          <a href="{{ about_url }}" class="footer-link">About AREN</a>
-          <a href="{{ training_url }}" class="footer-link">Training</a>
-          <a href="{{ services_url }}" class="footer-link">Services</a>
-          <a href="{{ street_miles_url }}" class="footer-link">Street Miles NYC</a>
-          <a href="{{ contact_url }}" class="footer-link">Join the Community</a>
+          <a href="{{ about_url }}" class="footer-link">{{ settings.header_about_label | default: 'About AREN' }}</a>
+          <a href="{{ training_url }}" class="footer-link">{{ settings.header_training_label | default: 'Training' }}</a>
+          <a href="{{ services_url }}" class="footer-link">{{ settings.header_services_label | default: 'Services' }}</a>
+          <a href="{{ street_miles_url }}" class="footer-link">{{ settings.header_street_label | default: 'Street Miles NYC' }}</a>
+          <a href="{{ contact_url }}" class="footer-link">{{ settings.footer_join_label | default: 'Join the Community' }}</a>
         </div>
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">ACCESS</div>
+        <div class="footer-col-title">{{ settings.footer_access_heading | default: 'ACCESS' }}</div>
         <div class="footer-links">
-          <a href="{{ shop_url }}" class="footer-link">Shop Apparel</a>
-          <a href="{{ shop_url }}" class="footer-link">New Arrivals</a>
-          <a href="{{ shop_url }}" class="footer-link">Core Essentials</a>
-          <a href="{{ shop_url }}" class="footer-link">Outerwear</a>
-          <a href="{{ routes.account_login_url }}" class="footer-link">Log In</a>
+          <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_shop_label | default: 'Shop Apparel' }}</a>
+          <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_new_arrivals_label | default: 'New Arrivals' }}</a>
+          <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_core_essentials_label | default: 'Core Essentials' }}</a>
+          <a href="{{ shop_url }}" class="footer-link">{{ settings.footer_outerwear_label | default: 'Outerwear' }}</a>
+          <a href="{{ routes.account_login_url }}" class="footer-link">{{ settings.footer_login_label | default: 'Log In' }}</a>
         </div>
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">NATIONAL HUB NETWORK.</div>
+        <div class="footer-col-title">{{ settings.footer_network_heading | default: 'NATIONAL HUB NETWORK.' }}</div>
         <div class="footer-links">
           <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}" class="footer-link">{{ settings.email_address | default: 'INFO@ARENATHLETIC.COM' | upcase }}</a>
-          <span class="footer-link" style="cursor:default;">AREN ATHLETIC COLLECTIVE.</span>
-          <span class="footer-link" style="cursor:default;">STRUCTURED PERFORMANCE.</span>
+          <span class="footer-link" style="cursor:default;">{{ settings.footer_network_line_1 | default: 'AREN ATHLETIC COLLECTIVE.' }}</span>
+          <span class="footer-link" style="cursor:default;">{{ settings.footer_network_line_2 | default: 'STRUCTURED PERFORMANCE.' }}</span>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="footer-bottom-left">
-        <span class="footer-identity-line">AREN ATHLETIC — NEW YORK CITY</span>
-        <span class="footer-copyright">© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.</span>
+        <span class="footer-identity-line">{{ settings.footer_identity_line | default: 'AREN ATHLETIC — NEW YORK CITY' }}</span>
+        <span class="footer-copyright">{{ settings.footer_copyright | default: '© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.' }}</span>
       </div>
       <div style="display:flex;gap:2rem;">
-        <a href="{{ privacy_url }}" class="footer-copyright" style="text-decoration:none;">PRIVACY</a>
-        <a href="{{ terms_url }}" class="footer-copyright" style="text-decoration:none;">TERMS</a>
+        <a href="{{ privacy_url }}" class="footer-copyright" style="text-decoration:none;">{{ settings.footer_privacy_label | default: 'PRIVACY' }}</a>
+        <a href="{{ terms_url }}" class="footer-copyright" style="text-decoration:none;">{{ settings.footer_terms_label | default: 'TERMS' }}</a>
       </div>
     </div>
   </div>

@@ -48,6 +48,176 @@
         "id": "youtube_url",
         "label": "YouTube URL",
         "default": "https://www.youtube.com/"
+      },
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "text",
+        "id": "header_home_label",
+        "label": "Home label",
+        "default": "Home"
+      },
+      {
+        "type": "text",
+        "id": "header_about_label",
+        "label": "About label",
+        "default": "About AREN"
+      },
+      {
+        "type": "text",
+        "id": "header_training_label",
+        "label": "Training label",
+        "default": "Training"
+      },
+      {
+        "type": "text",
+        "id": "header_services_label",
+        "label": "Services label",
+        "default": "Services"
+      },
+      {
+        "type": "text",
+        "id": "header_street_label",
+        "label": "Street Miles label",
+        "default": "Street Miles NYC"
+      },
+      {
+        "type": "text",
+        "id": "header_shop_label",
+        "label": "Shop label",
+        "default": "Shop"
+      },
+      {
+        "type": "text",
+        "id": "header_contact_label",
+        "label": "Contact label",
+        "default": "Contact / Join"
+      },
+      {
+        "type": "text",
+        "id": "header_login_label",
+        "label": "Login label",
+        "default": "Log In"
+      },
+      {
+        "type": "text",
+        "id": "header_cta_label",
+        "label": "Header CTA label",
+        "default": "Shop Now"
+      },
+      {
+        "type": "header",
+        "content": "Footer"
+      },
+      {
+        "type": "text",
+        "id": "footer_tagline_1",
+        "label": "Footer tagline 1",
+        "default": "SMNYC: FIVE BOROUGH CHAPTER"
+      },
+      {
+        "type": "text",
+        "id": "footer_tagline_2",
+        "label": "Footer tagline 2",
+        "default": "DISCIPLINE AND PERFORMANCE."
+      },
+      {
+        "type": "text",
+        "id": "footer_tagline_3",
+        "label": "Footer tagline 3",
+        "default": "AREN ATHLETIC UNIFORM."
+      },
+      {
+        "type": "text",
+        "id": "footer_ecosystem_heading",
+        "label": "Footer ecosystem heading",
+        "default": "ECOSYSTEM"
+      },
+      {
+        "type": "text",
+        "id": "footer_access_heading",
+        "label": "Footer access heading",
+        "default": "ACCESS"
+      },
+      {
+        "type": "text",
+        "id": "footer_network_heading",
+        "label": "Footer network heading",
+        "default": "NATIONAL HUB NETWORK."
+      },
+      {
+        "type": "text",
+        "id": "footer_join_label",
+        "label": "Footer join label",
+        "default": "Join the Community"
+      },
+      {
+        "type": "text",
+        "id": "footer_shop_label",
+        "label": "Footer shop label",
+        "default": "Shop Apparel"
+      },
+      {
+        "type": "text",
+        "id": "footer_new_arrivals_label",
+        "label": "Footer new arrivals label",
+        "default": "New Arrivals"
+      },
+      {
+        "type": "text",
+        "id": "footer_core_essentials_label",
+        "label": "Footer core essentials label",
+        "default": "Core Essentials"
+      },
+      {
+        "type": "text",
+        "id": "footer_outerwear_label",
+        "label": "Footer outerwear label",
+        "default": "Outerwear"
+      },
+      {
+        "type": "text",
+        "id": "footer_login_label",
+        "label": "Footer login label",
+        "default": "Log In"
+      },
+      {
+        "type": "text",
+        "id": "footer_network_line_1",
+        "label": "Footer network line 1",
+        "default": "AREN ATHLETIC COLLECTIVE."
+      },
+      {
+        "type": "text",
+        "id": "footer_network_line_2",
+        "label": "Footer network line 2",
+        "default": "STRUCTURED PERFORMANCE."
+      },
+      {
+        "type": "text",
+        "id": "footer_identity_line",
+        "label": "Footer identity line",
+        "default": "AREN ATHLETIC — NEW YORK CITY"
+      },
+      {
+        "type": "text",
+        "id": "footer_copyright",
+        "label": "Footer copyright",
+        "default": "© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED."
+      },
+      {
+        "type": "text",
+        "id": "footer_privacy_label",
+        "label": "Footer privacy label",
+        "default": "PRIVACY"
+      },
+      {
+        "type": "text",
+        "id": "footer_terms_label",
+        "label": "Footer terms label",
+        "default": "TERMS"
       }
     ]
   }

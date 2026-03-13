@@ -616,10 +616,46 @@
   {% if page.content != blank %}<section class="section"><div class="container rte">{{ page.content }}</div></section>{% endif %}
 
 {% elsif page_handle == 'privacy' %}
-  <section class="section" style="padding-top:calc(68px + var(--space-xl));"><div class="container container--narrow"><div class="text-eyebrow mb-sm">Legal</div><h1 class="text-display" style="margin-bottom:2rem;">Privacy Policy</h1><div class="text-body"><p style="margin-bottom:1.75rem;">AREN ATHLETIC ("AREN," "we," "us," or "our") respects your privacy. This Privacy Policy describes how we collect, use, and protect information you provide when you visit arenathletic.com or engage with our services.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Information We Collect</h2><p style="margin-bottom:1.75rem;">We collect information you voluntarily provide (name, email, phone) when you submit inquiry forms or sign up for community updates. We do not sell your personal information to third parties.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">How We Use Your Information</h2><p style="margin-bottom:1.75rem;">Information collected is used solely for AREN Athletic communications: responding to inquiries, sending community updates you have opted into, and coordinating training or community access.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Contact</h2><p style="margin-bottom:1.75rem;">For privacy inquiries, contact us at <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p><p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;">Last updated: 2026. AREN ATHLETIC. NEW YORK CITY.</p><div style="margin-top:3rem;"><a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;border-bottom:1px solid var(--color-black);padding-bottom:2px;">Return home</a></div></div>{% if page.content != blank %}<div class="rte" style="margin-top:2rem;">{{ page.content }}</div>{% endif %}</div></section>
+  <section class="section" style="padding-top:calc(68px + var(--space-xl));">
+    <div class="container container--narrow">
+      <div class="text-eyebrow mb-sm">{{ section.settings.privacy_eyebrow }}</div>
+      <h1 class="text-display" style="margin-bottom:2rem;">{{ section.settings.privacy_heading }}</h1>
+      <div class="text-body">
+        <p style="margin-bottom:1.75rem;">{{ section.settings.privacy_intro }}</p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.privacy_section_1_heading }}</h2>
+        <p style="margin-bottom:1.75rem;">{{ section.settings.privacy_section_1_body }}</p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.privacy_section_2_heading }}</h2>
+        <p style="margin-bottom:1.75rem;">{{ section.settings.privacy_section_2_body }}</p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.privacy_contact_heading }}</h2>
+        <p style="margin-bottom:1.75rem;">{{ section.settings.privacy_contact_copy }} <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p>
+        <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;">{{ section.settings.privacy_footer_note }}</p>
+        <div style="margin-top:3rem;">
+          <a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--color-black);">{{ section.settings.legal_back_label }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 {% elsif page_handle == 'terms' %}
-  <section class="section" style="padding-top:calc(68px + var(--space-xl));"><div class="container container--narrow"><div class="text-eyebrow mb-sm">Legal</div><h1 class="text-display" style="margin-bottom:2rem;">Terms of Service</h1><div class="text-body"><p style="margin-bottom:1.75rem;">By accessing or using arenathletic.com and engaging with AREN ATHLETIC services, you agree to the following terms. Please read them carefully.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Use of the Site</h2><p style="margin-bottom:1.75rem;">This site is provided for informational and commercial purposes. You may not use the site for unlawful purposes or in any way that could damage AREN ATHLETIC or its community members.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Community Standards</h2><p style="margin-bottom:1.75rem;">All AREN Athletic community participants are held to the AREN standard: discipline, presence, and consistency. Participation in training programs, Street Miles NYC, and community activities requires commitment to these values.</p><h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">Contact</h2><p style="margin-bottom:1.75rem;">For terms inquiries, contact us at <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p><p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;">Last updated: 2026. AREN ATHLETIC. NEW YORK CITY.</p><div style="margin-top:3rem;"><a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;border-bottom:1px solid var(--color-black);padding-bottom:2px;">Return home</a></div></div>{% if page.content != blank %}<div class="rte" style="margin-top:2rem;">{{ page.content }}</div>{% endif %}</div></section>
+  <section class="section" style="padding-top:calc(68px + var(--space-xl));">
+    <div class="container container--narrow">
+      <div class="text-eyebrow mb-sm">{{ section.settings.terms_eyebrow }}</div>
+      <h1 class="text-display" style="margin-bottom:2rem;">{{ section.settings.terms_heading }}</h1>
+      <div class="text-body">
+        <p style="margin-bottom:1.75rem;">{{ section.settings.terms_intro }}</p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.terms_section_1_heading }}</h2>
+        <p style="margin-bottom:1.75rem;">{{ section.settings.terms_section_1_body }}</p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.terms_section_2_heading }}</h2>
+        <p style="margin-bottom:1.75rem;">{{ section.settings.terms_section_2_body }}</p>
+        <h2 style="font-family:var(--font-sans);font-size:0.875rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin:2.5rem 0 1rem;">{{ section.settings.terms_contact_heading }}</h2>
+        <p style="margin-bottom:1.75rem;">{{ section.settings.terms_contact_copy }} <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}">{{ settings.email_address | default: 'info@arenathletic.com' }}</a>.</p>
+        <p style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-mid-gray);margin-top:4rem;">{{ section.settings.terms_footer_note }}</p>
+        <div style="margin-top:3rem;">
+          <a href="{{ routes.root_url }}" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.16em;text-transform:uppercase;text-decoration:none;color:var(--color-black);">{{ section.settings.legal_back_label }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 {% else %}
   <section class="section" style="padding-top:calc(68px + var(--space-xl));"><div class="container rte"><h1 class="text-display" style="margin-bottom:2rem;">{{ page.title }}</h1>{% if page.content != blank %}{{ page.content }}{% else %}<p class="text-body">Create a Shopify page with the handle <strong>{{ page_handle }}</strong> to add custom content here.</p>{% endif %}</div></section>
@@ -762,7 +798,29 @@
     { "type": "textarea", "id": "contact_form_success_text", "label": "Contact form success text", "default": "Received.<br>We'll be in touch within 48 hours. The standard applies here too." },
     { "type": "textarea", "id": "contact_form_disclaimer", "label": "Contact form disclaimer", "default": "Your information is never shared. Used only for AREN communication." },
     { "type": "text", "id": "contact_ecosystem_eyebrow", "label": "Contact ecosystem eyebrow", "default": "Grid & Grit" },
-    { "type": "text", "id": "contact_ecosystem_heading", "label": "Contact ecosystem heading", "default": "The AREN ecosystem in motion" }
+    { "type": "text", "id": "contact_ecosystem_heading", "label": "Contact ecosystem heading", "default": "The AREN ecosystem in motion" },
+    { "type": "header", "content": "Legal page editor settings" },
+    { "type": "text", "id": "privacy_eyebrow", "label": "Privacy eyebrow", "default": "Legal" },
+    { "type": "text", "id": "privacy_heading", "label": "Privacy heading", "default": "Privacy Policy" },
+    { "type": "textarea", "id": "privacy_intro", "label": "Privacy intro", "default": "AREN ATHLETIC (\"AREN,\" \"we,\" \"us,\" or \"our\") respects your privacy. This Privacy Policy describes how we collect, use, and protect information you provide when you visit arenathletic.com or engage with our services." },
+    { "type": "text", "id": "privacy_section_1_heading", "label": "Privacy section 1 heading", "default": "Information We Collect" },
+    { "type": "textarea", "id": "privacy_section_1_body", "label": "Privacy section 1 body", "default": "We collect information you voluntarily provide (name, email, phone) when you submit inquiry forms or sign up for community updates. We do not sell your personal information to third parties." },
+    { "type": "text", "id": "privacy_section_2_heading", "label": "Privacy section 2 heading", "default": "How We Use Your Information" },
+    { "type": "textarea", "id": "privacy_section_2_body", "label": "Privacy section 2 body", "default": "Information collected is used solely for AREN Athletic communications: responding to inquiries, sending community updates you have opted into, and coordinating training or community access." },
+    { "type": "text", "id": "privacy_contact_heading", "label": "Privacy contact heading", "default": "Contact" },
+    { "type": "text", "id": "privacy_contact_copy", "label": "Privacy contact copy", "default": "For privacy inquiries, contact us at" },
+    { "type": "text", "id": "privacy_footer_note", "label": "Privacy footer note", "default": "Last updated: 2026. AREN ATHLETIC. NEW YORK CITY." },
+    { "type": "text", "id": "terms_eyebrow", "label": "Terms eyebrow", "default": "Legal" },
+    { "type": "text", "id": "terms_heading", "label": "Terms heading", "default": "Terms of Service" },
+    { "type": "textarea", "id": "terms_intro", "label": "Terms intro", "default": "By accessing or using arenathletic.com and engaging with AREN ATHLETIC services, you agree to the following terms. Please read them carefully." },
+    { "type": "text", "id": "terms_section_1_heading", "label": "Terms section 1 heading", "default": "Use of the Site" },
+    { "type": "textarea", "id": "terms_section_1_body", "label": "Terms section 1 body", "default": "This site is provided for informational and commercial purposes. You may not use the site for unlawful purposes or in any way that could damage AREN ATHLETIC or its community members." },
+    { "type": "text", "id": "terms_section_2_heading", "label": "Terms section 2 heading", "default": "Community Standards" },
+    { "type": "textarea", "id": "terms_section_2_body", "label": "Terms section 2 body", "default": "All AREN Athletic community participants are held to the AREN standard: discipline, presence, and consistency. Participation in training programs, Street Miles NYC, and community activities requires commitment to these values." },
+    { "type": "text", "id": "terms_contact_heading", "label": "Terms contact heading", "default": "Contact" },
+    { "type": "text", "id": "terms_contact_copy", "label": "Terms contact copy", "default": "For terms inquiries, contact us at" },
+    { "type": "text", "id": "terms_footer_note", "label": "Terms footer note", "default": "Last updated: 2026. AREN ATHLETIC. NEW YORK CITY." },
+    { "type": "text", "id": "legal_back_label", "label": "Legal back link label", "default": "Back to home" }
   ],
   "blocks": [
     {
