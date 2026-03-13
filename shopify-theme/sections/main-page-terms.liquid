@@ -1,51 +1,4 @@
-{% liquid
-  assign about_url = pages['about'].url | default: '/pages/about'
-  assign training_url = pages['training'].url | default: '/pages/training'
-  assign services_url = pages['services'].url | default: '/pages/services'
-  assign street_miles_url = pages['street-miles'].url | default: '/pages/street-miles'
-  assign contact_url = pages['contact'].url | default: '/pages/contact'
-  assign privacy_url = pages['privacy'].url | default: '/pages/privacy'
-  assign terms_url = pages['terms'].url | default: '/pages/terms'
-  assign shop_url = pages['shop'].url | default: '/pages/shop'
-  assign about_hero_image = section.settings.about_hero_image
-  assign about_intro_image = section.settings.about_intro_image
-  assign about_identity_image = section.settings.about_identity_image
-  assign training_hero_image = section.settings.training_hero_image
-  assign training_feature_image = section.settings.training_feature_image
-  assign services_hero_image = section.settings.services_hero_image
-  assign street_miles_hero_image = section.settings.street_miles_hero_image
-  assign street_miles_culture_image = section.settings.street_miles_culture_image
-  assign contact_hero_image = section.settings.contact_hero_image
-  assign services_cta_image = section.settings.services_cta_image
-  assign street_miles_quotes_image = section.settings.street_miles_quotes_image
-
-  if section.settings.about_page != blank
-    assign about_url = section.settings.about_page.url
-  endif
-  if section.settings.training_page != blank
-    assign training_url = section.settings.training_page.url
-  endif
-  if section.settings.services_page != blank
-    assign services_url = section.settings.services_page.url
-  endif
-  if section.settings.street_miles_page != blank
-    assign street_miles_url = section.settings.street_miles_page.url
-  endif
-  if section.settings.contact_page != blank
-    assign contact_url = section.settings.contact_page.url
-  endif
-  if section.settings.privacy_page != blank
-    assign privacy_url = section.settings.privacy_page.url
-  endif
-  if section.settings.terms_page != blank
-    assign terms_url = section.settings.terms_page.url
-  endif
-  if section.settings.shop_page != blank
-    assign shop_url = section.settings.shop_page.url
-  endif
-%}
-
-  <div class="page-editor-surface page-editor-surface--terms" data-page-handle="terms" {{ section.shopify_attributes }}>
+<div class="page-editor-surface page-editor-surface--terms" data-page-handle="terms" {{ section.shopify_attributes }}>
   <section class="section" style="padding-top:calc(68px + var(--space-xl));">
     <div class="container container--narrow">
       <div class="text-eyebrow mb-sm"><span data-shopify-editor-setting="terms_eyebrow">{{ section.settings.terms_eyebrow }}</span></div>
@@ -65,21 +18,12 @@
       </div>
     </div>
   </section>
-  </div>
+</div>
 
 {% schema %}
 {
   "name": "Terms page",
   "settings": [
-    { "type": "header", "content": "Legal page editor settings" },
-    { "type": "page", "id": "about_page", "label": "About page" },
-    { "type": "page", "id": "training_page", "label": "Training page" },
-    { "type": "page", "id": "services_page", "label": "Services page" },
-    { "type": "page", "id": "street_miles_page", "label": "Street Miles page" },
-    { "type": "page", "id": "contact_page", "label": "Contact page" },
-    { "type": "page", "id": "privacy_page", "label": "Privacy page" },
-    { "type": "page", "id": "terms_page", "label": "Terms page" },
-    { "type": "page", "id": "shop_page", "label": "Shop page" },
     { "type": "text", "id": "terms_eyebrow", "label": "Terms eyebrow", "default": "Legal" },
     { "type": "text", "id": "terms_heading", "label": "Terms heading", "default": "Terms of Service" },
     { "type": "textarea", "id": "terms_intro", "label": "Terms intro", "default": "By accessing or using arenathletic.com and engaging with AREN ATHLETIC services, you agree to the following terms. Please read them carefully." },
@@ -91,8 +35,6 @@
     { "type": "text", "id": "terms_contact_copy", "label": "Terms contact copy", "default": "For terms inquiries, contact us at" },
     { "type": "text", "id": "terms_footer_note", "label": "Terms footer note", "default": "Last updated: 2026. AREN ATHLETIC. NEW YORK CITY." },
     { "type": "text", "id": "legal_back_label", "label": "Legal back link label", "default": "Back to home" }
-  ],
-  "blocks": [
   ],
   "presets": [
     {
