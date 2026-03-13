@@ -2,9 +2,20 @@
   "sections": {
     "main": {
       "type": "main-product"
+    },
+    "related": {
+      "type": "featured-collection",
+      "settings": {
+        "eyebrow": "Related Apparel",
+        "heading": "Build the full uniform.",
+        "button_label": "Shop All",
+        "products_limit": 4,
+        "show_product_price": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "related"
   ]
 }

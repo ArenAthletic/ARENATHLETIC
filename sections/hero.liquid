@@ -25,11 +25,11 @@
       <div class="text-body rte" style="max-width:{{ section.settings.copy_width }}ch;color:rgba(255,255,255,0.65);margin-bottom:2rem;">{{ section.settings.copy }}</div>
     {% endif %}
     <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;">
-      {% if section.settings.primary_label != blank %}
-        <a href="{{ shop_url }}" class="btn btn--primary">{{ section.settings.primary_label }}</a>
+      {% if section.settings.primary_button_label != blank %}
+        <a href="{{ shop_url }}" class="btn btn--primary">{{ section.settings.primary_button_label }}</a>
       {% endif %}
-      {% if section.settings.secondary_label != blank %}
-        <a href="{{ contact_url }}" class="btn btn--outline-white">{{ section.settings.secondary_label }}</a>
+      {% if section.settings.secondary_button_label != blank %}
+        <a href="{{ contact_url }}" class="btn btn--outline-white">{{ section.settings.secondary_button_label }}</a>
       {% endif %}
     </div>
     <div style="display:grid;gap:0.35rem;color:rgba(255,255,255,0.42);font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.18em;text-transform:uppercase;">
@@ -41,7 +41,7 @@
 
 {% schema %}
 {
-  "name": "Home hero",
+  "name": "Hero",
   "settings": [
     { "type": "page", "id": "shop_page", "label": "Shop page" },
     { "type": "page", "id": "contact_page", "label": "Contact page" },
@@ -49,8 +49,8 @@
     { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "AREN ATHLETIC" },
     { "type": "html", "id": "heading", "label": "Heading", "default": "Apparel built for training—and everything after." },
     { "type": "richtext", "id": "copy", "label": "Copy", "default": "<p>Minimal. Durable. Elevated. Designed for the gym, the street, and the pace of New York.</p>" },
-    { "type": "text", "id": "primary_label", "label": "Primary button label", "default": "Shop Apparel" },
-    { "type": "text", "id": "secondary_label", "label": "Secondary button label", "default": "Join the Community" },
+    { "type": "text", "id": "primary_button_label", "label": "Primary button label", "default": "Shop Apparel" },
+    { "type": "text", "id": "secondary_button_label", "label": "Secondary button label", "default": "Join the Community" },
     { "type": "text", "id": "microcopy_one", "label": "Microcopy line 1", "default": "New drops + core staples • Shipping nationwide" },
     { "type": "text", "id": "microcopy_two", "label": "Microcopy line 2", "default": "Quiet confidence. Built to wear daily." },
     { "type": "range", "id": "heading_width", "label": "Heading width", "min": 8, "max": 30, "step": 1, "default": 16 },
@@ -66,6 +66,6 @@
     ]},
     { "type": "textarea", "id": "overlay_gradient", "label": "Overlay gradient", "default": "linear-gradient(165deg,rgba(28,28,26,0.88) 0%,rgba(35,35,33,0.68) 55%,rgba(26,26,24,0.92) 100%)" }
   ],
-  "presets": [{ "name": "Home hero" }]
+  "presets": [{ "name": "Hero" }]
 }
 {% endschema %}

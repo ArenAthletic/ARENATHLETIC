@@ -1,10 +1,22 @@
 {
   "sections": {
+    "hero": {
+      "type": "image-with-text",
+      "settings": {
+        "eyebrow": "Collection",
+        "heading": "Performance-informed apparel built for daily standards.",
+        "text": "<p>Shop the current collection with the same discipline, restraint, and durability that defines AREN.</p>",
+        "image_position": "right",
+        "dark_theme": true,
+        "button_label": "Explore Collection"
+      }
+    },
     "main": {
       "type": "main-collection-product-grid"
     }
   },
   "order": [
+    "hero",
     "main"
   ]
 }

@@ -1,10 +1,32 @@
 {
   "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "eyebrow": "AREN ATHLETIC",
+        "heading": "Built by discipline. Proven by action.",
+        "copy": "<p>Use this template for editorial pages, brand storytelling, and service content while keeping everything editable in the Shopify theme editor.</p>",
+        "primary_button_label": "Shop Apparel",
+        "secondary_button_label": "Contact",
+        "min_height": 520
+      }
+    },
     "main": {
       "type": "main-page"
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "eyebrow": "Stay Connected",
+        "heading": "Join the AREN list.",
+        "copy": "<p>Get updates on drops, training, and community events.</p>",
+        "button_label": "Join"
+      }
     }
   },
   "order": [
-    "main"
+    "hero",
+    "main",
+    "newsletter"
   ]
 }
