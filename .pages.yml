@@ -1,10 +1,10 @@
 content:
-  - name: my-pages
+  - name: website-pages
     label: "Website Pages"
     type: collection
-    path: "**.html"
+    path: "Export-static/**.html" # This points to your specific folder
     format: html
     fields:
       - name: body
-        label: "Edit Page Content"
+        label: "Page Content"
         type: rich-text
