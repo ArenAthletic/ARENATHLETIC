@@ -23,38 +23,21 @@
       <img
         src="/assets/aren-logo.png"
         alt="AREN Athletic"
-        class="nav-logo-image"
-        data-editable="image"
-        data-prop-src="@file[data/site/site.json].header.logo_image"
-        data-prop-alt="@file[data/site/site.json].header.logo_alt"
+        class="nav-logo-image editable"
         style="width:160px;">
     </a>
-    <div class="nav-links" data-editable="array" data-prop="@file[data/site/site.json].navigation.links">
-      <a href="/" class="nav-link" data-editable="array-item">
-        <span data-editable="text" data-prop="title">Home</span>
-      </a>
-      <a href="/about/" class="nav-link" data-editable="array-item">
-        <span data-editable="text" data-prop="title">About AREN</span>
-      </a>
-      <a href="/training/" class="nav-link" data-editable="array-item">
-        <span data-editable="text" data-prop="title">Training</span>
-      </a>
-      <a href="/services/" class="nav-link" data-editable="array-item">
-        <span data-editable="text" data-prop="title">Services</span>
-      </a>
-      <a href="/street-miles-nyc/" class="nav-link" data-editable="array-item">
-        <span data-editable="text" data-prop="title">Street Miles NYC</span>
-      </a>
-      <a href="/shop/" class="nav-link" data-editable="array-item">
-        <span data-editable="text" data-prop="title">Shop</span>
-      </a>
-      <a href="/contact/" class="nav-link active" data-editable="array-item">
-        <span data-editable="text" data-prop="title">Contact / Join</span>
-      </a>
+    <div class="nav-links">
+      <a href="/" class="nav-link editable">Home</a>
+      <a href="/about/" class="nav-link editable">About AREN</a>
+      <a href="/training/" class="nav-link editable">Training</a>
+      <a href="/services/" class="nav-link editable">Services</a>
+      <a href="/street-miles-nyc/" class="nav-link editable">Street Miles NYC</a>
+      <a href="/shop/" class="nav-link editable">Shop</a>
+      <a href="/contact/" class="nav-link active editable">Contact / Join</a>
     </div>
     <div class="nav-actions">
-      <a href="/account/login" class="nav-action-link" data-editable="text" data-prop="@file[data/site/site.json].navigation.login_label">Log In</a>
-      <a href="/shop/" class="nav-cta" data-editable="text" data-prop="@file[data/site/site.json].navigation.cta_label">Shop Now</a>
+      <a href="/account/login" class="nav-action-link editable">Log In</a>
+      <a href="/shop/" class="nav-cta editable">Shop Now</a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" type="button">
         <span></span><span></span><span></span>
       </button>
@@ -63,29 +46,15 @@
 </nav>
 
 <div class="nav-mobile" id="nav-mobile">
-  <div class="nav-mobile-links" data-editable="array" data-prop="@file[data/site/site.json].navigation.links">
-    <a href="/" class="nav-mobile-link" data-editable="array-item">
-      <span data-editable="text" data-prop="title">Home</span>
-    </a>
-    <a href="/about/" class="nav-mobile-link" data-editable="array-item">
-      <span data-editable="text" data-prop="title">About AREN</span>
-    </a>
-    <a href="/training/" class="nav-mobile-link" data-editable="array-item">
-      <span data-editable="text" data-prop="title">Training</span>
-    </a>
-    <a href="/services/" class="nav-mobile-link" data-editable="array-item">
-      <span data-editable="text" data-prop="title">Services</span>
-    </a>
-    <a href="/street-miles-nyc/" class="nav-mobile-link" data-editable="array-item">
-      <span data-editable="text" data-prop="title">Street Miles NYC</span>
-    </a>
-    <a href="/shop/" class="nav-mobile-link" data-editable="array-item">
-      <span data-editable="text" data-prop="title">Shop</span>
-    </a>
-    <a href="/contact/" class="nav-mobile-link" data-editable="array-item">
-      <span data-editable="text" data-prop="title">Contact / Join</span>
-    </a>
-    <a href="/account/login" class="nav-mobile-link">Log In</a>
+  <div class="nav-mobile-links">
+    <a href="/" class="nav-mobile-link editable">Home</a>
+    <a href="/about/" class="nav-mobile-link editable">About AREN</a>
+    <a href="/training/" class="nav-mobile-link editable">Training</a>
+    <a href="/services/" class="nav-mobile-link editable">Services</a>
+    <a href="/street-miles-nyc/" class="nav-mobile-link editable">Street Miles NYC</a>
+    <a href="/shop/" class="nav-mobile-link editable">Shop</a>
+    <a href="/contact/" class="nav-mobile-link editable">Contact / Join</a>
+    <a href="/account/login" class="nav-mobile-link editable">Log In</a>
   </div>
 </div>
 
@@ -94,17 +63,15 @@
      ============================================================ -->
 <section class="page-hero" style="position:relative;overflow:hidden;min-height:420px;display:flex;align-items:flex-end;background:var(--color-off-white);">
   <img
-    data-editable="image"
-    data-prop-src="@data[pages/contact].hero.fallback_image_url"
-    data-prop-alt="@data[pages/contact].hero.eyebrow"
     src="https://static.wixstatic.com/media/8a3301_a50d3c308c3b4909b7726a0559353904~mv2.jpg/v1/crop/x_0,y_2549,w_3840,h_2057/fill/w_1920,h_600,al_c,q_90,enc_auto/8a3301_a50d3c308c3b4909b7726a0559353904~mv2.jpg"
     alt="Contact hero"
+    class="editable"
     style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;">
   <div style="position:absolute;inset:0;background:rgba(249,247,241,0.93);"></div>
   <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
-    <p class="text-eyebrow" data-editable="text" data-prop="@data[pages/contact].hero.eyebrow" style="margin-bottom:2rem;">Contact / Join</p>
-    <h1 class="text-display" data-editable="text" data-prop="@data[pages/contact].hero.heading" style="max-width:18ch;margin-bottom:2rem;">CONNECT WITH AREN.</h1>
-    <p class="text-body" data-editable="text" data-prop="@data[pages/contact].hero.copy" style="max-width:44ch;">GENERAL CORRESPONDENCE / PERFORMANCE TRAINING / COMMUNITY MEMBERSHIP / BRAND PARTNERSHIPS.</p>
+    <p class="text-eyebrow editable" style="margin-bottom:2rem;">Contact / Join</p>
+    <h1 class="text-display editable" style="max-width:18ch;margin-bottom:2rem;">CONNECT WITH AREN.</h1>
+    <p class="text-body editable" style="max-width:44ch;">GENERAL CORRESPONDENCE / PERFORMANCE TRAINING / COMMUNITY MEMBERSHIP / BRAND PARTNERSHIPS.</p>
   </div>
 </section>
 
@@ -113,8 +80,8 @@
      ============================================================ -->
 <div class="marquee-strip">
   <div class="marquee-track">
-    <span class="marquee-text" data-editable="text" data-prop="@data[pages/contact].marquee.text">AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —</span>
-    <span class="marquee-text" aria-hidden="true">AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —</span>
+    <span class="marquee-text editable">AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —</span>
+    <span class="marquee-text">AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —</span>
   </div>
 </div>
 
@@ -125,29 +92,29 @@
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
       <div>
-        <p class="text-eyebrow" data-editable="text" data-prop="@data[pages/contact].channels.eyebrow" style="margin-bottom:2rem;">Direct All Inquiries to the Appropriate Channel</p>
-        <h2 class="text-h2" data-editable="text" data-prop="@data[pages/contact].channels.heading" style="max-width:22ch;margin-bottom:1.75rem;">Choose the right line of contact.</h2>
-        <div class="rte" data-editable="text" data-prop="@data[pages/contact].channels.copy">
+        <p class="text-eyebrow editable" style="margin-bottom:2rem;">Direct All Inquiries to the Appropriate Channel</p>
+        <h2 class="text-h2 editable" style="max-width:22ch;margin-bottom:1.75rem;">Choose the right line of contact.</h2>
+        <div class="rte editable">
           <p>We keep communication structured so the right requests reach the right systems.</p>
         </div>
-        <p data-editable="text" data-prop="@data[pages/contact].channels.kicker" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;margin-top:1rem;">CONNECT / TRAIN / JOIN / PARTNER</p>
+        <p class="editable" style="font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;margin-top:1rem;">CONNECT / TRAIN / JOIN / PARTNER</p>
       </div>
-      <ul data-editable="array" data-prop="@data[pages/contact].channels.cards" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2rem;padding-left:var(--space-lg);border-left:1px solid var(--color-warm-gray);">
-        <li data-editable="array-item" style="padding:2.5rem;background:rgba(0,0,0,0.02);border:1px solid var(--color-warm-gray);">
-          <h3 class="text-eyebrow" data-editable="text" data-prop="title" style="margin-bottom:1rem;">General Inquiries</h3>
-          <p data-editable="text" data-prop="description" style="font-size:0.9375rem;line-height:1.7;">info@arenathletic.com</p>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2rem;padding-left:var(--space-lg);border-left:1px solid var(--color-warm-gray);">
+        <li style="padding:2.5rem;background:rgba(0,0,0,0.02);border:1px solid var(--color-warm-gray);">
+          <h3 class="text-eyebrow editable" style="margin-bottom:1rem;">General Inquiries</h3>
+          <p class="editable" style="font-size:0.9375rem;line-height:1.7;">info@arenathletic.com</p>
         </li>
-        <li data-editable="array-item" style="padding:2.5rem;background:rgba(0,0,0,0.02);border:1px solid var(--color-warm-gray);">
-          <h3 class="text-eyebrow" data-editable="text" data-prop="title" style="margin-bottom:1rem;">Performance Training</h3>
-          <p data-editable="text" data-prop="description" style="font-size:0.9375rem;line-height:1.7;">Use the form below to inquire about individual or group training.</p>
+        <li style="padding:2.5rem;background:rgba(0,0,0,0.02);border:1px solid var(--color-warm-gray);">
+          <h3 class="text-eyebrow editable" style="margin-bottom:1rem;">Performance Training</h3>
+          <p class="editable" style="font-size:0.9375rem;line-height:1.7;">Use the form below to inquire about individual or group training.</p>
         </li>
-        <li data-editable="array-item" style="padding:2.5rem;background:rgba(0,0,0,0.02);border:1px solid var(--color-warm-gray);">
-          <h3 class="text-eyebrow" data-editable="text" data-prop="title" style="margin-bottom:1rem;">Community Membership</h3>
-          <p data-editable="text" data-prop="description" style="font-size:0.9375rem;line-height:1.7;">Join Street Miles NYC or connect about future chapter activation.</p>
+        <li style="padding:2.5rem;background:rgba(0,0,0,0.02);border:1px solid var(--color-warm-gray);">
+          <h3 class="text-eyebrow editable" style="margin-bottom:1rem;">Community Membership</h3>
+          <p class="editable" style="font-size:0.9375rem;line-height:1.7;">Join Street Miles NYC or connect about future chapter activation.</p>
         </li>
-        <li data-editable="array-item" style="padding:2.5rem;background:rgba(0,0,0,0.02);border:1px solid var(--color-warm-gray);">
-          <h3 class="text-eyebrow" data-editable="text" data-prop="title" style="margin-bottom:1rem;">Brand Partnerships</h3>
-          <p data-editable="text" data-prop="description" style="font-size:0.9375rem;line-height:1.7;">For collaborations, media, and aligned partnerships, contact the AREN team.</p>
+        <li style="padding:2.5rem;background:rgba(0,0,0,0.02);border:1px solid var(--color-warm-gray);">
+          <h3 class="text-eyebrow editable" style="margin-bottom:1rem;">Brand Partnerships</h3>
+          <p class="editable" style="font-size:0.9375rem;line-height:1.7;">For collaborations, media, and aligned partnerships, contact the AREN team.</p>
         </li>
       </ul>
     </div>
@@ -161,14 +128,14 @@
   <div class="container">
     <div style="display:grid;grid-template-columns:0.95fr 1.05fr;gap:var(--space-xl);align-items:start;">
       <div>
-        <p class="text-eyebrow" data-editable="text" data-prop="@data[pages/contact].contact_form_intro.eyebrow" style="margin-bottom:2rem;">Contact Form</p>
-        <h2 class="text-h2" data-editable="text" data-prop="@data[pages/contact].contact_form_intro.heading" style="max-width:18ch;margin-bottom:1.75rem;">Use the form when the inquiry matters.</h2>
-        <div class="rte" data-editable="text" data-prop="@data[pages/contact].contact_form_intro.copy">
+        <p class="text-eyebrow editable" style="margin-bottom:2rem;">Contact Form</p>
+        <h2 class="text-h2 editable" style="max-width:18ch;margin-bottom:1.75rem;">Use the form when the inquiry matters.</h2>
+        <div class="rte editable">
           <p>Share your details, your context, and what you are looking to build or join.</p>
           <p>Your information is never shared. Used only for AREN communication.</p>
         </div>
         <div style="margin-top:2rem;">
-          <a href="mailto:info@arenathletic.com" class="btn btn--primary" data-editable="text" data-prop="@data[pages/contact].contact_form_intro.button_label">Email Directly</a>
+          <a href="mailto:info@arenathletic.com" class="btn btn--primary editable">Email Directly</a>
         </div>
       </div>
       <form style="display:flex;flex-direction:column;gap:1.25rem;">
@@ -201,34 +168,22 @@
 </section>
 
 <!-- ============================================================
-     SOCIAL / ECOSYSTEM LINKS
+     ECOSYSTEM LINKS
      ============================================================ -->
 <section class="section" style="border-top:1px solid var(--color-warm-gray);border-bottom:1px solid var(--color-warm-gray);">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;">
       <div>
-        <p class="text-eyebrow" data-editable="text" data-prop="@data[pages/contact].ecosystem.eyebrow" style="margin-bottom:2rem;">Grid &amp; Grit</p>
-        <h2 class="text-h2" data-editable="text" data-prop="@data[pages/contact].ecosystem.heading" style="max-width:22ch;margin-bottom:1.75rem;">The AREN ecosystem in motion</h2>
-        <div class="rte" data-editable="text" data-prop="@data[pages/contact].ecosystem.copy">
+        <p class="text-eyebrow editable" style="margin-bottom:2rem;">Grid &amp; Grit</p>
+        <h2 class="text-h2 editable" style="max-width:22ch;margin-bottom:1.75rem;">The AREN ecosystem in motion</h2>
+        <div class="rte editable">
           <p>Move deeper into the system through training, community, or uniform.</p>
         </div>
       </div>
-      <ul data-editable="array" data-prop="@data[pages/contact].ecosystem.links" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1rem;max-width:420px;justify-self:end;">
-        <li data-editable="array-item">
-          <a href="/training/" class="btn btn--outline" style="display:block;text-align:center;">
-            <span data-editable="text" data-prop="label">Train — Explore Training</span>
-          </a>
-        </li>
-        <li data-editable="array-item">
-          <a href="/street-miles-nyc/" class="btn btn--outline" style="display:block;text-align:center;">
-            <span data-editable="text" data-prop="label">Run — Join Street Miles</span>
-          </a>
-        </li>
-        <li data-editable="array-item">
-          <a href="/shop/" class="btn btn--primary" style="display:block;text-align:center;">
-            <span data-editable="text" data-prop="label">Wear — Shop Apparel</span>
-          </a>
-        </li>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1rem;max-width:420px;justify-self:end;">
+        <li><a href="/training/" class="btn btn--outline editable" style="display:block;text-align:center;">Train — Explore Training</a></li>
+        <li><a href="/street-miles-nyc/" class="btn btn--outline editable" style="display:block;text-align:center;">Run — Join Street Miles</a></li>
+        <li><a href="/shop/" class="btn btn--primary editable" style="display:block;text-align:center;">Wear — Shop Apparel</a></li>
       </ul>
     </div>
   </div>
@@ -246,64 +201,41 @@
           <img
             src="/assets/aren-logo.png"
             alt="AREN Athletic"
-            class="footer-logo-image"
-            data-editable="image"
-            data-prop-src="@file[data/site/site.json].footer.logo_image"
-            data-prop-alt="@file[data/site/site.json].footer.logo_alt">
+            class="footer-logo-image editable">
         </a>
         <div class="footer-brand-taglines">
-          <span class="footer-brand-tagline" data-editable="text" data-prop="@file[data/site/site.json].footer.tagline_1">SMNYC: FIVE BOROUGH CHAPTER</span>
-          <span class="footer-brand-tagline" data-editable="text" data-prop="@file[data/site/site.json].footer.tagline_2">DISCIPLINE AND PERFORMANCE.</span>
-          <span class="footer-brand-tagline" data-editable="text" data-prop="@file[data/site/site.json].footer.tagline_3">AREN ATHLETIC UNIFORM.</span>
+          <span class="footer-brand-tagline editable">SMNYC: FIVE BOROUGH CHAPTER</span>
+          <span class="footer-brand-tagline editable">DISCIPLINE AND PERFORMANCE.</span>
+          <span class="footer-brand-tagline editable">AREN ATHLETIC UNIFORM.</span>
         </div>
       </div>
 
       <div class="footer-col">
-        <h3 class="footer-col-title" data-editable="text" data-prop="@file[data/site/site.json].footer.ecosystem_heading">ECOSYSTEM</h3>
-        <ul class="footer-links" data-editable="array" data-prop="@file[data/site/site.json].footer.ecosystem_links" style="list-style:none;padding:0;margin:0;">
-          <li data-editable="array-item">
-            <a href="/about/" class="footer-link"><span data-editable="text" data-prop="title">About AREN</span></a>
-          </li>
-          <li data-editable="array-item">
-            <a href="/training/" class="footer-link"><span data-editable="text" data-prop="title">Training</span></a>
-          </li>
-          <li data-editable="array-item">
-            <a href="/services/" class="footer-link"><span data-editable="text" data-prop="title">Services</span></a>
-          </li>
-          <li data-editable="array-item">
-            <a href="/street-miles-nyc/" class="footer-link"><span data-editable="text" data-prop="title">Street Miles NYC</span></a>
-          </li>
-          <li data-editable="array-item">
-            <a href="/contact/" class="footer-link"><span data-editable="text" data-prop="title">Join the Community</span></a>
-          </li>
+        <h3 class="footer-col-title editable">ECOSYSTEM</h3>
+        <ul class="footer-links" style="list-style:none;padding:0;margin:0;">
+          <li><a href="/about/" class="footer-link editable">About AREN</a></li>
+          <li><a href="/training/" class="footer-link editable">Training</a></li>
+          <li><a href="/services/" class="footer-link editable">Services</a></li>
+          <li><a href="/street-miles-nyc/" class="footer-link editable">Street Miles NYC</a></li>
+          <li><a href="/contact/" class="footer-link editable">Join the Community</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h3 class="footer-col-title" data-editable="text" data-prop="@file[data/site/site.json].footer.access_heading">ACCESS</h3>
-        <ul class="footer-links" data-editable="array" data-prop="@file[data/site/site.json].footer.access_links" style="list-style:none;padding:0;margin:0;">
-          <li data-editable="array-item">
-            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">Shop Apparel</span></a>
-          </li>
-          <li data-editable="array-item">
-            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">New Arrivals</span></a>
-          </li>
-          <li data-editable="array-item">
-            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">Core Essentials</span></a>
-          </li>
-          <li data-editable="array-item">
-            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">Outerwear</span></a>
-          </li>
-          <li data-editable="array-item">
-            <a href="/account/login" class="footer-link"><span data-editable="text" data-prop="title">Log In</span></a>
-          </li>
+        <h3 class="footer-col-title editable">ACCESS</h3>
+        <ul class="footer-links" style="list-style:none;padding:0;margin:0;">
+          <li><a href="/shop/" class="footer-link editable">Shop Apparel</a></li>
+          <li><a href="/shop/" class="footer-link editable">New Arrivals</a></li>
+          <li><a href="/shop/" class="footer-link editable">Core Essentials</a></li>
+          <li><a href="/shop/" class="footer-link editable">Outerwear</a></li>
+          <li><a href="/account/login" class="footer-link editable">Log In</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h3 class="footer-col-title" data-editable="text" data-prop="@file[data/site/site.json].footer.network_heading">NATIONAL HUB NETWORK.</h3>
+        <h3 class="footer-col-title editable">NATIONAL HUB NETWORK.</h3>
         <div class="footer-links">
-          <a href="mailto:info@arenathletic.com" class="footer-link" data-editable="text" data-prop="@file[data/site/site.json].footer.email_address">INFO@ARENATHLETIC.COM</a>
+          <a href="mailto:info@arenathletic.com" class="footer-link editable">INFO@ARENATHLETIC.COM</a>
         </div>
       </div>
 
@@ -311,12 +243,12 @@
 
     <div class="footer-bottom">
       <div class="footer-bottom-left">
-        <span class="footer-identity-line" data-editable="text" data-prop="@file[data/site/site.json].footer.identity_line">AREN ATHLETIC — NEW YORK CITY</span>
-        <p class="footer-copyright" data-editable="text" data-prop="@file[data/site/site.json].footer.copyright_text">© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.</p>
+        <span class="footer-identity-line editable">AREN ATHLETIC — NEW YORK CITY</span>
+        <p class="footer-copyright editable">© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.</p>
       </div>
       <div style="display:flex;gap:2rem;">
-        <a href="#" class="footer-copyright" data-editable="text" data-prop="@file[data/site/site.json].footer.privacy_label">PRIVACY</a>
-        <a href="#" class="footer-copyright" data-editable="text" data-prop="@file[data/site/site.json].footer.terms_label">TERMS</a>
+        <a href="#" class="footer-copyright editable">PRIVACY</a>
+        <a href="#" class="footer-copyright editable">TERMS</a>
       </div>
     </div>
 

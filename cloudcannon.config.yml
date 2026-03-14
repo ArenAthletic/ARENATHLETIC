@@ -49,11 +49,9 @@ _editables:
     attributes:
       href:
         type: text
-  list:
-    remove_duplicates: false
 
 # ─── Input types ──────────────────────────────────────────────────────────────
-inputs:
+_inputs:
   image:
     type: image
   rich_text:
@@ -73,12 +71,6 @@ inputs:
       values:
         - light
         - dark
-
-# ─── Snippets ─────────────────────────────────────────────────────────────────
-_snippets_imports:
-  cc:
-    exclude:
-      - cloudcannon.config.yml
 
 # ─── Per-file config ──────────────────────────────────────────────────────────
 file_config:
