@@ -10,6 +10,18 @@ What it does:
 
 CloudCannon build command : python3 build_static.py
 Output directory          : dist
+
+Page routing (source → output URL):
+  site/index.html               → dist/index.html           → /
+  site/about/index.html         → dist/about/index.html     → /about/
+  site/contact/index.html       → dist/contact/index.html   → /contact/
+  site/services/index.html      → dist/services/index.html  → /services/
+  site/collection/index.html    → dist/collection/index.html → /collection/
+  site/product/index.html       → dist/product/index.html   → /product/
+  site/training/index.html      → dist/training/index.html  → /training/
+  site/street-miles-nyc/index.html → dist/street-miles-nyc/index.html → /street-miles-nyc/
+  site/shop/index.html          → dist/shop/index.html      → /shop/
+  site/apparel/index.html       → dist/apparel/index.html   → /apparel/
 """
 
 import os
@@ -52,6 +64,7 @@ def main():
     # ── 4. Manifest ───────────────────────────────────────────────────────────
     print("\n[build] Output manifest:")
     file_count = 0
+    html_pages = []
     for root, dirs, files in os.walk(DIST):
         # skip hidden dirs
         dirs[:] = [d for d in sorted(dirs) if not d.startswith(".")]
@@ -59,8 +72,20 @@ def main():
             rel = os.path.relpath(os.path.join(root, fname), DIST)
             print(f"  dist/{rel}")
             file_count += 1
+            if fname.endswith(".html"):
+                html_pages.append(rel)
 
     print(f"\n[build] ✓ Build complete — {file_count} files written to '{DIST}/'")
+
+    # ── 5. CloudCannon page map ──────────────────────────────────────────────
+    print(f"\n[build] CloudCannon previewable HTML pages ({len(html_pages)}):")
+    for page in sorted(html_pages):
+        # compute the URL from the file path
+        if page == "index.html":
+            url = "/"
+        else:
+            url = "/" + page.replace("/index.html", "/").replace(".html", "/")
+        print(f"  dist/{page}  →  {url}")
 
 
 if __name__ == "__main__":

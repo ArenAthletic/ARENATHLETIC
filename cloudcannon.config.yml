@@ -8,12 +8,17 @@ paths:
 # ─── Collections ─────────────────────────────────────────────────────────────
 collections_config:
 
-  # Rendered HTML pages — CloudCannon scans these for editable regions
-  # path points to the build output directory (dist/)
+  # Source HTML pages — CloudCannon edits these, build copies them to dist/
+  # The pages live in site/ as source; the build script copies site/ → dist/.
+  # CloudCannon needs `path` to point at the SOURCE directory (where it reads/writes),
+  # and `url` to tell it how each source file maps to an output URL.
   pages:
-    path: dist
+    path: site
     output: true
-    url: "/[relative_base_path]/[slug]/"
+    url: "/[relative_base_path]/{slug}/"
+    glob:
+      - "**/*.html"
+      - "!assets/**"
     icon: article
     _enabled_editors:
       - visual
@@ -34,6 +39,16 @@ collections_config:
     icon: settings
     _enabled_editors:
       - data
+
+# ─── Collection Groups ───────────────────────────────────────────────────────
+collection_groups:
+  - heading: Pages
+    collections:
+      - pages
+  - heading: Content Data
+    collections:
+      - data_pages
+      - data_site
 
 # ─── Global Editables ─────────────────────────────────────────────────────────
 _editables:

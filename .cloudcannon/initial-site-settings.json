@@ -2,6 +2,9 @@
   "ssg": "static",
   "mode": "hosted",
   "build": {
-    "output_path": "dist"
+    "install_command": "",
+    "build_command": "python3 build_static.py",
+    "output_path": "dist",
+    "preserve_output": false
   }
 }
