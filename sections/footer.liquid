@@ -32,7 +32,8 @@
   endif
 %}
 
-<footer class="footer" {{ section.shopify_attributes }}>
+<div data-editable="component" data-component="footer" data-path="sections/footer.liquid" data-key="footer">
+<footer class="footer" {{ section.shopify_attributes }} data-editable="source" data-path="data/site/site.json" data-key="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -139,6 +140,7 @@
     </div>
   </div>
 </footer>
+</div>
 
 {% schema %}
 {

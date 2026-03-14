@@ -16,7 +16,8 @@
   endif
 %}
 
-<section class="section">
+<div data-editable="component" data-component="featured-collection" data-path="sections/featured-collection.liquid" data-key="featured_collection">
+<section class="section" data-editable="source" data-path="data/pages/{% if cc_page_key == 'product' %}product{% else %}home{% endif %}.json" data-key="{% if cc_page_key == 'product' %}related{% else %}featured_collection{% endif %}">
   <div class="container">
     <div class="section-header">
       <div>
@@ -75,6 +76,7 @@
     </div>
   </div>
 </section>
+</div>
 
 {% schema %}
 {

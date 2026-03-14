@@ -1,22 +1,58 @@
 source: .
+
 paths:
   uploads: assets
   static: assets
   data: data
+
+# ─── Collections ─────────────────────────────────────────────────────────────
 collections_config:
+
+  # Rendered HTML pages — CloudCannon scans these for editable regions
+  # path points to the build output directory (dist/)
+  pages:
+    path: dist
+    output: true
+    url: "/[relative_base_path]/[slug]/"
+    icon: article
+    _enabled_editors:
+      - visual
+      - content
+      - data
+
+  # JSON data files for structured content editing
   data_pages:
     path: data/pages
     output: false
     icon: article
     _enabled_editors:
       - data
+
   data_site:
     path: data/site
     output: false
     icon: settings
     _enabled_editors:
       - data
-inputs:
+
+# ─── Global Editables ─────────────────────────────────────────────────────────
+_editables:
+  text:
+    block: true
+    inline: true
+  rich_text:
+    block: true
+    inline: false
+  image:
+    type: image
+    image_size_attributes: true
+  link:
+    attributes:
+      href:
+        type: text
+
+# ─── Input types ──────────────────────────────────────────────────────────────
+_inputs:
   image:
     type: image
   rich_text:
@@ -36,49 +72,10 @@ inputs:
       values:
         - light
         - dark
-_editables:
-  text:
-    block: true
-    inline: true
-  rich_text:
-    block: true
-    inline: false
-  image:
-    type: image
-    image_size_attributes: true
-  link:
-    attributes:
-      href:
-        type: text
-  list:
-    remove_duplicates: false
-_snippets_imports:
-  cc:
-    exclude:
-      - cloudcannon.config.yml
+
+# ─── Per-file config ──────────────────────────────────────────────────────────
 file_config:
-  data/pages/*.json:
-    schemas:
-      hero:
-        path:
-          - hero
-        name: Hero
-        icon: loyalty
-      card_list:
-        path:
-          - values
-        name: Card list
-        icon: view_quilt
-      cta_links:
-        path:
-          - cta
-        name: CTA links
-        icon: ads_click
-      newsletter:
-        path:
-          - newsletter
-        name: Newsletter
-        icon: email
+
   data/site/site.json:
     label: Site Settings
     icon: settings
@@ -96,6 +93,7 @@ file_config:
         type: array
       footer.access_links:
         type: array
+
   data/pages/home.json:
     label: Home Page Content
     icon: home
@@ -104,11 +102,16 @@ file_config:
       image: true
     _inputs:
       hero.fallback_image_url:
-        type: text
+        type: image
       featured_collection.fallback_cards:
         type: array
       image_with_text.stats:
         type: array
+      collection_categories.categories:
+        type: array
+      editorial_section.stats:
+        type: array
+
   data/pages/about.json:
     label: About Page Content
     icon: article
@@ -120,6 +123,7 @@ file_config:
         type: array
       cta.links:
         type: array
+
   data/pages/training.json:
     label: Training Page Content
     icon: fitness_center
@@ -133,6 +137,7 @@ file_config:
         type: array
       who.cards:
         type: array
+
   data/pages/services.json:
     label: Services Page Content
     icon: dashboard
@@ -144,6 +149,7 @@ file_config:
         type: array
       cta_links.links:
         type: array
+
   data/pages/street-miles.json:
     label: Street Miles Page Content
     icon: directions_run
@@ -159,6 +165,7 @@ file_config:
         type: array
       access.links:
         type: array
+
   data/pages/contact.json:
     label: Contact Page Content
     icon: call
@@ -172,6 +179,7 @@ file_config:
         type: array
       ecosystem.links:
         type: array
+
   data/pages/product.json:
     label: Product Content
     icon: shopping_bag
@@ -180,6 +188,7 @@ file_config:
     _inputs:
       related.fallback_cards:
         type: array
+
   data/pages/collection.json:
     label: Collection Content
     icon: grid_view

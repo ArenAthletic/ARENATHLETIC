@@ -24,7 +24,8 @@
   endif
 %}
 
-<nav class="nav" id="main-nav" {{ section.shopify_attributes }}>
+<div data-editable="component" data-component="header" data-path="sections/header.liquid" data-key="header">
+<nav class="nav" id="main-nav" {{ section.shopify_attributes }} data-editable="source" data-path="data/site/site.json" data-key="header">
   <div class="nav-inner">
     <a href="{{ routes.root_url }}" class="nav-logo" aria-label="{{ shop.name }} home">
       {% if cc_header.logo_image != blank %}
@@ -100,6 +101,7 @@
     {% endif %}
     <a href="{{ routes.account_login_url }}" class="nav-mobile-link">{{ cc_navigation.login_label | default: section.settings.login_label | default: settings.header_login_label | default: 'Log In' }}</a>
   </div>
+</div>
 </div>
 
 {% schema %}

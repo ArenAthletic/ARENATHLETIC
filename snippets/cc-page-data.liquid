@@ -18,6 +18,6 @@
     assign cc_page_data = shop.metafields.cloudcannon.pages[cc_page_key].value
   endif
 %}
-<script type="application/json" id="cc-page-data">
+<script type="application/json" id="cc-page-data" data-editable="source" data-path="data/pages/{{ cc_page_key }}.json" data-key="{{ cc_page_key }}">
   {{ cc_page_data | json }}
 </script>
