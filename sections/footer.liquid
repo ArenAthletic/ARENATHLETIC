@@ -39,7 +39,7 @@
       <div class="footer-col">
         <a href="{{ routes.root_url }}" class="footer-brand-name footer-brand-link" aria-label="{{ shop.name }} home">
           {% if cc_footer.logo_image != blank %}
-            <img src="{{ cc_footer.logo_image }}" alt="{{ cc_footer.logo_alt | default: shop.name | escape }}" class="footer-logo-image" data-editable="image" data-prop-src="footer.logo_image" data-prop-alt="footer.logo_alt" data-prop-title="footer.logo_title">
+            <img src="{{ cc_footer.logo_image }}" alt="{{ cc_footer.logo_alt | default: shop.name | escape }}" class="footer-logo-image" data-editable="image" data-prop="footer.logo_image">
           {% elsif section.settings.logo != blank %}
             <img src="{{ section.settings.logo | image_url: width: 180 }}" alt="{{ shop.name | escape }}" class="footer-logo-image">
           {% elsif settings.logo != blank %}
@@ -86,7 +86,7 @@
         <div class="footer-links" data-editable="array" data-prop="footer.ecosystem_links">
           {% if ecosystem_menu_links != blank %}
             {% for link in ecosystem_menu_links %}
-              <a href="{{ link.url }}" class="footer-link" data-editable="array-item" data-prop="footer.ecosystem_links[{{ forloop.index0 }}]"><span data-editable="text" data-prop="footer.ecosystem_links[{{ forloop.index0 }}].title">{{ link.title }}</span></a>
+              <a href="{{ link.url }}" class="footer-link" data-editable="array-item" data-prop="footer.ecosystem_links[{{ forloop.index0 }}]">{{ link.title }}</a>
             {% endfor %}
           {% else %}
             <a href="{{ about_url }}" class="footer-link">{{ cc_footer.about_label | default: section.settings.about_label | default: settings.header_about_label | default: 'About AREN' }}</a>
@@ -103,7 +103,7 @@
         <div class="footer-links" data-editable="array" data-prop="footer.access_links">
           {% if access_menu_links != blank %}
             {% for link in access_menu_links %}
-              <a href="{{ link.url }}" class="footer-link" data-editable="array-item" data-prop="footer.access_links[{{ forloop.index0 }}]"><span data-editable="text" data-prop="footer.access_links[{{ forloop.index0 }}].title">{{ link.title }}</span></a>
+              <a href="{{ link.url }}" class="footer-link" data-editable="array-item" data-prop="footer.access_links[{{ forloop.index0 }}]">{{ link.title }}</a>
             {% endfor %}
           {% else %}
             <a href="{{ shop_url }}" class="footer-link">{{ cc_footer.shop_label | default: section.settings.shop_label | default: settings.footer_shop_label | default: 'Shop Apparel' }}</a>

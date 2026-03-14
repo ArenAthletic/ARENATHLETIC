@@ -44,8 +44,8 @@
         {% if cc_featured.fallback_cards != blank %}
           {% for card in cc_featured.fallback_cards %}
             <a href="{{ card.link | default: shop_url }}" style="text-decoration:none;color:inherit;" class="product-card" data-editable="array-item" data-prop="featured_collection.fallback_cards[{{ forloop.index0 }}]">
-              <div class="product-image" style="background:{{ card.background_color | default: '#1e1e1c' }};">
-                {% if card.image != blank %}<img class="product-img" src="{{ card.image }}" alt="{{ card.alt | default: card.title | escape }}" title="{{ card.image_title | escape }}" loading="lazy" data-editable="image" data-prop-src="featured_collection.fallback_cards[{{ forloop.index0 }}].image" data-prop-alt="featured_collection.fallback_cards[{{ forloop.index0 }}].alt" data-prop-title="featured_collection.fallback_cards[{{ forloop.index0 }}].image_title">{% endif %}
+              <div class="product-image" data-editable="image" data-prop="featured_collection.fallback_cards[{{ forloop.index0 }}].image" style="background:{{ card.background_color | default: '#1e1e1c' }};">
+                {% if card.image != blank %}<img class="product-img" src="{{ card.image }}" alt="{{ card.alt | default: card.title | escape }}" loading="lazy">{% endif %}
                 {% if card.tag != blank %}<div class="product-tag" data-editable="text" data-prop="featured_collection.fallback_cards[{{ forloop.index0 }}].tag">{{ card.tag }}</div>{% endif %}
               </div>
               <div class="product-name" data-editable="text" data-prop="featured_collection.fallback_cards[{{ forloop.index0 }}].title">{{ card.title }}</div>
