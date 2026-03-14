@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: ArenAthletic/ARENATHLETIC
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
+
+      - label: "About"
+        name: "about"
+        file: "about/index.html"
+        fields:
+          - { label: "Content", name: "body", widget: "markdown" }
+
+      - label: "Training"
+        name: "training"
+        file: "training/index.html"
+        fields:
+          - { label: "Content", name: "body", widget: "markdown" }
