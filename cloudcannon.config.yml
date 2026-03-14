@@ -9,8 +9,9 @@ paths:
 collections_config:
 
   # Rendered HTML pages — CloudCannon scans these for editable regions
+  # path points to the build output directory (dist/)
   pages:
-    path: site
+    path: dist
     output: true
     url: "/[relative_base_path]/[slug]/"
     icon: article

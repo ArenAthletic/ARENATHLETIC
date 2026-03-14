@@ -2,6 +2,6 @@
   "ssg": "static",
   "mode": "hosted",
   "build": {
-    "output_path": "site"
+    "output_path": "dist"
   }
 }

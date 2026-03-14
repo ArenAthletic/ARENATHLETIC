@@ -1,7 +1,8 @@
 {
-  "name": "webapp",
+  "name": "aren-athletic",
   "private": true,
   "scripts": {
-    "build": "python3 build_static.py"
+    "build": "python3 build_static.py",
+    "preview": "python3 -m http.server 8080 --directory dist"
   }
 }
