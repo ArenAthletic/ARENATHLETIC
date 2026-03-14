@@ -1,1 +1,21 @@
+source: .
 
+paths:
+  uploads: assets
+  static: assets
+  data: data
+
+collections_config:
+  pages:
+    path: .
+    output: true
+    url: "/[slug]/"
+    _enabled_editors:
+      - visual
+      - content
+
+_inputs:
+  title:
+    type: text
+  description:
+    type: textarea
