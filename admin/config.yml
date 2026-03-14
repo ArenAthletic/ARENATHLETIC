@@ -3,28 +3,57 @@ backend:
   repo: ArenAthletic/ARENATHLETIC
   branch: main
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+media_folder: "assets"
+public_folder: "/assets"
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "site_files"
+    label: "Site Files"
     files:
-      - label: "Home"
+      - label: "Home Page HTML"
         name: "home"
         file: "index.html"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Content", name: "body", widget: "markdown" }
+          - { label: "HTML", name: "body", widget: "text" }
 
-      - label: "About"
+      - label: "About Page HTML"
         name: "about"
         file: "about/index.html"
         fields:
-          - { label: "Content", name: "body", widget: "markdown" }
+          - { label: "HTML", name: "body", widget: "text" }
 
-      - label: "Training"
+      - label: "Training Page HTML"
         name: "training"
         file: "training/index.html"
         fields:
-          - { label: "Content", name: "body", widget: "markdown" }
+          - { label: "HTML", name: "body", widget: "text" }
+
+      - label: "Services Page HTML"
+        name: "services"
+        file: "services/index.html"
+        fields:
+          - { label: "HTML", name: "body", widget: "text" }
+
+      - label: "Shop Page HTML"
+        name: "shop"
+        file: "shop/index.html"
+        fields:
+          - { label: "HTML", name: "body", widget: "text" }
+
+      - label: "Street Miles Page HTML"
+        name: "street_miles"
+        file: "street-miles/index.html"
+        fields:
+          - { label: "HTML", name: "body", widget: "text" }
+
+      - label: "Contact Page HTML"
+        name: "contact"
+        file: "contact/index.html"
+        fields:
+          - { label: "HTML", name: "body", widget: "text" }
+
+      - label: "Main Stylesheet"
+        name: "styles"
+        file: "assets/styles.css"
+        fields:
+          - { label: "CSS", name: "body", widget: "text" }
