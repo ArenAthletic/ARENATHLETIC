@@ -1,0 +1,7 @@
+{
+  "name": "webapp",
+  "private": true,
+  "scripts": {
+    "build": "python3 build_static.py"
+  }
+}

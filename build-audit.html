@@ -1,0 +1,206 @@
+<!doctype html><html><body>
+<section data-file="layout/theme.liquid">
+data-editable="source" data-path="layout/theme.liquid" data-key="theme"
+data-editable="component" data-component="header" data-path="sections/header.liquid" data-key="header"
+data-editable="source" data-path="templates/{{ template | replace: '.', '-' | append: '.json' }}" data-key="{{ template.name | default: template }}"
+data-editable="component" data-component="footer" data-path="sections/footer.liquid" data-key="footer"
+</section>
+<section data-file="snippets/cc-page-data.liquid">
+data-editable="source" data-path="data/pages/{{ cc_page_key }}.json" data-key="{{ cc_page_key }}"
+</section>
+<section data-file="sections/header.liquid">
+data-editable="component" data-component="header" data-path="sections/header.liquid" data-key="header"
+data-editable="source" data-path="data/site/site.json" data-key="header"
+data-editable="image"
+          data-prop-src="header.logo_image"
+          data-prop-alt="header.logo_alt"
+          data-prop-title="header.logo_title"
+          style="width: {{ cc_header.logo_width | default: section.settings.logo_width | default: settings.logo_width }}px;"
+        
+data-editable="array" data-prop="navigation.links"
+data-editable="array-item" data-prop="navigation.links[{{ forloop.index0 }}]"
+data-editable="text" data-prop="navigation.links[{{ forloop.index0 }}].title"
+data-editable="text" data-prop="navigation.login_label"
+data-editable="text" data-prop="navigation.cta_label"
+data-editable="array" data-prop="navigation.links"
+data-editable="array-item" data-prop="navigation.links[{{ forloop.index0 }}]"
+data-editable="text" data-prop="navigation.links[{{ forloop.index0 }}].title"
+</section>
+<section data-file="sections/footer.liquid">
+data-editable="component" data-component="footer" data-path="sections/footer.liquid" data-key="footer"
+data-editable="source" data-path="data/site/site.json" data-key="footer"
+data-editable="image" data-prop-src="footer.logo_image" data-prop-alt="footer.logo_alt" data-prop-title="footer.logo_title"
+data-editable="text" data-prop="footer.tagline_1"
+data-editable="text" data-prop="footer.tagline_2"
+data-editable="text" data-prop="footer.tagline_3"
+data-editable="text" data-prop="footer.ecosystem_heading"
+data-editable="array" data-prop="footer.ecosystem_links"
+data-editable="array-item" data-prop="footer.ecosystem_links[{{ forloop.index0 }}]"
+data-editable="text" data-prop="footer.ecosystem_links[{{ forloop.index0 }}].title"
+data-editable="text" data-prop="footer.access_heading"
+data-editable="array" data-prop="footer.access_links"
+data-editable="array-item" data-prop="footer.access_links[{{ forloop.index0 }}]"
+data-editable="text" data-prop="footer.access_links[{{ forloop.index0 }}].title"
+data-editable="text" data-prop="footer.network_heading"
+data-editable="text" data-prop="footer.email_address"
+data-editable="text" data-prop="footer.identity_line"
+data-editable="text" data-prop="footer.copyright_text"
+</section>
+<section data-file="sections/hero.liquid">
+data-editable="component" data-component="hero" data-path="sections/hero.liquid" data-key="hero"
+data-editable="source" data-path="data/pages/home.json" data-key="hero"
+data-editable="image" data-prop-src="hero.background_image" data-prop-alt="hero.image_alt" data-prop-title="hero.image_title" style="position:absolute;inset:0;{% if cc_hero.background_image != blank %}background-image:url('{{ cc_hero.background_image }}');{% elsif section.settings.background_image != blank %}background-image:url('{{ section.settings.background_image | image_url: width: 2200 }}');{% elsif settings.default_hero_image != blank %}background-image:url('{{ settings.default_hero_image | image_url: width: 2200 }}');{% elsif cc_hero.fallback_image_url != blank %}background-image:url('{{ cc_hero.fallback_image_url }}');{% elsif section.settings.fallback_image_url != blank %}background-image:url('{{ section.settings.fallback_image_url }}');{% endif %}background-size:cover;background-position:{{ cc_hero.background_position | default: section.settings.background_position }};"
+data-editable="text" data-prop="hero.eyebrow"
+data-editable="text" data-prop="hero.heading" style="color:#fff;max-width:{{ cc_hero.heading_width | default: section.settings.heading_width }}ch;margin-bottom:1.5rem;"
+data-editable="text" data-prop="hero.copy"
+data-editable="text" data-prop="hero.primary_button_label"
+data-editable="text" data-prop="hero.secondary_button_label"
+data-editable="text" data-prop="hero.microcopy_one"
+data-editable="text" data-prop="hero.microcopy_two"
+</section>
+<section data-file="sections/featured-collection.liquid">
+data-editable="component" data-component="featured-collection" data-path="sections/featured-collection.liquid" data-key="featured_collection"
+data-editable="source" data-path="data/pages/{% if cc_page_key == 'product' %}product{% else %}home{% endif %}.json" data-key="{% if cc_page_key == 'product' %}related{% else %}featured_collection{% endif %}"
+data-editable="text" data-prop="featured_collection.eyebrow"
+data-editable="text" data-prop="featured_collection.heading"
+data-editable="text" data-prop="featured_collection.button_label"
+data-editable="array" data-prop="featured_collection.fallback_cards"
+data-editable="array-item" data-prop="featured_collection.fallback_cards[{{ forloop.index0 }}]"
+data-editable="image" data-prop-src="featured_collection.fallback_cards[{{ forloop.index0 }}].image" data-prop-alt="featured_collection.fallback_cards[{{ forloop.index0 }}].alt" data-prop-title="featured_collection.fallback_cards[{{ forloop.index0 }}].image_title"
+data-editable="text" data-prop="featured_collection.fallback_cards[{{ forloop.index0 }}].tag"
+data-editable="text" data-prop="featured_collection.fallback_cards[{{ forloop.index0 }}].title"
+data-editable="text" data-prop="featured_collection.fallback_cards[{{ forloop.index0 }}].description"
+data-editable="text" data-prop="featured_collection.fallback_cards[{{ forloop.index0 }}].cta_label"
+</section>
+<section data-file="sections/image-with-text.liquid">
+data-editable="component" data-component="image-with-text" data-path="sections/image-with-text.liquid" data-key="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}"
+data-editable="source" data-path="data/pages/{% if cc_page_key == 'collection' %}collection{% else %}home{% endif %}.json" data-key="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}"
+data-editable="image"
+            data-prop-src="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.image"
+            data-prop-alt="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.image_alt"
+            data-prop-title="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.image_title"
+          
+data-editable="text" data-prop="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.eyebrow"
+data-editable="text" data-prop="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.heading"
+data-editable="text" data-prop="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.text"
+data-editable="text" data-prop="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.button_label"
+data-editable="array" data-prop="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.stats"
+data-editable="array-item" data-prop="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.stats[{{ forloop.index0 }}]"
+data-editable="text" data-prop="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.stats[{{ forloop.index0 }}].value"
+data-editable="text" data-prop="{% if cc_page_key == 'collection' %}hero{% else %}image_with_text{% endif %}.stats[{{ forloop.index0 }}].label"
+</section>
+<section data-file="sections/main-collection-product-grid.liquid">
+data-editable="component" data-component="collection-grid" data-path="sections/main-collection-product-grid.liquid" data-key="collection_grid"
+data-editable="source" data-path="data/pages/collection.json" data-key="collection_grid"
+data-editable="text" data-prop="collection_grid.hero_heading"
+data-editable="text" data-prop="collection_grid.hero_copy"
+data-editable="text" data-prop="collection_grid.philosophy_eyebrow"
+data-editable="text" data-prop="collection_grid.philosophy_heading"
+data-editable="array" data-prop="collection_grid.philosophy_columns"
+data-editable="array-item" data-prop="collection_grid.philosophy_columns[{{ forloop.index0 }}]"
+data-editable="text" data-prop="collection_grid.philosophy_columns[{{ forloop.index0 }}].title"
+data-editable="text" data-prop="collection_grid.philosophy_columns[{{ forloop.index0 }}].description"
+data-editable="array" data-prop="collection_grid.filters"
+data-editable="array-item" data-prop="collection_grid.filters[{{ forloop.index0 }}]"
+data-editable="text" data-prop="collection_grid.all_pieces_label"
+data-editable="text" data-prop="collection_grid.current_collection_label"
+data-editable="array" data-prop="collection_grid.fallback_cards"
+data-editable="array-item" data-prop="collection_grid.fallback_cards[{{ forloop.index0 }}]"
+data-editable="image" data-prop-src="collection_grid.fallback_cards[{{ forloop.index0 }}].image" data-prop-alt="collection_grid.fallback_cards[{{ forloop.index0 }}].image_alt" data-prop-title="collection_grid.fallback_cards[{{ forloop.index0 }}].image_title"
+data-editable="text" data-prop="collection_grid.fallback_cards[{{ forloop.index0 }}].title"
+data-editable="text" data-prop="collection_grid.fallback_cards[{{ forloop.index0 }}].description"
+data-editable="text" data-prop="collection_grid.fallback_cards[{{ forloop.index0 }}].price_label"
+data-editable="array-item" data-prop="collection_grid.fallback_cards[0]"
+data-editable="text" data-prop="collection_grid.empty_title"
+data-editable="text" data-prop="collection_grid.empty_description"
+data-editable="text" data-prop="collection_grid.empty_price"
+data-editable="text" data-prop="collection_grid.why_eyebrow"
+data-editable="text" data-prop="collection_grid.why_heading"
+data-editable="array" data-prop="collection_grid.why_paragraphs"
+data-editable="array-item" data-prop="collection_grid.why_paragraphs[{{ forloop.index0 }}]"
+data-editable="text" data-prop="collection_grid.why_emphasis"
+data-editable="array" data-prop="collection_grid.meta_blocks"
+data-editable="array-item" data-prop="collection_grid.meta_blocks[{{ forloop.index0 }}]"
+data-editable="text" data-prop="collection_grid.meta_blocks[{{ forloop.index0 }}].title"
+data-editable="text" data-prop="collection_grid.meta_blocks[{{ forloop.index0 }}].description"
+</section>
+<section data-file="sections/main-product.liquid">
+data-editable="component" data-component="main-product" data-path="sections/main-product.liquid" data-key="main_product"
+data-editable="source" data-path="data/pages/product.json" data-key="main_product"
+data-editable="text" data-prop="main_product.brand_label"
+data-editable="text" data-prop="main_product.quantity_label"
+data-editable="text" data-prop="main_product.add_to_cart_label"
+data-editable="text" data-prop="main_product.sold_out_label"
+data-editable="text" data-prop="main_product.shipping_label"
+data-editable="text" data-prop="main_product.shipping_text"
+data-editable="text" data-prop="main_product.returns_label"
+data-editable="text" data-prop="main_product.returns_text"
+</section>
+<section data-file="sections/page-hero-banner.liquid">
+data-editable="component" data-component="page-hero-banner" data-path="sections/page-hero-banner.liquid" data-key="{{ section_key }}"
+data-editable="source" data-path="data/pages/{{ current_page_handle }}.json" data-key="{{ section_key }}"
+data-editable="image" data-prop-src="{{ section_key }}.background_image" data-prop-alt="{{ section_key }}.image_alt" data-prop-title="{{ section_key }}.image_title" style="position:absolute;inset:0;{% if section_data.background_image != blank %}background-image:url('{{ section_data.background_image }}');{% elsif section.settings.background_image != blank %}background-image:url('{{ section.settings.background_image | image_url: width: 2200 }}');{% elsif section_data.fallback_image_url != blank %}background-image:url('{{ section_data.fallback_image_url }}');{% elsif section.settings.fallback_image_url != blank %}background-image:url('{{ section.settings.fallback_image_url }}');{% endif %}background-size:cover;background-position:{{ section_data.background_position | default: section.settings.background_position }};"
+data-editable="text" data-prop="{{ section_key }}.eyebrow" style="margin-bottom:2rem;{% if section_data.dark_theme | default: section.settings.dark_theme %}color:rgba(255,255,255,0.35);{% endif %}"
+data-editable="text" data-prop="{{ section_key }}.heading" style="{% if section_data.dark_theme | default: section.settings.dark_theme %}color:#fff;{% endif %}max-width:{{ section_data.heading_width | default: section.settings.heading_width }}ch;margin-bottom:{% if section_data.copy != blank or section.settings.copy != blank %}2rem{% else %}0{% endif %};"
+data-editable="text" data-prop="{{ section_key }}.copy" style="max-width:{{ section_data.copy_width | default: section.settings.copy_width }}ch;{% if section_data.dark_theme | default: section.settings.dark_theme %}color:rgba(255,255,255,0.6);{% endif %}"
+</section>
+<section data-file="sections/page-marquee.liquid">
+data-editable="component" data-component="page-marquee" data-path="sections/page-marquee.liquid" data-key="{{ section_key }}"
+data-editable="source" data-path="data/pages/{{ current_page_handle }}.json" data-key="{{ section_key }}"
+data-editable="text" data-prop="{{ section_key }}.text"
+data-editable="text" data-prop="{{ section_key }}.text"
+</section>
+<section data-file="sections/page-split-content.liquid">
+data-editable="component" data-component="page-split-content" data-path="sections/page-split-content.liquid" data-key="{{ section_key }}"
+data-editable="source" data-path="data/pages/{{ current_page_handle }}.json" data-key="{{ section_key }}"
+data-editable="text" data-prop="{{ section_key }}.eyebrow" style="margin-bottom:2rem;{% if section_data.section_background | default: section.settings.section_background == 'dark' %}color:rgba(255,255,255,0.3);{% endif %}"
+data-editable="text" data-prop="{{ section_key }}.heading" style="max-width:{{ section_data.heading_width | default: section.settings.heading_width }}ch;margin-bottom:1.75rem;{% if section_data.section_background | default: section.settings.section_background == 'dark' %}color:#fff;{% endif %}"
+data-editable="text" data-prop="{{ section_key }}.copy" style="{% if section_data.section_background | default: section.settings.section_background == 'dark' %}color:rgba(255,255,255,0.6);{% endif %}"
+data-editable="text" data-prop="{{ section_key }}.kicker"
+data-editable="text" data-prop="{{ section_key }}.button_label"
+data-editable="image" data-prop-src="{{ section_key }}.image" data-prop-alt="{{ section_key }}.image_alt" data-prop-title="{{ section_key }}.image_title" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy"
+data-editable="image" data-prop-src="{{ section_key }}.fallback_image_url" data-prop-alt="{{ section_key }}.image_alt" data-prop-title="{{ section_key }}.image_title" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy"
+</section>
+<section data-file="sections/page-card-list.liquid">
+data-editable="component" data-component="page-card-list" data-path="sections/page-card-list.liquid" data-key="{{ section_key }}"
+data-editable="source" data-path="data/pages/{{ current_page_handle }}.json" data-key="{{ section_key }}"
+data-editable="text" data-prop="{{ section_key }}.eyebrow" style="margin-bottom:2rem;{% if section_data.dark_theme | default: section.settings.dark_theme %}color:rgba(255,255,255,0.3);{% endif %}"
+data-editable="text" data-prop="{{ section_key }}.heading"
+data-editable="text" data-prop="{{ section_key }}.copy" style="font-size:1rem;line-height:1.75;{% if section_data.dark_theme | default: section.settings.dark_theme %}color:rgba(255,255,255,0.55);{% else %}color:var(--color-dark-gray);{% endif %};max-width:46ch;"
+data-editable="text" data-prop="{{ section_key }}.kicker"
+data-editable="array" data-prop="{{ section_key }}.cards"
+data-editable="array-item" data-prop="{{ section_key }}.cards[{{ forloop.index0 }}]"
+data-editable="text" data-prop="{{ section_key }}.cards[{{ forloop.index0 }}].title"
+data-editable="text" data-prop="{{ section_key }}.cards[{{ forloop.index0 }}].description"
+</section>
+<section data-file="sections/page-cta-links.liquid">
+data-editable="component" data-component="page-cta-links" data-path="sections/page-cta-links.liquid" data-key="{{ section_key }}"
+data-editable="source" data-path="data/pages/{{ current_page_handle }}.json" data-key="{{ section_key }}"
+data-editable="text" data-prop="{{ section_key }}.eyebrow" style="margin-bottom:2rem;"
+data-editable="text" data-prop="{{ section_key }}.heading" style="max-width:22ch;margin-bottom:1.75rem;"
+data-editable="text" data-prop="{{ section_key }}.copy" style="max-width:46ch;"
+data-editable="array" data-prop="{{ section_key }}.links"
+data-editable="array-item" data-prop="{{ section_key }}.links[{{ forloop.index0 }}]"
+data-editable="text" data-prop="{{ section_key }}.links[{{ forloop.index0 }}].label"
+</section>
+<section data-file="sections/main-page-about.liquid">
+data-editable="component" data-component="main-page-about" data-path="sections/main-page-about.liquid" data-key="main_content"
+data-editable="source" data-path="data/pages/about.json" data-key="main_content"
+</section>
+<section data-file="sections/main-page-training.liquid">
+data-editable="component" data-component="main-page-training" data-path="sections/main-page-training.liquid" data-key="main_content"
+data-editable="source" data-path="data/pages/training.json" data-key="main_content"
+</section>
+<section data-file="sections/main-page-services.liquid">
+data-editable="component" data-component="main-page-services" data-path="sections/main-page-services.liquid" data-key="main_content"
+data-editable="source" data-path="data/pages/services.json" data-key="main_content"
+</section>
+<section data-file="sections/main-page-street_miles.liquid">
+data-editable="component" data-component="main-page-street-miles" data-path="sections/main-page-street_miles.liquid" data-key="main_content"
+data-editable="source" data-path="data/pages/street-miles.json" data-key="main_content"
+</section>
+<section data-file="sections/main-page-contact.liquid">
+data-editable="component" data-component="main-page-contact" data-path="sections/main-page-contact.liquid" data-key="main_content"
+data-editable="source" data-path="data/pages/contact.json" data-key="main_content"
+</section>
+</body></html>

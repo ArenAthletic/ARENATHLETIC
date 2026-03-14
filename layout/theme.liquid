@@ -58,13 +58,17 @@
     <link rel="icon" href="{{ 'favicon.svg' | asset_url }}" type="image/svg+xml">
     {{ content_for_header }}
   </head>
-  <body class="template-{{ template.name | handle }}">
+  <body class="template-{{ template.name | handle }}" data-editable="source" data-path="layout/theme.liquid" data-key="theme">
     {% render 'cc-page-data' %}
-    {% section 'header' %}
-    <main id="MainContent" role="main">
+    <div data-editable="component" data-component="header" data-path="sections/header.liquid" data-key="header">
+      {% section 'header' %}
+    </div>
+    <main id="MainContent" role="main" data-editable="source" data-path="templates/{{ template | replace: '.', '-' | append: '.json' }}" data-key="{{ template.name | default: template }}">
       {{ content_for_layout }}
     </main>
-    {% section 'footer' %}
+    <div data-editable="component" data-component="footer" data-path="sections/footer.liquid" data-key="footer">
+      {% section 'footer' %}
+    </div>
     <script src="{{ 'aren-theme.js' | asset_url }}" defer></script>
   </body>
 </html>

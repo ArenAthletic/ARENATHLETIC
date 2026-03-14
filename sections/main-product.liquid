@@ -1,75 +1,86 @@
-<section class="section" style="padding-top:calc(68px + var(--space-lg));">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:var(--space-xl);align-items:start;">
-      <div>
-        {% if product.media.size > 0 %}
-          <div class="product-image" style="aspect-ratio:4/5;background:#f2efe9;margin-bottom:1rem;">
-            {{ product.featured_media | image_url: width: 1400 | image_tag: class: 'product-img', loading: 'eager', alt: product.title }}
+{% liquid
+  assign cc_page = shop.metafields.cloudcannon.pages['product'].value
+  assign main_product = blank
+
+  if cc_page and cc_page.main_product != blank
+    assign main_product = cc_page.main_product
+  endif
+%}
+
+<div data-editable="component" data-component="main-product" data-path="sections/main-product.liquid" data-key="main_product">
+  <section class="section" style="padding-top:calc(68px + var(--space-lg));" data-editable="source" data-path="data/pages/product.json" data-key="main_product">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1.05fr 0.95fr;gap:var(--space-xl);align-items:start;">
+        <div>
+          {% if product.media.size > 0 %}
+            <div class="product-image" style="aspect-ratio:4/5;background:#f2efe9;margin-bottom:1rem;">
+              {{ product.featured_media | image_url: width: 1400 | image_tag: class: 'product-img', loading: 'eager', alt: product.title }}
+            </div>
+            {% if product.media.size > 1 %}
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;">
+                {% for media in product.media limit: 4 %}
+                  <div class="product-image" style="aspect-ratio:1/1;background:#f2efe9;margin-bottom:0;">
+                    {{ media | image_url: width: 500 | image_tag: class: 'product-img', loading: 'lazy', alt: product.title }}
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
+
+        <div>
+          <div class="text-eyebrow" style="margin-bottom:1rem;" data-editable="text" data-prop="main_product.brand_label">{{ main_product.brand_label | default: 'AREN ATHLETIC' }}</div>
+          <h1 class="text-display" style="font-size:clamp(2.2rem,5vw,4.8rem);margin-bottom:1rem;">{{ product.title }}</h1>
+          <div class="text-body" style="margin-bottom:1.5rem;max-width:44ch;">
+            {{ product.description }}
           </div>
-          {% if product.media.size > 1 %}
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;">
-              {% for media in product.media limit: 4 %}
-                <div class="product-image" style="aspect-ratio:1/1;background:#f2efe9;margin-bottom:0;">
-                  {{ media | image_url: width: 500 | image_tag: class: 'product-img', loading: 'lazy', alt: product.title }}
+          <div class="product-price" style="font-size:1rem;margin-bottom:2rem;">{{ product.price | money }}</div>
+
+          {% form 'product', product %}
+            {% if product.has_only_default_variant == false %}
+              {% for option in product.options_with_values %}
+                <div class="form-group" style="margin-bottom:1rem;">
+                  <label class="form-label">{{ option.name }}</label>
+                  <select class="form-select" name="options[{{ option.name | escape }}]">
+                    {% for value in option.values %}
+                      <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value }}</option>
+                    {% endfor %}
+                  </select>
                 </div>
               {% endfor %}
-            </div>
-          {% endif %}
-        {% endif %}
-      </div>
-
-      <div>
-        <div class="text-eyebrow" style="margin-bottom:1rem;">AREN ATHLETIC</div>
-        <h1 class="text-display" style="font-size:clamp(2.2rem,5vw,4.8rem);margin-bottom:1rem;">{{ product.title }}</h1>
-        <div class="text-body" style="margin-bottom:1.5rem;max-width:44ch;">
-          {{ product.description }}
-        </div>
-        <div class="product-price" style="font-size:1rem;margin-bottom:2rem;">{{ product.price | money }}</div>
-
-        {% form 'product', product %}
-          {% if product.has_only_default_variant == false %}
-            {% for option in product.options_with_values %}
-              <div class="form-group" style="margin-bottom:1rem;">
-                <label class="form-label">{{ option.name }}</label>
-                <select class="form-select" name="options[{{ option.name | escape }}]">
-                  {% for value in option.values %}
-                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected{% endif %}>{{ value }}</option>
-                  {% endfor %}
-                </select>
-              </div>
-            {% endfor %}
-          {% endif %}
-
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-
-          <div class="form-group" style="margin-bottom:1rem;max-width:140px;">
-            <label class="form-label">Quantity</label>
-            <input class="form-input" type="number" name="quantity" min="1" value="1">
-          </div>
-
-          <button type="submit" class="btn btn--primary" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
-            {% if product.selected_or_first_available_variant.available %}
-              Add to cart
-            {% else %}
-              Sold out
             {% endif %}
-          </button>
-        {% endform %}
 
-        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--color-warm-gray);display:grid;gap:1rem;">
-          <div>
-            <div class="text-eyebrow" style="margin-bottom:0.5rem;">Shipping</div>
-            <p class="text-body-sm">Shipping nationwide on all orders.</p>
-          </div>
-          <div>
-            <div class="text-eyebrow" style="margin-bottom:0.5rem;">Returns</div>
-            <p class="text-body-sm">30-day return policy on unworn items.</p>
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+            <div class="form-group" style="margin-bottom:1rem;max-width:140px;">
+              <label class="form-label" data-editable="text" data-prop="main_product.quantity_label">{{ main_product.quantity_label | default: 'Quantity' }}</label>
+              <input class="form-input" type="number" name="quantity" min="1" value="1">
+            </div>
+
+            <button type="submit" class="btn btn--primary" {% unless product.selected_or_first_available_variant.available %}disabled{% endunless %}>
+              {% if product.selected_or_first_available_variant.available %}
+                <span data-editable="text" data-prop="main_product.add_to_cart_label">{{ main_product.add_to_cart_label | default: 'Add to cart' }}</span>
+              {% else %}
+                <span data-editable="text" data-prop="main_product.sold_out_label">{{ main_product.sold_out_label | default: 'Sold out' }}</span>
+              {% endif %}
+            </button>
+          {% endform %}
+
+          <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--color-warm-gray);display:grid;gap:1rem;">
+            <div>
+              <div class="text-eyebrow" style="margin-bottom:0.5rem;" data-editable="text" data-prop="main_product.shipping_label">{{ main_product.shipping_label | default: 'Shipping' }}</div>
+              <p class="text-body-sm" data-editable="text" data-prop="main_product.shipping_text">{{ main_product.shipping_text | default: 'Shipping nationwide on all orders.' }}</p>
+            </div>
+            <div>
+              <div class="text-eyebrow" style="margin-bottom:0.5rem;" data-editable="text" data-prop="main_product.returns_label">{{ main_product.returns_label | default: 'Returns' }}</div>
+              <p class="text-body-sm" data-editable="text" data-prop="main_product.returns_text">{{ main_product.returns_text | default: '30-day return policy on unworn items.' }}</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
 
 {% schema %}
 {
