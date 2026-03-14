@@ -8,6 +8,7 @@ paths:
 collections_config:
   pages:
     path: .
+    filter: "*.html"
     output: true
     url: "/[slug]/"
     _enabled_editors:
