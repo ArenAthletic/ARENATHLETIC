@@ -11,16 +11,16 @@
   <div class="container">
     <div class="section-header">
       <div>
-        {% if data.eyebrow != blank %}<div class="text-eyebrow mb-sm">{{ data.eyebrow }}</div>{% endif %}
-        {% if data.heading != blank %}<h2 class="text-h2">{{ data.heading }}</h2>{% endif %}
+        {% if data.eyebrow != blank %}<div class="text-eyebrow mb-sm" data-editable="text" data-prop="collection_categories.eyebrow">{{ data.eyebrow }}</div>{% endif %}
+        {% if data.heading != blank %}<h2 class="text-h2" data-editable="text" data-prop="collection_categories.heading">{{ data.heading }}</h2>{% endif %}
       </div>
     </div>
-    <div class="training-grid" style="margin-top:var(--space-lg);">
+    <div class="training-grid" data-editable="array" data-prop="collection_categories.categories" style="margin-top:var(--space-lg);">
       {% for item in data.categories %}
-        <a href="{{ item.link | default: '/pages/shop' }}" class="training-card" style="text-decoration:none;color:inherit;display:block;">
-          <div class="training-card-number">{{ item.number }}</div>
-          <div class="training-card-title">{{ item.title }}</div>
-          <div class="training-card-desc">{{ item.description }}</div>
+        <a href="{{ item.link | default: '/pages/shop' }}" class="training-card" data-editable="array-item" data-prop="collection_categories.categories[{{ forloop.index0 }}]" style="text-decoration:none;color:inherit;display:block;">
+          <div class="training-card-number" data-editable="text" data-prop="collection_categories.categories[{{ forloop.index0 }}].number">{{ item.number }}</div>
+          <div class="training-card-title" data-editable="text" data-prop="collection_categories.categories[{{ forloop.index0 }}].title">{{ item.title }}</div>
+          <div class="training-card-desc" data-editable="text" data-prop="collection_categories.categories[{{ forloop.index0 }}].description">{{ item.description }}</div>
         </a>
       {% endfor %}
     </div>

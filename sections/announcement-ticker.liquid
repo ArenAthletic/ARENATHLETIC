@@ -9,8 +9,8 @@
 {% if ticker != blank and ticker.text != blank %}
   <div class="marquee-strip" {{ section.shopify_attributes }}>
     <div class="marquee-track">
-      <span class="marquee-text">{{ ticker.text }}</span>
-      <span class="marquee-text">{{ ticker.text }}</span>
+      <span class="marquee-text" data-editable="text" data-prop="announcement_ticker.text">{{ ticker.text }}</span>
+      <span class="marquee-text" data-editable="text" data-prop="announcement_ticker.text">{{ ticker.text }}</span>
     </div>
   </div>
 {% endif %}

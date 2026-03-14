@@ -32,6 +32,8 @@
           src="{{ cc_header.logo_image }}"
           alt="{{ cc_header.logo_alt | default: shop.name | escape }}"
           class="nav-logo-image"
+          data-editable="image"
+          data-prop="header.logo_image"
           style="width: {{ cc_header.logo_width | default: section.settings.logo_width | default: settings.logo_width }}px;"
         >
       {% elsif section.settings.logo != blank %}
@@ -53,10 +55,10 @@
       {% endif %}
     </a>
 
-    <div class="nav-links">
+    <div class="nav-links" data-editable="array" data-prop="navigation.links">
       {% if header_menu_links != blank %}
         {% for link in header_menu_links %}
-          <a href="{{ link.url }}" class="nav-link{% if link.current or link.active %} active{% endif %}" title="{{ link.title | escape }}">{{ link.title }}</a>
+          <a href="{{ link.url }}" class="nav-link{% if link.current or link.active %} active{% endif %}" title="{{ link.title | escape }}" data-editable="array-item" data-prop="navigation.links[{{ forloop.index0 }}]">{{ link.title }}</a>
         {% endfor %}
       {% else %}
         <a href="{{ routes.root_url }}" class="nav-link{% if request.page_type == 'index' %} active{% endif %}">{{ cc_navigation.home_label | default: section.settings.home_label | default: settings.header_home_label | default: 'Home' }}</a>
@@ -70,8 +72,8 @@
     </div>
 
     <div class="nav-actions">
-      <a href="{{ routes.account_login_url }}" class="nav-action-link">{{ cc_navigation.login_label | default: section.settings.login_label | default: settings.header_login_label | default: 'Log In' }}</a>
-      <a href="{{ shop_url }}" class="nav-cta">{{ cc_navigation.cta_label | default: section.settings.cta_label | default: settings.header_cta_label | default: 'Shop Now' }}</a>
+      <a href="{{ routes.account_login_url }}" class="nav-action-link" data-editable="text" data-prop="navigation.login_label">{{ cc_navigation.login_label | default: section.settings.login_label | default: settings.header_login_label | default: 'Log In' }}</a>
+      <a href="{{ shop_url }}" class="nav-cta" data-editable="text" data-prop="navigation.cta_label">{{ cc_navigation.cta_label | default: section.settings.cta_label | default: settings.header_cta_label | default: 'Shop Now' }}</a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" type="button">
         <span></span>
         <span></span>
@@ -82,10 +84,10 @@
 </nav>
 
 <div class="nav-mobile" id="nav-mobile">
-  <div class="nav-mobile-links">
+  <div class="nav-mobile-links" data-editable="array" data-prop="navigation.links">
     {% if header_menu_links != blank %}
       {% for link in header_menu_links %}
-        <a href="{{ link.url }}" class="nav-mobile-link" title="{{ link.title | escape }}">{{ link.title }}</a>
+        <a href="{{ link.url }}" class="nav-mobile-link" title="{{ link.title | escape }}" data-editable="array-item" data-prop="navigation.links[{{ forloop.index0 }}]">{{ link.title }}</a>
       {% endfor %}
     {% else %}
       <a href="{{ routes.root_url }}" class="nav-mobile-link">{{ cc_navigation.home_label | default: section.settings.home_label | default: settings.header_home_label | default: 'Home' }}</a>
