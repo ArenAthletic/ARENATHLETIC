@@ -23,14 +23,14 @@
 %}
 
 <section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:{{ cc_hero.min_height | default: section.settings.min_height }}px;display:flex;align-items:flex-end;">
-  <div style="position:absolute;inset:0;{% if cc_hero.background_image != blank %}background-image:url('{{ cc_hero.background_image }}');{% elsif section.settings.background_image != blank %}background-image:url('{{ section.settings.background_image | image_url: width: 2200 }}');{% elsif settings.default_hero_image != blank %}background-image:url('{{ settings.default_hero_image | image_url: width: 2200 }}');{% elsif cc_hero.fallback_image_url != blank %}background-image:url('{{ cc_hero.fallback_image_url }}');{% elsif section.settings.fallback_image_url != blank %}background-image:url('{{ section.settings.fallback_image_url }}');{% endif %}background-size:cover;background-position:{{ cc_hero.background_position | default: section.settings.background_position }};"></div>
+  <div data-editable="image" data-prop="hero.background_image" style="position:absolute;inset:0;{% if cc_hero.background_image != blank %}background-image:url('{{ cc_hero.background_image }}');{% elsif section.settings.background_image != blank %}background-image:url('{{ section.settings.background_image | image_url: width: 2200 }}');{% elsif settings.default_hero_image != blank %}background-image:url('{{ settings.default_hero_image | image_url: width: 2200 }}');{% elsif cc_hero.fallback_image_url != blank %}background-image:url('{{ cc_hero.fallback_image_url }}');{% elsif section.settings.fallback_image_url != blank %}background-image:url('{{ section.settings.fallback_image_url }}');{% endif %}background-size:cover;background-position:{{ cc_hero.background_position | default: section.settings.background_position }};"></div>
   <div style="position:absolute;inset:0;background:{{ cc_hero.overlay_gradient | default: section.settings.overlay_gradient }};"></div>
   <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
     {% if cc_hero.eyebrow != blank or section.settings.eyebrow != blank %}
       <div class="text-eyebrow" style="margin-bottom:2rem;color:rgba(255,255,255,0.35);">{{ cc_hero.eyebrow | default: section.settings.eyebrow }}</div>
     {% endif %}
     {% if cc_hero.heading != blank or section.settings.heading != blank %}
-      <h1 class="text-display" style="color:#fff;max-width:{{ cc_hero.heading_width | default: section.settings.heading_width }}ch;margin-bottom:1.5rem;">{{ cc_hero.heading | default: section.settings.heading }}</h1>
+      <h1 class="text-display" data-editable="text" data-prop="hero.heading" style="color:#fff;max-width:{{ cc_hero.heading_width | default: section.settings.heading_width }}ch;margin-bottom:1.5rem;">{{ cc_hero.heading | default: section.settings.heading }}</h1>
     {% endif %}
     {% if cc_hero.copy != blank or section.settings.copy != blank %}
       <div class="text-body rte" style="max-width:{{ cc_hero.copy_width | default: section.settings.copy_width }}ch;color:rgba(255,255,255,0.65);margin-bottom:2rem;">{{ cc_hero.copy | default: section.settings.copy }}</div>
