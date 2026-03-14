@@ -1,6 +1,17 @@
+{% render 'cc-structured-data' %}
 {% liquid
+  assign cc_featured = blank
+
+  if cc_page_key == 'product'
+    assign cc_featured = cc_page.related
+  elsif cc_page
+    assign cc_featured = cc_page.featured_collection
+  endif
+
   assign shop_url = pages['shop'].url | default: '/pages/shop'
-  if section.settings.shop_page != blank
+  if cc_featured.shop_url != blank
+    assign shop_url = cc_featured.shop_url
+  elsif section.settings.shop_page != blank
     assign shop_url = section.settings.shop_page.url
   endif
 %}
@@ -9,15 +20,15 @@
   <div class="container">
     <div class="section-header">
       <div>
-        {% if section.settings.eyebrow != blank %}<div class="text-eyebrow mb-sm">{{ section.settings.eyebrow }}</div>{% endif %}
-        {% if section.settings.heading != blank %}<h2 class="text-h2">{{ section.settings.heading }}</h2>{% endif %}
+        {% if cc_featured.eyebrow != blank or section.settings.eyebrow != blank %}<div class="text-eyebrow mb-sm">{{ cc_featured.eyebrow | default: section.settings.eyebrow }}</div>{% endif %}
+        {% if cc_featured.heading != blank or section.settings.heading != blank %}<h2 class="text-h2">{{ cc_featured.heading | default: section.settings.heading }}</h2>{% endif %}
       </div>
-      {% if section.settings.button_label != blank %}<a href="{{ shop_url }}" class="btn btn--ghost">{{ section.settings.button_label }}</a>{% endif %}
+      {% if cc_featured.button_label != blank or section.settings.button_label != blank %}<a href="{{ shop_url }}" class="btn btn--ghost">{{ cc_featured.button_label | default: section.settings.button_label }}</a>{% endif %}
     </div>
     <div class="product-grid">
       {% assign featured_collection = section.settings.featured_collection %}
       {% if featured_collection != blank and featured_collection.products_count > 0 %}
-        {% for product in featured_collection.products limit: section.settings.featured_products_limit %}
+        {% for product in featured_collection.products limit: cc_featured.featured_products_limit | default: section.settings.featured_products_limit %}
           <a href="{{ product.url }}" style="text-decoration:none;color:inherit;" class="product-card">
             <div class="product-image" style="background:#f2efe9;">
               {% if product.featured_image %}<img class="product-img" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.featured_image.alt | default: product.title | escape }}" loading="lazy">{% endif %}
@@ -25,27 +36,41 @@
             </div>
             <div class="product-name">{{ product.title }}</div>
             {% if product.description != blank %}<div class="product-desc">{{ product.description | strip_html | truncate: 60 }}</div>{% endif %}
-            {% if section.settings.show_product_price %}<div class="product-price">{{ product.price | money }}</div>{% endif %}
+            {% if cc_featured.show_product_price | default: section.settings.show_product_price %}<div class="product-price">{{ product.price | money }}</div>{% endif %}
           </a>
         {% endfor %}
       {% else %}
-        {% for block in section.blocks %}
-          {% liquid
-            assign card_url = shop_url
-            if block.settings.link != blank
-              assign card_url = block.settings.link
-            endif
-          %}
-          <a href="{{ card_url }}" style="text-decoration:none;color:inherit;" class="product-card" {{ block.shopify_attributes }}>
-            <div class="product-image" style="background:{{ block.settings.background_color }};">
-              {% if block.settings.image != blank %}<img class="product-img" src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.image.alt | default: block.settings.title | escape }}" loading="lazy">{% endif %}
-              {% if block.settings.tag != blank %}<div class="product-tag">{{ block.settings.tag }}</div>{% endif %}
-            </div>
-            <div class="product-name">{{ block.settings.title }}</div>
-            <div class="product-desc">{{ block.settings.description }}</div>
-            {% if section.settings.show_product_price %}<div class="product-price">{{ block.settings.cta_label }}</div>{% endif %}
-          </a>
-        {% endfor %}
+        {% if cc_featured.fallback_cards != blank %}
+          {% for card in cc_featured.fallback_cards %}
+            <a href="{{ card.link | default: shop_url }}" style="text-decoration:none;color:inherit;" class="product-card">
+              <div class="product-image" style="background:{{ card.background_color | default: '#1e1e1c' }};">
+                {% if card.image != blank %}<img class="product-img" src="{{ card.image }}" alt="{{ card.alt | default: card.title | escape }}" loading="lazy">{% endif %}
+                {% if card.tag != blank %}<div class="product-tag">{{ card.tag }}</div>{% endif %}
+              </div>
+              <div class="product-name">{{ card.title }}</div>
+              <div class="product-desc">{{ card.description }}</div>
+              {% if cc_featured.show_product_price | default: section.settings.show_product_price %}<div class="product-price">{{ card.cta_label }}</div>{% endif %}
+            </a>
+          {% endfor %}
+        {% else %}
+          {% for block in section.blocks %}
+            {% liquid
+              assign card_url = shop_url
+              if block.settings.link != blank
+                assign card_url = block.settings.link
+              endif
+            %}
+            <a href="{{ card_url }}" style="text-decoration:none;color:inherit;" class="product-card" {{ block.shopify_attributes }}>
+              <div class="product-image" style="background:{{ block.settings.background_color }};">
+                {% if block.settings.image != blank %}<img class="product-img" src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.image.alt | default: block.settings.title | escape }}" loading="lazy">{% endif %}
+                {% if block.settings.tag != blank %}<div class="product-tag">{{ block.settings.tag }}</div>{% endif %}
+              </div>
+              <div class="product-name">{{ block.settings.title }}</div>
+              <div class="product-desc">{{ block.settings.description }}</div>
+              {% if cc_featured.show_product_price | default: section.settings.show_product_price %}<div class="product-price">{{ block.settings.cta_label }}</div>{% endif %}
+            </a>
+          {% endfor %}
+        {% endif %}
       {% endif %}
     </div>
   </div>

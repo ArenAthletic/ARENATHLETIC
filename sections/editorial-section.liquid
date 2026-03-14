@@ -1,0 +1,43 @@
+{% render 'cc-structured-data' %}
+{% liquid
+  assign data = blank
+  if cc_page and cc_page.editorial_section != blank
+    assign data = cc_page.editorial_section
+  endif
+%}
+
+{% if data != blank %}
+<section class="section" {{ section.shopify_attributes }}>
+  <div class="container" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:var(--space-xl);align-items:center;">
+    <div style="position:relative;overflow:hidden;aspect-ratio:4/5;background-size:cover;background-position:center;{% if data.image != blank %}background-image:url('{{ data.image }}');{% elsif data.fallback_image_url != blank %}background-image:url('{{ data.fallback_image_url }}');{% endif %}">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(35,35,33,0.45) 0%,transparent 50%);"></div>
+      <div style="position:absolute;left:1.5rem;bottom:1.5rem;right:1.5rem;color:#fff;z-index:1;">
+        {% if data.image_eyebrow != blank %}<div class="text-eyebrow" style="color:rgba(255,255,255,0.35);margin-bottom:1rem;">{{ data.image_eyebrow }}</div>{% endif %}
+        {% if data.image_heading != blank %}<div class="text-h2" style="color:#fff;">{{ data.image_heading }}</div>{% endif %}
+      </div>
+    </div>
+    <div>
+      {% if data.eyebrow != blank %}<div class="text-eyebrow mb-sm">{{ data.eyebrow }}</div>{% endif %}
+      {% if data.heading != blank %}<h2 class="text-h2" style="margin-bottom:1.25rem;">{{ data.heading }}</h2>{% endif %}
+      {% if data.copy != blank %}<div class="text-body rte" style="margin-bottom:2rem;max-width:42ch;">{{ data.copy }}</div>{% endif %}
+      <div class="training-grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-bottom:2rem;">
+        {% for item in data.stats %}
+          <div class="training-card">
+            <div class="training-card-number">{{ item.value }}</div>
+            <div class="training-card-title">{{ item.label }}</div>
+          </div>
+        {% endfor %}
+      </div>
+      {% if data.button_label != blank %}<a href="{{ data.button_url | default: '/pages/street-miles' }}" class="btn btn--outline">{{ data.button_label }}</a>{% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Editorial section",
+  "settings": [],
+  "presets": [{ "name": "Editorial section" }]
+}
+{% endschema %}

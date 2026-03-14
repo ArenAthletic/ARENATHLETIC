@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "eyebrow": "Contact / Join",
+    "heading": "CONNECT WITH AREN.",
+    "copy": "<p>GENERAL CORRESPONDENCE / PERFORMANCE TRAINING / COMMUNITY MEMBERSHIP / BRAND PARTNERSHIPS.</p>",
+    "fallback_image_url": "https://static.wixstatic.com/media/8a3301_a50d3c308c3b4909b7726a0559353904~mv2.jpg/v1/crop/x_0,y_2549,w_3840,h_2057/fill/w_1920,h_600,al_c,q_90,enc_auto/8a3301_a50d3c308c3b4909b7726a0559353904~mv2.jpg",
+    "background_position": "center",
+    "overlay_gradient": "linear-gradient(180deg,rgba(249,247,241,0.96) 0%,rgba(249,247,241,0.92) 100%)",
+    "min_height": 420,
+    "heading_width": 18,
+    "copy_width": 44,
+    "dark_theme": false
+  },
+  "marquee": {
+    "text": "AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —"
+  },
+  "channels": {
+    "eyebrow": "Direct All Inquiries to the Appropriate Channel",
+    "heading": "Choose the right line of contact.",
+    "copy": "<p>We keep communication structured so the right requests reach the right systems.</p>",
+    "kicker": "CONNECT / TRAIN / JOIN / PARTNER",
+    "dark_theme": false,
+    "cards": [
+      {
+        "title": "General Inquiries",
+        "description": "info@arenathletic.com"
+      },
+      {
+        "title": "Performance Training",
+        "description": "Use the form below to inquire about individual or group training."
+      },
+      {
+        "title": "Community Membership",
+        "description": "Join Street Miles NYC or connect about future chapter activation."
+      },
+      {
+        "title": "Brand Partnerships",
+        "description": "For collaborations, media, and aligned partnerships, contact the AREN team."
+      }
+    ]
+  },
+  "social": {
+    "eyebrow": "Follow AREN",
+    "heading": "Stay connected to the system.",
+    "copy": "<p>Use social channels for updates and use the form for direct inquiries.</p>",
+    "links": [
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/arenathletic/",
+        "style": "outline"
+      },
+      {
+        "label": "Twitter",
+        "url": "https://x.com/",
+        "style": "outline"
+      },
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/",
+        "style": "outline"
+      },
+      {
+        "label": "Open Contact Form",
+        "url": "#contact-form-section",
+        "style": "primary"
+      }
+    ]
+  },
+  "contact_form_intro": {
+    "eyebrow": "Contact Form",
+    "heading": "Use the form when the inquiry matters.",
+    "copy": "<p id='contact-form-section'>Share your details, your context, and what you are looking to build or join. We reply according to fit and priority.</p><p>Your information is never shared. Used only for AREN communication.</p>",
+    "button_url": "mailto:info@arenathletic.com",
+    "button_label": "Email Directly",
+    "button_style": "primary",
+    "heading_width": 18,
+    "border_top": true,
+    "columns": "0.95fr 1.05fr",
+    "vertical_align": "start"
+  },
+  "ecosystem": {
+    "eyebrow": "Grid & Grit",
+    "heading": "The AREN ecosystem in motion",
+    "copy": "<p>Move deeper into the system through training, community, or uniform.</p>",
+    "links": [
+      {
+        "label": "Train — Explore Training",
+        "url": "/pages/training",
+        "style": "outline"
+      },
+      {
+        "label": "Run — Join Street Miles",
+        "url": "/pages/street-miles",
+        "style": "outline"
+      },
+      {
+        "label": "Wear — Shop Apparel",
+        "url": "/pages/shop",
+        "style": "primary"
+      }
+    ]
+  }
+}

@@ -1,11 +1,27 @@
 {% liquid
+  assign cc_page_key = 'home'
+  if template.name == 'collection'
+    assign cc_page_key = 'collection'
+  endif
+
+  assign cc_page = shop.metafields.cloudcannon.pages[cc_page_key].value
+  assign cc_section = blank
+
+  if cc_page_key == 'collection'
+    assign cc_section = cc_page.hero
+  elsif cc_page
+    assign cc_section = cc_page.image_with_text
+  endif
+
   assign section_classes = 'image-with-text'
-  if section.settings.dark_theme
+  if cc_section.dark_theme | default: section.settings.dark_theme
     assign section_classes = section_classes | append: ' image-with-text--dark'
   endif
 
   assign button_url = blank
-  if section.settings.button_link != blank
+  if cc_section.button_link != blank
+    assign button_url = cc_section.button_link
+  elsif section.settings.button_link != blank
     assign button_url = section.settings.button_link
   elsif section.settings.page_link != blank
     assign button_url = section.settings.page_link.url
@@ -16,7 +32,13 @@
   <div class="container">
     <div class="image-with-text__grid"{% if section.settings.image_position == 'right' %} style="direction:rtl;"{% endif %}>
       <div class="media-card"{% if section.settings.image_position == 'right' %} style="direction:ltr;"{% endif %}>
-        {% if section.settings.image != blank %}
+        {% if cc_section.image != blank %}
+          <img
+            src="{{ cc_section.image }}"
+            alt="{{ cc_section.image_alt | default: cc_section.heading | escape }}"
+            loading="lazy"
+          >
+        {% elsif section.settings.image != blank %}
           <img
             src="{{ section.settings.image | image_url: width: 1600 }}"
             alt="{{ section.settings.image.alt | default: section.settings.heading | escape }}"
@@ -32,36 +54,49 @@
       </div>
 
       <div class="image-with-text__content"{% if section.settings.image_position == 'right' %} style="direction:ltr;"{% endif %}>
-        {% if section.settings.eyebrow != blank %}
-          <div class="text-eyebrow">{{ section.settings.eyebrow }}</div>
+        {% if cc_section.eyebrow != blank or section.settings.eyebrow != blank %}
+          <div class="text-eyebrow">{{ cc_section.eyebrow | default: section.settings.eyebrow }}</div>
         {% endif %}
 
-        {% if section.settings.heading != blank %}
-          <h2 class="text-h2">{{ section.settings.heading }}</h2>
+        {% if cc_section.heading != blank or section.settings.heading != blank %}
+          <h2 class="text-h2">{{ cc_section.heading | default: section.settings.heading }}</h2>
         {% endif %}
 
-        {% if section.settings.text != blank %}
-          <div class="text-body rte">{{ section.settings.text }}</div>
+        {% if cc_section.text != blank or section.settings.text != blank %}
+          <div class="text-body rte">{{ cc_section.text | default: section.settings.text }}</div>
         {% endif %}
 
-        {% if button_url != blank and section.settings.button_label != blank %}
+        {% if button_url != blank and (cc_section.button_label != blank or section.settings.button_label != blank) %}
           <div>
-            <a href="{{ button_url }}" class="btn {% if section.settings.dark_theme %}btn--outline-white{% else %}btn--outline{% endif %}">{{ section.settings.button_label }}</a>
+            <a href="{{ button_url }}" class="btn {% if cc_section.dark_theme | default: section.settings.dark_theme %}btn--outline-white{% else %}btn--outline{% endif %}">{{ cc_section.button_label | default: section.settings.button_label }}</a>
           </div>
         {% endif %}
 
-        {% if section.blocks.size > 0 %}
+        {% if cc_section.stats != blank or section.blocks.size > 0 %}
           <div class="image-with-text__stats">
-            {% for block in section.blocks %}
-              <div class="image-with-text__stat" {{ block.shopify_attributes }}>
-                {% if block.settings.value != blank %}
-                  <div class="text-display" style="font-size:clamp(1.6rem,3vw,3rem);">{{ block.settings.value }}</div>
-                {% endif %}
-                {% if block.settings.label != blank %}
-                  <div class="text-eyebrow">{{ block.settings.label }}</div>
-                {% endif %}
-              </div>
-            {% endfor %}
+            {% if cc_section.stats != blank %}
+              {% for stat in cc_section.stats %}
+                <div class="image-with-text__stat">
+                  {% if stat.value != blank %}
+                    <div class="text-display" style="font-size:clamp(1.6rem,3vw,3rem);">{{ stat.value }}</div>
+                  {% endif %}
+                  {% if stat.label != blank %}
+                    <div class="text-eyebrow">{{ stat.label }}</div>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            {% else %}
+              {% for block in section.blocks %}
+                <div class="image-with-text__stat" {{ block.shopify_attributes }}>
+                  {% if block.settings.value != blank %}
+                    <div class="text-display" style="font-size:clamp(1.6rem,3vw,3rem);">{{ block.settings.value }}</div>
+                  {% endif %}
+                  {% if block.settings.label != blank %}
+                    <div class="text-eyebrow">{{ block.settings.label }}</div>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            {% endif %}
           </div>
         {% endif %}
       </div>

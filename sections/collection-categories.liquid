@@ -1,0 +1,37 @@
+{% render 'cc-structured-data' %}
+{% liquid
+  assign data = blank
+  if cc_page and cc_page.collection_categories != blank
+    assign data = cc_page.collection_categories
+  endif
+%}
+
+{% if data != blank %}
+<section class="section" style="border-bottom:1px solid var(--color-warm-gray);" {{ section.shopify_attributes }}>
+  <div class="container">
+    <div class="section-header">
+      <div>
+        {% if data.eyebrow != blank %}<div class="text-eyebrow mb-sm">{{ data.eyebrow }}</div>{% endif %}
+        {% if data.heading != blank %}<h2 class="text-h2">{{ data.heading }}</h2>{% endif %}
+      </div>
+    </div>
+    <div class="training-grid" style="margin-top:var(--space-lg);">
+      {% for item in data.categories %}
+        <a href="{{ item.link | default: '/pages/shop' }}" class="training-card" style="text-decoration:none;color:inherit;display:block;">
+          <div class="training-card-number">{{ item.number }}</div>
+          <div class="training-card-title">{{ item.title }}</div>
+          <div class="training-card-desc">{{ item.description }}</div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Collection categories",
+  "settings": [],
+  "presets": [{ "name": "Collection categories" }]
+}
+{% endschema %}

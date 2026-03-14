@@ -1,4 +1,11 @@
 {% liquid
+  assign cc_site = shop.metafields.cloudcannon.site.value
+  assign cc_footer = blank
+
+  if cc_site
+    assign cc_footer = cc_site.footer
+  endif
+
   assign about_url = pages['about'].url | default: '/pages/about'
   assign training_url = pages['training'].url | default: '/pages/training'
   assign services_url = pages['services'].url | default: '/pages/services'
@@ -12,11 +19,15 @@
   assign ecosystem_menu_links = blank
   assign access_menu_links = blank
 
-  if ecosystem_menu_handle != blank and linklists[ecosystem_menu_handle] != blank
+  if cc_footer.ecosystem_links != blank
+    assign ecosystem_menu_links = cc_footer.ecosystem_links
+  elsif ecosystem_menu_handle != blank and linklists[ecosystem_menu_handle] != blank
     assign ecosystem_menu_links = linklists[ecosystem_menu_handle].links
   endif
 
-  if access_menu_handle != blank and linklists[access_menu_handle] != blank
+  if cc_footer.access_links != blank
+    assign access_menu_links = cc_footer.access_links
+  elsif access_menu_handle != blank and linklists[access_menu_handle] != blank
     assign access_menu_links = linklists[access_menu_handle].links
   endif
 %}
@@ -26,7 +37,9 @@
     <div class="footer-grid">
       <div class="footer-col">
         <a href="{{ routes.root_url }}" class="footer-brand-name footer-brand-link" aria-label="{{ shop.name }} home">
-          {% if section.settings.logo != blank %}
+          {% if cc_footer.logo_image != blank %}
+            <img src="{{ cc_footer.logo_image }}" alt="{{ cc_footer.logo_alt | default: shop.name | escape }}" class="footer-logo-image">
+          {% elsif section.settings.logo != blank %}
             <img src="{{ section.settings.logo | image_url: width: 180 }}" alt="{{ shop.name | escape }}" class="footer-logo-image">
           {% elsif settings.logo != blank %}
             <img src="{{ settings.logo | image_url: width: 180 }}" alt="{{ shop.name | escape }}" class="footer-logo-image">
@@ -35,9 +48,9 @@
           {% endif %}
         </a>
         <div class="footer-brand-taglines">
-          <span class="footer-brand-tagline">{{ section.settings.tagline_1 | default: settings.footer_tagline_1 | default: 'SMNYC: FIVE BOROUGH CHAPTER' }}</span>
-          <span class="footer-brand-tagline">{{ section.settings.tagline_2 | default: settings.footer_tagline_2 | default: 'DISCIPLINE AND PERFORMANCE.' }}</span>
-          <span class="footer-brand-tagline">{{ section.settings.tagline_3 | default: settings.footer_tagline_3 | default: 'AREN ATHLETIC UNIFORM.' }}</span>
+          <span class="footer-brand-tagline">{{ cc_footer.tagline_1 | default: section.settings.tagline_1 | default: settings.footer_tagline_1 | default: 'SMNYC: FIVE BOROUGH CHAPTER' }}</span>
+          <span class="footer-brand-tagline">{{ cc_footer.tagline_2 | default: section.settings.tagline_2 | default: settings.footer_tagline_2 | default: 'DISCIPLINE AND PERFORMANCE.' }}</span>
+          <span class="footer-brand-tagline">{{ cc_footer.tagline_3 | default: section.settings.tagline_3 | default: settings.footer_tagline_3 | default: 'AREN ATHLETIC UNIFORM.' }}</span>
         </div>
         <div class="footer-social">
           {% for block in section.blocks %}
@@ -68,43 +81,43 @@
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">{{ section.settings.ecosystem_heading | default: settings.footer_ecosystem_heading | default: 'ECOSYSTEM' }}</div>
+        <div class="footer-col-title">{{ cc_footer.ecosystem_heading | default: section.settings.ecosystem_heading | default: settings.footer_ecosystem_heading | default: 'ECOSYSTEM' }}</div>
         <div class="footer-links">
           {% if ecosystem_menu_links != blank %}
             {% for link in ecosystem_menu_links %}
               <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
             {% endfor %}
           {% else %}
-            <a href="{{ about_url }}" class="footer-link">{{ section.settings.about_label | default: settings.header_about_label | default: 'About AREN' }}</a>
-            <a href="{{ training_url }}" class="footer-link">{{ section.settings.training_label | default: settings.header_training_label | default: 'Training' }}</a>
-            <a href="{{ services_url }}" class="footer-link">{{ section.settings.services_label | default: settings.header_services_label | default: 'Services' }}</a>
-            <a href="{{ street_miles_url }}" class="footer-link">{{ section.settings.street_label | default: settings.header_street_label | default: 'Street Miles NYC' }}</a>
-            <a href="{{ contact_url }}" class="footer-link">{{ section.settings.join_label | default: settings.footer_join_label | default: 'Join the Community' }}</a>
+            <a href="{{ about_url }}" class="footer-link">{{ cc_footer.about_label | default: section.settings.about_label | default: settings.header_about_label | default: 'About AREN' }}</a>
+            <a href="{{ training_url }}" class="footer-link">{{ cc_footer.training_label | default: section.settings.training_label | default: settings.header_training_label | default: 'Training' }}</a>
+            <a href="{{ services_url }}" class="footer-link">{{ cc_footer.services_label | default: section.settings.services_label | default: settings.header_services_label | default: 'Services' }}</a>
+            <a href="{{ street_miles_url }}" class="footer-link">{{ cc_footer.street_label | default: section.settings.street_label | default: settings.header_street_label | default: 'Street Miles NYC' }}</a>
+            <a href="{{ contact_url }}" class="footer-link">{{ cc_footer.join_label | default: section.settings.join_label | default: settings.footer_join_label | default: 'Join the Community' }}</a>
           {% endif %}
         </div>
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">{{ section.settings.access_heading | default: settings.footer_access_heading | default: 'ACCESS' }}</div>
+        <div class="footer-col-title">{{ cc_footer.access_heading | default: section.settings.access_heading | default: settings.footer_access_heading | default: 'ACCESS' }}</div>
         <div class="footer-links">
           {% if access_menu_links != blank %}
             {% for link in access_menu_links %}
               <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
             {% endfor %}
           {% else %}
-            <a href="{{ shop_url }}" class="footer-link">{{ section.settings.shop_label | default: settings.footer_shop_label | default: 'Shop Apparel' }}</a>
-            <a href="{{ shop_url }}" class="footer-link">{{ section.settings.new_arrivals_label | default: settings.footer_new_arrivals_label | default: 'New Arrivals' }}</a>
-            <a href="{{ shop_url }}" class="footer-link">{{ section.settings.core_essentials_label | default: settings.footer_core_essentials_label | default: 'Core Essentials' }}</a>
-            <a href="{{ shop_url }}" class="footer-link">{{ section.settings.outerwear_label | default: settings.footer_outerwear_label | default: 'Outerwear' }}</a>
-            <a href="{{ routes.account_login_url }}" class="footer-link">{{ section.settings.login_label | default: settings.footer_login_label | default: 'Log In' }}</a>
+            <a href="{{ shop_url }}" class="footer-link">{{ cc_footer.shop_label | default: section.settings.shop_label | default: settings.footer_shop_label | default: 'Shop Apparel' }}</a>
+            <a href="{{ shop_url }}" class="footer-link">{{ cc_footer.new_arrivals_label | default: section.settings.new_arrivals_label | default: settings.footer_new_arrivals_label | default: 'New Arrivals' }}</a>
+            <a href="{{ shop_url }}" class="footer-link">{{ cc_footer.core_essentials_label | default: section.settings.core_essentials_label | default: settings.footer_core_essentials_label | default: 'Core Essentials' }}</a>
+            <a href="{{ shop_url }}" class="footer-link">{{ cc_footer.outerwear_label | default: section.settings.outerwear_label | default: settings.footer_outerwear_label | default: 'Outerwear' }}</a>
+            <a href="{{ routes.account_login_url }}" class="footer-link">{{ cc_footer.login_label | default: section.settings.login_label | default: settings.footer_login_label | default: 'Log In' }}</a>
           {% endif %}
         </div>
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">{{ section.settings.network_heading | default: settings.footer_network_heading | default: 'NATIONAL HUB NETWORK.' }}</div>
+        <div class="footer-col-title">{{ cc_footer.network_heading | default: section.settings.network_heading | default: settings.footer_network_heading | default: 'NATIONAL HUB NETWORK.' }}</div>
         <div class="footer-links">
-          <a href="mailto:{{ settings.email_address | default: 'info@arenathletic.com' }}" class="footer-link">{{ settings.email_address | default: 'INFO@ARENATHLETIC.COM' | upcase }}</a>
+          <a href="mailto:{{ cc_footer.email_address | default: settings.email_address | default: 'info@arenathletic.com' }}" class="footer-link">{{ cc_footer.email_address | default: settings.email_address | default: 'INFO@ARENATHLETIC.COM' | upcase }}</a>
           {% for block in section.blocks %}
             {% if block.type == 'footer_note' %}
               <span class="footer-link" style="cursor:default;" {{ block.shopify_attributes }}>{{ block.settings.text }}</span>
@@ -116,12 +129,12 @@
 
     <div class="footer-bottom">
       <div class="footer-bottom-left">
-        <span class="footer-identity-line">{{ section.settings.identity_line | default: settings.footer_identity_line | default: 'AREN ATHLETIC — NEW YORK CITY' }}</span>
-        <span class="footer-copyright">{{ section.settings.copyright_text | default: settings.footer_copyright | default: '© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.' }}</span>
+        <span class="footer-identity-line">{{ cc_footer.identity_line | default: section.settings.identity_line | default: settings.footer_identity_line | default: 'AREN ATHLETIC — NEW YORK CITY' }}</span>
+        <span class="footer-copyright">{{ cc_footer.copyright_text | default: section.settings.copyright_text | default: settings.footer_copyright | default: '© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.' }}</span>
       </div>
       <div style="display:flex;gap:2rem;">
-        <a href="{{ privacy_url }}" class="footer-copyright" style="text-decoration:none;">{{ section.settings.privacy_label | default: settings.footer_privacy_label | default: 'PRIVACY' }}</a>
-        <a href="{{ terms_url }}" class="footer-copyright" style="text-decoration:none;">{{ section.settings.terms_label | default: settings.footer_terms_label | default: 'TERMS' }}</a>
+        <a href="{{ privacy_url }}" class="footer-copyright" style="text-decoration:none;">{{ cc_footer.privacy_label | default: section.settings.privacy_label | default: settings.footer_privacy_label | default: 'PRIVACY' }}</a>
+        <a href="{{ terms_url }}" class="footer-copyright" style="text-decoration:none;">{{ cc_footer.terms_label | default: section.settings.terms_label | default: settings.footer_terms_label | default: 'TERMS' }}</a>
       </div>
     </div>
   </div>

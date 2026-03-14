@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "eyebrow": "Collection",
+    "heading": "Performance-informed apparel built for daily standards.",
+    "text": "<p>Shop the current collection with the same discipline, restraint, and durability that defines AREN.</p>",
+    "image_position": "right",
+    "dark_theme": true,
+    "button_label": "Explore Collection",
+    "button_link": "/collections/all"
+  },
+  "collection_grid": {
+    "hero_heading": "COMPOSURE UNDER PRESSURE.",
+    "hero_copy": "Performance-informed apparel built for daily standards, not trends.",
+    "philosophy_eyebrow": "Design Philosophy",
+    "philosophy_heading": "FUNCTION. RESTRAINT. DURABILITY.",
+    "philosophy_columns": [
+      {
+        "title": "Training",
+        "description": "Engineered for high-output training environments."
+      },
+      {
+        "title": "Daily Wear",
+        "description": "Structured comfort for transition and recovery days."
+      },
+      {
+        "title": "Outer Layers",
+        "description": "Technical protection for environmental defense."
+      }
+    ],
+    "filters": ["Shop System", "New Arrivals", "Core Essentials", "Outerwear", "Accessories"],
+    "all_pieces_label": "All Pieces",
+    "current_collection_label": "Current Collection",
+    "empty_title": "Add Shopify products",
+    "empty_description": "This layout is ready for your real catalog.",
+    "empty_price": "Theme Ready",
+    "why_eyebrow": "Why AREN Apparel",
+    "why_heading": "NOT STREETWEAR.<br>A SYSTEM.",
+    "why_paragraphs": [
+      "AREN apparel exists as an extension of the athlete's standard.",
+      "Not driven by seasonal trends or streetwear cycles, but by discipline, restraint, and functional precision.",
+      "Every piece is designed to hold up under training and carry that same standard into the rest of life.",
+      "This is not clothing for spectators."
+    ],
+    "why_emphasis": "It's equipment for people who operate.",
+    "meta_blocks": [
+      {
+        "label": "Shipping",
+        "text": "Shipping nationwide on all orders."
+      },
+      {
+        "label": "Quality Standard",
+        "text": "Built to last. Every piece carries the AREN standard."
+      },
+      {
+        "label": "Returns",
+        "text": "30-day return policy on unworn items."
+      }
+    ]
+  }
+}
