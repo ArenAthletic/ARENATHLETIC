@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Shop — AREN Athletic</title>
-  <meta name="description" content="AREN ATHLETIC — Built by discipline. Proven by action.">
-  <link rel="preconnect" href="https://static.parastorage.com" crossorigin>
+  <meta name="description" content="AREN ATHLETIC — Performance-informed apparel built for daily standards.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,58 +13,328 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 </head>
 <body class="template-shop">
+
 <!-- ============================================================
-     CLOUDCANNON PROOF SECTION — guarantees detection of all region types
+     NAV
      ============================================================ -->
-<section id="cc-proof" style="position:static;display:block;max-height:0;overflow:hidden;">
-  <h1 data-editable="text" data-prop="hero.title">THE STANDARD IS THE STANDARD.</h1>
-  <p data-editable="text" data-prop="hero.subtitle">Built on discipline, presence, and consistency.</p>
-  <img data-editable="image" data-prop-src="hero.image" data-prop-alt="hero.alt" data-prop-title="hero.title" src="/assets/hero.jpg" alt="Hero image" title="Hero">
-  <ul data-editable="array" data-prop="collection_grid.philosophy_columns">
-    <li data-editable="array-item"><h3>Core Tee</h3></li>
-    <li data-editable="array-item"><h3>Training Short</h3></li>
-  </ul>
-  <p data-editable="source" data-path="site/shop/index.html" data-key="shop-page-footer-copy">Footer copy here</p>
-</section>
-
-
-
-<div>
 <nav class="nav" id="main-nav">
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="AREN Athletic home">
-      <img src="/assets/aren-logo.png" alt="AREN Athletic" class="nav-logo-image" data-editable="image" data-prop-src="header.logo_image" data-prop-alt="header.logo_alt" data-prop-title="header.logo_title" style="width:160px;">
+      <img
+        src="/assets/aren-logo.png"
+        alt="AREN Athletic"
+        class="nav-logo-image"
+        data-editable="image"
+        data-prop-src="@file[data/site/site.json].header.logo_image"
+        data-prop-alt="@file[data/site/site.json].header.logo_alt"
+        style="width:160px;">
     </a>
-    <div class="nav-links" data-editable="array" data-prop="navigation.links"><a href="/" class="nav-link" data-editable="array-item" data-prop="navigation.links[0]"><span data-editable="text" data-prop="navigation.links[0].title">Home</span></a><a href="/about/" class="nav-link" data-editable="array-item" data-prop="navigation.links[1]"><span data-editable="text" data-prop="navigation.links[1].title">About AREN</span></a><a href="/training/" class="nav-link" data-editable="array-item" data-prop="navigation.links[2]"><span data-editable="text" data-prop="navigation.links[2].title">Training</span></a><a href="/services/" class="nav-link" data-editable="array-item" data-prop="navigation.links[3]"><span data-editable="text" data-prop="navigation.links[3].title">Services</span></a><a href="/street-miles-nyc/" class="nav-link" data-editable="array-item" data-prop="navigation.links[4]"><span data-editable="text" data-prop="navigation.links[4].title">Street Miles NYC</span></a><a href="/shop/" class="nav-link active" data-editable="array-item" data-prop="navigation.links[5]"><span data-editable="text" data-prop="navigation.links[5].title">Shop</span></a><a href="/contact/" class="nav-link" data-editable="array-item" data-prop="navigation.links[6]"><span data-editable="text" data-prop="navigation.links[6].title">Contact / Join</span></a></div>
+    <div class="nav-links" data-editable="array" data-prop="@file[data/site/site.json].navigation.links">
+      <a href="/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Home</span>
+      </a>
+      <a href="/about/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">About AREN</span>
+      </a>
+      <a href="/training/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Training</span>
+      </a>
+      <a href="/services/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Services</span>
+      </a>
+      <a href="/street-miles-nyc/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Street Miles NYC</span>
+      </a>
+      <a href="/shop/" class="nav-link active" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Shop</span>
+      </a>
+      <a href="/contact/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Contact / Join</span>
+      </a>
+    </div>
     <div class="nav-actions">
-      <a href="/account/login" class="nav-action-link" data-editable="text" data-prop="navigation.login_label">Log In</a>
-      <a href="/shop/" class="nav-cta" data-editable="text" data-prop="navigation.cta_label">Shop Now</a>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" type="button"><span></span><span></span><span></span></button>
+      <a href="/account/login" class="nav-action-link" data-editable="text" data-prop="@file[data/site/site.json].navigation.login_label">Log In</a>
+      <a href="/shop/" class="nav-cta" data-editable="text" data-prop="@file[data/site/site.json].navigation.cta_label">Shop Now</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" type="button">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
-<div class="nav-mobile" id="nav-mobile"><div class="nav-mobile-links" data-editable="array" data-prop="navigation.links"><a href="/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[0]"><span data-editable="text" data-prop="navigation.links[0].title">Home</span></a><a href="/about/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[1]"><span data-editable="text" data-prop="navigation.links[1].title">About AREN</span></a><a href="/training/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[2]"><span data-editable="text" data-prop="navigation.links[2].title">Training</span></a><a href="/services/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[3]"><span data-editable="text" data-prop="navigation.links[3].title">Services</span></a><a href="/street-miles-nyc/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[4]"><span data-editable="text" data-prop="navigation.links[4].title">Street Miles NYC</span></a><a href="/shop/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[5]"><span data-editable="text" data-prop="navigation.links[5].title">Shop</span></a><a href="/contact/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[6]"><span data-editable="text" data-prop="navigation.links[6].title">Contact / Join</span></a><a href="/account/login" class="nav-mobile-link">Log In</a></div></div>
-</div><section class="image-with-text image-with-text--dark collection-hero-inline"><div class="container"><div class="image-with-text__grid" style="direction:rtl;"><div class="media-card" style="direction:ltr;"><img src="/assets/cf5517a6.jpg" alt="Collection" data-editable="image" data-prop-src="hero.image" data-prop-alt="hero.alt"></div><div class="image-with-text__content" style="direction:ltr;"><div class="text-eyebrow">Collection</div><h1 class="text-display" data-editable="text" data-prop="hero.title" style="color:#fff;">Performance-informed apparel built for daily standards.</h1><p class="text-body" data-editable="text" data-prop="hero.subtitle">Shop the current collection with the same discipline, restraint, and durability that defines AREN.</p><div><a href="/shop/" class="btn btn--outline-white">Explore Collection</a></div></div></div></div></section>
-<div><section style="padding-top:calc(68px + var(--space-lg));padding-bottom:var(--space-lg);border-bottom:1px solid var(--color-warm-gray);"><div class="container"><h1 style="font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5.5rem);font-weight:700;letter-spacing:-0.01em;line-height:0.95;text-transform:uppercase;margin-bottom:1.5rem;" data-editable="text" data-prop="collection_grid.hero_heading">COMPOSURE UNDER PRESSURE.</h1><p class="text-body" style="max-width:52ch;" data-editable="text" data-prop="collection_grid.hero_copy">Performance-informed apparel built for daily standards, not trends.</p></div></section><section style="padding:3rem 0;border-bottom:1px solid var(--color-warm-gray);"><div class="container"><div class="text-eyebrow" style="text-align:center;margin-bottom:2rem;" data-editable="text" data-prop="collection_grid.philosophy_eyebrow">Design Philosophy</div><h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:700;letter-spacing:-0.01em;text-transform:uppercase;line-height:0.95;text-align:center;margin-bottom:3rem;" data-editable="text" data-prop="philosophy.title">FUNCTION. RESTRAINT. DURABILITY.</h2><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--color-warm-gray);" data-editable="array" data-prop="collection_grid.philosophy_columns"><div style="padding:2.5rem 2rem;border-right:1px solid var(--color-warm-gray);" data-editable="array-item" data-prop="collection_grid.philosophy_columns[0]"><div class="text-eyebrow" style="margin-bottom:0.75rem;" data-editable="text" data-prop="title">Training</div><p class="text-body-sm" data-editable="text" data-prop="philosophy.body">Engineered for high-output training environments.</p></div><div style="padding:2.5rem 2rem;border-right:1px solid var(--color-warm-gray);" data-editable="array-item" data-prop="collection_grid.philosophy_columns[1]"><div class="text-eyebrow" style="margin-bottom:0.75rem;" data-editable="text" data-prop="collection_grid.philosophy_columns[1].title">Daily Wear</div><p class="text-body-sm" data-editable="text" data-prop="collection_grid.philosophy_columns[1].description">Structured comfort for transition and recovery days.</p></div><div style="padding:2.5rem 2rem;" data-editable="array-item" data-prop="collection_grid.philosophy_columns[2]"><div class="text-eyebrow" style="margin-bottom:0.75rem;" data-editable="text" data-prop="collection_grid.philosophy_columns[2].title">Outer Layers</div><p class="text-body-sm" data-editable="text" data-prop="collection_grid.philosophy_columns[2].description">Technical protection for environmental defense.</p></div></div></div></section><div class="shop-filter-bar"><div class="container"><div class="shop-filters" data-editable="array" data-prop="collection_grid.filters"><span class="shop-filter active" data-filter="shop-system" data-editable="array-item" data-prop="collection_grid.filters[0]">Shop System</span><span class="shop-filter" data-filter="new-arrivals" data-editable="array-item" data-prop="collection_grid.filters[1]">New Arrivals</span><span class="shop-filter" data-filter="core-essentials" data-editable="array-item" data-prop="collection_grid.filters[2]">Core Essentials</span><span class="shop-filter" data-filter="outerwear" data-editable="array-item" data-prop="collection_grid.filters[3]">Outerwear</span><span class="shop-filter" data-filter="accessories" data-editable="array-item" data-prop="collection_grid.filters[4]">Accessories</span></div></div></div><section class="shop-grid"><div class="container"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3rem;padding-bottom:1.5rem;border-bottom:1px solid var(--color-warm-gray);"><div class="text-eyebrow" data-editable="text" data-prop="collection_grid.all_pieces_label">All Pieces</div><div class="text-eyebrow" style="color:var(--color-black);" data-editable="text" data-prop="collection_grid.current_collection_label">Current Collection</div></div><div class="shop-product-grid" data-editable="array" data-prop="collection_grid.fallback_cards"><a href="#" class="product-card" style="text-decoration:none;color:inherit;" data-editable="array-item"><div class="product-image" style="background:#1e1e1c;"></div><div class="product-name">AREN Product 1</div><div class="product-desc">Current collection placeholder built from rendered HTML output.</div><div class="product-price">$00.00</div></a><a href="#" class="product-card" style="text-decoration:none;color:inherit;" data-editable="array-item"><div class="product-image" style="background:#1e1e1c;"></div><div class="product-name">AREN Product 2</div><div class="product-desc">Current collection placeholder built from rendered HTML output.</div><div class="product-price">$00.00</div></a><a href="#" class="product-card" style="text-decoration:none;color:inherit;" data-editable="array-item"><div class="product-image" style="background:#1e1e1c;"></div><div class="product-name">AREN Product 3</div><div class="product-desc">Current collection placeholder built from rendered HTML output.</div><div class="product-price">$00.00</div></a><a href="#" class="product-card" style="text-decoration:none;color:inherit;" data-editable="array-item"><div class="product-image" style="background:#1e1e1c;"></div><div class="product-name">AREN Product 4</div><div class="product-desc">Current collection placeholder built from rendered HTML output.</div><div class="product-price">$00.00</div></a></div></div></section><section style="background:var(--color-black);padding:var(--space-xl) 0;margin-top:var(--space-lg);"><div class="container"><div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:center;"><div><div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:2rem;" data-editable="text" data-prop="collection_grid.why_eyebrow">Why AREN Apparel</div><h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:700;color:#fff;line-height:0.95;letter-spacing:-0.01em;text-transform:uppercase;margin-bottom:1.75rem;" data-editable="text" data-prop="collection_grid.why_heading">NOT STREETWEAR.<br>A SYSTEM.</h2><div data-editable="array" data-prop="collection_grid.why_paragraphs"><p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:1.5rem;" data-editable="array-item" data-prop="collection_grid.why_paragraphs[0]">AREN apparel exists as an extension of the athlete's standard.</p><p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:1.5rem;" data-editable="array-item" data-prop="collection_grid.why_paragraphs[1]">Not driven by seasonal trends or streetwear cycles, but by discipline, restraint, and functional precision.</p><p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:1.5rem;" data-editable="array-item" data-prop="collection_grid.why_paragraphs[2]">Every piece is designed to hold up under training and carry that same standard into the rest of life.</p><p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:44ch;margin-bottom:1.5rem;" data-editable="array-item" data-prop="collection_grid.why_paragraphs[3]">This is not clothing for spectators.</p></div><p style="font-size:1rem;line-height:1.75;color:rgba(255,255,255,0.65);max-width:44ch;font-weight:500;" data-editable="text" data-prop="collection_grid.why_emphasis">It's equipment for people who operate.</p></div><div style="border-left:1px solid rgba(255,255,255,0.08);padding-left:var(--space-xl);" data-editable="array" data-prop="collection_grid.meta_blocks"><div style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.08);" data-editable="array-item" data-prop="collection_grid.meta_blocks[0]"><div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:0.75rem;" data-editable="text" data-prop="collection_grid.meta_blocks[0].title">Shipping</div><p style="font-size:0.875rem;color:rgba(255,255,255,0.5);" data-editable="text" data-prop="collection_grid.meta_blocks[0].description">Shipping nationwide on all orders.</p></div><div style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.08);" data-editable="array-item" data-prop="collection_grid.meta_blocks[1]"><div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:0.75rem;" data-editable="text" data-prop="collection_grid.meta_blocks[1].title">Quality Standard</div><p style="font-size:0.875rem;color:rgba(255,255,255,0.5);" data-editable="text" data-prop="collection_grid.meta_blocks[1].description">Built to last. Every piece carries the AREN standard.</p></div><div style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.08);" data-editable="array-item" data-prop="collection_grid.meta_blocks[2]"><div class="text-eyebrow" style="color:rgba(255,255,255,0.3);margin-bottom:0.75rem;" data-editable="text" data-prop="collection_grid.meta_blocks[2].title">Returns</div><p style="font-size:0.875rem;color:rgba(255,255,255,0.5);" data-editable="text" data-prop="collection_grid.meta_blocks[2].description">30-day return policy on unworn items.</p></div></div></div></div></section></div>
-<div>
+
+<div class="nav-mobile" id="nav-mobile">
+  <div class="nav-mobile-links" data-editable="array" data-prop="@file[data/site/site.json].navigation.links">
+    <a href="/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Home</span>
+    </a>
+    <a href="/about/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">About AREN</span>
+    </a>
+    <a href="/training/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Training</span>
+    </a>
+    <a href="/services/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Services</span>
+    </a>
+    <a href="/street-miles-nyc/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Street Miles NYC</span>
+    </a>
+    <a href="/shop/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Shop</span>
+    </a>
+    <a href="/contact/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Contact / Join</span>
+    </a>
+    <a href="/account/login" class="nav-mobile-link">Log In</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section style="padding-top:calc(68px + var(--space-lg));padding-bottom:var(--space-lg);border-bottom:1px solid var(--color-warm-gray);">
+  <div class="container">
+    <h1 style="font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5.5rem);font-weight:700;letter-spacing:-0.01em;line-height:0.95;text-transform:uppercase;margin-bottom:1.5rem;"
+      data-editable="text"
+      data-prop="@data[pages/collection].collection_grid.hero_heading">COMPOSURE UNDER PRESSURE.</h1>
+    <p class="text-body" style="max-width:52ch;"
+      data-editable="text"
+      data-prop="@data[pages/collection].collection_grid.hero_copy">Performance-informed apparel built for daily standards, not trends.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     ANNOUNCEMENT TICKER
+     ============================================================ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="marquee-text" data-editable="text" data-prop="@data[pages/home].announcement_ticker.text">AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —</span>
+    <span class="marquee-text" aria-hidden="true">AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     DESIGN PHILOSOPHY
+     ============================================================ -->
+<section style="padding:3rem 0;border-bottom:1px solid var(--color-warm-gray);">
+  <div class="container">
+    <p class="text-eyebrow" style="text-align:center;margin-bottom:2rem;"
+      data-editable="text"
+      data-prop="@data[pages/collection].collection_grid.philosophy_eyebrow">Design Philosophy</p>
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:700;letter-spacing:-0.01em;text-transform:uppercase;line-height:0.95;text-align:center;margin-bottom:3rem;"
+      data-editable="text"
+      data-prop="@data[pages/collection].collection_grid.philosophy_heading">FUNCTION. RESTRAINT. DURABILITY.</h2>
+    <ul style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--color-warm-gray);list-style:none;padding:0;margin:0;"
+      data-editable="array"
+      data-prop="@data[pages/collection].collection_grid.philosophy_columns">
+      <li style="padding:2.5rem 2rem;border-right:1px solid var(--color-warm-gray);"
+        data-editable="array-item">
+        <p class="text-eyebrow" style="margin-bottom:0.75rem;"
+          data-editable="text"
+          data-prop="title">Training</p>
+        <p class="text-body-sm"
+          data-editable="text"
+          data-prop="description">Engineered for high-output training environments.</p>
+      </li>
+      <li style="padding:2.5rem 2rem;border-right:1px solid var(--color-warm-gray);"
+        data-editable="array-item">
+        <p class="text-eyebrow" style="margin-bottom:0.75rem;"
+          data-editable="text"
+          data-prop="title">Daily Wear</p>
+        <p class="text-body-sm"
+          data-editable="text"
+          data-prop="description">Structured comfort for transition and recovery days.</p>
+      </li>
+      <li style="padding:2.5rem 2rem;"
+        data-editable="array-item">
+        <p class="text-eyebrow" style="margin-bottom:0.75rem;"
+          data-editable="text"
+          data-prop="title">Outer Layers</p>
+        <p class="text-body-sm"
+          data-editable="text"
+          data-prop="description">Technical protection for environmental defense.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     COLLECTION GRID (PLACEHOLDER)
+     ============================================================ -->
+<section style="padding:var(--space-xl) 0;border-bottom:1px solid var(--color-warm-gray);">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem;">
+      <p class="text-eyebrow"
+        data-editable="text"
+        data-prop="@data[pages/collection].collection_grid.current_collection_label">Current Collection</p>
+      <p class="text-eyebrow"
+        data-editable="text"
+        data-prop="@data[pages/collection].collection_grid.all_pieces_label">All Pieces</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2rem;">
+      <div style="padding:4rem 2rem;background:var(--color-warm-gray);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;aspect-ratio:3/4;">
+        <p class="text-eyebrow"
+          data-editable="text"
+          data-prop="@data[pages/collection].collection_grid.empty_title" style="margin-bottom:0.5rem;">Add Shopify products</p>
+        <p class="text-body-sm"
+          data-editable="text"
+          data-prop="@data[pages/collection].collection_grid.empty_description">This layout is ready for your real catalog.</p>
+        <p class="text-body-sm" style="margin-top:0.5rem;"
+          data-editable="text"
+          data-prop="@data[pages/collection].collection_grid.empty_price">Theme Ready</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY AREN APPAREL
+     ============================================================ -->
+<section style="padding:var(--space-xl) 0;border-bottom:1px solid var(--color-warm-gray);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);align-items:start;">
+      <div>
+        <p class="text-eyebrow" style="margin-bottom:2rem;"
+          data-editable="text"
+          data-prop="@data[pages/collection].collection_grid.why_eyebrow">Why AREN Apparel</p>
+        <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;letter-spacing:-0.01em;text-transform:uppercase;line-height:0.95;margin-bottom:2rem;"
+          data-editable="text"
+          data-prop="@data[pages/collection].collection_grid.why_heading">NOT STREETWEAR.<br>A SYSTEM.</h2>
+        <p style="font-family:var(--font-mono);font-size:0.75rem;font-style:italic;margin-top:2rem;padding-top:2rem;border-top:1px solid var(--color-warm-gray);"
+          data-editable="text"
+          data-prop="@data[pages/collection].collection_grid.why_emphasis">It's equipment for people who operate.</p>
+      </div>
+      <ul data-editable="array" data-prop="@data[pages/collection].collection_grid.why_paragraphs"
+        style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:1.5rem;padding-left:var(--space-lg);border-left:1px solid var(--color-warm-gray);">
+        <li data-editable="array-item">
+          <p class="text-body" data-editable="text" data-prop="@item">AREN apparel exists as an extension of the athlete's standard.</p>
+        </li>
+        <li data-editable="array-item">
+          <p class="text-body" data-editable="text" data-prop="@item">Not driven by seasonal trends or streetwear cycles, but by discipline, restraint, and functional precision.</p>
+        </li>
+        <li data-editable="array-item">
+          <p class="text-body" data-editable="text" data-prop="@item">Every piece is designed to hold up under training and carry that same standard into the rest of life.</p>
+        </li>
+        <li data-editable="array-item">
+          <p class="text-body" data-editable="text" data-prop="@item">This is not clothing for spectators.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     META BLOCKS
+     ============================================================ -->
+<section style="padding:var(--space-lg) 0;border-bottom:1px solid var(--color-warm-gray);">
+  <div class="container">
+    <ul data-editable="array" data-prop="@data[pages/collection].collection_grid.meta_blocks"
+      style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;">
+      <li data-editable="array-item" style="padding:2rem;border:1px solid var(--color-warm-gray);">
+        <p class="text-eyebrow" data-editable="text" data-prop="label" style="margin-bottom:0.5rem;">Shipping</p>
+        <p class="text-body-sm" data-editable="text" data-prop="text">Shipping nationwide on all orders.</p>
+      </li>
+      <li data-editable="array-item" style="padding:2rem;border:1px solid var(--color-warm-gray);">
+        <p class="text-eyebrow" data-editable="text" data-prop="label" style="margin-bottom:0.5rem;">Quality Standard</p>
+        <p class="text-body-sm" data-editable="text" data-prop="text">Built to last. Every piece carries the AREN standard.</p>
+      </li>
+      <li data-editable="array-item" style="padding:2rem;border:1px solid var(--color-warm-gray);">
+        <p class="text-eyebrow" data-editable="text" data-prop="label" style="margin-bottom:0.5rem;">Returns</p>
+        <p class="text-body-sm" data-editable="text" data-prop="text">30-day return policy on unworn items.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
+
       <div class="footer-col">
-        <a href="/" class="footer-brand-name footer-brand-link"><img src="/assets/aren-logo.png" alt="AREN Athletic" class="footer-logo-image" data-editable="image" data-prop-src="footer.logo_image" data-prop-alt="footer.logo_alt" data-prop-title="footer.logo_title"></a>
+        <a href="/" class="footer-brand-name footer-brand-link">
+          <img
+            src="/assets/aren-logo.png"
+            alt="AREN Athletic"
+            class="footer-logo-image"
+            data-editable="image"
+            data-prop-src="@file[data/site/site.json].footer.logo_image"
+            data-prop-alt="@file[data/site/site.json].footer.logo_alt">
+        </a>
         <div class="footer-brand-taglines">
-          <span class="footer-brand-tagline" data-editable="text" data-prop="footer.tagline_1">SMNYC: FIVE BOROUGH CHAPTER</span>
-          <span class="footer-brand-tagline" data-editable="text" data-prop="footer.tagline_2">DISCIPLINE AND PERFORMANCE.</span>
-          <span class="footer-brand-tagline" data-editable="text" data-prop="footer.tagline_3">AREN ATHLETIC UNIFORM.</span>
+          <span class="footer-brand-tagline" data-editable="text" data-prop="@file[data/site/site.json].footer.tagline_1">SMNYC: FIVE BOROUGH CHAPTER</span>
+          <span class="footer-brand-tagline" data-editable="text" data-prop="@file[data/site/site.json].footer.tagline_2">DISCIPLINE AND PERFORMANCE.</span>
+          <span class="footer-brand-tagline" data-editable="text" data-prop="@file[data/site/site.json].footer.tagline_3">AREN ATHLETIC UNIFORM.</span>
         </div>
       </div>
-      <div class="footer-col"><div class="footer-col-title" data-editable="text" data-prop="footer.ecosystem_heading">ECOSYSTEM</div><div class="footer-links" data-editable="array" data-prop="footer.ecosystem_links"><a href="/about/" class="footer-link" data-editable="array-item" data-prop="footer.ecosystem_links[0]"><span data-editable="text" data-prop="footer.ecosystem_links[0].title">About AREN</span></a><a href="/training/" class="footer-link" data-editable="array-item" data-prop="footer.ecosystem_links[1]"><span data-editable="text" data-prop="footer.ecosystem_links[1].title">Training</span></a><a href="/services/" class="footer-link" data-editable="array-item" data-prop="footer.ecosystem_links[2]"><span data-editable="text" data-prop="footer.ecosystem_links[2].title">Services</span></a><a href="/street-miles-nyc/" class="footer-link" data-editable="array-item" data-prop="footer.ecosystem_links[3]"><span data-editable="text" data-prop="footer.ecosystem_links[3].title">Street Miles NYC</span></a><a href="/contact/" class="footer-link" data-editable="array-item" data-prop="footer.ecosystem_links[4]"><span data-editable="text" data-prop="footer.ecosystem_links[4].title">Join the Community</span></a></div></div>
-      <div class="footer-col"><div class="footer-col-title" data-editable="text" data-prop="footer.access_heading">ACCESS</div><div class="footer-links" data-editable="array" data-prop="footer.access_links"><a href="/shop/" class="footer-link" data-editable="array-item" data-prop="footer.access_links[0]"><span data-editable="text" data-prop="footer.access_links[0].title">Shop Apparel</span></a><a href="/shop/" class="footer-link" data-editable="array-item" data-prop="footer.access_links[1]"><span data-editable="text" data-prop="footer.access_links[1].title">New Arrivals</span></a><a href="/shop/" class="footer-link" data-editable="array-item" data-prop="footer.access_links[2]"><span data-editable="text" data-prop="footer.access_links[2].title">Core Essentials</span></a><a href="/shop/" class="footer-link" data-editable="array-item" data-prop="footer.access_links[3]"><span data-editable="text" data-prop="footer.access_links[3].title">Outerwear</span></a><a href="/account/login" class="footer-link" data-editable="array-item" data-prop="footer.access_links[4]"><span data-editable="text" data-prop="footer.access_links[4].title">Log In</span></a></div></div>
-      <div class="footer-col"><div class="footer-col-title" data-editable="text" data-prop="footer.network_heading">NATIONAL HUB NETWORK.</div><div class="footer-links"><a href="mailto:info@arenathletic.com" class="footer-link" data-editable="text" data-prop="footer.email_address">INFO@ARENATHLETIC.COM</a></div></div>
+
+      <div class="footer-col">
+        <h3 class="footer-col-title" data-editable="text" data-prop="@file[data/site/site.json].footer.ecosystem_heading">ECOSYSTEM</h3>
+        <ul class="footer-links" data-editable="array" data-prop="@file[data/site/site.json].footer.ecosystem_links" style="list-style:none;padding:0;margin:0;">
+          <li data-editable="array-item">
+            <a href="/about/" class="footer-link"><span data-editable="text" data-prop="title">About AREN</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/training/" class="footer-link"><span data-editable="text" data-prop="title">Training</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/services/" class="footer-link"><span data-editable="text" data-prop="title">Services</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/street-miles-nyc/" class="footer-link"><span data-editable="text" data-prop="title">Street Miles NYC</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/contact/" class="footer-link"><span data-editable="text" data-prop="title">Join the Community</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col-title" data-editable="text" data-prop="@file[data/site/site.json].footer.access_heading">ACCESS</h3>
+        <ul class="footer-links" data-editable="array" data-prop="@file[data/site/site.json].footer.access_links" style="list-style:none;padding:0;margin:0;">
+          <li data-editable="array-item">
+            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">Shop Apparel</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">New Arrivals</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">Core Essentials</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">Outerwear</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/account/login" class="footer-link"><span data-editable="text" data-prop="title">Log In</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col-title" data-editable="text" data-prop="@file[data/site/site.json].footer.network_heading">NATIONAL HUB NETWORK.</h3>
+        <div class="footer-links">
+          <a href="mailto:info@arenathletic.com" class="footer-link" data-editable="text" data-prop="@file[data/site/site.json].footer.email_address">INFO@ARENATHLETIC.COM</a>
+        </div>
+      </div>
+
     </div>
-    <div class="footer-bottom"><div class="footer-bottom-left"><span class="footer-identity-line" data-editable="text" data-prop="footer.identity_line">AREN ATHLETIC — NEW YORK CITY</span><p class="footer-copyright" data-editable="source" data-path="site/shop/index.html" data-key="shop-page-footer-copy">© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.</p></div><div style="display:flex;gap:2rem;"><a href="#" class="footer-copyright">PRIVACY</a><a href="#" class="footer-copyright">TERMS</a></div></div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <span class="footer-identity-line" data-editable="text" data-prop="@file[data/site/site.json].footer.identity_line">AREN ATHLETIC — NEW YORK CITY</span>
+        <p class="footer-copyright" data-editable="text" data-prop="@file[data/site/site.json].footer.copyright_text">© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.</p>
+      </div>
+      <div style="display:flex;gap:2rem;">
+        <a href="#" class="footer-copyright" data-editable="text" data-prop="@file[data/site/site.json].footer.privacy_label">PRIVACY</a>
+        <a href="#" class="footer-copyright" data-editable="text" data-prop="@file[data/site/site.json].footer.terms_label">TERMS</a>
+      </div>
+    </div>
+
   </div>
 </footer>
+
 <script src="/assets/aren-theme.js" defer></script>
 </body>
 </html>

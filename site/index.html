@@ -25,37 +25,36 @@
         alt="AREN Athletic"
         class="nav-logo-image"
         data-editable="image"
-        data-prop-src="header.logo_image"
-        data-prop-alt="header.logo_alt"
-        data-prop-title="header.logo_title"
+        data-prop-src="@file[data/site/site.json].header.logo_image"
+        data-prop-alt="@file[data/site/site.json].header.logo_alt"
         style="width:160px;">
     </a>
-    <div class="nav-links" data-editable="array" data-prop="navigation.links">
-      <a href="/" class="nav-link active" data-editable="array-item" data-prop="navigation.links[0]">
-        <span data-editable="text" data-prop="navigation.links[0].title">Home</span>
+    <div class="nav-links" data-editable="array" data-prop="@file[data/site/site.json].navigation.links">
+      <a href="/" class="nav-link active" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Home</span>
       </a>
-      <a href="/about/" class="nav-link" data-editable="array-item" data-prop="navigation.links[1]">
-        <span data-editable="text" data-prop="navigation.links[1].title">About AREN</span>
+      <a href="/about/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">About AREN</span>
       </a>
-      <a href="/training/" class="nav-link" data-editable="array-item" data-prop="navigation.links[2]">
-        <span data-editable="text" data-prop="navigation.links[2].title">Training</span>
+      <a href="/training/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Training</span>
       </a>
-      <a href="/services/" class="nav-link" data-editable="array-item" data-prop="navigation.links[3]">
-        <span data-editable="text" data-prop="navigation.links[3].title">Services</span>
+      <a href="/services/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Services</span>
       </a>
-      <a href="/street-miles-nyc/" class="nav-link" data-editable="array-item" data-prop="navigation.links[4]">
-        <span data-editable="text" data-prop="navigation.links[4].title">Street Miles NYC</span>
+      <a href="/street-miles-nyc/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Street Miles NYC</span>
       </a>
-      <a href="/shop/" class="nav-link" data-editable="array-item" data-prop="navigation.links[5]">
-        <span data-editable="text" data-prop="navigation.links[5].title">Shop</span>
+      <a href="/shop/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Shop</span>
       </a>
-      <a href="/contact/" class="nav-link" data-editable="array-item" data-prop="navigation.links[6]">
-        <span data-editable="text" data-prop="navigation.links[6].title">Contact / Join</span>
+      <a href="/contact/" class="nav-link" data-editable="array-item">
+        <span data-editable="text" data-prop="title">Contact / Join</span>
       </a>
     </div>
     <div class="nav-actions">
-      <a href="/account/login" class="nav-action-link" data-editable="text" data-prop="navigation.login_label">Log In</a>
-      <a href="/shop/" class="nav-cta" data-editable="text" data-prop="navigation.cta_label">Shop Now</a>
+      <a href="/account/login" class="nav-action-link" data-editable="text" data-prop="@file[data/site/site.json].navigation.login_label">Log In</a>
+      <a href="/shop/" class="nav-cta" data-editable="text" data-prop="@file[data/site/site.json].navigation.cta_label">Shop Now</a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" type="button">
         <span></span><span></span><span></span>
       </button>
@@ -64,27 +63,27 @@
 </nav>
 
 <div class="nav-mobile" id="nav-mobile">
-  <div class="nav-mobile-links" data-editable="array" data-prop="navigation.links">
-    <a href="/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[0]">
-      <span data-editable="text" data-prop="navigation.links[0].title">Home</span>
+  <div class="nav-mobile-links" data-editable="array" data-prop="@file[data/site/site.json].navigation.links">
+    <a href="/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Home</span>
     </a>
-    <a href="/about/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[1]">
-      <span data-editable="text" data-prop="navigation.links[1].title">About AREN</span>
+    <a href="/about/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">About AREN</span>
     </a>
-    <a href="/training/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[2]">
-      <span data-editable="text" data-prop="navigation.links[2].title">Training</span>
+    <a href="/training/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Training</span>
     </a>
-    <a href="/services/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[3]">
-      <span data-editable="text" data-prop="navigation.links[3].title">Services</span>
+    <a href="/services/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Services</span>
     </a>
-    <a href="/street-miles-nyc/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[4]">
-      <span data-editable="text" data-prop="navigation.links[4].title">Street Miles NYC</span>
+    <a href="/street-miles-nyc/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Street Miles NYC</span>
     </a>
-    <a href="/shop/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[5]">
-      <span data-editable="text" data-prop="navigation.links[5].title">Shop</span>
+    <a href="/shop/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Shop</span>
     </a>
-    <a href="/contact/" class="nav-mobile-link" data-editable="array-item" data-prop="navigation.links[6]">
-      <span data-editable="text" data-prop="navigation.links[6].title">Contact / Join</span>
+    <a href="/contact/" class="nav-mobile-link" data-editable="array-item">
+      <span data-editable="text" data-prop="title">Contact / Join</span>
     </a>
     <a href="/account/login" class="nav-mobile-link">Log In</a>
   </div>
@@ -95,7 +94,7 @@
      ============================================================ -->
 <div class="marquee-strip">
   <div class="marquee-track">
-    <span class="marquee-text" data-editable="text" data-prop="announcement_ticker.text">AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —</span>
+    <span class="marquee-text" data-editable="text" data-prop="@data[pages/home].announcement_ticker.text">AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —</span>
     <span class="marquee-text" aria-hidden="true">AREN ATHLETIC — NEW YORK CITY — DISCIPLINE AND PERFORMANCE — STREET MILES NYC — FIVE BOROUGH CHAPTER — STRUCTURED PERFORMANCE — AREN ATHLETIC COLLECTIVE — APPAREL BUILT FOR TRAINING —</span>
   </div>
 </div>
@@ -106,25 +105,24 @@
 <section class="page-hero page-hero--dark" style="position:relative;overflow:hidden;min-height:640px;display:flex;align-items:flex-end;">
   <img
     data-editable="image"
-    data-prop-src="hero.image"
-    data-prop-alt="hero.alt"
-    data-prop-title="hero.title"
+    data-prop-src="@data[pages/home].hero.fallback_image_url"
+    data-prop-alt="@data[pages/home].hero.eyebrow"
     src="/assets/hero.jpg"
     alt="Hero image"
     title="AREN Athletic Hero"
     style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
   <div style="position:absolute;inset:0;background:linear-gradient(165deg,rgba(28,28,26,0.88) 0%,rgba(35,35,33,0.68) 55%,rgba(26,26,24,0.92) 100%);"></div>
   <div class="container" style="position:relative;z-index:1;padding-bottom:var(--space-xl);">
-    <p class="text-eyebrow" data-editable="text" data-prop="hero.eyebrow" style="margin-bottom:2rem;color:rgba(255,255,255,0.35);">AREN ATHLETIC</p>
-    <h1 data-editable="text" data-prop="hero.title">THE STANDARD IS THE STANDARD.</h1>
-    <p class="text-body" data-editable="text" data-prop="hero.subtitle" style="max-width:44ch;color:rgba(255,255,255,0.65);margin-bottom:2rem;">Minimal. Durable. Elevated. Designed for the gym, the street, and the pace of New York.</p>
+    <p class="text-eyebrow" data-editable="text" data-prop="@data[pages/home].hero.eyebrow" style="margin-bottom:2rem;color:rgba(255,255,255,0.35);">AREN ATHLETIC</p>
+    <h1 data-editable="text" data-prop="@data[pages/home].hero.heading">THE STANDARD IS THE STANDARD.</h1>
+    <p class="text-body" data-editable="text" data-prop="@data[pages/home].hero.copy" style="max-width:44ch;color:rgba(255,255,255,0.65);margin-bottom:2rem;">Minimal. Durable. Elevated. Designed for the gym, the street, and the pace of New York.</p>
     <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem;">
-      <a href="/shop/" class="btn btn--primary" data-editable="text" data-prop="hero.cta_primary">Shop Apparel</a>
-      <a href="/contact/" class="btn btn--outline-white" data-editable="text" data-prop="hero.cta_secondary">Join the Community</a>
+      <a href="/shop/" class="btn btn--primary" data-editable="text" data-prop="@data[pages/home].hero.primary_button_label">Shop Apparel</a>
+      <a href="/contact/" class="btn btn--outline-white" data-editable="text" data-prop="@data[pages/home].hero.secondary_button_label">Join the Community</a>
     </div>
     <div style="display:grid;gap:0.35rem;color:rgba(255,255,255,0.42);font-family:var(--font-mono);font-size:0.625rem;letter-spacing:0.18em;text-transform:uppercase;">
-      <span data-editable="text" data-prop="hero.microcopy_1">New drops + core staples • Shipping nationwide</span>
-      <span data-editable="text" data-prop="hero.microcopy_2">Quiet confidence. Built to wear daily.</span>
+      <span data-editable="text" data-prop="@data[pages/home].hero.microcopy_one">New drops + core staples • Shipping nationwide</span>
+      <span data-editable="text" data-prop="@data[pages/home].hero.microcopy_two">Quiet confidence. Built to wear daily.</span>
     </div>
   </div>
 </section>
@@ -136,36 +134,36 @@
   <div class="container">
     <div class="section-header">
       <div>
-        <p class="text-eyebrow mb-sm" data-editable="text" data-prop="collection_categories.eyebrow">Category focus</p>
-        <h2 class="text-h2" data-editable="text" data-prop="collection_categories.heading">Shop by system.</h2>
+        <p class="text-eyebrow mb-sm" data-editable="text" data-prop="@data[pages/home].collection_categories.eyebrow">Category focus</p>
+        <h2 class="text-h2" data-editable="text" data-prop="@data[pages/home].collection_categories.heading">Shop by system.</h2>
       </div>
     </div>
-    <ul class="product-grid" data-editable="array" data-prop="collection_categories.categories" style="list-style:none;padding:0;margin:0;">
-      <li data-editable="array-item" data-prop="collection_categories.categories[0]">
+    <ul class="product-grid" data-editable="array" data-prop="@data[pages/home].collection_categories.categories" style="list-style:none;padding:0;margin:0;">
+      <li data-editable="array-item">
         <a href="/shop/" class="product-card" style="text-decoration:none;color:inherit;display:block;">
           <div class="product-name">
-            <span class="text-eyebrow" data-editable="text" data-prop="collection_categories.categories[0].number">01</span>
-            <span data-editable="text" data-prop="collection_categories.categories[0].title">New Arrivals</span>
+            <span class="text-eyebrow" data-editable="text" data-prop="number">01</span>
+            <span data-editable="text" data-prop="title">New Arrivals</span>
           </div>
-          <p class="product-desc" data-editable="text" data-prop="collection_categories.categories[0].description">Latest drops, limited runs.</p>
+          <p class="product-desc" data-editable="text" data-prop="description">Latest drops, limited runs.</p>
         </a>
       </li>
-      <li data-editable="array-item" data-prop="collection_categories.categories[1]">
+      <li data-editable="array-item">
         <a href="/shop/" class="product-card" style="text-decoration:none;color:inherit;display:block;">
           <div class="product-name">
-            <span class="text-eyebrow" data-editable="text" data-prop="collection_categories.categories[1].number">02</span>
-            <span data-editable="text" data-prop="collection_categories.categories[1].title">Core Essentials</span>
+            <span class="text-eyebrow" data-editable="text" data-prop="number">02</span>
+            <span data-editable="text" data-prop="title">Core Essentials</span>
           </div>
-          <p class="product-desc" data-editable="text" data-prop="collection_categories.categories[1].description">Daily uniform pieces built for repetition.</p>
+          <p class="product-desc" data-editable="text" data-prop="description">Daily uniform pieces built for repetition.</p>
         </a>
       </li>
-      <li data-editable="array-item" data-prop="collection_categories.categories[2]">
+      <li data-editable="array-item">
         <a href="/shop/" class="product-card" style="text-decoration:none;color:inherit;display:block;">
           <div class="product-name">
-            <span class="text-eyebrow" data-editable="text" data-prop="collection_categories.categories[2].number">03</span>
-            <span data-editable="text" data-prop="collection_categories.categories[2].title">Outerwear</span>
+            <span class="text-eyebrow" data-editable="text" data-prop="number">03</span>
+            <span data-editable="text" data-prop="title">Outerwear</span>
           </div>
-          <p class="product-desc" data-editable="text" data-prop="collection_categories.categories[2].description">Protection layers for movement and weather.</p>
+          <p class="product-desc" data-editable="text" data-prop="description">Protection layers for movement and weather.</p>
         </a>
       </li>
     </ul>
@@ -179,23 +177,23 @@
   <div class="container">
     <div class="section-header">
       <div>
-        <p class="text-eyebrow mb-sm" data-editable="text" data-prop="featured_collection.eyebrow">Featured Apparel</p>
-        <h2 class="text-h2" data-editable="text" data-prop="featured_collection.heading">The standard pieces.</h2>
+        <p class="text-eyebrow mb-sm" data-editable="text" data-prop="@data[pages/home].featured_collection.eyebrow">Featured Apparel</p>
+        <h2 class="text-h2" data-editable="text" data-prop="@data[pages/home].featured_collection.heading">The standard pieces.</h2>
       </div>
-      <a href="/shop/" class="btn btn--ghost" data-editable="text" data-prop="featured_collection.button_label">View All</a>
+      <a href="/shop/" class="btn btn--ghost" data-editable="text" data-prop="@data[pages/home].featured_collection.button_label">View All</a>
     </div>
-    <ul data-editable="array" data-prop="featured_collection.fallback_cards" style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2rem;">
-      <li class="product-card" data-editable="array-item" data-prop="featured_collection.fallback_cards[0]" style="background:#1e1e1c;padding:2rem;">
-        <p class="text-eyebrow" data-editable="text" data-prop="featured_collection.fallback_cards[0].tag">Featured</p>
-        <h3 data-editable="text" data-prop="featured_collection.fallback_cards[0].title">Tonal Men's Box Tee — Black</h3>
-        <p data-editable="text" data-prop="featured_collection.fallback_cards[0].description">Sharp structure. Everyday system.</p>
-        <a href="/shop/" class="btn btn--outline-white" data-editable="text" data-prop="featured_collection.fallback_cards[0].cta_label">Shop</a>
+    <ul data-editable="array" data-prop="@data[pages/home].featured_collection.fallback_cards" style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2rem;">
+      <li class="product-card" data-editable="array-item" style="background:#1e1e1c;padding:2rem;">
+        <p class="text-eyebrow" data-editable="text" data-prop="tag">Featured</p>
+        <h3 data-editable="text" data-prop="title">Tonal Men's Box Tee — Black</h3>
+        <p data-editable="text" data-prop="description">Sharp structure. Everyday system.</p>
+        <a href="/shop/" class="btn btn--outline-white" data-editable="text" data-prop="cta_label">Shop</a>
       </li>
-      <li class="product-card" data-editable="array-item" data-prop="featured_collection.fallback_cards[1]" style="background:#2e2e2b;padding:2rem;">
-        <p class="text-eyebrow" data-editable="text" data-prop="featured_collection.fallback_cards[1].tag">Uniform</p>
-        <h3 data-editable="text" data-prop="featured_collection.fallback_cards[1].title">Training Short — Graphite</h3>
-        <p data-editable="text" data-prop="featured_collection.fallback_cards[1].description">Daily movement. Quiet utility.</p>
-        <a href="/shop/" class="btn btn--outline-white" data-editable="text" data-prop="featured_collection.fallback_cards[1].cta_label">Shop</a>
+      <li class="product-card" data-editable="array-item" style="background:#2e2e2b;padding:2rem;">
+        <p class="text-eyebrow" data-editable="text" data-prop="tag">Uniform</p>
+        <h3 data-editable="text" data-prop="title">Training Short — Graphite</h3>
+        <p data-editable="text" data-prop="description">Daily movement. Quiet utility.</p>
+        <a href="/shop/" class="btn btn--outline-white" data-editable="text" data-prop="cta_label">Shop</a>
       </li>
     </ul>
   </div>
@@ -212,29 +210,28 @@
           src="/assets/7e4d26bf.jpg"
           alt="AREN standard"
           data-editable="image"
-          data-prop-src="philosophy.image"
-          data-prop-alt="philosophy.alt"
-          data-prop-title="philosophy.title">
+          data-prop-src="@data[pages/home].image_with_text.fallback_image_url"
+          data-prop-alt="@data[pages/home].image_with_text.eyebrow">
       </div>
       <div class="image-with-text__content">
-        <p class="text-eyebrow" data-editable="text" data-prop="philosophy.eyebrow">Brand Philosophy</p>
-        <h2 class="text-h2" data-editable="text" data-prop="philosophy.heading">The standard is the standard.</h2>
-        <p class="text-body" data-editable="text" data-prop="philosophy.body">AREN exists as an extension of the athlete's standard—built for discipline, consistency, and everyday performance.</p>
+        <p class="text-eyebrow" data-editable="text" data-prop="@data[pages/home].image_with_text.eyebrow">Brand Philosophy</p>
+        <h2 class="text-h2" data-editable="text" data-prop="@data[pages/home].image_with_text.heading">The standard is the standard.</h2>
+        <p class="text-body" data-editable="text" data-prop="@data[pages/home].image_with_text.text">AREN exists as an extension of the athlete's standard—built for discipline, consistency, and everyday performance.</p>
         <div>
-          <a href="/about/" class="btn btn--outline" data-editable="text" data-prop="philosophy.button_label">About AREN</a>
+          <a href="/about/" class="btn btn--outline" data-editable="text" data-prop="@data[pages/home].image_with_text.button_label">About AREN</a>
         </div>
-        <div class="image-with-text__stats" data-editable="array" data-prop="philosophy.stats">
-          <div class="image-with-text__stat" data-editable="array-item" data-prop="philosophy.stats[0]">
-            <p class="text-display" data-editable="text" data-prop="philosophy.stats[0].value" style="font-size:clamp(1.6rem,3vw,3rem);">NYC</p>
-            <p class="text-eyebrow" data-editable="text" data-prop="philosophy.stats[0].label">Home Chapter — Five Boroughs</p>
+        <div class="image-with-text__stats" data-editable="array" data-prop="@data[pages/home].image_with_text.stats">
+          <div class="image-with-text__stat" data-editable="array-item">
+            <p class="text-display" data-editable="text" data-prop="value" style="font-size:clamp(1.6rem,3vw,3rem);">NYC</p>
+            <p class="text-eyebrow" data-editable="text" data-prop="label">Home Chapter — Five Boroughs</p>
           </div>
-          <div class="image-with-text__stat" data-editable="array-item" data-prop="philosophy.stats[1]">
-            <p class="text-display" data-editable="text" data-prop="philosophy.stats[1].value" style="font-size:clamp(1.6rem,3vw,3rem);">Daily</p>
-            <p class="text-eyebrow" data-editable="text" data-prop="philosophy.stats[1].label">Standard — Not Seasonal</p>
+          <div class="image-with-text__stat" data-editable="array-item">
+            <p class="text-display" data-editable="text" data-prop="value" style="font-size:clamp(1.6rem,3vw,3rem);">Daily</p>
+            <p class="text-eyebrow" data-editable="text" data-prop="label">Standard — Not Seasonal</p>
           </div>
-          <div class="image-with-text__stat" data-editable="array-item" data-prop="philosophy.stats[2]">
-            <p class="text-display" data-editable="text" data-prop="philosophy.stats[2].value" style="font-size:clamp(1.6rem,3vw,3rem);">One</p>
-            <p class="text-eyebrow" data-editable="text" data-prop="philosophy.stats[2].label">System — Built to Perform</p>
+          <div class="image-with-text__stat" data-editable="array-item">
+            <p class="text-display" data-editable="text" data-prop="value" style="font-size:clamp(1.6rem,3vw,3rem);">One</p>
+            <p class="text-eyebrow" data-editable="text" data-prop="label">System — Built to Perform</p>
           </div>
         </div>
       </div>
@@ -253,30 +250,29 @@
           src="https://static.wixstatic.com/media/8a3301_dfd7f8236654470390a4357692431d22~mv2.png/v1/fill/w_1920,h_1080,al_c,q_90,enc_auto/8a3301_dfd7f8236654470390a4357692431d22~mv2.png"
           alt="Street Miles NYC"
           data-editable="image"
-          data-prop-src="editorial_section.fallback_image_url"
-          data-prop-alt="editorial_section.image_alt"
-          data-prop-title="editorial_section.image_title"
+          data-prop-src="@data[pages/home].editorial_section.fallback_image_url"
+          data-prop-alt="@data[pages/home].editorial_section.image_eyebrow"
           style="width:100%;height:100%;object-fit:cover;display:block;">
       </div>
       <div class="image-with-text__content">
-        <p class="text-eyebrow" data-editable="text" data-prop="editorial_section.eyebrow">Street Miles</p>
-        <h2 class="text-h2" data-editable="text" data-prop="editorial_section.heading" style="color:#fff;">Street Miles NYC</h2>
-        <p class="text-body" data-editable="text" data-prop="editorial_section.copy">A weekly run club built on exploration, effort, and community — moving through the city together.</p>
+        <p class="text-eyebrow" data-editable="text" data-prop="@data[pages/home].editorial_section.eyebrow">Street Miles</p>
+        <h2 class="text-h2" data-editable="text" data-prop="@data[pages/home].editorial_section.heading" style="color:#fff;">Street Miles NYC</h2>
+        <p class="text-body" data-editable="text" data-prop="@data[pages/home].editorial_section.copy">A weekly run club built on exploration, effort, and community — moving through the city together.</p>
         <div>
-          <a href="/street-miles-nyc/" class="btn btn--outline-white" data-editable="text" data-prop="editorial_section.button_label">Explore Street Miles</a>
+          <a href="/street-miles-nyc/" class="btn btn--outline-white" data-editable="text" data-prop="@data[pages/home].editorial_section.button_label">Explore Street Miles</a>
         </div>
-        <div class="image-with-text__stats" data-editable="array" data-prop="editorial_section.stats">
-          <div class="image-with-text__stat" data-editable="array-item" data-prop="editorial_section.stats[0]">
-            <p class="text-display" data-editable="text" data-prop="editorial_section.stats[0].value" style="font-size:clamp(1.6rem,3vw,3rem);">5</p>
-            <p class="text-eyebrow" data-editable="text" data-prop="editorial_section.stats[0].label">Boroughs</p>
+        <div class="image-with-text__stats" data-editable="array" data-prop="@data[pages/home].editorial_section.stats">
+          <div class="image-with-text__stat" data-editable="array-item">
+            <p class="text-display" data-editable="text" data-prop="value" style="font-size:clamp(1.6rem,3vw,3rem);">5</p>
+            <p class="text-eyebrow" data-editable="text" data-prop="label">Boroughs</p>
           </div>
-          <div class="image-with-text__stat" data-editable="array-item" data-prop="editorial_section.stats[1]">
-            <p class="text-display" data-editable="text" data-prop="editorial_section.stats[1].value" style="font-size:clamp(1.6rem,3vw,3rem);">09:00</p>
-            <p class="text-eyebrow" data-editable="text" data-prop="editorial_section.stats[1].label">Sunday sharp</p>
+          <div class="image-with-text__stat" data-editable="array-item">
+            <p class="text-display" data-editable="text" data-prop="value" style="font-size:clamp(1.6rem,3vw,3rem);">09:00</p>
+            <p class="text-eyebrow" data-editable="text" data-prop="label">Sunday sharp</p>
           </div>
-          <div class="image-with-text__stat" data-editable="array-item" data-prop="editorial_section.stats[2]">
-            <p class="text-display" data-editable="text" data-prop="editorial_section.stats[2].value" style="font-size:clamp(1.6rem,3vw,3rem);">NYC</p>
-            <p class="text-eyebrow" data-editable="text" data-prop="editorial_section.stats[2].label">Home chapter</p>
+          <div class="image-with-text__stat" data-editable="array-item">
+            <p class="text-display" data-editable="text" data-prop="value" style="font-size:clamp(1.6rem,3vw,3rem);">NYC</p>
+            <p class="text-eyebrow" data-editable="text" data-prop="label">Home chapter</p>
           </div>
         </div>
       </div>
@@ -289,14 +285,14 @@
      ============================================================ -->
 <section class="section">
   <div class="container container--narrow" style="text-align:center;">
-    <p class="text-eyebrow" data-editable="text" data-prop="newsletter.eyebrow" style="margin-bottom:1rem;">Community Signup</p>
-    <h2 class="text-h2" data-editable="text" data-prop="newsletter.heading" style="margin-bottom:1rem;">Join the AREN list.</h2>
-    <p class="text-body" data-editable="text" data-prop="newsletter.copy" style="margin-bottom:2rem;">Drops, restocks, and community updates — sent when it matters.</p>
+    <p class="text-eyebrow" data-editable="text" data-prop="@data[pages/home].newsletter.eyebrow" style="margin-bottom:1rem;">Community Signup</p>
+    <h2 class="text-h2" data-editable="text" data-prop="@data[pages/home].newsletter.heading" style="margin-bottom:1rem;">Join the AREN list.</h2>
+    <p class="text-body" data-editable="text" data-prop="@data[pages/home].newsletter.copy" style="margin-bottom:2rem;">Drops, restocks, and community updates — sent when it matters.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
       <input class="form-input" type="email" placeholder="Email address" style="max-width:320px;">
-      <button class="btn btn--primary" data-editable="text" data-prop="newsletter.button_label">Join</button>
+      <button class="btn btn--primary" data-editable="text" data-prop="@data[pages/home].newsletter.button_label">Join</button>
     </div>
-    <p class="text-body-sm" data-editable="text" data-prop="newsletter.disclaimer" style="margin-top:1rem;">No spam. Unsubscribe any time.</p>
+    <p class="text-body-sm" data-editable="text" data-prop="@data[pages/home].newsletter.disclaimer" style="margin-top:1rem;">No spam. Unsubscribe any time.</p>
   </div>
 </section>
 
@@ -314,63 +310,62 @@
             alt="AREN Athletic"
             class="footer-logo-image"
             data-editable="image"
-            data-prop-src="footer.logo_image"
-            data-prop-alt="footer.logo_alt"
-            data-prop-title="footer.logo_title">
+            data-prop-src="@file[data/site/site.json].footer.logo_image"
+            data-prop-alt="@file[data/site/site.json].footer.logo_alt">
         </a>
         <div class="footer-brand-taglines">
-          <span class="footer-brand-tagline" data-editable="text" data-prop="footer.tagline_1">SMNYC: FIVE BOROUGH CHAPTER</span>
-          <span class="footer-brand-tagline" data-editable="text" data-prop="footer.tagline_2">DISCIPLINE AND PERFORMANCE.</span>
-          <span class="footer-brand-tagline" data-editable="text" data-prop="footer.tagline_3">AREN ATHLETIC UNIFORM.</span>
+          <span class="footer-brand-tagline" data-editable="text" data-prop="@file[data/site/site.json].footer.tagline_1">SMNYC: FIVE BOROUGH CHAPTER</span>
+          <span class="footer-brand-tagline" data-editable="text" data-prop="@file[data/site/site.json].footer.tagline_2">DISCIPLINE AND PERFORMANCE.</span>
+          <span class="footer-brand-tagline" data-editable="text" data-prop="@file[data/site/site.json].footer.tagline_3">AREN ATHLETIC UNIFORM.</span>
         </div>
       </div>
 
       <div class="footer-col">
-        <h3 class="footer-col-title" data-editable="text" data-prop="footer.ecosystem_heading">ECOSYSTEM</h3>
-        <ul class="footer-links" data-editable="array" data-prop="footer.ecosystem_links" style="list-style:none;padding:0;margin:0;">
-          <li data-editable="array-item" data-prop="footer.ecosystem_links[0]">
-            <a href="/about/" class="footer-link"><span data-editable="text" data-prop="footer.ecosystem_links[0].title">About AREN</span></a>
+        <h3 class="footer-col-title" data-editable="text" data-prop="@file[data/site/site.json].footer.ecosystem_heading">ECOSYSTEM</h3>
+        <ul class="footer-links" data-editable="array" data-prop="@file[data/site/site.json].footer.ecosystem_links" style="list-style:none;padding:0;margin:0;">
+          <li data-editable="array-item">
+            <a href="/about/" class="footer-link"><span data-editable="text" data-prop="title">About AREN</span></a>
           </li>
-          <li data-editable="array-item" data-prop="footer.ecosystem_links[1]">
-            <a href="/training/" class="footer-link"><span data-editable="text" data-prop="footer.ecosystem_links[1].title">Training</span></a>
+          <li data-editable="array-item">
+            <a href="/training/" class="footer-link"><span data-editable="text" data-prop="title">Training</span></a>
           </li>
-          <li data-editable="array-item" data-prop="footer.ecosystem_links[2]">
-            <a href="/services/" class="footer-link"><span data-editable="text" data-prop="footer.ecosystem_links[2].title">Services</span></a>
+          <li data-editable="array-item">
+            <a href="/services/" class="footer-link"><span data-editable="text" data-prop="title">Services</span></a>
           </li>
-          <li data-editable="array-item" data-prop="footer.ecosystem_links[3]">
-            <a href="/street-miles-nyc/" class="footer-link"><span data-editable="text" data-prop="footer.ecosystem_links[3].title">Street Miles NYC</span></a>
+          <li data-editable="array-item">
+            <a href="/street-miles-nyc/" class="footer-link"><span data-editable="text" data-prop="title">Street Miles NYC</span></a>
           </li>
-          <li data-editable="array-item" data-prop="footer.ecosystem_links[4]">
-            <a href="/contact/" class="footer-link"><span data-editable="text" data-prop="footer.ecosystem_links[4].title">Join the Community</span></a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col-title" data-editable="text" data-prop="footer.access_heading">ACCESS</h3>
-        <ul class="footer-links" data-editable="array" data-prop="footer.access_links" style="list-style:none;padding:0;margin:0;">
-          <li data-editable="array-item" data-prop="footer.access_links[0]">
-            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="footer.access_links[0].title">Shop Apparel</span></a>
-          </li>
-          <li data-editable="array-item" data-prop="footer.access_links[1]">
-            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="footer.access_links[1].title">New Arrivals</span></a>
-          </li>
-          <li data-editable="array-item" data-prop="footer.access_links[2]">
-            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="footer.access_links[2].title">Core Essentials</span></a>
-          </li>
-          <li data-editable="array-item" data-prop="footer.access_links[3]">
-            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="footer.access_links[3].title">Outerwear</span></a>
-          </li>
-          <li data-editable="array-item" data-prop="footer.access_links[4]">
-            <a href="/account/login" class="footer-link"><span data-editable="text" data-prop="footer.access_links[4].title">Log In</span></a>
+          <li data-editable="array-item">
+            <a href="/contact/" class="footer-link"><span data-editable="text" data-prop="title">Join the Community</span></a>
           </li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h3 class="footer-col-title" data-editable="text" data-prop="footer.network_heading">NATIONAL HUB NETWORK.</h3>
+        <h3 class="footer-col-title" data-editable="text" data-prop="@file[data/site/site.json].footer.access_heading">ACCESS</h3>
+        <ul class="footer-links" data-editable="array" data-prop="@file[data/site/site.json].footer.access_links" style="list-style:none;padding:0;margin:0;">
+          <li data-editable="array-item">
+            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">Shop Apparel</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">New Arrivals</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">Core Essentials</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/shop/" class="footer-link"><span data-editable="text" data-prop="title">Outerwear</span></a>
+          </li>
+          <li data-editable="array-item">
+            <a href="/account/login" class="footer-link"><span data-editable="text" data-prop="title">Log In</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-col-title" data-editable="text" data-prop="@file[data/site/site.json].footer.network_heading">NATIONAL HUB NETWORK.</h3>
         <div class="footer-links">
-          <a href="mailto:info@arenathletic.com" class="footer-link" data-editable="text" data-prop="footer.email_address">INFO@ARENATHLETIC.COM</a>
+          <a href="mailto:info@arenathletic.com" class="footer-link" data-editable="text" data-prop="@file[data/site/site.json].footer.email_address">INFO@ARENATHLETIC.COM</a>
         </div>
       </div>
 
@@ -378,12 +373,12 @@
 
     <div class="footer-bottom">
       <div class="footer-bottom-left">
-        <span class="footer-identity-line" data-editable="text" data-prop="footer.identity_line">AREN ATHLETIC — NEW YORK CITY</span>
-        <p class="footer-copyright" data-editable="source" data-path="site/index.html" data-key="index-footer-copyright">© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.</p>
+        <span class="footer-identity-line" data-editable="text" data-prop="@file[data/site/site.json].footer.identity_line">AREN ATHLETIC — NEW YORK CITY</span>
+        <p class="footer-copyright" data-editable="text" data-prop="@file[data/site/site.json].footer.copyright_text">© 2026 AREN ATHLETIC. ALL RIGHTS RESERVED.</p>
       </div>
       <div style="display:flex;gap:2rem;">
-        <a href="#" class="footer-copyright">PRIVACY</a>
-        <a href="#" class="footer-copyright">TERMS</a>
+        <a href="#" class="footer-copyright" data-editable="text" data-prop="@file[data/site/site.json].footer.privacy_label">PRIVACY</a>
+        <a href="#" class="footer-copyright" data-editable="text" data-prop="@file[data/site/site.json].footer.terms_label">TERMS</a>
       </div>
     </div>
 
